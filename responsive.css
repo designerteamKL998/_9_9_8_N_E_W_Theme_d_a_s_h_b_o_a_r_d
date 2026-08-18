@@ -1,0 +1,911 @@
+﻿.deks-view {
+    display: block;
+}
+
+.mob-view {
+    display: none;
+}
+
+.mobile-game-menu {
+    display: none;
+}
+
+.mobile-more-wrap {
+    display: none;
+}
+
+
+/* ========================================================= RESPONSIVE - TABLET MAX WIDTH: 1024px ========================================================= */
+@media (max-width: 1024px) {
+    .deks-view {
+        display: none;
+    }
+
+    .mob-view {
+        display: block;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main-header {
+        padding: 8px 15px;
+    }
+
+    .header-inner {
+        height: 70px;
+        padding: 0 18px;
+        border-radius: 10px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+        .logo img {
+            width: 85px;
+        }
+
+    .main-nav {
+        margin-left: 20px;
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .language {
+        padding: 3px 6px;
+        display: none;
+    }
+
+    .globe {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    .divider {
+        height: 25px;
+    }
+
+    .user-box {
+        gap: 5px;
+    }
+
+    .user-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .user-info {
+        min-width: 42px;
+    }
+
+    .vip-badge {
+        padding: 3px 5px;
+        font-size: 8px;
+    }
+
+    .username {
+        font-size: 8px;
+    }
+
+    .balance-box {
+        min-width: 70px;
+    }
+
+    .balance-label {
+        font-size: 8px;
+    }
+
+    .balance-value {
+        font-size: 10px;
+    }
+
+    .refresh {
+        font-size: 13px;
+    }
+
+    .btn {
+        height: 28px;
+        padding: 0 12px;
+        font-size: 9px;
+    }
+
+    .promo-slider {
+        width: calc(100% - 30px);
+        margin: 15px auto 0;
+    }
+
+    .promo-slide {
+        padding: 0 4px;
+    }
+
+        .promo-slide img {
+            border-radius: 8px;
+        }
+
+    .slot-section-title {
+        gap: 14px;
+        margin: 18px 0px 12px;
+        margin: 5px 0px;
+    }
+
+
+    .slot-section-icon {
+        width: auto;
+        height: auto;
+        flex: 0;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .slot-section-text {
+        padding: 0 30px 0 0;
+    }
+
+        .slot-section-text h2 {
+            font-size: 24px;
+        }
+
+        .slot-section-text p {
+            font-size: 12px;
+        }
+
+    .slot-section-line {
+        min-width: 30px;
+    }
+
+    .slot-header {
+        margin-bottom: 0px;
+    }
+
+    .games-grid {
+        column-gap: 12px;
+        row-gap: 12px;
+        margin-bottom: 0px;
+    }
+
+    .hot-games {
+        width: calc(100% - 30px);
+        overflow: hidden;
+        margin: 10px auto 10px;
+    }
+
+        .hot-games .games-grid {
+            display: flex;
+            gap: 5px;
+            overflow-x: auto;
+            overflow-y: visible;
+            padding: 8px 0 12px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+            .hot-games .games-grid::-webkit-scrollbar {
+                display: none;
+            }
+
+            .hot-games .games-grid .game-card {
+                flex: 0 0 120px;
+                width: 120px;
+                min-width: 120px;
+            }
+
+    .game-card img {
+        aspect-ratio: 1 / 1;
+        border-radius: 12px;
+    }
+
+    .hot-badge,
+    .new-badge,
+    .ex-badge,
+    .promo-badge {
+        top: -6px;
+        left: 7px;
+        padding: 2px 7px;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+
+    .slot-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+
+    .slot-card img {
+        border-radius: 10px;
+    }
+
+    .game-card:hover,
+    .slot-card:hover {
+        transform: translateY(-2px);
+    }
+
+    .mobile-game-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 66px;
+        position: absolute;
+        left: 8px;
+        z-index: 20;
+        margin-top: 15px;
+    }
+
+    .mobile-game-btn {
+        width: 72px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        padding: 5px;
+        border: 0;
+        border-radius: 10px;
+        background: #f3f3f3;
+        color: #8c8c8c;
+        cursor: pointer;
+    }
+
+    .slot-section-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mobile-game-btn img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .mobile-game-btn span {
+        font-family: var(--font-main);
+        font-size: 9px;
+        font-weight: var(--weight-semibold);
+    }
+
+    .mobile-game-btn.active {
+        background: #ffe45c;
+        color: #c69b00;
+    }
+
+    .slot-games .slot-section-title,
+    .lc-games .slot-section-title,
+    .sport-games .slot-section-title,
+    .lottery-games .slot-section-title,
+    .battle-games .slot-section-title,
+    .poker-games .slot-section-title {
+        display: none;
+    }
+
+
+    .slot-games,
+    .lc-games,
+    .sport-games,
+    .lottery-games,
+    .battle-games,
+    .poker-games {
+        display: none;
+    }
+
+    .slot-games {
+        display: block;
+    }
+
+    .slot-card {
+        width: 100%;
+        border-radius: 9px;
+    }
+
+    .slot-games,
+    .lc-games,
+    .sport-games,
+    .battle-games,
+    .lottery-games,
+    .poker-games {
+        width: calc(100% - 105px);
+        max-width: none;
+        margin-left: 90px;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+
+    .mobile-bottom-nav {
+        display: none;
+    }
+}
+
+
+/*===============================================================  MOBILE 768PX  ==========================================================*/
+@media (max-width: 768px) {
+
+    .main-header {
+        padding: 7px 10px;
+    }
+
+    .header-inner {
+        height: 56px;
+        padding: 0 10px;
+        border-radius: 9px;
+        box-shadow: 0 4px 15px rgba(37, 96, 160, 0.08);
+    }
+
+
+    .logo {
+        width: auto;
+    }
+
+        .logo img {
+            width: 75px;
+        }
+
+
+    .main-nav {
+        display: none;
+    }
+
+
+    .header-right {
+        margin-left: auto;
+        gap: 5px;
+        height: auto;
+    }
+
+
+    .language {
+        padding: 3px 5px;
+        border: 0;
+        background: #f3f8ff;
+        border-radius: 6px;
+    }
+
+
+    .language-btn {
+        gap: 2px;
+    }
+
+
+    .globe {
+        width: 21px;
+        height: 21px;
+        font-size: 21px;
+    }
+
+
+    .arrow {
+        display: none;
+    }
+
+
+    .divider {
+        display: none;
+    }
+
+
+    .user-box {
+        display: none;
+    }
+
+
+    .balance-box {
+        min-width: auto;
+        height: 32px;
+        padding: 0 10px;
+        display: flex;
+        gap: 0px;
+        background: #ffffff;
+        border-radius: 18px;
+        position: relative;
+    }
+
+
+    .balance-label {
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+
+
+    .balance-value {
+        gap: 2px;
+    }
+
+
+    .refresh {
+        font-size: 20px;
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .balance-value {
+        font-size: 12px;
+        grid-gap: 2px;
+    }
+
+
+    .btn {
+        height: 27px;
+        padding: 0 9px;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+
+    .btn-logout {
+        display: none;
+        padding: 0 8px;
+    }
+
+
+    /* =====================================================
+       PROMOTION BANNER
+       ORIGINAL
+    ===================================================== */
+
+    .promo-slider {
+        width: calc(100% - 16px);
+        margin: 8px auto 0;
+    }
+
+
+    .promo-slide {
+        padding: 0;
+    }
+
+
+        .promo-slide img {
+            width: 100%;
+            aspect-ratio: 1320 / 400;
+            border-radius: 8px;
+        }
+
+
+    .promo-dots {
+        gap: 5px;
+        margin-top: 6px;
+        background: #fff;
+        padding: 5px 0px;
+        margin-top: 0px;
+    }
+
+
+    .promo-dot {
+        width: 5px;
+        height: 5px;
+    }
+
+
+        .promo-dot.active {
+            width: 14px;
+        }
+
+
+    /* =====================================================
+       HOT GAMES
+    ===================================================== */
+
+    .hot-games {
+        width: calc(100% - 16px);
+        max-width: none;
+        transition: opacity 1.2s ease, transform 1.2s ease;
+        will-change: opacity, transform;
+    }
+
+
+    /* =====================================================
+       NEW GAMES
+    ===================================================== */
+
+    .new-games {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 1.2s ease, transform 1.2s ease;
+        will-change: opacity, transform;
+    }
+
+
+        .hot-games.mobile-scroll-hide-games,
+        .new-games.mobile-scroll-hide-games {
+            opacity: 0;
+            transform: translateY(-25px);
+            pointer-events: none;
+        }
+
+
+    /* =====================================================
+       GAME SECTIONS
+    ===================================================== */
+
+    .slot-games,
+    .lc-games,
+    .sport-games,
+    .battle-games,
+    .lottery-games,
+    .poker-games {
+        margin-left: 84px;
+        width: calc(100% - 92px);
+        max-width: none;
+        margin-top: 14px;
+        margin-bottom: 22px;
+    }
+
+
+    /* =====================================================
+       GAME GRID
+    ===================================================== */
+
+    .games-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 7px;
+        row-gap: 9px;
+    }
+
+
+    .game-card {
+        border-radius: 7px;
+    }
+
+
+        .game-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+
+
+    /* =====================================================
+       SLOT TITLE
+    ===================================================== */
+
+    .slot-section-title {
+        gap: 9px;
+    }
+
+
+    .slot-section-icon {
+        border-width: 1px;
+        border-radius: 12px;
+    }
+
+
+    .slot-section-text {
+        min-width: 0;
+        padding: 0;
+    }
+
+
+        .slot-section-text h2 {
+            margin-bottom: 3px;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+
+        .slot-section-text p {
+            max-width: 160px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: 1.2;
+        }
+
+
+    .slot-section-line {
+        min-width: 15px;
+        height: 1px;
+    }
+
+
+    .slot-section-star {
+        margin-right: 3px;
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       SLOT GRID
+    ===================================================== */
+
+    .slot-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        column-gap: 9px;
+        row-gap: 10px;
+        margin-bottom: 80px;
+    }
+
+
+    .slot-card {
+        border-radius: 8px;
+    }
+
+
+        .slot-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+
+        .game-card:hover,
+        .slot-card:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+
+    /* =====================================================
+       MOBILE MORE MENU
+    ===================================================== */
+
+    .mobile-more-wrap {
+        position: relative;
+        display: block;
+    }
+
+
+    .mobile-more-menu {
+        display: none;
+    }
+
+
+    .mobile-more-btn {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+
+    .mobile-more-menu {
+        position: absolute;
+        top: calc(100% + 6px);
+        right: 0;
+        min-width: 110px;
+        padding: 8px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        z-index: 100;
+    }
+
+
+        .mobile-more-menu.active {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+
+        .mobile-more-menu a {
+            font-size: 12px;
+            color: #333;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+
+
+
+    .mobile-bottom-nav {
+        position: fixed;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 30px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+        border: 1px solid #fff;
+        padding: 2px;
+    }
+
+
+    .bottom-nav-item {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        color: #222;
+        text-decoration: none;
+        font-size: 11px;
+    }
+
+
+    .bottom-nav-icon {
+        width: 27px;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        line-height: 1;
+    }
+
+
+    .bottom-nav-item.active {
+        color: #146cff;
+    }
+
+
+        .bottom-nav-item.active .bottom-nav-icon {
+            color: #146cff;
+        }
+
+
+
+
+    /* =====================================================
+       PROMOTION BANNER STICKY
+    ===================================================== */
+
+    .promo-slider.mob-view {
+        position: sticky;
+        top: 56px;
+        z-index: 9998;
+    }
+}
+
+
+
+/*===============================================================  MOBILE 480PX  ==========================================================*/
+
+@media (max-width: 480px) {
+
+    .main-header {
+        padding: 6px 8px;
+    }
+
+    .header-inner {
+        height: 52px;
+        padding: 0 8px;
+        border-radius: 8px;
+    }
+
+    .logo img {
+        width: 68px;
+    }
+
+    .header-right {
+        gap: 4px;
+    }
+
+    .language {
+        padding: 2px 4px;
+    }
+
+    .globe {
+        width: 19px;
+        height: 19px;
+    }
+
+    .balance-box {
+        padding: 2px 5px;
+    }
+
+    .btn {
+        height: 25px;
+        padding: 0 7px;
+        border-radius: 5px;
+    }
+
+    .btn-logout {
+        padding: 0 6px;
+    }
+
+    .promo-slider {
+        width: calc(100% - 12px);
+        margin-top: 7px;
+    }
+
+    .promo-slide img {
+        border-radius: 7px;
+    }
+
+    .promo-dots {
+        margin-top: 0px;
+        gap: 4px;
+    }
+
+    .promo-dot {
+        width: 4px;
+        height: 4px;
+    }
+
+        .promo-dot.active {
+            width: 12px;
+        }
+
+    .hot-games {
+        width: calc(100% - 12px);
+        margin: 0px 5px;
+    }
+
+    .slot-games,
+    .lc-games,
+    .sport-games,
+    .battle-games,
+    .lottery-games,
+    .poker-games {
+        margin-left: 84px;
+        width: calc(100% - 92px);
+        margin-top: 12px;
+        margin-bottom: 18px;
+    }
+
+    .game-card {
+        border-radius: 6px;
+    }
+
+        .game-card img {
+            aspect-ratio: 1 / 1;
+            border-radius: 6px;
+        }
+
+    .slot-section-title {
+        gap: 7px;
+    }
+
+    .slot-section-icon {
+        border-radius: 10px;
+    }
+
+    .slot-section-text h2 {
+        margin-bottom: 2px;
+        font-size: 16px;
+    }
+
+    .slot-section-text p {
+        max-width: 130px;
+    }
+
+    .slot-section-line {
+        min-width: 10px;
+    }
+
+    .slot-section-star {
+        margin-right: 2px;
+        font-size: 12px;
+    }
+
+    .slot-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 7px;
+        row-gap: 8px;
+    }
+
+    .slot-card {
+        border-radius: 7px;
+    }
+
+        .slot-card img {
+            aspect-ratio: 1 / 1;
+            border-radius: 7px;
+        }
+}

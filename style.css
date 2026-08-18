@@ -1,0 +1,501 @@
+/* =========================================================
+   GLOBAL VARIABLES
+========================================================= */
+
+:root {
+    /* =========================
+       FONT FAMILY
+    ========================= */
+    --font-main: Arial, Helvetica, sans-serif;
+    /* =========================
+       FONT SIZE
+    ========================= */
+    --font-xs: 7px;
+    --font-sm: 9px;
+    --font-base: 10px;
+    --font-md: 11px;
+    --font-lg: 12px;
+    --font-xl: 13px;
+    --font-icon-sm: 15px;
+    --font-icon: 16px;
+    --font-icon-lg: 17px;
+    --font-icon-xl: 21px;
+    /* =========================
+       FONT WEIGHT
+    ========================= */
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    /* =========================
+       PRIMARY COLOR
+    ========================= */
+    --primary: #1679ef;
+    --primary-dark: #0754bd;
+    --primary-hover: #0869d8;
+    /* =========================
+       TEXT COLOR
+    ========================= */
+    --text-main: #222;
+    --text-dark: #343a46;
+    --text-gray: #666;
+    --text-light: #777;
+    --text-white: #ffffff;
+    /* =========================
+       BACKGROUND
+    ========================= */
+    --bg-body: #f7faff;
+    --bg-white: #ffffff;
+    --bg-light-blue: #eaf4ff;
+    /* =========================
+       BORDER
+    ========================= */
+    --border-light: #e7e7e7;
+    /* =========================
+       SHADOW
+    ========================= */
+    --shadow-header: 0 8px 25px rgba(37, 96, 160, 0.10), 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-button: 0 4px 10px rgba(20, 120, 237, 0.18);
+    /* =========================
+       GRADIENT
+    ========================= */
+    --gradient-primary: linear-gradient( 135deg, var(--primary), var(--primary-dark) );
+    /* =========================
+       BORDER RADIUS
+    ========================= */
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    /* =========================
+       TRANSITION
+    ========================= */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient( 135deg, #eaf8ff 0%, #ffffff 45%, #dff4ff 100% );
+    font-family: var(--font-main);
+    font-size: var(--font-base);
+    font-weight: var(--weight-normal);
+    color: var(--text-main);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= 
+
+.main-header {
+    width: 100%;
+    padding: 10px 24px;
+}*/
+
+.header-inner {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px 0 38px;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-header);
+}
+
+/* =====================================================
+   HEADER STICKY
+===================================================== */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+    .main-header .header-inner {
+        transition: all 0.3s ease;
+    }
+
+    .main-header.is-sticky {
+        padding: 0;
+        margin: 0px;
+        width: 100%;
+    }
+
+        .main-header.is-sticky .header-inner {
+            width: 100%;
+            height: 56px;
+            border-radius: 0;
+            box-shadow: 0 4px 15px rgba(37, 96, 160, 0.08);
+        }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    width: 140px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+    .logo img {
+        width: 105px;
+        height: auto;
+        display: block;
+    }
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 45px;
+    gap: 34px;
+}
+
+.nav-link {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: var(--font-xl);
+    font-weight: var(--weight-semibold);
+    white-space: nowrap;
+    transition: color var(--transition-fast);
+}
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--primary);
+    }
+
+
+        /* Active underline */
+
+        .nav-link.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 7px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: var(--radius-lg);
+        }
+
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.header-right {
+    margin-left: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+.language {
+    display: flex;
+    align-items: center;
+    border:1px solid #1679ef;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.language-btn {
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+.globe {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-light-blue);
+    color: var(--primary);
+    font-size: var(--font-icon-xl);
+    font-weight: var(--weight-bold);
+}
+
+.arrow {
+    color: var(--primary);
+    font-size: var(--font-icon-lg);
+    font-weight: var(--weight-bold);
+    margin-top: -12px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+    width: 1px;
+    height: 30px;
+    background: var(--border-light);
+}
+
+
+/* =========================================================
+   USER
+========================================================= */
+
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--text-white);
+    font-size: var(--font-icon-sm);
+    font-weight: var(--weight-bold);
+}
+
+.user-info {
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.username-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.vip-badge {
+    padding: 5px 6px;
+    border-radius: var(--radius-sm);
+    background: var(--gradient-primary);
+    color: var(--text-white);
+    font-size: var(--font-xl);
+    font-weight: var(--weight-bold);
+    line-height: 1;
+}
+
+.username {
+    color: var(--text-light);
+    font-size: var(--font-xl);
+    font-weight: var(--weight-normal);
+}
+
+
+/* =========================================================
+   BALANCE
+========================================================= */
+
+.balance-box {
+    min-width: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.balance-label {
+    margin-bottom: 2px;
+    color: var(--text-gray);
+    font-size: var(--font-xl);
+    font-weight: var(--weight-semibold);
+}
+
+.balance-value {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary);
+    font-size: var(--font-xl);
+    font-weight: var(--weight-bold);
+}
+
+.refresh {
+    border: 0;
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: var(--font-icon);
+    line-height: 1;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn {
+    height: 30px;
+    padding: 0 17px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-main);
+    font-size: var(--font-md);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+
+/* =========================================================
+   DEPOSIT BUTTON
+========================================================= */
+
+.btn-deposit {
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: var(--text-white);
+    box-shadow: var(--shadow-button);
+    font-size: var(--font-xl);
+}
+
+    .btn-deposit:hover {
+        background: var(--primary-hover);
+        border-color: var(--primary-hover);
+    }
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.btn-logout {
+    border: 1px solid var(--primary);
+    background: var(--bg-white);
+    color: var(--primary);
+    font-size: var(--font-xl);
+}
+
+    .btn-logout:hover {
+        background: var(--bg-light-blue);
+    }
+
+
+/* =========================================================
+   PROMO SLIDER
+========================================================= */
+
+.promo-slider {
+    width: 100%;
+    max-width: 1320px;
+    margin: 18px auto 0;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SLIDER TRACK
+========================================================= */
+
+.promo-track {
+    width: 100%;
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* =========================================================
+   PROMO SLIDE
+========================================================= */
+
+.promo-slide {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 0 5px;
+}
+
+    .promo-slide a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .promo-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1320 / 280;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+    }
+
+
+/* =========================================================
+   PROMO DOTS
+========================================================= */
+
+.promo-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.promo-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: 0;
+    background: #b8c2cc;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .promo-dot.active {
+        width: 16px;
+        background: var(--primary);
+    }
+
+

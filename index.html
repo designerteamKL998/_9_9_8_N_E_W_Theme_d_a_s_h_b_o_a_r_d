@@ -1,0 +1,1099 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gaming Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="responsive.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- JQuery -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-inner">
+            <!-- LOGO -->
+            <a href="#" class="logo">
+                <img src="imgs/logo-testing.png" alt="CM8">
+            </a>
+            <!-- NAVIGATION -->
+            <nav class="main-nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Slot Games</a>
+                <a href="#" class="nav-link">Live Games</a>
+                <a href="#" class="nav-link">Sports Games</a>
+                <a href="#" class="nav-link">Promotions</a>
+                <a href="#" class="nav-link">Commission</a>
+                <a href="#" class="nav-link">VIP</a>
+            </nav>
+            <!-- RIGHT SIDE -->
+            <div class="header-right">
+                <!-- LANGUAGE -->
+                <div class="language">
+                    <button class="language-btn">
+                        <span class="globe"><i class="fa-solid fa-globe"></i></span>
+                        <span class="arrow">⌄</span>
+                    </button>
+                </div>
+                <div class="divider"></div>
+                <!-- USER -->
+                <div class="user-box">
+                    <div class="user-icon">
+                        <span><i class="fa-solid fa-user"></i></span>
+                    </div>
+                    <div class="user-info">
+                        <div class="username-row">
+                            <span class="vip-badge">VIP 1</span>
+                        </div>
+                        <span class="username">mario9</span>
+                    </div>
+                </div>
+                <!-- BALANCE -->
+                <div class="balance-box">
+                    <span class="balance-label">MYR</span>
+                    <div class="balance-value">
+                        <span>RM 0.00</span>
+                        <span class="refresh" role="button" tabindex="0">↻</span>
+                    </div>
+                </div>
+                <!-- DEPOSIT -->
+                <button class="btn btn-deposit">
+                    <span class="deks-view">Deposit</span><span class="mob-view">+Add</span>
+                </button>
+                <!-- LOGOUT -->
+                <button class="btn btn-logout">
+                    Logout
+                </button>
+                <div class="mobile-more-wrap">
+                    <button class="mobile-more-btn" type="button">•••</button>
+                    <div class="mobile-more-menu">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="mobile-bottom-nav mob-view">
+        <a href="#" class="bottom-nav-item active">
+            <span class="bottom-nav-icon"><i class="fa-etch fa-solid fa-house"></i></span>
+            <span>Home</span>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span class="bottom-nav-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+            <span>Promotions</span>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span class="bottom-nav-icon"><i class="fa-solid fa-headset"></i></span>
+            <span>Support</span>
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span class="bottom-nav-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- =========================
+         PROMO SLIDER
+    ========================= -->
+
+    <section class="promo-slider deks-view">
+
+        <div class="promo-track">
+
+            <!-- SLIDE 1 -->
+            <div class="promo-slide">
+                <a href="#">
+                    <img src="imgs/banner01a.jpg" alt="Promotion Banner">
+                </a>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="promo-slide">
+                <a href="#">
+                    <img src="imgs/banner01b.jpg" alt="Promotion Banner">
+                </a>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="promo-slide">
+                <a href="#">
+                    <img src="imgs/banner01c.jpg" alt="Promotion Banner">
+                </a>
+            </div>
+
+        </div>
+
+        <!-- DOTS -->
+        <div class="promo-dots">
+            <span class="promo-dot active"></span>
+            <span class="promo-dot"></span>
+            <span class="promo-dot"></span>
+        </div>
+
+    </section>
+
+    <!-------------------------------------------------   HOT GAMES  -------------------------------------------------------->
+    <!-- =========================
+         HOT GAMES
+    ========================= -->
+
+    <section class="hot-games">
+
+        <div class="slot-section-title">
+
+            <div class="slot-section-icon">
+                <img src="imgs/icon/hot-ic.png" alt="Hot Icon">
+            </div>
+
+            <div class="slot-section-text">
+                <h2>Hot Games</h2>
+                <p>Trending picks • Popular choices • More excitement</p>
+            </div>
+
+        </div>
+
+
+        <div class="games-grid">
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht01.png" alt="Gates of Olympus">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht02.png" alt="Sweet Bonanza">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht03.png" alt="Starlight Princess">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht05.png" alt="Wild Bounty">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht06.png" alt="Ways of the Qilin">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht07.png" alt="Treasures of Aztec">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht08.png" alt="Sugar Rush">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht09.png" alt="Fortune Ox">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht10.png" alt="Wild Bandito">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht12.png" alt="Razor Returns">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht13.png" alt="Chicky Chicky">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht16.jpg" alt="Cleocatra">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht17.jpg" alt="Fire Hopper">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht18.jpg" alt="Wild West Gold">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht19.jpg" alt="Joker Jewels">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht21.jpg" alt="Buffalo King">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht22.jpg" alt="Money Coming">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht23.jpg" alt="Fruit Party">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht24.jpg" alt="Wild Coaster">
+                <div class="hot-badge">HOT</div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-------------------------------------------------   NEW GAMES  -------------------------------------------------------->
+    <!-- =========================
+         NEW GAMES
+    ========================= -->
+
+    <section class="hot-games">
+
+        <div class="slot-section-title">
+
+            <div class="slot-section-icon">
+                <img src="imgs/icon/new-ic.png" alt="Hot Icon">
+            </div>
+
+            <div class="slot-section-text">
+                <h2>New Games</h2>
+                <p>Fresh releases • New adventures • More excitement</p>
+            </div>
+
+        </div>
+
+
+        <div class="games-grid">
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht01.png" alt="Gates of Olympus">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht02.png" alt="Sweet Bonanza">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht03.png" alt="Starlight Princess">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht05.png" alt="Wild Bounty">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht06.png" alt="Ways of the Qilin">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht07.png" alt="Treasures of Aztec">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht08.png" alt="Sugar Rush">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht09.png" alt="Fortune Ox">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht10.png" alt="Wild Bandito">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht12.png" alt="Razor Returns">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht13.png" alt="Chicky Chicky">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht16.jpg" alt="Cleocatra">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht17.jpg" alt="Fire Hopper">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht18.jpg" alt="Wild West Gold">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht19.jpg" alt="Joker Jewels">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht21.jpg" alt="Buffalo King">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht22.jpg" alt="Money Coming">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht23.jpg" alt="Fruit Party">
+                <div class="new-badge">NEW</div>
+            </a>
+
+            <a href="#" class="game-card">
+                <img src="imgs/games/ht24.jpg" alt="Wild Coaster">
+                <div class="new-badge">NEW</div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="promo-slider mob-view">
+
+        <div class="promo-track">
+
+            <!-- SLIDE 1 -->
+            <div class="promo-slide">
+                <a href="#">
+                    <img src="imgs/banner01a.jpg" alt="Promotion Banner">
+                </a>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="promo-slide">
+                <a href="#">
+                    <img src="imgs/banner01b.jpg" alt="Promotion Banner">
+                </a>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="promo-slide">
+                <a href="#">
+                    <img src="imgs/banner01c.jpg" alt="Promotion Banner">
+                </a>
+            </div>
+
+        </div>
+
+        <!-- DOTS -->
+        <div class="promo-dots">
+            <span class="promo-dot active"></span>
+            <span class="promo-dot"></span>
+            <span class="promo-dot"></span>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MOBILE GAME CATEGORY
+    ===================================================== -->
+
+    <div class="mobile-game-menu">
+
+        <button class="mobile-game-btn active" data-game="slot-games">
+            <img src="imgs/icon/title_0004_slot-ic.png" alt="Slot">
+            <span>Slot</span>
+        </button>
+
+        <button class="mobile-game-btn" data-game="lc-games">
+            <img src="imgs/icon/title_0005_cas-ic.png" alt="Live Casino">
+            <span>Casino</span>
+        </button>
+
+        <button class="mobile-game-btn" data-game="sport-games">
+            <img src="imgs/icon/title_0002_sports-ic.png" alt="Sports">
+            <span>Sports</span>
+        </button>
+
+        <button class="mobile-game-btn" data-game="lottery-games">
+            <img src="imgs/icon/title_0003_lottery-ic.png" alt="Lottery">
+            <span>Lottery</span>
+        </button>
+
+        <button class="mobile-game-btn" data-game="battle-games">
+            <img src="imgs/icon/title_0000_battle-ic.png" alt="Battle">
+            <span>Battle</span>
+        </button>
+
+        <button class="mobile-game-btn" data-game="poker-games">
+            <img src="imgs/icon/title_0001_poker-ic.png" alt="Poker">
+            <span>Poker</span>
+        </button>
+
+    </div>
+
+    <!----------------------------------------------------------   SLOT GAMES  -------------------------------------------------------->
+    <!-- ========================================================= SLOT GAMES ========================================================= -->
+
+    <section class="slot-games">
+
+        <div class="slot-header">
+
+            <div class="slot-section-title">
+
+                <div class="slot-section-icon">
+                    <img src="imgs/icon/title_0004_slot-ic.png" alt="Slot Games">
+                </div>
+
+                <div class="slot-section-text">
+                    <h2>Slot Games</h2>
+                    <p>Exciting slots • Big wins • Endless fun</p>
+                </div>
+
+                <div class="slot-section-line"></div>
+
+            </div>
+
+        </div>
+
+        <div class="slot-grid">
+
+            <a href="#" class="slot-card">
+                <div class="ex-badge">EXCLUSIVE</div>
+                <img src="imgs/games/slot/slot-g1.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <div class="promo-badge">promotion</div>
+                <img src="imgs/games/slot/slot-g2.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g3.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g4.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g5.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g6.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g7.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g8.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g9.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g10.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g11.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g12.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g13.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g14.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g15.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g16.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g17.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g18.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g19.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g20.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g21.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g22.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g23.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g24.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g25.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g26.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g27.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g28.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g29.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g30.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g31.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g32.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g33.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g34.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g35.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g36.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g37.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g38.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g39.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g40.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g41.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/slot/slot-g42.png" alt="Slot Game">
+            </a>
+
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------   LIVE CASINO  -------------------------------------------------------->
+    <!-- ========================================================= LIVE CASINO ========================================================= -->
+
+    <section class="lc-games">
+
+        <div class="slot-section-title">
+
+            <div class="slot-section-icon">
+                <img src="imgs/icon/title_0005_cas-ic.png" alt="Live Casino">
+            </div>
+
+            <div class="slot-section-text">
+                <h2>Live Casino</h2>
+                <p>Real dealers • Real time • Real thrill</p>
+            </div>
+
+            <div class="slot-section-line"></div>
+        </div>
+
+        <div class="slot-grid">
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-01.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-02.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-03.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-04.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-05.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-06.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-07.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-08.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-09.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-10.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-11.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-12.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-13.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-14.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-15.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-16.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-17.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-18.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-19.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-20.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/casino/cas-21.png" alt="Slot Game">
+            </a>
+
+
+
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------   SPORTSBOOK  -------------------------------------------------------->
+    <!-- ========================================================= SPORTSBOOK ========================================================= -->
+
+    <section class="sport-games">
+
+        <div class="slot-section-title">
+
+            <div class="slot-section-icon">
+                <img src="imgs/icon/title_0002_sports-ic.png" alt="Sportsbook">
+            </div>
+
+            <div class="slot-section-text">
+                <h2>Sportsbook</h2>
+                <p>Live odds • Big matches • More excitement</p>
+            </div>
+
+            <div class="slot-section-line"></div>
+
+        </div>
+
+        <div class="slot-grid">
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-01.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-02.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-03.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-04.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-05.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-06.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-07.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-08.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-09.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-10.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/sports/spt-11.png" alt="Slot Game">
+            </a>
+
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------   BATTLE  -------------------------------------------------------->
+    <!-- ========================================================= BATTLE ========================================================= -->
+
+    <section class="battle-games">
+
+        <div class="slot-section-title">
+
+            <div class="slot-section-icon">
+                <img src="imgs/icon/title_0000_battle-ic.png" alt="Battle">
+            </div>
+
+            <div class="slot-section-text">
+                <h2>Battle</h2>
+                <p>Epic fights • Real action • Non-stop thrills</p>
+            </div>
+
+            <div class="slot-section-line"></div>
+        </div>
+
+        <div class="slot-grid">
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-01.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-02.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-03.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-04.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-05.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-06.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-07.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-08.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-09.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-10.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-11.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-12.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-13.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-14.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-15.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-16.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-17.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-18.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-19.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/battle/btlehome-20.png" alt="Slot Game">
+            </a>
+
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------   LOTTERY  -------------------------------------------------------->
+    <!-- ========================================================= LOTTERY ========================================================= -->
+
+    <section class="lottery-games">
+
+        <div class="slot-section-title">
+
+            <div class="slot-section-icon">
+                <img src="imgs/icon/title_0003_lottery-ic.png" alt="Lottery">
+            </div>
+
+            <div class="slot-section-text">
+                <h2>Lottery</h2>
+                <p>Lucky draws • Big prizes • More chances</p>
+            </div>
+
+            <div class="slot-section-line"></div>
+
+        </div>
+
+        <div class="slot-grid">
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-01.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-02.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-03.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-04.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-05.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-06.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-07.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/lotto/lottoh-08.png" alt="Slot Game">
+            </a>
+
+        </div>
+
+    </section>
+
+    <!----------------------------------------------------------   POKER  -------------------------------------------------------->
+    <!-- ========================================================= POKER ========================================================= -->
+
+    <section class="poker-games">
+
+        <div class="slot-section-title">
+
+            <div class="slot-section-icon">
+                <img src="imgs/icon/title_0001_poker-ic.png" alt="Poker">
+            </div>
+
+            <div class="slot-section-text">
+                <h2>Poker</h2>
+                <p>Smart plays • Big hands • More excitement</p>
+            </div>
+
+            <div class="slot-section-line"></div>
+        </div>
+
+        <div class="slot-grid">
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/poker/pokerh-01.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/poker/pokerh-02.png" alt="Slot Game">
+            </a>
+
+            <a href="#" class="slot-card">
+                <img src="imgs/games/poker/pokerh-03.png" alt="Slot Game">
+            </a>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
