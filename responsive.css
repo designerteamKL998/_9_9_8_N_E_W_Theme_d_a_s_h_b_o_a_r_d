@@ -1,4 +1,4 @@
-﻿.deks-view {
+.deks-view {
     display: block;
 }
 
@@ -182,7 +182,7 @@
 
         .hot-games .games-grid {
             display: flex;
-            gap: 5px;
+            gap: 18px;
             overflow-x: auto;
             overflow-y: visible;
             padding: 8px 0 12px;
@@ -196,9 +196,9 @@
             }
 
             .hot-games .games-grid .game-card {
-                flex: 0 0 120px;
-                width: 120px;
-                min-width: 120px;
+                flex: 0 0 80px;
+                width: 80px;
+                min-width: 80px;
             }
 
     .game-card img {
