@@ -182,7 +182,7 @@
 
         .hot-games .games-grid {
             display: flex;
-            gap: 18px;
+            gap: 20px;
             overflow-x: auto;
             overflow-y: visible;
             padding: 8px 0 12px;
@@ -196,9 +196,9 @@
             }
 
             .hot-games .games-grid .game-card {
-                flex: 0 0 80px;
-                width: 80px;
-                min-width: 80px;
+                flex: 0 0 84px;
+                width: 84px;
+                min-width: 84px;
             }
 
     .game-card img {
@@ -845,6 +845,7 @@
     .hot-games {
         width: calc(100% - 12px);
         margin: 0px 5px;
+        padding: 0px 6px;
     }
 
     .slot-games,
