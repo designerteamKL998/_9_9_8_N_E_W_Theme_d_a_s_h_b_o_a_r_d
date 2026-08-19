@@ -866,7 +866,7 @@
 
         .game-card img {
             aspect-ratio: 1 / 1;
-            border-radius: 6px;
+            border-radius: 10px;
         }
 
     .slot-section-title {
