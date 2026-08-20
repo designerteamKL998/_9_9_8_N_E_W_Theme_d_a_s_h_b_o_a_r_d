@@ -1,4 +1,4 @@
-﻿// SLIDER
+// SLIDER
 document.querySelectorAll('.promo-slider').forEach(slider => {
 
     const track = slider.querySelector('.promo-track');
@@ -108,3 +108,58 @@ window.addEventListener("scroll", () => {
     );
 
 });
+
+
+//profile-dropdown
+const userProfileBtn = document.getElementById("userProfileBtn");
+const userProfileWrap = document.querySelector(".user-profile-wrap");
+
+if (userProfileBtn && userProfileWrap) {
+
+    userProfileBtn.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        userProfileWrap.classList.toggle("active");
+
+    });
+
+
+    document.addEventListener("click", function (e) {
+
+        if (!userProfileWrap.contains(e.target)) {
+            userProfileWrap.classList.remove("active");
+        }
+
+    });
+
+}
+
+//eye-balance hide out
+const btns = document.querySelectorAll(".balance-view, .balance-eye");
+const balances = document.querySelectorAll(".balance-amount");
+
+btns.forEach(btn => btn.onclick = () => {
+    const hide = balances[0].textContent !== "**.**";
+
+    balances.forEach(b => b.textContent = hide ? "**.**" : "0.00");
+    btns.forEach(b => b.querySelector("i").className =
+        `fa-solid fa-eye${hide ? "-slash" : ""}`
+    );
+});
+
+//user dropdown
+const dropdown = document.getElementById("userDropdown");
+const mobileMenu = document.querySelector(".mobile-more-menu");
+const desktopParent = dropdown.parentElement;
+
+function moveDropdown() {
+    if (window.innerWidth <= 768) {
+        mobileMenu.appendChild(dropdown);
+    } else {
+        desktopParent.appendChild(dropdown);
+    }
+}
+
+moveDropdown();
+window.addEventListener("resize", moveDropdown);
