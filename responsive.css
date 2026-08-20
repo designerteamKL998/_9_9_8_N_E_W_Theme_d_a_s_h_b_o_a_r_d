@@ -431,8 +431,21 @@
 
     .btn-deposit {
         margin-left:0px;
+        padding:0px 2px;
     }
 
+        .btn-deposit i {
+            font-size: 22px;
+        }
+
+    .deposit-plus {
+        right: 2px;
+        bottom: 1px;
+        width: 12px;
+        height: 12px;
+        font-size: 10px;
+    }
+    
     .balance-view {
         margin-left: 5px;
         width: auto;
@@ -496,16 +509,17 @@
     }
 
         .mobile-more-menu .user-dropdown {
-            position: static !important;
-            display: block !important;
-            width: 100% !important;
-            max-width: none !important;
-            height: auto !important;
-            max-height: none !important;
-            margin: 0 !important;
-            transform: none !important;
-            visibility: visible !important;
-            opacity: 1 !important;
+            position: static;
+            display: block;
+            width: 100%;
+            max-width: none;
+            height: auto;
+            max-height: none;
+            margin: 0;
+            transform: none;
+            visibility: visible;
+            opacity: 1;
+            box-shadow: unset;
         }
 
 
@@ -743,6 +757,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
         z-index: 100;
+        border-radius: 25px;
     }
 
 
