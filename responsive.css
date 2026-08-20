@@ -48,12 +48,25 @@
         }
 
     .main-nav {
-        margin-left: 20px;
-        gap: 18px;
+        margin-left: 0px;
+        gap: 5px;
+        padding: 0px;
     }
 
     .nav-link {
         font-size: 10px;
+        gap: 4px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+        .nav-link .nav-icon img {
+            width: 18px;
+            height: 18px;
+        }
+
+    .nav-text {
+        font-size: var(--font-l);
     }
 
     .header-right {
@@ -71,6 +84,10 @@
         font-size: 14px;
     }
 
+    .user-dropdown {
+        width:100%;
+    }
+    
     .divider {
         height: 25px;
     }
@@ -406,11 +423,22 @@
         display: flex;
         gap: 0px;
         background: #ffffff;
-        border-radius: 18px;
+        border-radius: 0px;
+        border-left: 0px solid red;
+        border-right: 0px solid red;
         position: relative;
     }
 
+    .btn-deposit {
+        margin-left:0px;
+    }
 
+    .balance-view {
+        margin-left: 5px;
+        width: auto;
+        height: auto;
+    }
+    
     .balance-label {
         margin-bottom: 0;
         font-size: 12px;
@@ -449,6 +477,36 @@
         display: none;
         padding: 0 8px;
     }
+
+    .mobile-more-wrap {
+        position: relative;
+    }
+
+    .mobile-more-menu {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 360px;
+        max-width: calc(100vw - 20px);
+        height: auto;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 9999;
+    }
+
+        .mobile-more-menu .user-dropdown {
+            position: static !important;
+            display: block !important;
+            width: 100% !important;
+            max-width: none !important;
+            height: auto !important;
+            max-height: none !important;
+            margin: 0 !important;
+            transform: none !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
 
 
     /* =====================================================
