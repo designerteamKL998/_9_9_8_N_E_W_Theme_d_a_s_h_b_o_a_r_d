@@ -522,7 +522,9 @@
             box-shadow: unset;
         }
 
-
+    .btn-deposit:hover::after {
+        opacity: 0;
+    }
     /* =====================================================
        PROMOTION BANNER
        ORIGINAL
