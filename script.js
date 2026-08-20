@@ -118,18 +118,10 @@ if (userProfileBtn && userProfileWrap) {
 
     userProfileBtn.addEventListener("click", function (e) {
 
+        if (window.innerWidth > 768) return;
+
         e.stopPropagation();
-
         userProfileWrap.classList.toggle("active");
-
-    });
-
-
-    document.addEventListener("click", function (e) {
-
-        if (!userProfileWrap.contains(e.target)) {
-            userProfileWrap.classList.remove("active");
-        }
 
     });
 
