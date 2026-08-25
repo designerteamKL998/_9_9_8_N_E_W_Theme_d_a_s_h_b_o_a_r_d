@@ -342,6 +342,299 @@
     .mobile-bottom-nav {
         display: none;
     }
+
+/*=============   DEPOSIT PAGE   ================*/
+
+    .sidebar {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: calc(100% - 40px);
+        height: auto;
+        margin: 20px auto 0;
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #edf3fb;
+        border-radius: 22px;
+        box-shadow: 0 8px 25px rgba(37, 96, 160, 0.08);
+        overflow: hidden;
+    }
+
+    .sidebar-link {
+        flex: 1 1 0;
+        min-width: 180px;
+        height: 54px;
+        padding: 0 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-sizing: border-box;
+        background: #fff;
+        border: 1px solid #d8e1ed;
+        border-radius: 14px;
+        white-space: nowrap;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 4px 5px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .sidebar-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+        .sidebar-nav::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .sidebar-nav::-webkit-scrollbar-thumb {
+            background: transparent;
+            border-radius: 20px;
+        }
+
+    .sidebar-link.active {
+        background: #f1f7ff;
+        border-color: #1976ff;
+        box-shadow: 0 3px 0 #1976ff, 0 5px 12px rgba(25, 118, 255, 0.08);
+    }
+
+    .main-content {
+        margin-left: 0px;
+    }
+
+    .sidebar.close + .main-content {
+        margin-left: 0px;
+    }
+
+    .sidebar.close {
+        width: 100%;
+    }
+
+        .sidebar.close .sidebar-text {
+            display: block;
+        }
+
+        .sidebar.close .sidebar-link {
+            justify-content: flex-start;
+            padding: 0 15px;
+        }
+
+        .sidebar.close .sidebar-icon {
+            margin: 0;
+        }
+
+
+    .page-header {
+        padding: 20px 24px 16px;
+    }
+
+    .page-title h1 {
+        font-size: 22px;
+    }
+
+
+    .deposit-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 20px 20px;
+    }
+
+    .sidebar-text {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        color: #26364d;
+        white-space: nowrap;
+    }
+
+    .sidebar-link.active .sidebar-text {
+        color: #176cff;
+    }
+
+
+    .sidebar-icon {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .sidebar-icon img {
+            object-fit: contain;
+        }
+
+    .sidebar-help {
+        display: none;
+    }
+
+    .deposit-left {
+        min-height: auto;
+        padding: 18px 18px 0;
+        background-size: 90%;
+    }
+    .deposit-right {
+        min-height: 560px;
+    }
+
+    .deposit-left,
+    .deposit-right {
+        width: 100%;
+    }
+
+    .payment-methods {
+        gap: 8px;
+    }
+
+    .payment-method {
+        flex: 0 0 calc((100% - 16px) / 3);
+        width: calc((100% - 16px) / 3);
+        min-height: 110px;
+        padding: 12px 8px;
+        gap: 7px;
+    }
+
+    .payment-icon {
+        width: 46px;
+        height: 46px;
+        flex: 0 0 46px;
+    }
+
+        .payment-icon img {
+            width: 34px;
+            height: 34px;
+        }
+
+    .payment-check {
+        top: 8px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .deposit-right {
+        min-height: 520px;
+        padding: 16px 18px 45px;
+    }
+
+    .gateway-grid {
+        gap: 8px;
+    }
+
+    .gateway-card {
+        min-width: 110px;
+        flex: 0 0 110px;
+        min-height: 82px;
+        padding: 10px;
+        gap: 5px;
+    }
+
+        .gateway-card img {
+            width: 65px;
+            height: 65px;
+        }
+
+    .bank-info-card {
+        min-height: 92px;
+        padding: 12px 14px;
+        gap: 14px;
+    }
+
+    .bank-main-icon {
+        width: 56px;
+        height: 56px;
+        flex: 0 0 56px;
+    }
+
+        .bank-main-icon img {
+            width: 32px;
+            height: 32px;
+        }
+
+    .bank-detail {
+        min-width: 0;
+    }
+
+    .amount-card {
+        padding: 20px;
+    }
+
+    .amount-input-new {
+        height: 48px;
+    }
+
+    .currency-btn {
+        width: 90px;
+    }
+
+    .amount-display {
+        width: 90px;
+    }
+
+    .quick-amounts {
+        gap: 12px;
+    }
+
+        .quick-amounts > button:not(.confirm-btn) {
+            width: 58px;
+            height: 58px;
+            flex: 0 0 58px;
+        }
+
+            .quick-amounts > button:not(.confirm-btn) span {
+                width: 23px;
+                height: 23px;
+                font-size: var(--font-lg);
+            }
+
+    .confirm-btn {
+        min-width: 150px;
+        height: 58px;
+        gap: 10px;
+    }
+
+    .confirm-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .qr-result {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .qr-code {
+        width: 110px;
+        height: 110px;
+        flex: 0 0 110px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -845,6 +1138,34 @@
         top: 56px;
         z-index: 9998;
     }
+
+/*======================   DEPOSIT  ==========================*/
+    .quick-amounts {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+        /* Quick amount buttons */
+        .quick-amounts > button:not(.confirm-btn) {
+            flex: 0 0 58px;
+            width: 58px;
+            height: 58px;
+        }
+
+        /* Confirm button → full row bawah */
+        .quick-amounts .confirm-btn {
+            flex: 0 0 70%;
+            width: 70%;
+            min-width: 70%;
+            height: 50px;
+            margin-top: 20px;
+            margin-left:0px;
+        }
+
+
 }
 
 
@@ -984,4 +1305,86 @@
             aspect-ratio: 1 / 1;
             border-radius: 7px;
         }
-}
+
+
+    /*======================   DEPOSIT   ============================*/
+    /* Confirm button → full row bawah */
+    .quick-amounts .confirm-btn {
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .amount-card {
+        padding: 0px;
+    }
+
+    .deposit-left, .deposit-right {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .quick-amounts > button:not(.confirm-btn) strong {
+        font-size: var(--font-xl);
+        font-weight: 600;
+    }
+
+    .quick-amounts > button:not(.confirm-btn) {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+    }
+
+        .quick-amounts > button:not(.confirm-btn) span {
+            width: 15px;
+            height: 15px;
+            font-size: var(--font-lg);
+        }
+
+    .payment-info span, .payment-info strong {
+        font-size: var(--font-lg);
+    }
+
+    .payment-method {
+        flex: 0 0 calc((100% - 16px) / 2);
+        width: calc((100% - 16px) / 2);
+    }
+
+    .deposit-content {
+        padding: 10px;
+    }
+
+    .sidebar {
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .sidebar-link {
+        gap: 5px;
+        min-width: 160px;
+    }
+
+    .sidebar-nav {
+        gap: 5px;
+    }
+
+    .page-title {
+        padding: 0px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
