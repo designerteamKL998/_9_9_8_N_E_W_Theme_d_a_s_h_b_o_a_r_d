@@ -1,0 +1,1194 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gaming Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="deposit.css" />
+    <link rel="stylesheet" href="responsive.css" />
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- JQuery -->
+    <script src="script.js" defer></script>
+    <script src="depo.js" defer></script>
+
+</head>
+<header class="main-header">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            <img src="imgs/logo-testing.png" alt="CM8">
+        </a>
+        <!-- NAVIGATION -->
+        <nav class="main-nav">
+
+            <!-- GAMES -->
+            <div class="nav-link nav-dropdown">
+
+                <span class="nav-icon">
+                    <img src="imgs/icon/header/game-ich.png">
+                </span>
+                <span class="nav-text">
+                    Games
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+
+                <div class="nav-dropdown-menu">
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0007_sports-ich.png">
+                        </span>
+                        <span class="nav-text">Sports</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0003_bsttle-ich.png">
+                        </span>
+                        <span class="nav-text">E-sports</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0006_casino-ich.png">
+                        </span>
+                        <span class="nav-text">Live Casino</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0005_slot-ich.png">
+                        </span>
+                        <span class="nav-text">Slots</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0000_download-ich.png">
+                        </span>
+                        <span class="nav-text">APK</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0003_bsttle-ich.png">
+                        </span>
+                        <span class="nav-text">Fish Hunter</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0002_poker-ich.png">
+                        </span>
+                        <span class="nav-text">P2P</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon">
+                            <img src="imgs/icon/header/head_0001_4dlottery-ich.png">
+                        </span>
+                        <span class="nav-text">4D</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- FEATURES -->
+            <div class="nav-link nav-dropdown">
+
+                <span class="nav-icon">
+                    <img src="imgs/icon/header/feature-ich.png" />
+                </span>
+
+                <span class="nav-text">
+                    Features
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+
+                <div class="nav-dropdown-menu">
+                    <a href="#" class="nav-link">
+                        <span class="nav-text">Lucky Draw</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-text">Daily Check-In</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-text">Leveling Program</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-text">Friends</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-text">PK</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- TREASURE -->
+            <div class="nav-link nav-dropdown">
+
+                <span class="nav-icon">
+                    <img src="imgs/icon/header/diamond-ich.png" />
+                </span>
+
+                <span class="nav-text">
+                    Treasure
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
+
+                <div class="nav-dropdown-menu">
+                    <a href="#" class="nav-link">
+                        <span class="nav-text">Free Point</span>
+                    </a>
+
+                    <a href="#" class="nav-link">
+                        <span class="nav-text">Redeem</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="header-right">
+
+            <!-- USER PROFILE -->
+            <div class="user-profile-wrap">
+
+                <button class="user-box" type="button" id="userProfileBtn">
+
+                    <div class="user-icon">
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
+
+                    <div class="user-info">
+                        <span class="username">Mario9 Alphabet</span>
+
+                        <span class="user-vip">
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                            LV.2
+                        </span>
+                    </div>
+
+                    <span class="user-arrow">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+
+                </button>
+
+
+                <!-- PROFILE DROPDOWN -->
+                <div class="user-dropdown" id="userDropdown">
+
+                    <!-- PROFILE HEADER -->
+                    <div class="dropdown-profile">
+
+                        <div class="dropdown-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="dropdown-user-info">
+                            <strong>Mario9 Alphabet</strong>
+
+                            <span>
+                                <i class="fa fa-trophy" aria-hidden="true"></i>
+                                LV.2
+                            </span>
+                        </div>
+
+                        <button class="profile-settings" type="button">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+
+                    </div>
+
+
+                    <!-- LEVEL -->
+                    <div class="profile-stat level-stat">
+
+                        <div class="stat-icon">
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <div class="stat-title">
+                                <span>Level</span>
+
+                                <!--<span class="stat-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>-->
+                            </div>
+
+                            <div class="level-row">
+                                <span>LV.2</span>
+
+                                <span>
+                                    2,400 / 3,000 XP
+                                </span>
+                            </div>
+
+                            <div class="level-progress">
+                                <span></span>
+                            </div>
+
+                            <div class="level-percent">
+                                80%
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GAME POINT -->
+                    <div class="profile-stat gamepoint-stat">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <div class="stat-title">
+                                <span>Game Point</span>
+
+                                <!--<span class="stat-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>-->
+                            </div>
+
+                            <span class="game-point">
+                                2,580 pts
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BALANCE -->
+                    <div class="profile-stat balance-stat">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+
+                        <div class="stat-content">
+
+                            <div class="stat-title">
+                                <span>Balance</span>
+
+                                <!--<span class="stat-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>-->
+                            </div>
+
+                            <div class="balance-detail">
+
+                                <span class="balance-currency">MYR</span>
+                                <span class="balance-amount">0.00</span>
+
+                                <button type="button" class="balance-refresh">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                </button>
+
+                                <button type="button" class="balance-eye">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DROPDOWN FOOTER -->
+                    <div class="dropdown-actions">
+
+                        <a href="profile.html" class="profile-action">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+
+                        <a href="transaction.html" class="profile-action">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <span>Transaction</span>
+                        </a>
+
+                        <button type="button" class="logout-action">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BALANCE HEADER -->
+            <div class="balance-box">
+                <div class="balance-icon">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="balance-header-value">
+                    <span class="balance-label">MYR</span>
+                    <span class="balance-amount">0.00</span>
+                </div>
+                <button type="button" class="balance-view">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+
+
+            <!-- NOTIFICATION
+            <button class="notification-btn" type="button">
+
+                <i class="fa-regular fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>-->
+            <!-- DEPOSIT -->
+            <button class="btn-deposit" type="button" data-tooltip="Deposit">
+
+                <a href="deposit.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span class="deposit-plus">+</span>
+                    <!--<span class="desk-view">Deposit</span>
+                    <span class="mob-view">+Add</span>-->
+                </a>
+
+            </button>
+
+
+            <!-- MOBILE MORE -->
+            <div class="mobile-more-wrap">
+
+                <button class="mobile-more-btn" type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+
+                <div class="mobile-more-menu">
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+<nav class="mobile-bottom-nav mob-view">
+    <a href="#" class="bottom-nav-item active">
+        <span class="bottom-nav-icon"><i class="fa-etch fa-solid fa-house"></i></span>
+        <span>Home</span>
+    </a>
+    <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+        <span>Promotions</span>
+    </a>
+    <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-icon"><i class="fa-solid fa-headset"></i></span>
+        <span>Support</span>
+    </a>
+    <a href="#" class="bottom-nav-item">
+        <span class="bottom-nav-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+        <span>Profile</span>
+    </a>
+</nav>
+
+<aside class="sidebar" id="sidebar">
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar-nav">
+
+        <a href="deposit.html" class="sidebar-link active">
+            <span class="sidebar-icon">
+                <img src="imgs/icon/sidebar/sidenav_depo-ich.png" />
+            </span>
+            <span class="sidebar-text">Deposit</span>
+        </a>
+
+
+        <a href="#" class="sidebar-link">
+            <span class="sidebar-icon">
+                <img src="imgs/icon/sidebar/sidenav_withdrawal-ich.png" />
+            </span>
+            <span class="sidebar-text">Withdrawal</span>
+        </a>
+
+
+        <a href="#" class="sidebar-link">
+            <span class="sidebar-icon">
+                <img src="imgs/icon/sidebar/sidenav_statement-ich.png" />
+            </span>
+            <span class="sidebar-text">Statement</span>
+        </a>
+
+
+        <a href="#" class="sidebar-link">
+            <span class="sidebar-icon">
+                <img src="imgs/icon/sidebar/sidenav_mybet-ich.png" />
+            </span>
+            <span class="sidebar-text">MyBet</span>
+        </a>
+
+
+        <a href="#" class="sidebar-link">
+            <span class="sidebar-icon">
+                <img src="imgs/icon/sidebar/sidenav_acc-ich.png" />
+            </span>
+            <span class="sidebar-text">Account</span>
+        </a>
+
+
+        <a href="#" class="sidebar-link">
+            <span class="sidebar-icon">
+                <img src="imgs/icon/sidebar/sidenav_announce-ich.png" />
+            </span>
+            <span class="sidebar-text">Announcements</span>
+        </a>
+
+    </nav>
+
+
+    <!-- Help Card -->
+    <div class="sidebar-help">
+
+        <div class="help-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M4 13v-2a8 8 0 0 1 16 0v2"></path>
+                <path d="M4 13a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 2z"></path>
+                <path d="M20 13a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"></path>
+                <path d="M17 15c0 3-2 5-5 5"></path>
+                <path d="M12 20h-2"></path>
+            </svg>
+        </div>
+
+        <h3>Need Help?</h3>
+
+        <p>
+            Our support team is ready
+            to assist you.
+        </p>
+
+        <button class="live-chat-btn" type="button" id="liveChatBtn">
+            <span class="chat-left">
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 5h14a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-7l-4 3v-3H5a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z"></path>
+                    <path d="M8 12h.01"></path>
+                    <path d="M12 12h.01"></path>
+                    <path d="M16 12h.01"></path>
+                </svg>
+
+                <span>Live Chat</span>
+            </span>
+
+            <svg class="chat-arrow" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+
+    </div>
+
+</aside>
+<main class="main-content">
+
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
+    <section class="page-header">
+
+        <div class="page-title">
+
+            <div class="page-title-row">
+                <h1>Deposit</h1>
+            </div>
+
+            <p>
+                Make a deposit to your account and start playing.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DEPOSIT CONTENT
+    ========================== -->
+    <section class="deposit-content">
+
+        <!-- =====================================================
+             LEFT
+        ====================================================== -->
+        <div class="deposit-left">
+
+            <!-- =========================
+                 1. PAYMENT METHOD
+            ========================== -->
+            <div class="deposit-step">
+
+                <h3>Payment Method</h3>
+
+
+                <div class="payment-methods">
+
+
+                    <!-- BANK-IN -->
+                    <button type="button" class="payment-method active" data-method="bank">
+                        <div class="payment-icon">
+                            <img src="imgs/icon/sidebar/banktt-ich.png" alt="Bank Transfer">
+                        </div>
+
+                        <div class="payment-info">
+                            <strong>
+                                Bank-in Transfer
+                            </strong>
+                            <span> Transfer directly from<br> your bank </span>
+                        </div>
+
+                        <div class="payment-check">
+                            ✓
+                        </div>
+
+                    </button>
+
+
+                    <!-- ONLINE TRANSFER -->
+                    <button type="button"class="payment-method"data-method="online">
+                        <div class="payment-icon">
+                            <img src="imgs/icon/sidebar/onltt-ich.png" alt="Online Transfer">
+                        </div>
+
+                        <div class="payment-info">
+                            <strong>
+                                Online Transfer
+                            </strong>
+                            <span>
+                                Transfer through payment gateway
+                            </span>
+                        </div>
+
+                        <div class="payment-check">
+                            ✓
+                        </div>
+                    </button>
+
+
+                    <!-- QR -->
+                    <button type="button" class="payment-method" data-method="qr">
+                        <div class="payment-icon">
+                            <img src="imgs/icon/sidebar/bankqr-ich.png" alt="QR Code Transfer">
+                        </div>
+
+                        <div class="payment-info">
+                            <strong>
+                                QR Code Payment
+                            </strong>
+
+                            <span>
+                                Pay using QR payment gateway
+                            </span>
+
+                        </div>
+
+                        <div class="payment-check">
+                            ✓
+                        </div>
+
+                    </button>
+
+
+                    <!-- E-WALLET -->
+                    <button type="button" class="payment-method" data-method="ewallet">
+                        <div class="payment-icon"><img src="imgs/icon/sidebar/ewallet-ich.png" alt="E Wallet"></div>
+                        <div class="payment-info">
+                            <strong>E-Wallet</strong>
+                            <span>Pay using supported e-wallets</span>
+                        </div>
+                        <div class="payment-check">✓</div>
+                    </button>
+
+
+                    <!-- CRYPTO -->
+                    <button type="button" class="payment-method" data-method="crypto">
+                        <div class="payment-icon"><img src="imgs/icon/sidebar/crypto-ich.png" alt="Crypto"></div>
+                        <div class="payment-info">
+                            <strong>Crypto</strong>
+                            <span>Deposit using crypto payment</span>
+                        </div>
+                        <div class="payment-check">✓</div>
+                    </button>
+                </div>
+            </div>       
+
+            <!-- =====================================================
+                 ONLINE TRANSFER FLOW
+            ====================================================== -->
+            <div class="deposit-flow online">
+                <div class="deposit-step">
+                    <h3>Payment Gateway</h3>
+
+                    <div class="gateway-grid">
+
+                        <button type="button" class="gateway-card" data-gateway="vaderpay" data-choose-bank="true" data-method-name="Online Transfer">
+                            <img src="imgs/payment/icon-vaderpay-m.png" alt="VaderPay">
+                            <span>VaderPay</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="Help2Pay" data-choose-bank="false" data-method-name="Online Transfer">
+                            <img src="imgs/payment/icon-help2pay-m.png" alt="Help2Pay">
+                            <span>Help2Pay</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="PayEssence" data-choose-bank="false" data-method-name="Online Transfer">
+                            <img src="imgs/payment/icon-payEssence-m.png" alt="PayEssence">
+                            <span>PayEssence</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- =====================================================
+                 QR FLOW
+            ====================================================== -->
+            <div class="deposit-flow qr">
+                <div class="deposit-step">
+                    <h3>Payment Gateway</h3>
+
+                    <div class="gateway-grid">
+
+                        <button type="button" class="gateway-card" data-gateway="vaderpay" data-choose-bank="true" data-method-name="QR">                          
+                            <img src="imgs/payment/icon-vaderpayEwallet-m.png" alt="VaderPay">
+                            <span>Vaderpay(C1)</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="vaderpay" data-choose-bank="false" data-method-name="QR">
+                            <img src="imgs/payment/icon-vaderpayEwallet-m.png" alt="VaderPay">
+                            <span>Vaderpay(C2)</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="Eeziepay" data-choose-bank="false" data-method-name="QR">
+                            <img src="imgs/payment/icn-eeziepay.png" alt="Eeziepay">
+                            <span>Eeziepay</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- =====================================================
+                 E-WALLET FLOW
+            ====================================================== -->
+            <div class="deposit-flow ewallet">
+                <div class="deposit-step">
+                    <h3> Payment Gateway </h3>
+                    <div class="gateway-grid">
+
+                        <button type="button" class="gateway-card" data-gateway="vaderpay" data-choose-bank="true" data-method-name="E-Wallet">
+                            <img src="imgs/payment/icon-vaderpayEwallet-m.png" alt="VaderPay">
+                            <span>VaderPay(C1)</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="A9Wallet" data-choose-bank="false" data-method-name="E-Wallet">
+                            <img src="imgs/payment/icon-A9-m.png" alt="A9Wallet">
+                            <span>A9Wallet</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="PayEssence" data-choose-bank="false" data-method-name="E-Wallet">
+                            <img src="imgs/payment/icon-payEssence-m.png" alt="PayEssence">
+                            <span>PayEssence</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="PayJom" data-choose-bank="false" data-method-name="E-Wallet">
+                            <img src="imgs/payment/icon-vaderpayEwallet-m.png" alt="PayJom">
+                            <span>PayJom</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="Bigpayz" data-choose-bank="false" data-method-name="E-Wallet">
+                            <img src="imgs/payment/icon-bigpayz-new.png" alt="Bigpayz">
+                            <span>Bigpayz</span>
+                        </button>
+
+                        <button type="button" class="gateway-card" data-gateway="Eeziepay" data-choose-bank="true" data-method-name="E-Wallet">
+                            <img src="imgs/payment/icn-eeziepay.png" alt="Eeziepay">
+                            <span>Eeziepay</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- =====================================================
+                 CRYPTO FLOW
+            ====================================================== -->
+            <div class="deposit-flow crypto">
+                <div class="deposit-step">
+                    <h3>Payment Gateway</h3>
+                    <div class="gateway-grid">
+
+                        <button type="button" class="gateway-card" data-gateway="Eeziepay" data-choose-bank="true" data-method-name="Crypto">
+                            <img src="imgs/payment/icon-vaderpay-m.png" alt="VaderPay">
+                            <span>VaderPay(C2)</span>
+                        </button>
+
+                    </div>
+                </div>               
+            </div>
+
+            <!-- CHOOSE BANK -->
+            <div class="deposit-step choose-bank-step bank-choose-bank">
+                <h3>Choose Bank</h3>
+
+                <div class="custom-dropdown">
+
+                    <button type="button" class="custom-dropdown-btn">
+                        <span class="custom-dropdown-value">
+                            <img src="imgs/icon/header/cimblogo.png" alt="CIMB Bank">
+                            <span>CIMB Bank</span>
+                        </span>
+                        <span class="custom-dropdown-arrow"></span>
+                    </button>
+
+                    <div class="custom-dropdown-menu">
+                        <button type="button" class="custom-dropdown-option">
+                            <img src="imgs/icon/header/cimblogo.png" alt="CIMB Bank">
+                            <span>CIMB Bank</span>
+                        </button>
+
+
+                        <button type="button" class="custom-dropdown-option">
+                            <img src="imgs/icon/header/maybanklogo.png" alt="Maybank">
+                            <span>Maybank</span>
+                        </button>
+
+                        <button type="button" class="custom-dropdown-option">
+                            <img src="imgs/icon/header/pbblogo.png" alt="Public Bank">
+                            <span>Public Bank</span>
+                        </button>
+
+                        <button type="button" class="custom-dropdown-option">
+                            <img src="imgs/icon/header/hlbdepo.png" alt="Hong Leong Bank">
+                            <span>Hong Leong Bank</span>
+                        </button>
+
+                        <button type="button" class="custom-dropdown-option">
+                            <img src="imgs/icon/header/rhblogo.png" alt="RHB Bank">
+                            <span>RHB Bank</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>            
+        </div>
+
+
+        <!-- =====================================================
+         RIGHT
+    ====================================================== -->
+
+        <div class="deposit-right">
+            <!-- =================================================
+             RIGHT - BANK REQUIRED
+             Untuk gateway yang ada data-choose-bank="true"
+        ================================================== -->
+
+            <div class="right-layout right-bank-layout">
+                <!-- BANK INFO -->
+                <div class="bank-info-card">
+                    <div class="bank-main-icon">
+                        <img src="imgs/icon/header/cimblogo.png" alt="Bank">
+                    </div>
+
+                    <div class="bank-detail">
+                        <span>Bank</span>
+                        <strong class="right-bank-name">CIMB Bank</strong>
+                    </div>
+
+
+                    <div class="bank-divider"></div>
+
+                    <div class="bank-detail">
+                        <span>Account Name</span>
+                        <strong>Czhtest8950</strong>
+                    </div>
+
+
+                    <div class="bank-divider"></div>
+
+                    <div class="bank-detail">
+                        <span>Account Number</span>
+                        <strong>1234 5678 9012</strong>
+                    </div>
+
+                    <button class="copy-btn" onclick="copyAccountNumber(this, '1234567890')" title="Copy">
+                        <img src="imgs/icon/header/iconcopy.png" alt="Copy">
+                    </button>
+
+                </div>
+
+
+                <!-- AMOUNT -->
+                <div class="deposit-form-group">
+
+                    <!-- AMOUNT CARD -->
+                    <div class="amount-card">
+
+                        <label>
+                            Enter Amount
+                            <span>*</span>
+                        </label>
+
+
+                        <div class="amount-input-new">
+
+                            <div class="currency-dropdown">
+                                <button type="button" class="currency-btn">
+                                    <span class="currency-value">MYR</span>
+                                    <span class="currency-arrow">▼</span>
+                                </button>
+                                <div class="currency-menu">
+                                    <button type="button" data-currency="MYR">MYR</button>
+                                    <button type="button" data-currency="SGD">SGD</button>
+                                </div>
+                            </div>
+
+
+                            <input type="number"
+                                   class="gateway-amount-input"
+                                   placeholder="Enter amount">
+
+
+                            <div class="amount-display">
+
+                                <span class="amount-icon">
+                                    <img src="imgs/icon/sidebar/wallet-icon.png" />
+                                </span>
+
+                                <strong>
+                                    0.00
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- QUICK ADD -->
+                        <div class="quick-add">
+
+                            <div class="quick-line"></div>
+
+                            <span>
+                                Quick Add
+                            </span>
+
+                            <div class="quick-line"></div>
+
+                        </div>
+
+
+                        <!-- QUICK AMOUNTS -->
+                        <div class="quick-amounts">
+
+                            <button type="button"
+                                    data-amount="20">
+                                <strong>20</strong>
+                                <span>+</span>
+                            </button>
+
+
+                            <button type="button"
+                                    data-amount="50">
+                                <strong>50</strong>
+                                <span>+</span>
+                            </button>
+
+
+                            <button type="button"
+                                    data-amount="100">
+                                <strong>100</strong>
+                                <span>+</span>
+                            </button>
+
+
+                            <button type="button"
+                                    data-amount="200">
+                                <strong>200</strong>
+                                <span>+</span>
+                            </button>
+
+
+                            <button type="button"
+                                    data-amount="500">
+                                <strong>500</strong>
+                                <span>+</span>
+                            </button>
+
+
+                            <button type="button"
+                                    class="deposit-submit confirm-btn">
+
+                                <span class="confirm-icon">
+                                    →
+                                </span>
+
+                                <span>
+                                    Confirm
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <small>
+                        Minimum: RM 30.00
+                        <b>•</b>
+                        Maximum: RM 50,000.00
+                    </small>
+
+                </div>
+
+
+                <!-- TRANSFER TYPE -->
+                <div class="deposit-form-group">
+                    <label>Transfer Type</label>
+
+                    <div class="custom-dropdown">
+                        <button type="button" class="custom-dropdown-btn">
+                            <span class="custom-dropdown-value">
+                                <span>Internet Banking</span>
+                            </span>
+                            <span class="custom-dropdown-arrow"></span>
+                        </button>
+
+                        <div class="custom-dropdown-menu">
+                            <button type="button" class="custom-dropdown-option">Internet Banking</button>
+                            <button type="button" class="custom-dropdown-option">ATM</button>
+                            <button type="button" class="custom-dropdown-option">CDM</button>
+                            <button type="button" class="custom-dropdown-option">SMS Banking</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- UPLOAD -->
+                <div class="deposit-form-group">
+                    <label>Upload Slip<span>(Optional)</span></label>
+
+                    <label class="upload-box" for="depositSlip">
+                        <input type="file" id="depositSlip" accept=".jpg,.jpeg,.png,.pdf">
+                        <img src="imgs/icon/header/upfile.png" alt="Upload">
+
+                        <div class="upload-text">
+                            <strong>Drag & drop your file here</strong>
+                            <span>or click to upload</span>
+                            <small>JPG, PNG or PDF (Max. 5MB)</small>
+                        </div>
+                    </label>
+
+                </div>
+                <button type="button" class="deposit-submit">Submit</button>
+            </div>
+
+
+
+            <!-- =================================================
+             RIGHT - NO BANK REQUIRED
+             Untuk gateway data-choose-bank="false"
+        ================================================== -->
+
+            <div class="right-layout right-gateway-layout">
+
+
+                <!-- GATEWAY HEADER -->
+                <div class="gateway-header">
+                    <h2 class="gateway-name">Gateway</h2>
+
+                    <div class="gateway-logo">
+                        <img src="" alt="Gateway">
+                    </div>
+
+                    <div class="payment-method-label">
+                        <span>Payment Method</span>
+                        <div class="payment-method-line"></div>
+                        <strong class="right-payment-method">E-Wallet</strong>
+                    </div>
+                </div>
+
+
+                <!-- AMOUNT CARD -->
+                <div class="amount-card">
+
+                    <label>
+                        Enter Amount
+                        <span>*</span>
+                    </label>
+
+
+                    <div class="amount-input-new">
+
+                        <div class="currency-dropdown">
+                            <button type="button" class="currency-btn">
+                                <span class="currency-value">MYR</span>
+                                <span class="currency-arrow">▼</span>
+                            </button>
+                            <div class="currency-menu">
+                                <button type="button" data-currency="MYR">MYR</button>
+                                <button type="button" data-currency="SGD">SGD</button>
+                            </div>
+                        </div>
+
+
+                        <input type="number"
+                               class="gateway-amount-input"
+                               placeholder="Enter amount">
+
+
+                        <div class="amount-display">
+
+                            <span class="amount-icon">
+                                <img src="imgs/icon/sidebar/wallet-icon.png" />
+                            </span>
+
+                            <strong>
+                                0.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ADD -->
+                    <div class="quick-add">
+
+                        <div class="quick-line"></div>
+
+                        <span>
+                            Quick Add
+                        </span>
+
+                        <div class="quick-line"></div>
+
+                    </div>
+
+
+                    <!-- QUICK AMOUNTS -->
+                    <div class="quick-amounts">
+
+                        <button type="button"
+                                data-amount="20">
+                            <strong>20</strong>
+                            <span>+</span>
+                        </button>
+
+
+                        <button type="button"
+                                data-amount="50">
+                            <strong>50</strong>
+                            <span>+</span>
+                        </button>
+
+
+                        <button type="button"
+                                data-amount="100">
+                            <strong>100</strong>
+                            <span>+</span>
+                        </button>
+
+
+                        <button type="button"
+                                data-amount="200">
+                            <strong>200</strong>
+                            <span>+</span>
+                        </button>
+
+
+                        <button type="button"
+                                data-amount="500">
+                            <strong>500</strong>
+                            <span>+</span>
+                        </button>
+
+
+                        <button type="button"
+                                class="deposit-submit confirm-btn">
+
+                            <span class="confirm-icon">
+                                →
+                            </span>
+
+                            <span>
+                                Confirm
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECURITY -->
+                <div class="deposit-security">
+
+                    <span class="security-icon">
+                        <img src="imgs/icon/sidebar/rightfootericon-icon.png" />
+                    </span>
+
+                    <span>
+                        Safe, secure and hassle-free transactions.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+
+
+
+
+
+</html>
