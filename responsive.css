@@ -51,6 +51,7 @@
         margin-left: 0px;
         gap: 5px;
         padding: 0px;
+        display:none;
     }
 
     .nav-link {
@@ -996,7 +997,7 @@
     }
 
     .level-link {
-        padding: 5px 15px !important;
+        padding: 0px !important;
     }
 
     .dropdown-user-info strong {
@@ -1006,6 +1007,23 @@
     .user-profile-wrap {
         display:none;
     }
+
+    .stat-title, .stat-icon {
+        display:none;
+    }
+
+    .profile-feature-list {
+        margin-top:0px;
+    }
+
+    .profile-stat {
+        padding: 5px 10px;
+    }
+
+
+
+
+
 
 }
 
