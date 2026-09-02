@@ -45,9 +45,31 @@ document.querySelectorAll(".mobile-game-btn").forEach(button => {
 
         document.querySelector("." + target).style.display = "block";
 
+        // CLOSE HOME MENU
+        const homeWrap = document.querySelector(".bottom-home-wrap");
+
+        if (homeWrap) {
+            homeWrap.classList.remove("game-open");
+        }
+
     });
 
 });
+
+// HOME GAME MENU
+const homeWrap = document.querySelector(".bottom-home-wrap");
+const homeBtn = document.querySelector(".home-btn");
+
+if (homeWrap && homeBtn) {
+
+    homeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        homeWrap.classList.toggle("game-open");
+    });
+
+}
 
 
 // profile-mobile
@@ -77,18 +99,59 @@ if (refreshBtn) {
 
 
 /* =========================================================
-   MOBILE HEADER SCROLL
+   MOBILE BOTTOM MENU SCROLL
 ========================================================= */
 
-window.addEventListener("scroll", () => {
+const mobileBottomNav = document.querySelector(".mobile-bottom-nav");
+const floatingMenuBtn = document.querySelector(".floating-menu-btn");
+const bottomHomeWrap = document.querySelector(".bottom-home-wrap");
 
-    if (window.innerWidth > 768) return;
+function updateMobileMenuScroll() {
+
+    if (window.innerWidth > 1024) return;
 
     const scrolled = window.scrollY > 80;
 
+    if (mobileBottomNav) {
+        mobileBottomNav.classList.toggle("scrolled", scrolled);
+    }
 
-});
+    document.body.classList.toggle("menu-scrolled", scrolled);
 
+    /* Bila scroll, tutup game menu */
+    if (scrolled && bottomHomeWrap) {
+        bottomHomeWrap.classList.remove("game-open");
+    }
+}
+
+window.addEventListener("scroll", updateMobileMenuScroll);
+updateMobileMenuScroll();
+
+
+/* =========================================================
+   FLOATING MENU BUTTON
+========================================================= */
+
+if (floatingMenuBtn) {
+
+    floatingMenuBtn.addEventListener("click", function () {
+
+        /* Show bottom menu */
+        if (mobileBottomNav) {
+            mobileBottomNav.classList.remove("scrolled");
+        }
+
+        /* Hide floating circle */
+        document.body.classList.remove("menu-scrolled");
+
+        /* Optional: terus buka game menu */
+        if (bottomHomeWrap) {
+            bottomHomeWrap.classList.add("game-open");
+        }
+
+    });
+
+}
 /* =========================================================
    MOBILE HEADER STICKY STATE
 ========================================================= */
@@ -118,7 +181,7 @@ if (userProfileBtn && userProfileWrap) {
 
     userProfileBtn.addEventListener("click", function (e) {
 
-        if (window.innerWidth > 768) return;
+        if (window.innerWidth > 1024) return;
 
         e.stopPropagation();
         userProfileWrap.classList.toggle("active");
@@ -146,7 +209,7 @@ const mobileMenu = document.querySelector(".mobile-more-menu");
 const desktopParent = dropdown.parentElement;
 
 function moveDropdown() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
         mobileMenu.appendChild(dropdown);
     } else {
         desktopParent.appendChild(dropdown);
@@ -155,3 +218,31 @@ function moveDropdown() {
 
 moveDropdown();
 window.addEventListener("resize", moveDropdown);
+
+//language
+const languageBtn = document.getElementById("languageBtn");
+const languagePopup = document.getElementById("languagePopup");
+const languageClose = document.getElementById("languageClose");
+
+
+// OPEN
+languageBtn.addEventListener("click", function () {
+    languagePopup.classList.add("show");
+});
+
+
+// CLOSE
+languageClose.addEventListener("click", function () {
+    languagePopup.classList.remove("show");
+});
+
+
+// CLICK OUTSIDE
+languagePopup.addEventListener("click", function (e) {
+
+    if (e.target === languagePopup) {
+        languagePopup.classList.remove("show");
+    }
+
+});
+
