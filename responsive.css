@@ -231,7 +231,7 @@
         left: 7px;
         padding: 2px 7px;
         border-radius: 2px;
-        font-weight: bold;
+        font-size: 10px;
     }
 
     .slot-grid {
@@ -249,32 +249,92 @@
         transform: translateY(-2px);
     }
 
-    .mobile-game-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        width: 66px;
-        position: absolute;
-        left: 8px;
-        z-index: 20;
-        margin-top: 15px;
-    }
-
-    .mobile-game-btn {
-        width: 72px;
-        height: 72px;
+    .bottom-home-wrap {
+        position: relative;
+        flex: 1;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        gap: 4px;
-        padding: 5px;
-        border: 0;
-        border-radius: 10px;
-        background: #f3f3f3;
-        color: #8c8c8c;
-        cursor: pointer;
     }
+
+        .bottom-home-wrap .home-btn {
+            width: 100%;
+        }
+
+
+        /* GAME MENU POPUP */
+        .bottom-home-wrap .mobile-game-menu {
+            position: absolute;
+            left: 50%;
+            bottom: calc(100% + 10px);
+            transform: translateX(-50%) translateY(10px);
+            width: 180px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 7px;
+            padding: 9px;
+            background: rgba(255, 255, 255, 0.97);
+            border: 1px solid #e5eaf0;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            z-index: 10001;
+        }
+
+
+        /* OPEN */
+        .bottom-home-wrap.game-open .mobile-game-menu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+
+
+        /* GAME BUTTON */
+        .bottom-home-wrap .mobile-game-btn {
+            width: 52px;
+            height: 58px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            padding: 3px;
+            border: 0;
+            border-radius: 10px;
+            background: #f5f7fa;
+            color: #777;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+            .bottom-home-wrap .mobile-game-btn:hover {
+                transform: translateY(-2px);
+            }
+
+            .bottom-home-wrap .mobile-game-btn img {
+                width: 34px;
+                height: 34px;
+                object-fit: contain;
+            }
+
+            .bottom-home-wrap .mobile-game-btn span {
+                font-family: var(--font-main);
+                font-size: 8px;
+                font-weight: var(--weight-semibold);
+            }
+
+            .bottom-home-wrap .mobile-game-btn.active {
+                background: #ffe45c;
+                color: #c69b00;
+            }
+
+
 
     .slot-section-icon img {
         width: 20px;
@@ -720,11 +780,12 @@
         border-left: 0px solid red;
         border-right: 0px solid red;
         position: relative;
+        margin-top: -10px;
     }
 
     .btn-deposit {
-        margin-left:0px;
-        padding:0px 2px;
+        margin-left: 0px;
+        padding: 0px 2px;
     }
 
         .btn-deposit i {
@@ -738,13 +799,13 @@
         height: 12px;
         font-size: 10px;
     }
-    
+
     .balance-view {
         margin-left: 5px;
         width: auto;
         height: auto;
     }
-    
+
     .balance-label {
         margin-bottom: 0;
         font-size: 12px;
@@ -778,27 +839,62 @@
         font-size: 12px;
     }
 
-
+    .profile-feature-list {
+        margin-top: 0px;
+        gap: 4px;
+    }
+    
     .btn-logout {
         display: none;
         padding: 0 8px;
     }
 
     .mobile-more-wrap {
+        width: 30px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
+        flex: 0 0 30px;
     }
 
-    .mobile-more-menu {
-        position: absolute;
-        top: 45px;
-        right: 0;
-        width: 360px;
-        max-width: calc(100vw - 20px);
-        height: auto;
-        max-height: calc(100vh - 70px);
-        overflow-y: auto;
-        overflow-x: hidden;
-        z-index: 9999;
+    .mobile-more-btn {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+
+        /* ICON GRID */
+        .mobile-more-btn .menu-grid-icon {
+            width: 18px;
+            height: 18px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3px;
+            flex-shrink: 0;
+        }
+
+            .mobile-more-btn .menu-grid-icon span {
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                border: 2px solid #414d61;
+                border-radius: 2px;
+            }
+
+    .mobile-more-wrap {
+        position: relative;
+        display: block;
     }
 
         .mobile-more-menu .user-dropdown {
@@ -813,11 +909,153 @@
             visibility: visible;
             opacity: 1;
             box-shadow: unset;
+            padding:0px;
         }
 
     .btn-deposit:hover::after {
         opacity: 0;
     }
+
+    /* =====================================================
+       NORMAL NAV ITEM
+    ===================================================== */
+
+    .mobile-bottom-nav .bottom-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 0;
+        margin: 0;
+        border: 0 !important;
+        outline: none;
+        background: transparent !important;
+        color: #222;
+        font-family: var(--font-main);
+        font-size: 10px;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /* =====================================================
+       ICON
+    ===================================================== */
+
+    .mobile-bottom-nav .bottom-nav-icon {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        line-height: 1;
+    }
+    /* =====================================================
+       ACTIVE MENU
+    ===================================================== */
+
+    .mobile-bottom-nav .bottom-nav-item.active {
+        color: #146cff;
+        background: transparent;
+    }
+
+
+        .mobile-bottom-nav .bottom-nav-item.active .bottom-nav-icon {
+            color: #146cff;
+        }
+
+    .mobile-bottom-nav .bottom-nav-item.active,
+    .mobile-bottom-nav .bottom-nav-item:hover {
+        color: #1679ef;
+    }
+
+    .bottom-home-wrap .home-btn {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        color: #1679ef;
+    }
+
+    .bottom-home-wrap .mobile-game-btn span {
+        width: auto !important;
+        font-size: 10px !important;
+        font-weight: 600;
+        text-align: left;
+        line-height: 1;
+    }
+
+    .bottom-home-wrap .mobile-game-btn {
+        width: 100% !important;
+        height: 42px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 10px;
+        padding: 5px 10px !important;
+        border: 0 !important;
+        border-radius: 9px;
+        background: #f5f7fa;
+        color: #777;
+        box-sizing: border-box;
+    }
+
+        .bottom-home-wrap .mobile-game-btn.active {
+            background: #ffe45c;
+            color: #c69b00;
+        }
+
+        .bottom-home-wrap .mobile-game-btn img {
+            width: 34px !important;
+            height: 34px !important;
+            object-fit: contain;
+        }
+    /* =====================================================
+       FLOATING MENU BUTTON
+       SHOW WHEN SCROLL
+    ===================================================== */
+
+    .floating-menu-btn {
+        position: fixed;
+        left: 8px;
+        bottom: 0%;
+        width: 42px;
+        height: 42px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        color: #146cff;
+        font-size: 17px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+        z-index: 10000;
+        cursor: pointer;
+        transform: translateY(-50%);
+    }
+
+
+    /* =====================================================
+       FLOATING BUTTON WHEN SCROLLED
+    ===================================================== */
+
+    body.menu-scrolled .floating-menu-btn {
+        display: flex;
+    }
+
+
+
+
     /* =====================================================
        PROMOTION BANNER
        ORIGINAL
@@ -903,11 +1141,11 @@
     .battle-games,
     .lottery-games,
     .poker-games {
-        margin-left: 84px;
-        width: calc(100% - 92px);
-        max-width: none;
-        margin-top: 14px;
-        margin-bottom: 22px;
+        width: calc(100% - 30px) !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 15px;
     }
 
 
@@ -1019,12 +1257,6 @@
        MOBILE MORE MENU
     ===================================================== */
 
-    .mobile-more-wrap {
-        position: relative;
-        display: block;
-    }
-
-
     .mobile-more-menu {
         display: none;
     }
@@ -1039,57 +1271,91 @@
         cursor: pointer;
         font-size: 13px;
         font-weight: 700;
+        border-left: 1px solid #1f7fee;
     }
 
 
     .mobile-more-menu {
         position: absolute;
-        top: calc(100% + 6px);
+        top: 45px;
         right: 0;
+        width: 300px;
+        max-width: calc(100vw - 20px);
+        height: auto;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 9999;
+        top: calc(100% + 6px);
         min-width: 110px;
-        padding: 8px;
+        padding: 0px;
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-        z-index: 100;
-        border-radius: 25px;
+    }
+
+    
+    .mobile-more-menu.active {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
     }
 
 
-        .mobile-more-menu.active {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-
         .mobile-more-menu a {
-            font-size: 12px;
+            font-size: 10px;
             color: #333;
             text-decoration: none;
             padding: 5px;
         }
 
+    .level-row span {
+        font-size: 11px;
+    }
 
+    .level-link {
+        padding:5px 15px !important;
+    }
 
+    .dropdown-user-info strong {
+        font-size: 13px;
+    }
 
     .mobile-bottom-nav {
-        position: fixed;
+        position: fixed !important;
         left: 8px;
         right: 8px;
         bottom: 8px;
-        display: flex;
+        width: auto !important;
+        height: 58px;
+        display: flex !important;
         align-items: center;
-        justify-content: space-around;
-        background: rgba(255, 255, 255, 0.65);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border-radius: 30px;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
-        z-index: 9999;
-        border: 1px solid #fff;
+        justify-content: center;
         padding: 2px;
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255,255,255,0.95);
+        border-radius: 30px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+        z-index: 99999;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
     }
+
+        /* =====================================================
+       HIDE BOTTOM NAV WHEN SCROLLING
+    ===================================================== */
+
+        .mobile-bottom-nav.scrolled {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+            transform: translateY(20px) !important;
+        }
 
 
     .bottom-nav-item {
@@ -1116,8 +1382,17 @@
         line-height: 1;
     }
 
+        .bottom-nav-icon img{
+            width: 30px;
+            height: 30px;
+        }
 
-    .bottom-nav-item.active {
+    .floating-menu-btn img {
+        width: 25px;
+        height: 25px;
+    }
+
+        .bottom-nav-item.active {
         color: #146cff;
     }
 
@@ -1139,7 +1414,7 @@
         z-index: 9998;
     }
 
-/*======================   DEPOSIT  ==========================*/
+    /*======================   DEPOSIT  ==========================*/
     .quick-amounts {
         display: flex;
         flex-wrap: wrap;
@@ -1162,11 +1437,53 @@
             min-width: 70%;
             height: 50px;
             margin-top: 20px;
-            margin-left:0px;
+            margin-left: 0px;
         }
 
+    .mobile-bottom-nav > .bottom-home-wrap,
+    .mobile-bottom-nav > .bottom-nav-item {
+        flex: 1;
+        width: 50%;
+        height: 100%;
+    }
 
+    .bottom-home-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+    }
+
+        .bottom-home-wrap .mobile-game-menu {
+            position: absolute !important;
+            left: 50% !important;
+            bottom: calc(100% + 10px) !important;
+            transform: translateX(-50%) translateY(10px);
+            width: 150px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 5px;
+            padding: 8px;
+            background: rgba(255,255,255,0.98);
+            border: 1px solid #e4eaf2;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            z-index: 100000;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        }
+
+        .bottom-home-wrap.game-open .mobile-game-menu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
 }
+
 
 
 
@@ -1250,10 +1567,11 @@
     .battle-games,
     .lottery-games,
     .poker-games {
-        margin-left: 84px;
-        width: calc(100% - 92px);
-        margin-top: 12px;
-        margin-bottom: 18px;
+        width: calc(100% - 30px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
     }
 
     .game-card {
@@ -1292,9 +1610,9 @@
     }
 
     .slot-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap: 7px;
-        row-gap: 8px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 20px;
+        row-gap: 20px;
     }
 
     .slot-card {
@@ -1376,15 +1694,9 @@
 
 
 
-
-
-
-
-
-
-
-
     }
+
+
 
 
 
