@@ -1338,13 +1338,13 @@ body {
 }
 
     .btn-deposit img {
-        width: 30px;
+        width: 27px;
     }
 
 .notification-btn img {
     display: block;
-    width: 21px;
-    height: 21px;
+    width: 27px;
+    height: 27px;
     object-fit: contain;
 }
 
