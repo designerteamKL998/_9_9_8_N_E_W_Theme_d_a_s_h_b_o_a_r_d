@@ -78,8 +78,15 @@ const moreMenu = document.querySelector(".mobile-more-menu");
 
 if (moreBtn && moreMenu) {
 
-    moreBtn.addEventListener("click", () => {
+    moreBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
         moreMenu.classList.toggle("active");
+    });
+
+    moreMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
     });
 
 }
@@ -219,30 +226,186 @@ function moveDropdown() {
 moveDropdown();
 window.addEventListener("resize", moveDropdown);
 
-//language
+// =========================================
+// LANGUAGE POPUP
+// =========================================
+
 const languageBtn = document.getElementById("languageBtn");
 const languagePopup = document.getElementById("languagePopup");
 const languageClose = document.getElementById("languageClose");
 
 
 // OPEN
-languageBtn.addEventListener("click", function () {
-    languagePopup.classList.add("show");
-});
+if (languageBtn) {
+    languageBtn.addEventListener("click", function () {
+        languagePopup.classList.add("show");
+
+        document.body.classList.add("language-open");
+    });
+}
 
 
 // CLOSE
-languageClose.addEventListener("click", function () {
+function closeLanguagePopup() {
     languagePopup.classList.remove("show");
-});
+
+    document.body.classList.remove("language-open");
+}
+
+
+if (languageClose) {
+    languageClose.addEventListener("click", closeLanguagePopup);
+}
 
 
 // CLICK OUTSIDE
 languagePopup.addEventListener("click", function (e) {
 
     if (e.target === languagePopup) {
-        languagePopup.classList.remove("show");
+        closeLanguagePopup();
     }
 
 });
 
+
+// =========================================
+// SELECT LANGUAGE
+// =========================================
+
+const languageItems = document.querySelectorAll(".language-item");
+
+languageItems.forEach(function (item) {
+
+    item.addEventListener("click", function () {
+
+        // Remove active from all
+        languageItems.forEach(function (language) {
+            language.classList.remove("active");
+        });
+
+        // Add active to selected
+        this.classList.add("active");
+
+        // Get selected language
+        const selectedLanguage = this.dataset.language;
+
+        console.log("Selected language:", selectedLanguage);
+
+        /*
+         * Kalau nak terus tukar language website,
+         * letak function/API translation kat sini.
+         */
+
+    });
+
+});
+
+
+// =========================================
+// ESC KEY
+// =========================================
+
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Escape" &&
+        languagePopup.classList.contains("show")) {
+
+        closeLanguagePopup();
+
+    }
+
+});
+
+// =========================================
+// CLOSE ALL FLOATING MENU WHEN CLICK OUTSIDE
+// =========================================
+
+document.addEventListener("click", function (e) {
+
+    const homeWrap = document.querySelector(".bottom-home-wrap");
+    const moreMenu = document.querySelector(".mobile-more-menu");
+    const profileWrap = document.querySelector(".user-profile-wrap");
+
+    // Floating elements
+    const floatingElements = [
+        homeWrap,
+        moreMenu,
+        profileWrap
+    ].filter(Boolean);
+
+    // Check kalau click dalam floating menu
+    const clickedInside = floatingElements.some(el =>
+        el.contains(e.target)
+    );
+
+    // Kalau click luar floating menu → tutup semua
+    if (!clickedInside) {
+
+        if (homeWrap) {
+            homeWrap.classList.remove("game-open");
+        }
+
+        if (moreMenu) {
+            moreMenu.classList.remove("active");
+        }
+
+        if (profileWrap) {
+            profileWrap.classList.remove("active");
+        }
+
+        document.body.classList.remove("menu-scrolled");
+    }
+
+});
+
+// =========================================
+// NOTIFICATION
+// =========================================
+
+const notificationButtons = document.querySelectorAll(
+    ".notification-btn, .notification-bottom-btn"
+);
+
+const notificationDots = document.querySelectorAll(
+    ".notification-dot"
+);
+
+function openNotification() {
+
+    // Tutup floating menu lain
+    const homeWrap = document.querySelector(".bottom-home-wrap");
+    const moreMenu = document.querySelector(".mobile-more-menu");
+
+    if (homeWrap) {
+        homeWrap.classList.remove("game-open");
+    }
+
+    if (moreMenu) {
+        moreMenu.classList.remove("active");
+    }
+
+    // TODO:
+    // Buka notification popup / notification page
+    console.log("Notification opened");
+
+    // Bila notification dah dibuka,
+    // buang tanda unread
+    notificationDots.forEach(dot => {
+        dot.style.display = "none";
+    });
+}
+
+
+// Header + Bottom Notification
+notificationButtons.forEach(button => {
+
+    button.addEventListener("click", function (e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        openNotification();
+
+    });
+
+});
