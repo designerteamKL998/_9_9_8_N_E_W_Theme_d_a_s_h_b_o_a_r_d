@@ -1350,11 +1350,11 @@ body {
 
 .notification-btn .notification-dot {
     position: absolute;
-    top: 7px;
-    right: 7px;
+    top: 11px;
+    right: 9px;
 
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: red;
 }
