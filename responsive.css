@@ -942,31 +942,29 @@
     /* =====================================================
        MOBILE MORE MENU
     ===================================================== */
-
     .mobile-more-menu {
         display: none;
-    }
-
-    .mobile-more-menu {
-        position: absolute;
-        top: 45px;
+        position: fixed;
+        top: 55px;
         right: 0;
         width: 300px;
         max-width: calc(100vw - 20px);
-        height: auto;
-        max-height: calc(100vh - 120px);
+        /* Bagi ruang untuk bottom navigation */
+        max-height: calc(100dvh - 130px);
         overflow-y: auto;
         overflow-x: hidden;
-        z-index: 9999;
-        top: calc(100% + 6px);
-        min-width: 110px;
-        padding: 0px;
+        padding: 0;
         background: #000;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        z-index: 9999;
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
     }
+
+        .mobile-more-menu.active {
+            display: block;
+        }
 
         .mobile-more-menu.active .user-dropdown {
             opacity: 1;
