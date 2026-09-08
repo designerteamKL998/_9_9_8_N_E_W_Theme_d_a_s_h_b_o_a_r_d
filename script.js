@@ -409,3 +409,34 @@ notificationButtons.forEach(button => {
     });
 
 });
+
+// =========================================
+// CLOSE MOBILE MENUS WHEN SCROLLING
+// =========================================
+
+window.addEventListener("scroll", function () {
+
+    if (window.innerWidth > 1024) return;
+
+    // Close More menu
+    const moreMenu = document.querySelector(".mobile-more-menu");
+
+    if (moreMenu) {
+        moreMenu.classList.remove("active");
+    }
+
+    // Close Profile menu
+    const profileWrap = document.querySelector(".user-profile-wrap");
+
+    if (profileWrap) {
+        profileWrap.classList.remove("active");
+    }
+
+    // Close Home game menu
+    const homeWrap = document.querySelector(".bottom-home-wrap");
+
+    if (homeWrap) {
+        homeWrap.classList.remove("game-open");
+    }
+
+});
