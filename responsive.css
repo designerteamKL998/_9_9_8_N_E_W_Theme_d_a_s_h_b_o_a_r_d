@@ -51,7 +51,7 @@
         margin-left: 0px;
         gap: 5px;
         padding: 0px;
-        display:none;
+        display: none;
     }
 
     .nav-link {
@@ -84,7 +84,7 @@
         height: 22px;
         font-size: 14px;
     }
-    
+
     .divider {
         height: 25px;
     }
@@ -282,6 +282,15 @@
         display: none;
     }
 
+    .pagecontent .slot-games,
+    .pagecontent .lc-games,
+    .pagecontent .sport-games,
+    .pagecontent .lottery-games,
+    .pagecontent .battle-games,
+    .pagecontent .poker-games {
+        display: block !important;
+    }
+
     .slot-games {
         display: block;
     }
@@ -305,7 +314,7 @@
 
 
 
-/*=============   DEPOSIT PAGE   ================*/
+    /*=============   DEPOSIT PAGE   ================*/
 
     .sidebar {
         position: relative;
@@ -352,9 +361,9 @@
         scrollbar-width: none;
     }
 
-    .sidebar-nav::-webkit-scrollbar {
-        display: none;
-    }
+        .sidebar-nav::-webkit-scrollbar {
+            display: none;
+        }
 
         .sidebar-nav::-webkit-scrollbar-track {
             background: transparent;
@@ -448,6 +457,7 @@
         padding: 18px 18px 0;
         background-size: 90%;
     }
+
     .deposit-right {
         min-height: 560px;
     }
@@ -809,10 +819,10 @@
         font-size: 11px;
     }
 
-        .bottom-nav-icon img {
-            width: 30px;
-            height: 30px;
-        }
+    .bottom-nav-icon img {
+        width: 30px;
+        height: 30px;
+    }
 
     .floating-menu-btn img {
         width: 25px;
@@ -951,7 +961,7 @@
         top: calc(100% + 6px);
         min-width: 110px;
         padding: 0px;
-        background: #fff;
+        background: #000;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
     }
@@ -1003,15 +1013,15 @@
     }
 
     .user-profile-wrap {
-        display:none;
+        display: none;
     }
 
     .stat-title, .stat-icon {
-        display:none;
+        display: none;
     }
 
     .profile-feature-list {
-        margin-top:0px;
+        margin-top: 0px;
     }
 
     .profile-stat {
@@ -1022,7 +1032,7 @@
         background: linear-gradient(189deg, #ffe45c 0%, #202228 100%);
     }
 
-/*======================================  PROFILE PAGE  ========================================*/
+    /*======================================  PROFILE PAGE  ========================================*/
     .section-title h2 {
         font-size: var(--font-icon);
     }
@@ -1066,11 +1076,6 @@
         display: block;
         object-fit: contain;
     }
-
-
-
-
-
 }
 
 
@@ -1147,25 +1152,25 @@
     .btn-deposit {
         margin-left: 0px;
         padding: 0px;
-        height:auto;
+        height: auto;
     }
 
-.notification-btn, .btn-deposit a {
-    height: auto;
-    width: auto;
-}
-
-        .btn-deposit a, .notification-btn a{
-            padding: 5px;
+        .notification-btn, .btn-deposit a {
+            height: auto;
+            width: auto;
         }
 
-    .notification-btn a {
-        height:auto;
-    }
-    
-    .btn-deposit i {
-                font-size: 22px;
+            .btn-deposit a, .notification-btn a {
+                padding: 5px;
             }
+
+            .notification-btn a {
+                height: auto;
+            }
+
+        .btn-deposit i {
+            font-size: 22px;
+        }
 
     .deposit-plus {
         right: 2px;
@@ -1258,8 +1263,7 @@
     .promo-dots {
         gap: 5px;
         margin-top: 6px;
-        background: #000
-        ;
+        background: #000;
         padding: 5px 0px;
         margin-top: 0px;
     }
@@ -1328,10 +1332,10 @@
     .notification-dot {
         top: 8px;
     }
-        /* =====================================================
+    /* =====================================================
        GAME GRID
     ===================================================== */
-        .games-grid {
+    .games-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         column-gap: 7px;
         row-gap: 9px;
@@ -1481,7 +1485,7 @@
         /* POPUP */
         .language-overlay .language-popup {
             width: 80%;
-            max-width: 100% ;
+            max-width: 100%;
             border-radius: 15px;
             box-shadow: 0 18px 45px rgba(8, 37, 80, 0.24), 0 4px 15px rgba(23, 100, 239, 0.08);
             animation: languageMobileIn .22s ease-out;
@@ -1510,7 +1514,6 @@
         height: 62px;
         min-height: 62px;
         padding: 8px 40px 0px;
-        background: #ffffff;
     }
 
 
@@ -1686,7 +1689,6 @@
         height: 55px;
         padding: 5px 9px;
         gap: 7px;
-        background: linear-gradient( 90deg, #edf5ff 0%, #f7faff 60%, #eaf3ff 100% );
     }
 
 
@@ -1724,7 +1726,7 @@
     }
 
 
-/*==================================================  PROFILE PAGE  =============================================== */
+    /*==================================================  PROFILE PAGE  =============================================== */
     .account-page {
         width: calc(100% - 16px);
         margin: 8px auto;
@@ -1893,24 +1895,9 @@
             padding-left: 17px;
             line-height: 1.6;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-  
+
 
 
 
@@ -2072,6 +2059,7 @@
         width: 100%;
         margin-bottom: 40px;
     }
+
     .quick-amounts > button:not(.confirm-btn) strong {
         font-size: var(--font-xl);
         font-weight: 600;
@@ -2106,6 +2094,7 @@
         margin: 10px auto;
         padding: 10px;
     }
+
     .sidebar-link {
         gap: 5px;
         min-width: 160px;
@@ -2118,13 +2107,4 @@
     .page-title {
         padding: 0px;
     }
-
-
-
-
-    }
-
-
-
-
-
+}
