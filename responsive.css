@@ -954,7 +954,7 @@
         width: 300px;
         max-width: calc(100vw - 20px);
         height: auto;
-        max-height: calc(100vh - 70px);
+        max-height: calc(100vh - 120px);
         overflow-y: auto;
         overflow-x: hidden;
         z-index: 9999;
@@ -964,6 +964,8 @@
         background: #000;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
     }
 
         .mobile-more-menu.active .user-dropdown {
