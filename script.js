@@ -411,12 +411,39 @@ notificationButtons.forEach(button => {
 });
 
 // =========================================
-// CLOSE MOBILE MENUS WHEN SCROLLING
+// CLOSE MOBILE MENUS WHEN SCROLL OUTSIDE
 // =========================================
 
+let scrollingInsideFloatingMenu = false;
+
+// Detect scroll/touch bermula dalam floating menu
+document.addEventListener("touchstart", function (e) {
+
+    scrollingInsideFloatingMenu = !!e.target.closest(
+        ".mobile-more-menu, .user-profile-wrap, .bottom-home-wrap"
+    );
+
+}, { passive: true });
+
+document.addEventListener("pointerdown", function (e) {
+
+    scrollingInsideFloatingMenu = !!e.target.closest(
+        ".mobile-more-menu, .user-profile-wrap, .bottom-home-wrap"
+    );
+
+}, { passive: true });
+
+
+// Bila PAGE scroll
 window.addEventListener("scroll", function () {
 
     if (window.innerWidth > 1024) return;
+
+    // Kalau scroll bermula dalam menu,
+    // jangan close menu
+    if (scrollingInsideFloatingMenu) {
+        return;
+    }
 
     // Close More menu
     const moreMenu = document.querySelector(".mobile-more-menu");
@@ -425,6 +452,7 @@ window.addEventListener("scroll", function () {
         moreMenu.classList.remove("active");
     }
 
+
     // Close Profile menu
     const profileWrap = document.querySelector(".user-profile-wrap");
 
@@ -432,11 +460,22 @@ window.addEventListener("scroll", function () {
         profileWrap.classList.remove("active");
     }
 
-    // Close Home game menu
+
+    // Close Home menu
     const homeWrap = document.querySelector(".bottom-home-wrap");
 
     if (homeWrap) {
         homeWrap.classList.remove("game-open");
     }
 
-});
+}, { passive: true });
+
+
+// Reset selepas jari/mouse dilepaskan
+document.addEventListener("touchend", function () {
+    scrollingInsideFloatingMenu = false;
+}, { passive: true });
+
+document.addEventListener("pointerup", function () {
+    scrollingInsideFloatingMenu = false;
+}, { passive: true });
