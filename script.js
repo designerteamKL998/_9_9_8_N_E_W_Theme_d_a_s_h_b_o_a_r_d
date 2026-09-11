@@ -1,4 +1,4 @@
-// SLIDER
+﻿// SLIDER
 document.querySelectorAll('.promo-slider').forEach(slider => {
 
     const track = slider.querySelector('.promo-track');
@@ -479,3 +479,70 @@ document.addEventListener("touchend", function () {
 document.addEventListener("pointerup", function () {
     scrollingInsideFloatingMenu = false;
 }, { passive: true });
+
+
+
+//BACK-TO-TOP
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 400) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+});
+
+backToTop.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+//PROMO
+document.addEventListener("DOMContentLoaded", function () {
+
+    const promoCategories = document.querySelectorAll(".cm8-promo-category");
+    const promoCards = document.querySelectorAll(".cm8-promo-card");
+
+    if (!promoCategories.length || !promoCards.length) {
+        return;
+    }
+
+    promoCategories.forEach(function (categoryButton) {
+
+        categoryButton.addEventListener("click", function () {
+
+            const selectedCategory = this.dataset.promoCategory;
+
+            // Remove active from all buttons
+            promoCategories.forEach(function (button) {
+                button.classList.remove("active");
+            });
+
+            // Add active to clicked button
+            this.classList.add("active");
+
+
+            // Filter promotion cards
+            promoCards.forEach(function (card) {
+
+                const promoType = card.dataset.promoType;
+
+                if (
+                    selectedCategory === "all" ||
+                    promoType === selectedCategory
+                ) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+    });
+
+});

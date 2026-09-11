@@ -1,8 +1,8 @@
-/* =========================================================
+﻿/* =========================================================
    HOT GAMES
 ========================================================= */
 
-.hot-games {
+.hot-games, .cm8-promo-section {
     width: 100%;
     max-width: 1320px;
     margin: 22px auto 20px;
@@ -82,6 +82,7 @@
     border: 0px solid rgba(234,216,125,0.22);
     border-radius: 30px;
     background: transparent;
+    flex-shrink: 0;
 }
 
     .slot-section-icon img {
@@ -133,6 +134,69 @@
     font-size: var(--font-icon-sm);
 }
 
+.slot-search {
+    width: 300px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    background: #151515;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+    .slot-search i {
+        color: #999;
+        font-size: 13px;
+        margin-right: 8px;
+    }
+
+    .slot-search input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: none;
+        background: transparent;
+        color: #fff;
+        font-size: 13px;
+        font-family: var(--font-main);
+    }
+
+        .slot-search input::placeholder {
+            color: #777;
+        }
+
+.view-more-btn {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #f5d76e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease;
+}
+
+    .view-more-btn i {
+        font-size: 9px;
+        transition: transform 0.25s ease;
+    }
+
+    .view-more-btn:hover {
+        background: rgba(245, 215, 110, 0.08);
+        border-color: rgba(245, 215, 110, 0.4);
+    }
+
+        .view-more-btn:hover i {
+            transform: translateX(3px);
+        }
 
 
 /* =========================================================

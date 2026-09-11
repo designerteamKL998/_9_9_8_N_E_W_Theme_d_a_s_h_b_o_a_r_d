@@ -1,4 +1,3 @@
-
 /* =========================================================
    POPPINS FONT
 ========================================================= */
@@ -111,16 +110,16 @@ button {
     /* =========================
        BORDER
     ========================= */
-    --border-light: rgba(234,216,125,0.22);
+    --border-light: rgba(234, 216, 125, 0.22);
     /* =========================
        SHADOW
     ========================= */
-    --shadow-header: 0 8px 25px rgba(234, 216, 125, 0.10), 0 2px 8px rgba(0, 0, 0, 0.30);
+    --shadow-header: 0 8px 25px rgba(234, 216, 125, 0.1), 0 2px 8px rgba(0, 0, 0, 0.3);
     --shadow-button: 0 4px 10px rgba(234, 216, 125, 0.18);
     /* =========================
        GRADIENT
     ========================= */
-    --gradient-primary: linear-gradient( 135deg, var(--primary), var(--primary-dark) );
+    --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
     /* =========================
        BORDER RADIUS
     ========================= */
@@ -133,7 +132,6 @@ button {
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
 }
-
 
 /* =========================================================
    RESET
@@ -161,7 +159,6 @@ body {
     font-weight: var(--weight-normal);
     color: var(--text-main);
 }
-
 
 .header-inner {
     width: 100%;
@@ -202,7 +199,6 @@ body {
             box-shadow: 0 4px 15px rgba(234, 216, 125, 0.08);
         }
 
-
 /* =========================================================
    LOGO
 ========================================================= */
@@ -221,7 +217,6 @@ body {
         display: block;
     }
 
-
 /* =========================================================
    NAVIGATION
 ========================================================= */
@@ -233,7 +228,6 @@ body {
     gap: 10px;
     margin-left: clamp(60px, 6vw, 100px);
 }
-
 
 /* =========================================================
    NAV LINK
@@ -258,7 +252,6 @@ body {
     transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-
 /* =========================================================
    ICON
 ========================================================= */
@@ -277,7 +270,6 @@ body {
         line-height: 1;
     }
 
-
 /* =========================================================
    TEXT
 ========================================================= */
@@ -291,7 +283,6 @@ body {
     white-space: nowrap;
 }
 
-
 /* =========================================================
    NAV IMAGE
 ========================================================= */
@@ -302,13 +293,11 @@ body {
     object-fit: contain;
 }
 
-
 /* =========================================================
    NORMAL NAV HOVER / ACTIVE
 ========================================================= */
 
 .nav-link:hover,
-.nav-link.active,
 .btn-deposit:hover,
 .notification-btn:hover {
     color: var(--primary);
@@ -317,33 +306,33 @@ body {
     transform: translateY(0px);
 }
 
-
     .nav-link:hover .nav-icon img,
     .nav-link.active .nav-icon img {
         filter: brightness(0) saturate(100%) invert(88%) sepia(35%) saturate(650%) hue-rotate(8deg) brightness(101%) contrast(94%);
     }
 
-
-    /* =========================================================
+/* =========================================================
    ACTIVE UNDERLINE
 ========================================================= */
 
-    .nav-link.active::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 18px;
-        right: 18px;
-        height: 3px;
-        background: var(--primary);
-        border-radius: 10px 10px 0 0;
-    }
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 18px;
+    right: 18px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 10px 10px 0 0;
+}
 
-
+.nav-link.active {
+    color: var(--primary);
+    transform: translateY(0px);
+}
 /* =========================================================
    4D ICON
 ========================================================= */
-
 .four-d-icon {
     min-width: 36px;
     height: 27px;
@@ -356,7 +345,6 @@ body {
     font-weight: 700;
     line-height: 1;
 }
-
 
 /* =========================================================
    DROPDOWN NAV
@@ -383,7 +371,6 @@ body {
             font-size: 13px;
         }
 
-
     /* Dropdown arrow */
 
     .nav-dropdown > .nav-text {
@@ -396,7 +383,6 @@ body {
             font-size: 9px;
             opacity: 0.65;
         }
-
 
 /* =========================================================
    DROPDOWN MENU
@@ -416,7 +402,6 @@ body {
     z-index: 9999;
 }
 
-
 /* Show dropdown */
 
 .nav-dropdown:hover > .nav-dropdown-menu {
@@ -432,8 +417,6 @@ body {
     width: 175px;
     height: 10px;
 }
-
-
 
 /* =========================================================
    DROPDOWN ITEM
@@ -457,7 +440,6 @@ body {
     box-sizing: border-box;
 }
 
-
     /* Dropdown icon */
 
     .nav-dropdown-menu .nav-link .nav-icon {
@@ -472,7 +454,6 @@ body {
         box-shadow: 0 2px 5px rgba(38, 52, 73, 0.12);
     }
 
-
         /* Dropdown image */
 
         .nav-dropdown-menu .nav-link .nav-icon img {
@@ -482,7 +463,6 @@ body {
             filter: none;
         }
 
-
     /* Dropdown text */
 
     .nav-dropdown-menu .nav-link .nav-text {
@@ -491,7 +471,6 @@ body {
         color: #fff1a8;
         line-height: 1;
     }
-
 
     /* =========================================================
    DROPDOWN ITEM HOVER
@@ -504,13 +483,11 @@ body {
         transform: none;
     }
 
-
         /* Hover icon */
 
         .nav-dropdown-menu .nav-link:hover .nav-icon {
             background: #202228;
         }
-
 
             /* Hover image */
 
@@ -518,13 +495,11 @@ body {
                 filter: brightness(0) saturate(100%) invert(88%) sepia(35%) saturate(650%) hue-rotate(8deg) brightness(101%) contrast(94%);
             }
 
-
         /* Hover text */
 
         .nav-dropdown-menu .nav-link:hover .nav-text {
             color: var(--primary);
         }
-
 
     /* =========================================================
    REMOVE ACTIVE UNDERLINE INSIDE DROPDOWN
@@ -534,7 +509,6 @@ body {
         display: none;
     }
 
-
     /* =========================================================
    EVENTS / SPECIAL DROPDOWN
 ========================================================= */
@@ -542,7 +516,6 @@ body {
     .nav-dropdown-menu .nav-link:not(:has(.nav-icon)) {
         min-height: 40px;
     }
-
 
 /* ==================================================
    HEADER RIGHT
@@ -555,7 +528,6 @@ body {
     height: 100%;
     flex: 0 0 auto;
 }
-
 
 /* ==================================================
    USER PROFILE
@@ -580,7 +552,6 @@ body {
         background: #202228;
     }
 
-
 /* USER BUTTON */
 
 .user-box {
@@ -594,13 +565,12 @@ body {
     background: transparent;
     cursor: pointer;
     text-align: left;
-    transition: background .2s ease;
+    transition: background 0.2s ease;
 }
 
     .user-box:hover {
         background: #202228;
     }
-
 
 /* AVATAR */
 
@@ -612,9 +582,9 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: linear-gradient( 145deg, #202228, #202228 );
+    background: linear-gradient(145deg, #202228, #202228);
     border: 3px solid #ead87d;
-    box-shadow: 0 4px 12px rgba(234, 216, 125, .12);
+    box-shadow: 0 4px 12px rgba(234, 216, 125, 0.12);
 }
 
     .user-icon span {
@@ -624,11 +594,10 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background: linear-gradient( 145deg, #ffd700, #ead87d );
+        background: linear-gradient(145deg, #ffd700, #ead87d);
         color: #fff;
         font-size: 18px;
     }
-
 
 /* USER INFO */
 
@@ -663,16 +632,14 @@ body {
     color: #ffffff;
     font-size: 12px;
     white-space: nowrap;
-    padding: 5px 10px;
+    padding: 2px 10px;
     border-radius: 26px;
     border: 1px solid #ead87d;
 }
 
     .user-vip i {
-        display: none;
-        font-size: 10px;
+        font-size: 15px;
     }
-
 
 /* ARROW */
 
@@ -680,7 +647,7 @@ body {
     margin-left: auto;
     color: #fff1a8;
     font-size: 12px;
-    transition: transform .25s ease;
+    transition: transform 0.25s ease;
 }
 
 .user-profile-wrap.active .user-arrow {
@@ -703,16 +670,15 @@ body {
     width: 300px;
     padding: 0px;
     background: #000000;
-    border: 1px solid rgba(234,216,125,0.18);
+    border: 1px solid rgba(234, 216, 125, 0.18);
     border-radius: 0 0 16px 16px;
-    box-shadow: 0 18px 45px rgba(234, 216, 125, .12), 0 4px 14px rgba(234, 216, 125, .06);
+    box-shadow: 0 18px 45px rgba(234, 216, 125, 0.12), 0 4px 14px rgba(234, 216, 125, 0.06);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
-    transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
+    transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease;
     z-index: 999;
 }
-
 
 /* ACTIVE */
 
@@ -726,8 +692,6 @@ body {
     transform: rotate(180deg);
 }
 
-
-
 /* ==================================================
    DROPDOWN PROFILE HEADER
 ================================================== */
@@ -736,10 +700,9 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid rgba(234,216,125,0.18);
+    border-bottom: 1px solid rgba(234, 216, 125, 0.18);
     background: linear-gradient(189deg, #ffffff 0%, #202228 100%);
 }
-
 
 /* BIG AVATAR */
 
@@ -751,7 +714,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: linear-gradient( 145deg, #202228, #202228 );
+    background: linear-gradient(145deg, #202228, #202228);
     border: 3px solid #ead87d;
 }
 
@@ -762,11 +725,10 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background: linear-gradient( 145deg, #ffd700, #ead87d );
+        background: linear-gradient(145deg, #ffd700, #ead87d);
         color: #fff;
         font-size: 19px;
     }
-
 
 /* USER NAME */
 
@@ -802,7 +764,6 @@ body {
             font-size: 9px;
         }
 
-
 /* SETTINGS */
 
 .profile-settings {
@@ -816,14 +777,13 @@ body {
     background: #202228;
     color: #fff1a8;
     cursor: pointer;
-    transition: .2s ease;
+    transition: 0.2s ease;
 }
 
     .profile-settings:hover {
         background: #202228;
         color: #ead87d;
     }
-
 
 /* ==================================================
    PROFILE STAT
@@ -833,9 +793,8 @@ body {
     display: flex;
     align-items: flex-start;
     padding: 10px 15px;
-    border-bottom: 1px solid rgba(234,216,125,0.18);
+    border-bottom: 1px solid rgba(234, 216, 125, 0.18);
 }
-
 
 /* STAT ICON */
 
@@ -856,7 +815,6 @@ body {
         height: 20px;
         object-fit: contain;
     }
-
 
 /* LEVEL */
 .level-stat .stat-icon {
@@ -964,16 +922,12 @@ body {
     font-size: 11px;
 }
 
-
-
-
 /* GAME POINT */
 
 .feature-stat .stat-icon {
     color: #43c07a;
     background: #202228;
 }
-
 
 /* BALANCE */
 
@@ -982,7 +936,6 @@ body {
     background: #202228;
 }
 
-
 /* STAT CONTENT */
 
 .stat-content {
@@ -990,7 +943,6 @@ body {
     min-width: 0;
     margin-left: 0 0px;
 }
-
 
 /* TITLE */
 
@@ -1014,7 +966,6 @@ body {
     font-size: 11px;
 }
 
-
 /* ==================================================
    LEVEL
 ================================================== */
@@ -1031,8 +982,6 @@ body {
         color: #ead87d;
         font-size: 12px;
     }
-
-
 
 /* PROGRESS */
 
@@ -1052,10 +1001,9 @@ body {
         left: 0;
         width: 80%;
         height: 100%;
-        background: linear-gradient( 90deg, #ead87d, #ffd700 );
+        background: linear-gradient(90deg, #ead87d, #ffd700);
         border-radius: inherit;
     }
-
 
 /* PERCENT */
 
@@ -1067,7 +1015,6 @@ body {
     font-weight: 600;
 }
 
-
 /* ==================================================
    GAME POINT
 ================================================== */
@@ -1078,7 +1025,6 @@ body {
     color: #43c07a;
     font-size: 14px;
 }
-
 
 /* ==================================================
    BALANCE
@@ -1095,7 +1041,6 @@ body {
         font-size: 14px;
     }
 
-
 /* BALANCE SMALL BUTTON */
 
 .balance-refresh,
@@ -1105,14 +1050,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(234,216,125,0.20);
+    border: 1px solid rgba(234, 216, 125, 0.2);
     border-radius: 7px;
     background: #202228;
     color: #fff1a8;
     font-size: 10px;
     cursor: pointer;
 }
-
 
 /* ==================================================
    DROPDOWN ACTIONS
@@ -1125,7 +1069,6 @@ body {
     padding: 15px;
 }
 
-
 /* ACTION */
 
 .profile-action {
@@ -1135,12 +1078,12 @@ body {
     gap: 9px;
     color: #ffffff;
     background: #121418;
-    border: 1px solid rgba(234,216,125,0.18);
+    border: 1px solid rgba(234, 216, 125, 0.18);
     border-radius: 10px;
     text-decoration: none;
     font-size: 12px;
     font-weight: 600;
-    transition: .2s ease;
+    transition: 0.2s ease;
     padding: 0px 10px;
 }
 
@@ -1168,14 +1111,14 @@ body {
     justify-content: center;
     gap: 8px;
     margin-top: 2px;
-    border: 1px solid rgba(234,216,125,0.18);
+    border: 1px solid rgba(234, 216, 125, 0.18);
     border-radius: 10px;
     background: #121418;
     color: #ead87d;
     font-size: 12px;
     font-weight: 600;
     cursor: pointer;
-    transition: .2s ease;
+    transition: 0.2s ease;
 }
 
     .logout-action i {
@@ -1187,7 +1130,6 @@ body {
         border-color: #ff5b5b;
         color: #ff5b5b;
     }
-
 
 /* ==================================================
    HEADER BALANCE
@@ -1202,12 +1144,9 @@ body {
     border-right: 1px solid #ead87d;
 }
 
-
 /* REFRESH ICON */
 
 .balance-icon {
-    width: 30px;
-    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1215,8 +1154,8 @@ body {
     background: #202228;
     color: #ead87d;
     font-size: 14px;
+    padding: 5px;
 }
-
 
 /* VALUE */
 
@@ -1255,7 +1194,6 @@ body {
     font-size: 11px;
 }
 
-
 /* VIEW */
 
 .balance-view {
@@ -1264,13 +1202,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(234,216,125,0.20);
+    border: 1px solid rgba(234, 216, 125, 0.2);
     border-radius: 9px;
     background: #121418;
     color: #fff1a8;
     cursor: pointer;
 }
-
 
 /* ==================================================
    NOTIFICATION
@@ -1313,7 +1250,6 @@ body {
     border-radius: 50%;
     background: #ff5b5b;
 }
-
 
 /* ==================================================
    DEPOSIT
@@ -1414,8 +1350,6 @@ body {
     line-height: 1;
 }
 
-
-
 /* =========================================================
    PROMO SLIDER
 ========================================================= */
@@ -1427,7 +1361,6 @@ body {
     overflow: hidden;
 }
 
-
 /* =========================================================
    SLIDER TRACK
 ========================================================= */
@@ -1437,7 +1370,6 @@ body {
     display: flex;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 /* =========================================================
    PROMO SLIDE
@@ -1463,7 +1395,6 @@ body {
         object-fit: cover;
         border-radius: var(--radius-md);
     }
-
 
 /* =========================================================
    PROMO DOTS
@@ -1491,7 +1422,6 @@ body {
         width: 16px;
         background: var(--primary);
     }
-
 
 /* =========================================
    LANGUAGE POPUP
@@ -1546,13 +1476,11 @@ body {
     border: 1px solid rgba(23, 100, 239, 0.12);
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 25px 70px rgba(234, 216, 125, 0.20), 0 5px 20px rgba(234, 216, 125, 0.08);
+    box-shadow: 0 25px 70px rgba(234, 216, 125, 0.2), 0 5px 20px rgba(234, 216, 125, 0.08);
     animation: languagePopupIn 0.25s ease;
 }
 
-
 @keyframes languagePopupIn {
-
     from {
         opacity: 0;
         transform: translateY(12px) scale(0.97);
@@ -1563,7 +1491,6 @@ body {
         transform: translateY(0) scale(1);
     }
 }
-
 
 /* =========================================
    HEADER
@@ -1577,14 +1504,12 @@ body {
     padding: 22px 24px 12px;
 }
 
-
 .language-title-wrap {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 .language-globe {
     position: absolute;
@@ -1601,14 +1526,12 @@ body {
     box-shadow: 0 0 0 7px rgba(234, 216, 125, 0.035);
 }
 
-
 .language-title-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3px;
 }
-
 
     .language-title-content h3 {
         margin: 0;
@@ -1618,13 +1541,11 @@ body {
         font-weight: 700;
     }
 
-
     .language-title-content span {
         color: #fff1a8;
         font-size: 11px;
         font-weight: 400;
     }
-
 
 /* =========================================
    CLOSE
@@ -1648,12 +1569,10 @@ body {
     transition: all 0.2s ease;
 }
 
-
     .language-close:hover {
         color: #ead87d;
         background: rgba(234, 216, 125, 0.08);
     }
-
 
 /* =========================================
    DECORATIVE DIVIDER
@@ -1666,7 +1585,6 @@ body {
     height: 20px;
 }
 
-
     .language-divider::before,
     .language-divider::after {
         content: "";
@@ -1675,7 +1593,6 @@ body {
         background: #ead87d;
         opacity: 0.5;
     }
-
 
     .language-divider span {
         position: relative;
@@ -1687,7 +1604,6 @@ body {
         box-shadow: 0 0 0 4px rgba(234, 216, 125, 0.08);
     }
 
-
 /* =========================================
    LANGUAGE LIST
 ========================================= */
@@ -1698,7 +1614,6 @@ body {
     gap: 5px 8px;
     padding: 10px 22px 18px;
 }
-
 
 /* =========================================
    LANGUAGE ITEM
@@ -1712,14 +1627,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid rgba(234,216,125,0.22);
+    border: 1px solid rgba(234, 216, 125, 0.22);
     border-radius: 7px;
     background: #121418;
     color: #ffffff;
     cursor: pointer;
     transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
 }
-
 
     .language-item:hover {
         border-color: rgba(234, 216, 125, 0.35);
@@ -1728,15 +1642,13 @@ body {
         transform: translateY(-1px);
     }
 
-
     /* SELECTED */
 
     .language-item.active {
         border-color: #ead87d;
-        background: linear-gradient( 90deg, rgba(234, 216, 125, 0.10), rgba(234, 216, 125, 0.025) );
+        background: linear-gradient(90deg, rgba(234, 216, 125, 0.1), rgba(234, 216, 125, 0.025));
         box-shadow: 0 3px 12px rgba(234, 216, 125, 0.08);
     }
-
 
 /* =========================================
    LANGUAGE INFO
@@ -1749,7 +1661,6 @@ body {
     gap: 10px;
 }
 
-
 .language-name {
     overflow: hidden;
     white-space: nowrap;
@@ -1759,12 +1670,10 @@ body {
     color: #ffffff;
 }
 
-
 .language-item.active .language-name {
     color: #ead87d;
     font-weight: 600;
 }
-
 
 /* =========================================
    RADIO
@@ -1780,11 +1689,9 @@ body {
     transition: all 0.2s ease;
 }
 
-
 .language-item.active .language-radio {
     border-color: #ead87d;
 }
-
 
     .language-item.active .language-radio::after {
         content: "";
@@ -1796,7 +1703,6 @@ body {
         border-radius: 50%;
         background: #ead87d;
     }
-
 
 /* =========================================
    FOOTER
@@ -1810,10 +1716,9 @@ body {
     min-height: 58px;
     padding: 10px 20px;
     background: linear-gradient(90deg, #202228 0%, #000000 70%, #121418 100%);
-    border-top: 1px solid rgba(234,216,125,0.18);
+    border-top: 1px solid rgba(234, 216, 125, 0.18);
     overflow: hidden;
 }
-
 
     /* decorative glow */
 
@@ -1829,7 +1734,6 @@ body {
         filter: blur(15px);
     }
 
-
 .language-footer-icon {
     position: relative;
     z-index: 1;
@@ -1843,9 +1747,8 @@ body {
     color: #ffffff;
     background: #ead87d;
     font-size: 11px;
-    box-shadow: 0 4px 10px rgba(234, 216, 125, 0.20);
+    box-shadow: 0 4px 10px rgba(234, 216, 125, 0.2);
 }
-
 
 .language-footer-text {
     position: relative;
@@ -1855,16 +1758,594 @@ body {
     gap: 2px;
 }
 
-
     .language-footer-text strong {
         color: #fff1a8;
         font-size: 11px;
         font-weight: 700;
     }
 
-
     .language-footer-text span {
         color: #fff1a8;
         font-size: 9px;
         line-height: 1.3;
     }
+
+/* =========================================
+   BACK TO TOP - DESKTOP
+========================================= */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    background: rgba(20, 20, 20, 0.92);
+    color: #f5d76e;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    z-index: 9999;
+}
+
+    .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+        background: #1f1f1f;
+        border-color: rgba(245, 215, 110, 0.5);
+    }
+
+        .back-to-top:hover i {
+            transform: translateY(-2px);
+        }
+
+    .back-to-top i {
+        transition: transform 0.2s ease;
+    }
+
+/* =========================================================
+   CM8 PROMOTION
+   ALL CLASSES ARE PROMOTION-SPECIFIC
+========================================================= */
+
+.cm8-promo-section {
+    width: 100%;
+    margin-top: 35px;
+    padding-bottom: 40px;
+}
+
+/* HEADER */
+
+.cm8-promo-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.cm8-promo-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cm8-promo-title-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .cm8-promo-title-icon img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+    }
+
+.cm8-promo-title-content h2 {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.cm8-promo-title-content p {
+    margin: 4px 0 0;
+    color: #aaa;
+}
+
+/* VIEW ALL */
+
+.cm8-promo-view-all {
+    min-width: 150px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 18px;
+    border: 1px solid #ead87d;
+    border-radius: 25px;
+    color: #ead87d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+    .cm8-promo-view-all:hover {
+        background: rgba(234, 216, 125, 0.1);
+    }
+
+    .cm8-promo-view-all i {
+        transition: 0.3s ease;
+    }
+
+    .cm8-promo-view-all:hover i {
+        transform: translateX(5px);
+    }
+
+/* CATEGORY */
+
+.cm8-promo-category-wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 9px;
+    margin-bottom: 14px;
+}
+
+.cm8-promo-category {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 25px;
+    background: linear-gradient(180deg, #121718, #090d0e);
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+    .cm8-promo-category i {
+        color: #ead87d;
+    }
+
+    .cm8-promo-category img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cm8-promo-category:hover {
+        border-color: #ead87d;
+    }
+
+    .cm8-promo-category.active {
+        color: #111;
+        border-color: transparent;
+        background: linear-gradient(135deg, #fff0a8, #dfc45c);
+    }
+
+        .cm8-promo-category.active i {
+            color: #111;
+        }
+
+/* GRID */
+
+.cm8-promo-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px 18px;
+}
+
+/* =========================================================
+   CM8 PROMOTION CARD
+========================================================= */
+
+.cm8-promo-card {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    overflow: hidden;
+    border: 1px solid rgba(234, 216, 125, 0.45);
+    border-radius: 13px;
+    background: #080d0e;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .cm8-promo-card:hover {
+        border-color: #ead87d;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    }
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.cm8-promo-card-content {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+    padding: 12px 10px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cm8-promo-card,
+.cm8-promo-card-content {
+    overflow: visible !important;
+}
+
+/* NUMBER + CATEGORY */
+
+.cm8-promo-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 18px;
+    margin-bottom: 2px;
+}
+
+    .cm8-promo-number span {
+        display: none;
+    }
+
+    .cm8-promo-number small {
+        color: #ead87d;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+/* TITLE */
+
+.cm8-promo-card-content h3 {
+    width: 100%;
+    max-width: 100%;
+    margin: 5px 5px 10px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 700;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+}
+
+.cm8-promo-card-content p {
+    padding: 0px 5px;
+}
+
+.cm8-promo-game-icons .promo-bot-sec img {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.cm8-promo-game-icons .promo-game-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================
+   PAYMENT ICONS - BIG
+========================================= */
+
+.promo-payment-icons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 7px;
+}
+
+    .promo-payment-icons .promo-bot-sec {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        flex: 0 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 7px;
+        background: linear-gradient(145deg, #292f31, #101516);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+    }
+
+        .promo-payment-icons .promo-bot-sec img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+/* =========================================================
+   INFO BOX
+========================================================= */
+.cm8-promo-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3px;
+    margin-bottom: 7px;
+}
+
+    .cm8-promo-info > div {
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        border-radius: 5px;
+        background: #151b1d;
+    }
+
+    .cm8-promo-info span {
+        color: #e5e5e5;
+        line-height: 1;
+    }
+
+    .cm8-promo-info p {
+        margin-top: 4px;
+        color: #ffe78b;
+        line-height: 1;
+    }
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.cm8-promo-payment {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 7px;
+}
+
+    .cm8-promo-payment span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        min-width: 0;
+        color: #fff;
+        line-height: 1.05;
+        white-space: nowrap;
+    }
+
+    .cm8-promo-payment i {
+        flex-shrink: 0;
+        color: #fff;
+    }
+
+    .cm8-promo-payment span:last-child i {
+        color: #ead87d;
+    }
+
+    .cm8-promo-payment em {
+        font-style: normal;
+    }
+
+/* =========================================================
+   GAME ICONS
+========================================================= */
+
+.cm8-promo-game-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 1px;
+}
+
+    .cm8-promo-game-icons span {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #292f31, #101516);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .cm8-promo-game-icons .promo-game-icon {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        border-radius: 50%;
+        background: #202228;
+        border: 1px solid rgba(234, 216, 125, 0.18);
+        cursor: pointer;
+    }
+
+        .cm8-promo-game-icons .promo-game-icon:hover {
+            border-color: #ead87d;
+            transform: translateY(-2px);
+        }
+
+.cm8-promo-payment .promo-bot-sec {
+    border-radius: 5px !important;
+    padding: 5px !important;
+}
+
+/* =========================================
+   GLOBAL PROMO TOOLTIP
+========================================= */
+
+.tooltip {
+    position: relative;
+}
+
+    /* tooltip box */
+    .tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 9px);
+        transform: translateX(-50%) translateY(4px);
+        padding: 6px 9px;
+        background: #202228;
+        color: #fff;
+        border: 1px solid rgba(234, 216, 125, 0.45);
+        border-radius: 6px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 99999;
+        transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+    }
+
+    /* arrow */
+    .tooltip::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 4px);
+        width: 7px;
+        height: 7px;
+        background: #202228;
+        border-right: 1px solid rgba(234, 216, 125, 0.45);
+        border-bottom: 1px solid rgba(234, 216, 125, 0.45);
+        transform: translateX(-50%) rotate(45deg);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99998;
+        transition: opacity 0.18s ease, visibility 0.18s ease;
+    }
+
+    /* show tooltip */
+    .tooltip:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .tooltip:hover::before {
+        opacity: 1;
+        visibility: visible;
+    }
+
+/* SMALL ARROW */
+
+.cm8-promo-game-icons .tooltip::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 4px);
+    width: 7px;
+    height: 7px;
+    background: #202228;
+    border-right: 1px solid rgba(234, 216, 125, 0.45);
+    border-bottom: 1px solid rgba(234, 216, 125, 0.45);
+    transform: translateX(-50%) rotate(45deg);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99998;
+    transition: opacity 0.18s ease, visibility 0.18s ease;
+}
+
+/* SHOW */
+
+.cm8-promo-game-icons .tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.cm8-promo-game-icons .tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.cm8-promo-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.cm8-promo-arrow {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fff0a8, #dfc45c);
+    color: #111;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .cm8-promo-arrow:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 16px rgba(234, 216, 125, 0.35);
+    }
+
+.cm8-promo-action strong {
+    color: #ffe78b;
+    font-weight: 700;
+}
+
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
+
+.cm8-promo-card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    padding: 5px;
+}
+
+    .cm8-promo-card-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.45s ease;
+        border-radius: 0px 8px 8px 0px;
+    }
+
+.cm8-promo-card:hover .cm8-promo-card-image img {
+    transform: scale(1.04);
+}
