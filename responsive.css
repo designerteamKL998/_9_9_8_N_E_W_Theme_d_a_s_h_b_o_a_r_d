@@ -14,6 +14,9 @@
     display: none;
 }
 
+.dci-mobile-checkin {
+    display: none;
+}
 
 /* ========================================================= RESPONSIVE - TABLET MAX WIDTH: 1024px ========================================================= */
 @media (max-width: 1024px) {
@@ -162,7 +165,6 @@
         margin: 5px 0px;
     }
 
-
     .slot-section-icon {
         width: auto;
         height: auto;
@@ -185,7 +187,7 @@
 
     .slot-section-line {
         min-width: 30px;
-        display:none;
+        display: none;
     }
 
     .slot-header {
@@ -245,7 +247,7 @@
         grid-template-columns: repeat(6, minmax(0, 1fr));
         column-gap: 12px;
         row-gap: 12px;
-        margin-top:15px;
+        margin-top: 15px;
     }
 
     .slot-card img {
@@ -257,13 +259,10 @@
         transform: translateY(-2px);
     }
 
-
     .slot-section-icon img {
         width: 20px;
         height: 20px;
     }
-
-
 
     .slot-games .slot-section-title,
     .lc-games .slot-section-title,
@@ -271,9 +270,7 @@
     .lottery-games .slot-section-title,
     .battle-games .slot-section-title,
     .poker-games .slot-section-title {
-        
     }
-
 
     .slot-games,
     .lc-games,
@@ -313,8 +310,6 @@
         margin-top: 0px;
         padding: 0px 15px;
     }
-
-
 
     /*=============   DEPOSIT PAGE   ================*/
 
@@ -407,7 +402,6 @@
             margin: 0;
         }
 
-
     .page-header {
         padding: 20px 24px 16px;
     }
@@ -415,7 +409,6 @@
     .page-title h1 {
         font-size: 22px;
     }
-
 
     .deposit-content {
         display: flex;
@@ -435,7 +428,6 @@
     .sidebar-link.active .sidebar-text {
         color: #176cff;
     }
-
 
     .sidebar-icon {
         width: 24px;
@@ -596,7 +588,6 @@
         flex: 0 0 110px;
     }
 
-
     .mobile-bottom-nav {
         position: fixed !important;
         left: 8px;
@@ -608,7 +599,7 @@
         align-items: center;
         justify-content: center;
         padding: 2px;
-        background: linear-gradient( 135deg, #050505 0%, #11100d 45%, #050505 100% );
+        background: linear-gradient(135deg, #050505 0%, #11100d 45%, #050505 100%);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         border: 1px solid rgba(212, 175, 55, 0.85);
@@ -806,8 +797,6 @@
         color: #c69b00;
     }
 
-
-
     .bottom-nav-item {
         flex: 1;
         height: 100%;
@@ -835,11 +824,9 @@
         color: #146cff;
     }
 
-
         .bottom-nav-item.active .bottom-nav-icon {
             color: #146cff;
         }
-
 
     /* =====================================================
        FLOATING MENU BUTTON
@@ -866,7 +853,6 @@
         cursor: pointer;
         transform: translateY(-50%);
     }
-
 
     /* =====================================================
        FLOATING BUTTON WHEN SCROLLED
@@ -903,8 +889,6 @@
         justify-content: center;
     }
 
-
-
         /* ICON GRID */
         .mobile-more-btn .menu-grid-icon {
             width: 15px;
@@ -922,8 +906,6 @@
                 border: 2px solid #ead87d;
                 border-radius: 2px;
             }
-
-
 
     .mobile-more-menu .user-dropdown {
         position: static;
@@ -968,20 +950,18 @@
             display: block;
         }
 
-        .mobile-more-menu.active .user-dropdown {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-            transform: translateY(0);
-        }
-
+            .mobile-more-menu.active .user-dropdown {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
 
         .mobile-more-menu.active {
             display: block;
             flex-direction: column;
             gap: 6px;
         }
-
 
         .mobile-more-menu a {
             font-size: 10px;
@@ -1018,7 +998,8 @@
         display: none;
     }
 
-    .stat-title, .stat-icon {
+    .stat-title,
+    .stat-icon {
         display: none;
     }
 
@@ -1072,7 +1053,8 @@
         padding: 0 20px;
     }
 
-    .btn-deposit img, .notification-btn img {
+    .btn-deposit img,
+    .notification-btn img {
         width: 27px;
         height: 24px;
         display: block;
@@ -1083,8 +1065,9 @@
         display: none;
     }
 
-/*--------------------------  PROMOTIONS  ---------------------------*/
-    /* HEADER */ .cm8-promo-header {
+    /*--------------------------  PROMOTIONS  ---------------------------*/
+    /* HEADER */
+    .cm8-promo-header {
         margin-bottom: 15px;
     }
 
@@ -1189,7 +1172,9 @@
         height: 28px;
     }
 
-    .page-hot .games-grid, .new-page .games-grid, .fav-games .games-grid {
+    .page-hot .games-grid,
+    .new-page .games-grid,
+    .fav-games .games-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
@@ -1210,13 +1195,590 @@
         width: 180px;
     }
 
+    /*--------------------------  LEVELPROGRAM PAGE  ---------------------------*/
+    .lp-page {
+        margin: 0px;
+        padding: 8px;
+        font-size: 11px;
+    }
+    /* SIDEBAR */
 
+    .lp-sidebar {
+        width: 190px;
+        min-width: 190px;
+        padding: 12px 6px;
+    }
+
+    .lp-side-item {
+        padding: 13px 10px;
+        gap: 10px;
+        font-size: 14px;
+        font-size: 11px;
+    }
+
+        .lp-side-item i {
+            font-size: 16px;
+            width: 20px;
+        }
+
+    .lp-earning-box {
+        margin-top: 30px;
+    }
+    /* MAIN */
+
+    .lp-main {
+        padding: 8px 6px;
+    }
+    /* LEVEL HEADER */
+
+    .lp-level-header {
+        grid-template-columns: 220px minmax(180px, 1fr) 200px;
+        padding: 7px 12px;
+    }
+
+    .lp-member-info {
+        gap: 10px;
+    }
+
+    .lp-member-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .lp-level-number {
+        font-size: 20px;
+    }
+
+    .lp-progress-area {
+        padding: 0 15px;
+    }
+
+    .lp-reward-message {
+        padding-left: 12px;
+        gap: 8px;
+        font-size: 13px;
+    }
+    /* HERO */
+
+    .lp-hero-content {
+        padding: 25px 35px;
+    }
+
+    .lp-hero-title {
+        font-size: clamp(40px, 5vw, 60px);
+    }
+
+    .lp-hero-player {
+        right: 5%;
+    }
+    /* REWARDS */
+
+    .lp-rewards-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .lp-reward-card {
+        height: 165px;
+    }
+
+    .lp-terms {
+        margin-bottom: 50px;
+    }
+    /*--------------------------  LUCKYDRAW PAGE  ---------------------------*/
+    .sw-container {
+        width: calc(100% - 40px);
+        padding: 18px;
+        border-radius: 24px;
+    }
+    /* HEADER */
+
+    .sw-header img {
+        width: 95%;
+    }
+
+    .sw-subtitle {
+        font-size: 13px;
+    }
+    /* CONTENT */
+
+    .sw-content {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.75fr);
+        gap: 25px;
+    }
+    /* WHEEL */
+
+    .sw-wheel-stage {
+        width: min(500px, 100%);
+    }
+
+    .sw-wheel-segment {
+        font-size: 15px;
+    }
+
+    .sw-s2,
+    .sw-s3 {
+        font-size: 26px;
+    }
+
+    .sw-phone small {
+        font-size: 14px;
+    }
+    /* SPIN BUTTON */
+
+    .sw-spin-btn {
+        min-width: 350px;
+        padding: 14px 25px;
+    }
+    /* HISTORY */
+
+    .sw-history {
+        padding: 20px;
+        border-radius: 17px;
+    }
+
+    .sw-history-header {
+        gap: 10px;
+    }
+
+        .sw-history-header h2 {
+            font-size: 20px;
+        }
+
+        .sw-history-header p {
+            font-size: 12px;
+        }
+
+    .sw-history-head,
+    .sw-history-row {
+        padding: 13px 14px;
+        font-size: 13px;
+    }
+    /* PROMO */
+
+    .sw-promo-card {
+        width: 100%;
+        min-height: 78px;
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        box-sizing: border-box;
+        border-radius: 14px;
+        background: linear-gradient(145deg, #111619, #080b0d);
+        border: 1px solid #30333d;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .sw-promo-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ead87d;
+        font-size: 30px;
+    }
+
+    .sw-promo-copy {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+        /* MAIN TEXT
+   IMPORTANT:
+   Jangan flex row lagi
+*/
+
+        .sw-promo-copy > div {
+            display: block;
+            line-height: 1.25;
+        }
+
+        /* DEPOSIT 50 */
+
+        .sw-promo-copy strong {
+            color: #ead87d;
+            font-weight: 900;
+            margin-right: 5px;
+        }
+
+        /* GETS FREE... */
+
+        .sw-promo-copy span {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* MAXIMUM */
+
+        .sw-promo-copy small {
+            display: block;
+            color: #aeb5ba;
+            font-size: 12px;
+            line-height: 1.3;
+        }
+    /* TERMS */
+
+    .sw-term-item {
+        margin: 8px 10px;
+        padding: 8px 11px;
+        gap: 9px;
+        font-size: 13px;
+    }
+
+    /*----------------------------  DAILY CHECKIN PAGE  ----------------------------------*/
+    .dci-page {
+        padding: 16px;
+    }
+
+    .dci-main {
+        grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
+        gap: 12px;
+    }
+
+    .dci-calendar-card,
+    .dci-reward-card {
+        padding: 16px;
+    }
+
+    .dci-header {
+        gap: 16px;
+    }
+
+    .dci-brand-text h1 {
+        font-size: 26px;
+    }
+
+    .dci-brand-text p {
+        font-size: 13px;
+    }
+
+    .dci-header-badge {
+        padding: 8px 12px;
+    }
+
+    .dci-days-grid {
+        grid-template-columns: repeat(7, minmax(55px, 1fr));
+        gap: 6px;
+    }
+
+    .dci-day {
+        min-height: 95px;
+        padding: 8px 6px;
+    }
+
+    .dci-day-number {
+        font-size: 24px;
+    }
+
+    .dci-day-symbol {
+        font-size: 19px;
+    }
+
+    .dci-day-label {
+        font-size: 12px;
+    }
+
+    .dci-progress-wrap {
+        min-width: 120px;
+    }
+
+    .dci-progress-track {
+        width: 120px;
+    }
+
+    .dci-reward-content {
+        min-height: 180px;
+    }
+
+    .dci-terms-card {
+        padding: 16px 18px;
+        margin-bottom: 50px;
+    }
+
+    /*----------------------------  FRIENDS PAGE  ----------------------------------*/
+    .fr-page {
+        padding: 10px 18px 18px;
+        margin: 10px auto;
+    }
+
+    .fr-tabs {
+        overflow-x: auto;
+    }
+
+    .fr-tab {
+        min-width: 115px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+    .fr-section {
+        padding: 10px 15px 15px;
+    }
+
+    .fr-cards-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .fr-card {
+        height: 205px;
+    }
+
+    .fr-collection-reward {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 8px;
+    }
+
+    .fr-collection .fr-cards-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .fr-reward-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 10px 10px;
+    }
+
+    .fr-reward-list {
+        padding: 0 10px 10px;
+    }
+
+    .fr-game-types {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .fr-info-grid {
+        gap: 8px;
+    }
+
+    .fr-exchange-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .fr-record-list {
+        padding: 10px;
+    }
+
+    /*--------------------------  TRANSACTION (STATEMENT/MYBET) PAGE  ---------------------------*/
+    .st-page,
+    .mb-page {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 10px 18px 18px;
+        border-radius: 16px;
+    }
+
+    /* HEADER */
+
+    .st-header {
+        gap: 18px;
+    }
+
+    .st-header-left {
+        gap: 12px;
+    }
+
+    .st-icon {
+        width: 50px;
+        height: 50px;
+        flex-basis: 50px;
+        font-size: 20px;
+    }
+
+    .st-header-text h1 {
+        font-size: 27px;
+    }
+
+    .st-header-text p {
+        font-size: 12px;
+    }
+
+    .st-brand {
+        font-size: 12px;
+    }
+
+    /* FILTER */
+
+    .st-filter {
+        grid-template-columns: auto 1px minmax(0, 1fr);
+        column-gap: 18px;
+    }
+
+    .st-quick-buttons {
+        flex-wrap: wrap;
+    }
+
+    .st-quick-btn {
+        padding: 0 12px;
+    }
+
+    .st-date-input {
+        width: 160px;
+        flex-basis: 160px;
+    }
+
+    .st-search-btn {
+        min-width: 82px;
+        padding: 0 13px;
+    }
+
+    /* SUMMARY */
+
+    .st-summary {
+        padding-top: 18px;
+    }
+
+    .st-summary-card {
+        height: 105px;
+        padding: 16px;
+    }
+
+    .st-summary-info strong {
+        font-size: 18px;
+    }
+
+    /* TABLE */
+
+    .st-table {
+        min-width: 980px;
+    }
+
+        .st-table th,
+        .st-table td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    /* MYBETS */
+
+    .mb-actions {
+        flex-wrap: wrap;
+    }
+
+    .mb-filter-wrap,
+    .mb-dropdown {
+        width: 175px;
+    }
+
+    .mb-table-head,
+    .mb-record {
+        --mb-grid: 55px 1.15fr 1.35fr 0.7fr 0.85fr 1fr;
+    }
+
+    .mb-table-head,
+    .mb-record {
+        min-width: 900px;
+    }
+
+    .mb-table-head {
+        min-height: 44px;
+    }
+
+    .mb-record {
+        min-height: 66px;
+    }
+
+    /*--------------------------  DOWNLOAD PAGE  ---------------------------*/
+    .download-page {
+        width: calc(100% - 20px);
+        padding: 10px 22px 18px;
+    }
+
+    .dl-header {
+        height: 82px;
+    }
+
+    .dl-logo-text {
+        font-size: 27px;
+    }
+
+    .dl-logo-crown {
+        left: 128px;
+    }
+
+    .dl-live-status {
+        padding: 8px 13px;
+        font-size: 11px;
+    }
+
+    .dl-hero {
+        padding: 18px 15px;
+    }
+
+        .dl-hero h1 {
+            font-size: clamp(38px, 5vw, 58px);
+        }
+
+    .dl-main {
+        width: 100%;
+    }
+
+    .dl-download-area {
+        margin-top: 16px;
+    }
+
+    .dl-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dl-card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .dl-card-icon img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .dl-card h3 {
+        font-size: 19px;
+    }
+
+    .dl-card p {
+        font-size: 12px;
+    }
+
+    .dl-store-btn {
+        min-height: 52px;
+        padding: 8px 18px;
+    }
+
+    .dl-features {
+        margin-top: 32px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 15px 0;
+    }
+
+    .dl-feature {
+        gap: 8px;
+        padding: 5px 12px;
+    }
+
+    .dl-feature-icon {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        font-size: 17px;
+    }
+
+    .dl-feature h4 {
+        font-size: 12px;
+    }
+
+    .dl-feature p {
+        font-size: 10px;
+    }
 }
-
 
 /*===============================================================  MOBILE 768PX  ==========================================================*/
 @media (max-width: 768px) {
-
     .main-header {
         padding: 7px 10px;
     }
@@ -1228,7 +1790,6 @@
         box-shadow: 0 4px 15px rgba(37, 96, 160, 0.08);
     }
 
-
     .logo {
         width: auto;
     }
@@ -1237,18 +1798,15 @@
             width: 75px;
         }
 
-
     .main-nav {
         display: none;
     }
-
 
     .header-right {
         margin-left: auto;
         gap: 5px;
         height: auto;
     }
-
 
     .language {
         padding: 3px 5px;
@@ -1257,11 +1815,9 @@
         border-radius: 6px;
     }
 
-
     .language-btn {
         gap: 2px;
     }
-
 
     .globe {
         width: 21px;
@@ -1269,16 +1825,13 @@
         font-size: 21px;
     }
 
-
     .arrow {
         display: none;
     }
 
-
     .divider {
         display: none;
     }
-
 
     .user-box {
         display: none;
@@ -1290,12 +1843,14 @@
         height: auto;
     }
 
-        .notification-btn, .btn-deposit a {
+        .notification-btn,
+        .btn-deposit a {
             height: auto;
             width: auto;
         }
 
-            .btn-deposit a, .notification-btn a {
+            .btn-deposit a,
+            .notification-btn a {
                 padding: 5px;
             }
 
@@ -1326,11 +1881,9 @@
         font-size: 12px;
     }
 
-
     .balance-value {
         gap: 2px;
     }
-
 
     .refresh {
         font-size: 20px;
@@ -1340,12 +1893,10 @@
         transform: translateY(-50%);
     }
 
-
     .balance-value {
         font-size: 12px;
         grid-gap: 2px;
     }
-
 
     .btn {
         height: 27px;
@@ -1364,13 +1915,9 @@
         padding: 0 8px;
     }
 
-
-
     .btn-deposit:hover::after {
         opacity: 0;
     }
-
-
 
     /* =====================================================
        PROMOTION BANNER
@@ -1382,18 +1929,15 @@
         margin: 8px auto 0;
     }
 
-
     .promo-slide {
         padding: 0;
     }
-
 
         .promo-slide img {
             width: 100%;
             aspect-ratio: 1320 / 400;
             border-radius: 8px;
         }
-
 
     .promo-dots {
         gap: 5px;
@@ -1403,18 +1947,15 @@
         margin-top: 0px;
     }
 
-
     .promo-dot {
         width: 5px;
         height: 5px;
         background: #787879;
     }
 
-
         .promo-dot.active {
             width: 14px;
         }
-
 
     /* =====================================================
        HOT GAMES
@@ -1427,7 +1968,6 @@
         will-change: opacity, transform;
     }
 
-
     /* =====================================================
        NEW GAMES
     ===================================================== */
@@ -1439,14 +1979,12 @@
         will-change: opacity, transform;
     }
 
-
         .hot-games.mobile-scroll-hide-games,
         .new-games.mobile-scroll-hide-games {
             opacity: 0;
             transform: translateY(-25px);
             pointer-events: none;
         }
-
 
     /* =====================================================
        GAME SECTIONS
@@ -1476,11 +2014,9 @@
         row-gap: 9px;
     }
 
-
     .game-card {
         border-radius: 7px;
     }
-
 
         .game-card img {
             width: 100%;
@@ -1488,7 +2024,6 @@
             object-fit: cover;
             border-radius: 7px;
         }
-
 
     /* =====================================================
        SLOT TITLE
@@ -1498,25 +2033,21 @@
         gap: 9px;
     }
 
-
     .slot-section-icon {
         border-width: 1px;
         border-radius: 12px;
     }
-
 
     .slot-section-text {
         min-width: 0;
         padding: 0;
     }
 
-
         .slot-section-text h2 {
             margin-bottom: 3px;
             font-size: 18px;
             line-height: 1;
         }
-
 
         .slot-section-text p {
             max-width: 160px;
@@ -1525,18 +2056,15 @@
             line-height: 1.2;
         }
 
-
     .slot-section-line {
         min-width: 15px;
         height: 1px;
     }
 
-
     .slot-section-star {
         margin-right: 3px;
         font-size: 15px;
     }
-
 
     /* =====================================================
        SLOT GRID
@@ -1549,11 +2077,9 @@
         margin-bottom: 80px;
     }
 
-
     .slot-card {
         border-radius: 8px;
     }
-
 
         .slot-card img {
             width: 100%;
@@ -1561,7 +2087,6 @@
             object-fit: cover;
             border-radius: 8px;
         }
-
 
         .game-card:hover,
         .slot-card:hover {
@@ -1616,22 +2141,19 @@
         z-index: 99999;
     }
 
-
         /* POPUP */
         .language-overlay .language-popup {
             width: 80%;
             max-width: 100%;
             border-radius: 15px;
             box-shadow: 0 18px 45px rgba(8, 37, 80, 0.24), 0 4px 15px rgba(23, 100, 239, 0.08);
-            animation: languageMobileIn .22s ease-out;
+            animation: languageMobileIn 0.22s ease-out;
         }
 
-
     @keyframes languageMobileIn {
-
         from {
             opacity: 0;
-            transform: scale(.96) translateY(6px);
+            transform: scale(0.96) translateY(6px);
         }
 
         to {
@@ -1639,7 +2161,6 @@
             transform: scale(1) translateY(0);
         }
     }
-
 
     /* =========================================
        HEADER LANGUAGE
@@ -1651,7 +2172,6 @@
         padding: 8px 40px 0px;
     }
 
-
     /* GLOBE */
     .language-overlay .language-globe {
         left: 18px;
@@ -1662,17 +2182,14 @@
         box-shadow: 0 0 0 5px rgba(23, 100, 239, 0.035);
     }
 
-
     /* TITLE */
     .language-overlay .language-title-content h3 {
         line-height: 1.1 !important;
     }
 
-
     .language-overlay .language-title-content > span {
         margin-top: 3px !important;
     }
-
 
     /* CLOSE */
     .language-overlay .language-close {
@@ -1682,7 +2199,6 @@
         height: 25px;
     }
 
-
     /* =========================================
        DIVIDER LANGUAGE
     ========================================= */
@@ -1691,12 +2207,10 @@
         height: 10px;
     }
 
-
         .language-overlay .language-divider::before,
         .language-overlay .language-divider::after {
             width: 14px;
         }
-
 
         .language-overlay .language-divider span {
             width: 5px;
@@ -1704,7 +2218,6 @@
             margin: 0 4px;
             box-shadow: 0 0 0 3px rgba(23, 100, 239, 0.07);
         }
-
 
     /* =========================================
        LANGUAGE GRID
@@ -1718,7 +2231,6 @@
         padding: 3px 10px 9px;
         margin: 0;
     }
-
 
     /* =========================================
        LANGUAGE ITEM 
@@ -1734,21 +2246,18 @@
         transform: none;
     }
 
-
         .language-overlay .language-item:hover {
             transform: none;
             box-shadow: none;
             background: #f8fbff;
         }
 
-
         /* ACTIVE */
         .language-overlay .language-item.active {
-            background: linear-gradient( 90deg, rgba(23, 100, 239, .09), rgba(23, 100, 239, .025) );
+            background: linear-gradient( 90deg, rgba(23, 100, 239, 0.09), rgba(23, 100, 239, 0.025) );
             border-color: #1764ef;
-            box-shadow: 0 2px 6px rgba(23, 100, 239, .07);
+            box-shadow: 0 2px 6px rgba(23, 100, 239, 0.07);
         }
-
 
     /* =========================================
        LANGUAGE LEFT
@@ -1758,7 +2267,6 @@
         gap: 6px;
         min-width: 0;
     }
-
 
     /* =========================================
        FLAG LANGUAGE
@@ -1771,14 +2279,12 @@
         border-radius: 2px;
     }
 
-
         .language-overlay .language-flag img {
             width: 25px;
             height: 25px;
             object-fit: cover;
             border-radius: 2px;
         }
-
 
     /* LANGUAGE NAME */
     .language-overlay .language-name {
@@ -1789,11 +2295,9 @@
         text-overflow: ellipsis;
     }
 
-
     .language-overlay .language-item.active .language-name {
         font-weight: 600;
     }
-
 
     /* =========================================
    RADIO LANGUAGE
@@ -1806,14 +2310,12 @@
         border-width: 1px;
     }
 
-
     .language-overlay .language-item.active .language-radio::after {
         top: 2px;
         left: 2px;
         width: 4px;
         height: 4px;
     }
-
 
     /* =========================================
    FOOTER LANGUAGE
@@ -1826,7 +2328,6 @@
         gap: 7px;
     }
 
-
     /* FOOTER CHECK */
     .language-overlay .language-footer-icon {
         width: 19px;
@@ -1834,22 +2335,18 @@
         flex: 0 0 19px;
     }
 
-
     /* FOOTER LANGUAGE TEXT */
     .language-overlay .language-footer-text {
         gap: 1px;
     }
 
-
         .language-overlay .language-footer-text strong {
             line-height: 1.1;
         }
 
-
         .language-overlay .language-footer-text span {
             line-height: 1.1;
         }
-
 
     /* FOOTER DECORATION */
     .language-overlay .language-footer::after {
@@ -1860,8 +2357,7 @@
         filter: blur(10px);
     }
 
-
-    /*==================================================  PROFILE PAGE  =============================================== */
+    /*=================================  PROFILE PAGE  ============================== */
     .account-page {
         width: calc(100% - 16px);
         margin: 8px auto;
@@ -1885,7 +2381,6 @@
             margin: 0 3px;
         }
 
-
     /* CONTENT */
     .account-content {
         grid-template-columns: 1fr;
@@ -1894,7 +2389,6 @@
         border-radius: 0 0 10px 10px;
     }
 
-
     /* CARDS */
     .profile-card,
     .password-card {
@@ -1902,7 +2396,6 @@
         padding: 12px;
         border-radius: 12px;
     }
-
 
     /* PROFILE USER */
     .profile-user {
@@ -1940,25 +2433,18 @@
         font-size: 12px;
     }
 
-
     /* BALANCE */
     .balance-summary {
         width: 100%;
         min-width: 0;
         padding: 12px 0 0;
         border-left: none;
-        border-top: 1px solid #dce7f5;
+        border-top: 1px solid #36383f;
     }
 
         .balance-summary span {
             margin-bottom: 4px;
         }
-
-
-    /* PROFILE GRID */
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
 
     .info-box {
         min-width: 0;
@@ -1971,11 +2457,11 @@
         }
 
         .info-box:not(:last-child) {
-            border-bottom: 1px solid #e5edf7;
+            border-bottom: 1px solid #36383f;
         }
 
         .info-box:nth-last-child(-n + 2) {
-            border-bottom: 1px solid #e5edf7;
+            border-bottom: 1px solid #36383f;
         }
 
         .info-box:last-child {
@@ -1994,7 +2480,6 @@
         font-size: 13px;
     }
 
-
     /* PASSWORD FORM */
     .form-group {
         margin-bottom: 16px;
@@ -2011,14 +2496,12 @@
             box-sizing: border-box;
         }
 
-
     /* PASSWORD BUTTON */
     .change-password-btn {
         width: 100%;
         max-width: none;
         height: 42px;
     }
-
 
     /* PASSWORD POLICY */
     .password-policy {
@@ -2149,7 +2632,8 @@
             height: 34px;
         }
 
-        .cm8-promo-info span, .cm8-promo-info p {
+        .cm8-promo-info span,
+        .cm8-promo-info p {
             font-size: 10px;
         }
     /* PAYMENT */
@@ -2206,20 +2690,1191 @@
         gap: 6px;
     }
 
+    /*--------------------------  LEVELPROGRAM PAGE  ---------------------------*/
 
+    .lp-page {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 8px;
+        border-radius: 15px;
+    }
+    /* SIDEBAR */
 
+    .lp-sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 8px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+    }
+
+    .lp-sidebar-menu {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        padding-bottom: 3px;
+    }
+
+    .lp-side-item {
+        width: auto;
+        min-width: max-content;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: 25px;
+        white-space: nowrap;
+    }
+
+        .lp-side-item i {
+            width: auto;
+        }
+    /* HIDE EARNING BOX ON TABLET */
+
+    .lp-earning-box {
+        display: none;
+    }
+    /* MAIN */
+
+    .lp-main {
+        width: 100%;
+        padding: 8px 0 0;
+    }
+    /* LEVEL HEADER */
+
+    .lp-level-header {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .lp-member-info {
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--lp-border);
+        padding-bottom: 10px;
+    }
+
+    .lp-progress-area {
+        padding: 0 5px;
+    }
+
+    .lp-reward-message,
+    .lp-hero {
+        display: none;
+    }
+    /* HERO */
+
+    .lp-hero-content {
+        padding: 25px;
+        max-width: 65%;
+    }
+
+    .lp-hero-title {
+        font-size: clamp(38px, 7vw, 55px);
+    }
+
+    .lp-hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .lp-hero-player {
+        right: 0;
+        height: 100%;
+    }
+    /* REWARDS */
+
+    .lp-rewards-section {
+        height: 250px;
+    }
+
+    .lp-rewards-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .lp-reward-card {
+        height: 120px;
+        padding: 5px;
+    }
+
+    .lp-reward-value img {
+        width: 38%;
+    }
+    /* TERMS */
+    .lp-terms-title {
+        font-size: 12px;
+    }
+
+    .lp-terms-text {
+        font-size: 12px;
+    }
+
+    .lp-mobile-terms {
+        display: block;
+        margin-bottom: 60px;
+    }
+
+        .lp-mobile-terms .lp-terms-divider,
+        .lp-mobile-terms .lp-terms-icon {
+            display: none;
+        }
+
+    /*--------------------------  LUKYDRAW PAGE  ---------------------------*/
+
+    .sw-page {
+        min-height: 100vh;
+    }
+
+    .sw-container {
+        width: calc(100% - 20px);
+        margin: 8px auto;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    /* HEADER */
+
+    .sw-header {
+        margin-bottom: 15px;
+    }
+
+        .sw-header img {
+            width: 100%;
+        }
+
+        .sw-header h1 {
+            gap: 10px;
+            letter-spacing: -2px;
+        }
+
+    .sw-subtitle {
+        gap: 8px;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+        .sw-subtitle i {
+            width: 25px;
+        }
+    /* CHANGE TO 1 COLUMN */
+
+    .sw-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    /* WHEEL */
+
+    .sw-wheel-stage {
+        width: min(560px, 100%);
+    }
+
+    .sw-wheel-segment {
+        font-size: 14px;
+        top: 22px;
+        transform-origin: 50% 85%;
+    }
+
+    .sw-s2,
+    .sw-s3 {
+        font-size: 27px;
+    }
+
+    .sw-phone small {
+        font-size: 13px;
+    }
+    /* SPIN BUTTON */
+
+    .sw-spin-btn {
+        width: min(410px, 90%);
+        min-width: 0;
+        padding: 14px 25px;
+    }
+    /* RIGHT COLUMN */
+
+    .sw-right-column {
+        gap: 15px;
+    }
+    /* HISTORY */
+
+    .sw-history {
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .sw-history-table {
+        min-height: 250px;
+    }
+
+    .sw-history-empty {
+        min-height: 220px;
+    }
+    /* PROMO */
+
+    .sw-promo-card {
+        min-height: 70px;
+    }
+    /* TERMS */
+
+    .sw-term-item {
+        min-height: 50px;
+    }
+
+    .sw-bottom-info {
+        margin-top: 18px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .sw-center-inner span {
+        font-size: 40px;
+    }
+
+    .sw-pointer {
+        top: -2%;
+    }
+
+    .sw-terms-card {
+        margin-bottom: 40px;
+    }
+
+    /*---------------------------------  DAILY CHECK IN PAGE ---------------------------*/
+    .dci-page {
+        padding: 12px;
+    }
+
+    .dci-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0 4px 12px;
+        gap: 12px;
+    }
+
+    .dci-brand {
+        width: 100%;
+    }
+
+    .dci-brand-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 23px;
+    }
+
+    .dci-brand-text h1 {
+        font-size: 24px;
+    }
+
+    .dci-brand-text p {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+    .dci-header-badge {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .dci-main {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .dci-calendar-card,
+    .dci-reward-card {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .dci-calendar-top {
+        gap: 12px;
+        margin-bottom: 14px;
+    }
+
+    .dci-section-label {
+        font-size: 12px;
+    }
+
+    .dci-calendar-heading h2 {
+        font-size: 17px;
+    }
+
+    .dci-progress-wrap {
+        min-width: 105px;
+    }
+
+        .dci-progress-wrap > span {
+            font-size: 12px;
+        }
+
+    .dci-progress-track {
+        width: 105px;
+    }
+
+    .dci-days-grid {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .dci-day {
+        min-height: 70px;
+        padding: 7px 5px;
+        border-radius: 8px;
+    }
+
+    .dci-day-number {
+        font-size: 22px;
+    }
+
+    .dci-day-symbol {
+        font-size: 18px;
+    }
+
+    .dci-day-label {
+        font-size: 10px;
+    }
+
+    .dci-day.dci-checked::after {
+        top: 5px;
+        right: 5px;
+        width: 19px;
+        height: 19px;
+        font-size: 11px;
+    }
+
+    .dci-calendar-footer {
+        font-size: 12px;
+    }
+
+    .dci-reward-header {
+        padding-bottom: 12px;
+    }
+
+    .dci-reward-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .dci-reward-heading h2 {
+        font-size: 16px;
+    }
+
+    .dci-reward-content {
+        min-height: 160px;
+    }
+
+    .dci-eligibility {
+        margin-top: 10px;
+    }
+
+    .dci-checkin-button {
+        min-height: 46px;
+        font-size: 14px;
+    }
+
+    .dci-terms-card {
+        margin-top: 12px;
+        padding: 14px;
+        border-radius: 14px;
+        margin-bottom: 50px;
+    }
+
+    .dci-terms-header {
+        cursor: pointer;
+    }
+
+    .dci-terms-arrow {
+        margin-left: auto;
+        flex-shrink: 0;
+        color: var(--dci-accent);
+        font-size: 14px;
+        transition: transform 0.25s ease;
+    }
+
+    /* CLOSED */
+    .dci-terms-list {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.35s ease, opacity 0.25s ease;
+    }
+
+    /* OPEN */
+    .dci-terms-card.dci-open .dci-terms-list {
+        max-height: 1000px;
+        opacity: 1;
+    }
+
+    /* ARROW */
+    .dci-terms-card.dci-open .dci-terms-arrow {
+        transform: rotate(180deg);
+    }
+
+    i.dci-terms-arrow {
+        display: block;
+    }
+
+    .dci-mobile-checkin {
+        display: block;
+        margin-top: 12px;
+    }
+
+        .dci-mobile-checkin .dci-checkin-wrap {
+            display: block;
+        }
+
+        .dci-mobile-checkin .dci-checkin-button {
+            margin-top: 0;
+        }
+
+        .dci-mobile-checkin .dci-status {
+            padding-top: 8px;
+        }
+
+    /*----------------------------  FRIENDS PAGE  ----------------------------------*/
+    .fr-page {
+        padding: 8px 12px 15px;
+        margin: 8px auto;
+        border-radius: 14px;
+    }
+
+    .fr-header {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .fr-title {
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+        .fr-title h2 {
+            font-size: 20px;
+        }
+
+    .fr-desktop-size {
+        font-size: 11px;
+        padding: 3px 7px;
+    }
+
+    .fr-header-actions {
+        gap: 4px;
+    }
+
+    .fr-icon-btn i {
+        font-size: 17px;
+        padding: 8px;
+    }
+
+    .fr-tabs {
+        min-height: 43px;
+        gap: 5px;
+        border-radius: 22px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+        .fr-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+    .fr-tab {
+        min-width: 105px;
+        padding: 0 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .fr-tab-content {
+        margin-top: 7px;
+    }
+
+    .fr-section {
+        padding: 9px 11px 13px;
+        border-radius: 8px;
+    }
+
+    .fr-section-header {
+        min-height: 38px;
+    }
+
+    .fr-section-title {
+        gap: 7px;
+        font-size: 13px;
+    }
+
+        .fr-section-title i,
+        .fr-empty-icon i {
+            font-size: 17px;
+        }
+
+    .fr-collection-count {
+        padding: 3px 8px;
+        font-size: 11px;
+    }
+
+    /* COLLECTION + REWARD */
+    .fr-collection-reward {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .fr-collection .fr-cards-grid {
+        height: auto;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .fr-card {
+        height: 175px;
+        border-radius: 10px;
+    }
+
+    .fr-card-symbol {
+        top: 12px;
+        right: 7px;
+        padding: 0 7px;
+        font-size: 8px;
+    }
+
+    .fr-card-image {
+        top: 32px;
+    }
+
+    .fr-card-bottom {
+        bottom: 6px;
+        left: 7px;
+        right: 7px;
+        font-size: 12px;
+    }
+
+    .fr-reward-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+        padding: 0 8px 8px;
+    }
+
+    .fr-reward-list {
+        padding: 0 8px 8px;
+    }
+
+    .fr-reward-item {
+        min-height: 45px;
+        padding: 0 8px;
+    }
+
+    .fr-reward-info {
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    .fr-claim {
+        min-width: 65px;
+        height: 32px;
+        font-size: 11px;
+    }
+
+    /* INFO */
+    .fr-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .fr-game-types {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .fr-card-type {
+        min-height: 55px;
+        font-size: 11px;
+    }
+
+    .fr-exchange-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .fr-exchange-item {
+        min-height: 55px;
+        font-size: 11px;
+    }
+
+    .fr-records {
+        min-height: 220px;
+        margin-bottom: 50px;
+    }
+
+    .fr-record-list {
+        padding: 9px;
+    }
+
+    .fr-record-row {
+        min-height: 48px;
+        padding: 0 9px;
+    }
+
+    .fr-record-left {
+        gap: 7px;
+    }
+
+    .fr-record-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .fr-record-date {
+        font-size: 11px;
+    }
+
+    /* MODAL */
+    .fr-modal-overlay {
+        padding: 12px;
+    }
+
+    .fr-record-modal {
+        max-width: 100%;
+    }
+
+    /*--------------------------  TRANSACTION (STATEMENT/MYBET) PAGE  ---------------------------*/
+    .st-page,
+    .mb-page {
+        width: calc(100% - 14px);
+        margin: 7px auto;
+        padding: 9px 12px 14px;
+        border-radius: 14px;
+    }
+
+    /* HEADER */
+
+    .st-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    .st-header-left {
+        gap: 10px;
+    }
+
+    .st-icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+        font-size: 18px;
+    }
+
+    .st-header-text h1 {
+        font-size: 23px;
+    }
+
+    .st-header-text p {
+        margin-top: 5px;
+        font-size: 11px;
+    }
+
+    .st-header-right {
+        width: 100%;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .st-brand {
+        font-size: 11px;
+    }
+
+    /* TABS */
+
+    .st-tabs {
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+        .st-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+    .st-tab {
+        min-width: 100px;
+        padding: 0 12px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    /* FILTER */
+
+    .st-filter {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        column-gap: 0;
+        padding: 8px 0 11px;
+    }
+
+    .st-filter-divider {
+        display: none;
+    }
+
+    .st-filter-block {
+        width: 100%;
+    }
+
+    .st-quick-buttons {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .st-quick-btn {
+        height: 32px;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+    .st-custom-filter {
+        width: 100%;
+    }
+
+    .st-date-row {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .st-date-input {
+        width: calc(50% - 22px);
+        flex: 1 1 170px;
+        height: 34px;
+    }
+
+    .st-date-separator {
+        font-size: 11px;
+    }
+
+    .st-search-btn {
+        height: 34px;
+        min-width: 82px;
+        flex: 0 0 auto;
+    }
+
+    /* SUMMARY */
+
+    .st-summary {
+        padding-top: 14px;
+    }
+
+    .st-section-heading {
+        margin-bottom: 8px;
+    }
+
+        .st-section-heading > span {
+            font-size: 11px;
+        }
+
+        .st-section-heading small {
+            font-size: 10px;
+        }
+
+    .st-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .st-summary-card {
+        height: 92px;
+        padding: 13px;
+        border-radius: 14px;
+    }
+
+    .st-summary-title {
+        font-size: 10px;
+    }
+
+    .st-summary-info strong {
+        margin-top: 11px;
+        font-size: 17px;
+    }
+
+    .st-summary-info small {
+        margin-top: 5px;
+        font-size: 9px;
+    }
+
+    .st-summary-icon {
+        font-size: 16px;
+    }
+
+    /* TRANSACTION */
+
+    .st-transaction {
+        margin-top: 10px;
+        border-radius: 14px;
+    }
+
+    .st-transaction-header {
+        min-height: 50px;
+        padding: 10px 13px;
+    }
+
+        .st-transaction-header h2 {
+            font-size: 15px;
+        }
+
+        .st-transaction-header p,
+        .st-transaction-header > span {
+            font-size: 10px;
+        }
+
+    .st-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .st-table {
+        min-width: 900px;
+    }
+
+        .st-table th {
+            height: 36px;
+            padding: 0 9px;
+            font-size: 10px;
+        }
+
+        .st-table td {
+            height: 45px;
+            padding: 0 9px;
+            font-size: 10px;
+        }
+
+    .st-empty-row td,
+    .st-empty {
+        height: 150px;
+    }
+
+    .st-empty-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 9px;
+    }
+
+    .st-empty h3 {
+        font-size: 13px;
+    }
+
+    .st-empty p {
+        font-size: 10px;
+    }
+
+    /* MYBETS ACTIONS */
+
+    .mb-actions {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 7px;
+        padding: 8px 0;
+    }
+
+    .mb-filter-wrap,
+    .mb-dropdown {
+        width: 170px;
+        max-width: calc(100% - 100px);
+    }
+
+    .mb-filter,
+    .mb-dropdown-selected {
+        height: 38px;
+        font-size: 11px;
+    }
+
+    .mb-print {
+        width: 38px;
+        height: 38px;
+    }
+
+    .mb-refresh {
+        height: 38px;
+        min-width: 95px;
+        padding: 0 13px;
+        font-size: 11px;
+    }
+
+    /* MYBETS TABLE */
+
+    .mb-page {
+        width: calc(100% - 14px);
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .mb-table-head,
+    .mb-record {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+        .mb-table-head > *,
+        .mb-record > * {
+            min-width: 0;
+            overflow: hidden;
+        }
+
+    .mb-table-head {
+        min-height: 42px;
+        padding: 0 10px;
+        font-size: 10px;
+    }
+
+    .mb-record {
+        min-height: 62px;
+        padding: 0 10px;
+        margin-top: 5px;
+    }
+
+    .mb-number {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+        font-size: 11px;
+    }
+
+    .mb-selection {
+        gap: 7px;
+    }
+
+    .mb-game-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+    }
+
+    .mb-details strong,
+    .mb-selection strong {
+        font-size: 11px;
+    }
+
+    .mb-details span,
+    .mb-selection span {
+        font-size: 9px;
+    }
+
+    .mb-odds {
+        width: 40px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .mb-stake {
+        font-size: 11px;
+    }
+
+    .mb-status {
+        width: 73px;
+        height: 30px;
+        padding: 0 9px;
+        font-size: 10px;
+    }
+
+    .mb-details strong,
+    .mb-selection strong {
+        font-size: 10px;
+    }
+
+    .mb-stake {
+        font-size: 9px;
+    }
+
+    /*--------------------------  DOWNLOAD PAGE  ---------------------------*/
+    .download-page {
+        width: calc(100% - 14px);
+        padding: 8px 13px 15px;
+        margin: 8px auto 35px;
+        border-radius: 15px;
+        min-height: 95vh;
+    }
+
+    .dl-header {
+        height: auto;
+        min-height: 70px;
+        gap: 10px;
+    }
+
+    .dl-logo-text {
+        font-size: 23px;
+        letter-spacing: -1.2px;
+    }
+
+    .dl-logo small {
+        bottom: -14px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .dl-logo-crown {
+        top: -13px;
+        left: 108px;
+        font-size: 14px;
+    }
+
+    .dl-live-status {
+        padding: 7px 10px;
+        gap: 7px;
+        font-size: 10px;
+    }
+
+        .dl-live-status span {
+            width: 6px;
+            height: 6px;
+        }
+
+    .dl-hero {
+        padding: 16px 10px;
+    }
+
+    .dl-eyebrow {
+        margin-bottom: 12px;
+        gap: 8px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+        .dl-eyebrow span {
+            width: 25px;
+        }
+
+    .dl-hero h1 {
+        font-size: clamp(32px, 7vw, 48px);
+        letter-spacing: -2px;
+    }
+
+    .dl-hero p {
+        padding-left: 3px;
+        font-size: 11px;
+    }
+
+    .dl-download-area {
+        margin-top: 12px;
+    }
+
+    .dl-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .dl-card {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .dl-card-icon {
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+
+        .dl-card-icon img {
+            width: 68px;
+            height: 68px;
+        }
+
+    .dl-card-label {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .dl-card h3 {
+        font-size: 16px;
+    }
+
+    .dl-card p {
+        min-height: 35px;
+        margin-bottom: 12px;
+        font-size: 10px;
+        line-height: 1.45;
+    }
+
+    .dl-store-btn {
+        min-height: 45px;
+        gap: 8px;
+        padding: 7px 11px;
+        border-radius: 8px;
+    }
+
+    .dl-store-icon {
+        width: 28px;
+        font-size: 20px;
+    }
+
+        .dl-store-icon img {
+            padding-top: 5px;
+        }
+
+    .dl-store-text small {
+        font-size: 8px;
+    }
+
+    .dl-store-text strong {
+        font-size: 10px;
+    }
+
+    .dl-arrow {
+        font-size: 10px;
+    }
+
+    .dl-features {
+        margin-top: 22px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .dl-feature {
+        min-height: 55px;
+        justify-content: flex-start;
+        padding: 6px 12px;
+    }
+
+        .dl-feature:nth-child(2) {
+            border-right: 0;
+        }
+
+        .dl-feature:nth-child(-n + 2) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            padding-bottom: 10px;
+        }
+
+        .dl-feature:nth-child(n + 3) {
+            padding-top: 10px;
+        }
+
+    .dl-feature-icon {
+        width: 35px;
+        height: 35px;
+        flex: 0 0 35px;
+        font-size: 15px;
+    }
+
+    .dl-feature h4 {
+        font-size: 10px;
+    }
+
+    .dl-feature p {
+        font-size: 8px;
+    }
+
+    .dl-footer {
+        margin-top: 16px;
+    }
+
+    .dl-back-btn {
+        padding: 8px 15px;
+        font-size: 10px;
+    }
 }
-
-
-
-
-
-
 
 /*===============================================================  MOBILE 480PX  ==========================================================*/
 
 @media (max-width: 480px) {
-
     .main-header {
         padding: 6px 8px;
     }
@@ -2354,7 +4009,6 @@
             border-radius: 7px;
         }
 
-
     /*======================   DEPOSIT   ============================*/
     /* Confirm button → full row bawah */
     .quick-amounts .confirm-btn {
@@ -2370,7 +4024,8 @@
         padding: 0px;
     }
 
-    .deposit-left, .deposit-right {
+    .deposit-left,
+    .deposit-right {
         width: 100%;
         margin-bottom: 40px;
     }
@@ -2392,7 +4047,8 @@
             font-size: var(--font-lg);
         }
 
-    .payment-info span, .payment-info strong {
+    .payment-info span,
+    .payment-info strong {
         font-size: var(--font-lg);
     }
 
@@ -2421,5 +4077,47 @@
 
     .page-title {
         padding: 0px;
+    }
+
+    /*----------------------  FREN PAGE  --------------------------------*/
+    .fr-card {
+        height: 130px;
+    }
+
+    .fr-collection .fr-cards-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    /*----------------------  PROFILE PAGE  --------------------------------*/
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /*----------------------  STATEMENT/MYBETS PAGE  --------------------------------*/
+
+    .mb-odds {
+        width: 40px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .mb-stake {
+        font-size: 9px;
+    }
+
+    .mb-number {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+    }
+
+    .mb-status {
+        width: 75px;
+        font-size: 10px;
+    }
+
+    .mb-table-head,
+    .mb-record {
+        --mb-grid: 30px 1.15fr 1.35fr 0.7fr 0.85fr 1fr;
     }
 }

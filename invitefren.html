@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="invitefren.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
@@ -16,9 +18,10 @@
 
     <!-- JQuery -->
     <script src="script.js" defer></script>
+    <script src="invitefren.js" defer></script>
 </head>
-
 <body>
+
     <header class="main-header">
         <div class="header-inner">
             <!-- LOGO -->
@@ -419,262 +422,323 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
+    <div class="rf-page">
 
-    <section class="promo-slider">
-        <div class="promo-track">
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01a.jpg" alt="Promotion Banner" />
-                </a>
+        <!-- TOP DECORATION -->
+        <div class="rf-glow rf-glow-1"></div>
+        <div class="rf-glow rf-glow-2"></div>
+
+        <div class="rf-container">
+
+
+            <!-- =========================
+                 MAIN GRID
+            ========================== -->
+            <div class="rf-main-grid">
+
+                <!-- =========================
+                     LEFT SIDE
+                ========================== -->
+                <section class="rf-left">
+
+                    <!-- SHARE CARD -->
+                    <div class="rf-share-card">
+
+                        <!-- tabs -->
+                        <div class="rf-tabs">
+
+                            <button class="rf-tab rf-tab-active"
+                                    data-tab="code">
+                                <span class="rf-tab-icon"><i class="fa-solid fa-user-plus"></i></span>
+                                Invite Code
+                            </button>
+
+                            <button class="rf-tab"
+                                    data-tab="link">
+                                <span class="rf-tab-icon"><i class="fa-solid fa-link"></i></span>
+                                Invite Link
+                            </button>
+
+                        </div>
+
+
+                        <!-- CODE -->
+                        <div class="rf-tab-content rf-content-active"
+                             id="rf-code">
+
+                            <div class="rf-field-heading">
+                                <div class="rf-round-icon"><i class="fa-solid fa-user-plus"></i></div>
+
+                                <div>
+                                    <h3>Your Invite Code</h3>
+                                    <p>Share this code with your friends</p>
+                                </div>
+                            </div>
+
+                            <div class="rf-copy-box">
+
+                                <span class="rf-code-value">
+                                    MFJIL
+                                </span>
+
+                                <button class="rf-copy-btn"
+                                        data-copy="MFJIL">
+                                    <span><i class="fa-regular fa-copy"></i></span>
+                                    Copy
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LINK -->
+                        <div class="rf-tab-content"
+                             id="rf-link">
+
+                            <div class="rf-field-heading">
+                                <div class="rf-round-icon"><i class="fa-solid fa-link"></i></div>
+
+                                <div>
+                                    <h3>Your Invite Link</h3>
+                                    <p>Share this link with your friends</p>
+                                </div>
+                            </div>
+
+                            <div class="rf-copy-box">
+
+                                <span class="rf-link-value">
+                                    https://gdbet333mys.com/en/registration?r=mfjil
+                                </span>
+
+                                <button class="rf-copy-btn"
+                                        data-copy="https://gdbet333mys.com/en/registration?r=mfjil">
+                                    <span><i class="fa-regular fa-copy"></i></span>
+                                    Copy
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- OR -->
+                        <div class="rf-or">
+                            <span></span>
+                            <b>OR</b>
+                            <span></span>
+                        </div>
+
+
+                        <!-- SHARE BOTH -->
+                        <div class="rf-share-options">
+
+                            <span>Share via</span>
+
+                            <button class="rf-social rf-whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+
+                            <button class="rf-social rf-facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </button>
+
+                            <button class="rf-social rf-telegram">
+                                <i class="fa-brands fa-telegram"></i>
+                            </button>
+
+                            <button class="rf-social rf-more">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+
+                        <!-- REWARD -->
+                        <div class="rf-reward-box">
+
+                            <div class="rf-reward-icon">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+
+                            <div class="rf-reward-text">
+
+                                <p>
+                                    Your friends will get
+                                    <strong>MYR 0</strong>
+                                    with rollover x0 upon depositing
+                                    a minimum of
+                                    <strong>MYR 30</strong>
+                                    within 30 day(s).
+                                </p>
+
+                                <p>
+                                    While you'll be rewarded
+                                    <strong>MYR 6.01</strong>
+                                    with rollover x2.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BONUS CARDS -->
+                    <div class="rf-bonus-grid">
+
+                        <div class="rf-bonus-card rf-pending">
+
+                            <div class="rf-status-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+
+                            <div class="rf-status-content">
+                                <small>PENDING BONUS</small>
+                                <strong>MYR 0.00</strong>
+                            </div>
+
+                            <span class="rf-arrow">›</span>
+
+                        </div>
+
+
+                        <div class="rf-bonus-card rf-earned">
+
+                            <div class="rf-status-icon">
+                                <i class="fa-regular fa-money-bill-1"></i>
+                            </div>
+
+                            <div class="rf-status-content">
+                                <small>EARNED BONUS</small>
+                                <strong>MYR 0.00</strong>
+                            </div>
+
+                            <span class="rf-arrow">›</span>
+
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- =========================
+                     RIGHT SIDE
+                ========================== -->
+                <section class="rf-how">
+
+                    <div class="rf-how-header">
+
+                        <div class="rf-how-icon">
+                            <i class="fa-solid fa-list"></i>
+                        </div>
+
+                        <div>
+                            <div class="rf-how-label">
+                                JUST 3 SIMPLE STEPS
+                            </div>
+
+                            <h2>
+                                HOW IT <strong>WORKS</strong>
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 01 -->
+                    <div class="rf-step">
+
+                        <div class="rf-step-number">
+                            01
+                        </div>
+
+                        <div class="rf-step-icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+
+                        <div class="rf-step-content">
+
+                            <h3>Invite Your Friends</h3>
+
+                            <p>
+                                The invite friend bonus is only valid
+                                for your new registered friend through code.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 02 -->
+                    <div class="rf-step">
+
+                        <div class="rf-step-number">
+                            02
+                        </div>
+
+                        <div class="rf-step-icon">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+
+                        <div class="rf-step-content">
+
+                            <h3>Complete Deposit</h3>
+
+                            <p>
+                                Referrer will receive the invite friend
+                                bonus after your referee completed the deposit.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 03 -->
+                    <div class="rf-step">
+
+                        <div class="rf-step-number">
+                            03
+                        </div>
+
+                        <div class="rf-step-icon">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+
+                        <div class="rf-step-content">
+
+                            <h3>Enjoy Rewards</h3>
+
+                            <p>
+                                Company reserves the right to remove invite
+                                friend bonus if we notice any activity that
+                                we believe is abusive and fraudulent.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
             </div>
 
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01b.jpg" alt="Promotion Banner" />
-                </a>
-            </div>
+        </div>
 
-            <!-- SLIDE 3 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01c.jpg" alt="Promotion Banner" />
-                </a>
+
+        <!-- TOAST -->
+        <div class="rf-toast">
+            <span>✓</span>
+            <div>
+                <strong>Copied!</strong>
+                <small>Referral information copied.</small>
             </div>
         </div>
 
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-            <span class="promo-dot"></span>
-        </div>
-    </section>
-
-    <!-- =========================
-         HOT GAMES
-    ========================= -->
-
-    <section class="hot-games page-hot">
-        <div class="slot-section-title">
-            <div class="slot-section-icon">
-                <img src="imgs/icon/hot-ic.png" alt="Hot Icon" />
-            </div>
-
-            <div class="slot-section-text">
-                <h2>Hot Games</h2>
-                <p>Trending picks</p>
-            </div>
-
-        </div>
-
-        <div class="games-grid">
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
+    </div>
 
 
 
@@ -911,6 +975,8 @@
     <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
+
+
 
 </body>
 </html>

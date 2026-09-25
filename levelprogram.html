@@ -9,15 +9,16 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="levelprogram.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <!-- JQuery -->
+    <script src="levelprogram.js" defer></script>
     <script src="script.js" defer></script>
 </head>
-
 <body>
     <header class="main-header">
         <div class="header-inner">
@@ -419,269 +420,493 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
 
-    <section class="promo-slider">
-        <div class="promo-track">
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01a.jpg" alt="Promotion Banner" />
-                </a>
+    <div class="lp-page">
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+        <aside class="lp-sidebar">
+            <div class="lp-sidebar-menu">
+                <!-- Sports -->
+                <button type="button"
+                        class="lp-side-item lp-active"
+                        data-lp-menu="rewards">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>
+                        Sport
+                    </span>
+                </button>
+
+                <!-- casino -->
+                <button type="button"
+                        class="lp-side-item"
+                        data-lp-menu="statement">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>
+                        Casino
+                    </span>
+                </button>
+
+                <!-- Lottery -->
+                <button type="button"
+                        class="lp-side-item"
+                        data-lp-menu="profile">
+                    <i class="fa-solid fa-user"></i>
+                    <span>
+                        Lottery
+                    </span>
+                </button>
+
+                <!-- Games -->
+                <button type="button"
+                        class="lp-side-item"
+                        data-lp-menu="settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>
+                        Games
+                    </span>
+                </button>
+
+                <!-- p2p -->
+                <button type="button"
+                        class="lp-side-item"
+                        data-lp-menu="settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>
+                        P2P
+                    </span>
+                </button>
+
             </div>
 
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01b.jpg" alt="Promotion Banner" />
-                </a>
+            <!-- =================================================
+                 EARNING INFORMATION
+            ================================================== -->
+            <div class="lp-earning-box">
+                <button type="button"
+                        class="lp-earning-button">
+                    <span>
+                        START EARNING
+                    </span>
+                    <span>
+                        REWARDS NOW!
+                    </span>
+                </button>
+
+                <div class="lp-earning-content">
+                    <div class="lp-earning-row">
+                        <span class="lp-earning-number">
+                            1.
+                        </span>
+                        <span>
+                            XP is required to level up
+                        </span>
+                    </div>
+
+                    <div class="lp-earning-row">
+                        <span class="lp-earning-number">
+                            2.
+                        </span>
+                        <span>
+                            You can earn XP by placing bets
+                            in any game categories.
+                        </span>
+                    </div>
+
+                    <div class="lp-earning-row">
+                        <span class="lp-earning-number">
+                            3.
+                        </span>
+                        <span>
+                            The more you bet, the more XP
+                            you earn.
+                        </span>
+                    </div>
+
+                    <div class="lp-earning-row">
+                        <span class="lp-earning-number">
+                            4.
+                        </span>
+                        <span>
+                            XP gain varies by game category.
+                        </span>
+                    </div>
+
+                    <div class="lp-earning-row">
+                        <span class="lp-earning-number">
+                            5.
+                        </span>
+                        <span>
+                            Reward will be given for every
+                            milestone level you reach!
+                        </span>
+                    </div>
+
+                    <div class="lp-earning-row">
+                        <span class="lp-earning-number">
+                            6.
+                        </span>
+                        <span>
+                            Only 1 reward will be given for
+                            each milestone level.
+                        </span>
+                    </div>
+                </div>
             </div>
+        </aside>
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+        <main class="lp-main">
+            <!-- =================================================
+                 LEVEL STATUS
+            ================================================== -->
+            <section class="lp-level-header">
+                <!-- MEMBER -->
+                <div class="lp-member-info">
+                    <div class="lp-member-avatar">
+                        <img src="imgs/icon/header/head_0007_sports-ich.png"
+                             alt="Player">
+                    </div>
+
+                    <div class="lp-member-details">
+                        <div class="lp-level-number">
+                            Lv. 0
+                        </div>
+                        <div class="lp-member-category">
+                            Sport
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XP PROGRESS -->
+                <div class="lp-progress-area">
+                    <div class="lp-progress-top">
+                        <span class="lp-progress-percent">
+                            0%
+                        </span>
+                        <span class="lp-next-level">
+                            Lv.1
+                        </span>
+                    </div>
+
+                    <div class="lp-progress-bar">
+                        <div class="lp-progress-fill"
+                             style="width: 0%;"></div>
+                    </div>
+
+                    <div class="lp-progress-bottom">
+                        <span class="lp-xp-value">
+                            0 / 1,000 XP
+                        </span>
+                        <span>
+                            To next level
+                        </span>
+                    </div>
+                </div>
+
+                <!-- REWARD MESSAGE -->
+                <div class="lp-reward-message">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>
+                        Keep playing to unlock<br>
+                        exclusive rewards!
+                    </span>
+                </div>
+            </section>
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+            <section class="lp-hero">
+                <div class="lp-hero-content">
+                    <div class="lp-hero-label">
+                        PLAY MORE&nbsp;&nbsp; EARN MORE
+                    </div>
+
+                    <h1 class="lp-hero-title">
+                        <span>
+                            LEVEL
+                        </span>
+                        <strong>
+                            REWARDS
+                        </strong>
+                    </h1>
+
+                    <div class="lp-hero-subtitle">
+                        MORE PLAY
+                        &nbsp;&nbsp;&nbsp;
+                        MORE XP
+                        &nbsp;&nbsp;&nbsp;
+                        MORE REWARDS
+
+                    </div>
+
+                    <button type="button"
+                            class="lp-hero-button">
+                        <span>
+                            START EARNING NOW
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- PLAYER 
+                <div class="lp-hero-player">
+                    <img src="imgs/icon/sport_embassy2.png" alt="Football Player">
+                </div>-->
+            </section>
 
-            <!-- SLIDE 3 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01c.jpg" alt="Promotion Banner" />
-                </a>
-            </div>
-        </div>
-
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-            <span class="promo-dot"></span>
-        </div>
-    </section>
-
-    <!-- =========================
-         HOT GAMES
-    ========================= -->
-
-    <section class="hot-games page-hot">
-        <div class="slot-section-title">
-            <div class="slot-section-icon">
-                <img src="imgs/icon/hot-ic.png" alt="Hot Icon" />
-            </div>
-
-            <div class="slot-section-text">
-                <h2>Hot Games</h2>
-                <p>Trending picks</p>
-            </div>
-
-        </div>
-
-        <div class="games-grid">
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
+            <!-- =========================================================
+         LEVEL REWARDS
+    ========================================================= -->
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
+            <section class="lp-rewards-section">
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
+                <div class="lp-rewards-grid">
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
+                    <!-- LEVEL 1 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 1</div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 9</span>
+                        </div>
+                    </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
+                    <!-- LEVEL 2 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 2</div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 19</span>
+                        </div>
+                    </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
+                    <!-- LEVEL 3 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 3</div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 39</span>
+                        </div>
+                    </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
+                    <!-- LEVEL 4 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 4</div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 99</span>
+                        </div>
+                    </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
+                    <!-- LEVEL 5 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 5</div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 199</span>
+                        </div>
+                    </div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
+                    <!-- LEVEL 6 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 6</div>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
-        </div>
-    </section>
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 219</span>
+                        </div>
+                    </div>
 
 
+                    <!-- LEVEL 7 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 7</div>
 
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 269</span>
+                        </div>
+                    </div>
 
 
+                    <!-- LEVEL 8 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 8</div>
 
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
+                        <div class="lp-reward-lock">
+                            <span>5 STAR HOTEL<br>
+                            ROOM 4D3N</span>
+                        </div>
+                    </div>
 
 
+                    <!-- LEVEL 9 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 9</div>
 
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
 
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 319</span>
+                        </div>
+                    </div>
 
 
+                    <!-- LEVEL 10 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 10</div>
 
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
+
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 1,999</span>
+                        </div>
+                    </div>
+
+
+                    <!-- LEVEL 11 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 11</div>
+
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
+
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 2,099</span>
+                        </div>
+                    </div>
+
+
+                    <!-- LEVEL 12 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 12</div>
+
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
+
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 2,199</span>
+                        </div>
+                    </div>
+
+
+                    <!-- LEVEL 13 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 13</div>
+
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
+
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 2,299</span>
+                        </div>
+                    </div>
+
+
+                    <!-- LEVEL 14 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 14</div>
+
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
+
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 2,399</span>
+                        </div>
+                    </div>
+
+
+                    <!-- LEVEL 15 -->
+                    <div class="lp-reward-card">
+                        <div class="lp-reward-level">Lv. 15</div>
+
+                        <div class="lp-reward-value">
+                            <img src="imgs/icon/giftlevel.png" />
+                        </div>
+
+                        <div class="lp-reward-lock">
+                            <span>MYR/SGD 2,499</span>
+                        </div>
+                    </div>
+
+
+                    <!-- COPY THIS CARD FOR LEVEL 16 - 100 -->
+
+                </div>
+
+            </section>
+
+            <!-- =================================================
+                 TERMS & CONDITIONS
+            ================================================== -->
+            <section class="lp-terms lp-mobile-terms">
+                <div class="lp-terms-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div class="lp-terms-title">
+                    Terms & Conditions
+
+                </div>
+
+                <div class="lp-terms-divider"></div>
+
+                <div class="lp-terms-text">
+                    In order to better serve our members and
+                    ensure fairness, the company reserves the
+                    right to make necessary changes to the rewards.
+
+                </div>
+            </section>
+        </main>
+    </div>
 
 
 

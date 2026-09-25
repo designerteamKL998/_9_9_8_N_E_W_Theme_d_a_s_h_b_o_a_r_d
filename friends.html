@@ -9,12 +9,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="friends.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <!-- JQuery -->
+    <script src="friends.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -419,272 +421,309 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
-
-    <section class="promo-slider">
-        <div class="promo-track">
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01a.jpg" alt="Promotion Banner" />
-                </a>
+    <div class="fr-page">
+        <!-- =========================================
+             TOP HEADER
+        ========================================== -->
+        <header class="fr-header">
+            <div class="fr-title">
+                <h2>FRIENDS</h2>
             </div>
-
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01b.jpg" alt="Promotion Banner" />
-                </a>
+            <div class="fr-header-actions">
+                <button class="fr-icon-btn" title="History">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+                <button class="fr-icon-btn" title="Cards">
+                    <i class="fa-solid fa-layer-group"></i>
+                </button>
+                <button class="fr-icon-btn" title="Add Friend">
+                    <i class="fa-solid fa-user-plus"></i>
+                </button>
+                <button class="fr-icon-btn" title="Settings">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
             </div>
+        </header>
+        <!-- =========================================
+             FRIEND TABS
+        ========================================== -->
+        <nav class="fr-tabs">
+            <button class="fr-tab active" data-tab="all">
+                ALL FRIENDS <span>(0)</span>
+            </button>
+            <button class="fr-tab" data-tab="request">
+                FRIEND REQUEST
+            </button>
+            <button class="fr-tab" data-tab="sent">
+                SENT REQUEST
+            </button>
+        </nav>
+        <!-- =========================================
+             ALL FRIENDS CONTENT
+        ========================================== -->
+        <main id="all-content" class="fr-tab-content active">
+            <!-- =========================================
+                 COLLECTION + REWARD ROW
+            ========================================== -->
+            <div class="fr-collection-reward">
+                <!-- =====================================
+                     FRIENDS COLLECTION
+                ====================================== -->
+                <section class="fr-section fr-collection">
+                    <div class="fr-section-header">
+                        <div class="fr-section-title">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>FRIENDS COLLECTION</span>
+                        </div>
+                        <div class="fr-collection-count">
+                            <span class="fr-dot"></span>
+                            5 Cards Collection
+                        </div>
+                    </div>
 
-            <!-- SLIDE 3 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01c.jpg" alt="Promotion Banner" />
-                </a>
+                    <div class="fr-cards-grid">
+                        <!-- CARD 1 -->
+                        <div class="fr-card fr-card-diamond">
+                            <img src="imgs/icon/1f9bc74631154e18baa71b5381d940e9_A1.jpg" />
+                            <div class="fr-card-symbol">0</div>
+
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="fr-card fr-card-diamond">
+                            <img src="imgs/icon/3f992f81edb94e0baf5c3cd6706a5f33_A2.jpg" />
+                            <div class="fr-card-symbol">0</div>
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="fr-card fr-card-diamond">
+                            <img src="imgs/icon/251a5078a763462e8e97a0956d929fee_A3.jpg" />
+                            <div class="fr-card-symbol">0</div>
+                        </div>
+
+                        <!-- CARD 4 -->
+                        <div class="fr-card fr-card-diamond">
+                            <img src="imgs/icon/d4ac8eee09fe4a568c2ae123c071aa82_A4.jpg" />
+                            <div class="fr-card-symbol">0</div>
+                        </div>
+
+                        <!-- CARD 5 -->
+                        <div class="fr-card fr-card-black">
+                            <img src="imgs/icon/284e65a304324bc087fdcf06b9160d8d_A5.jpg" />
+                            <div class="fr-card-symbol">0</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- =====================================
+                     REWARD SYSTEM
+                ====================================== -->
+                <section class="fr-section fr-reward">
+                    <div class="fr-section-header">
+                        <div class="fr-section-title">
+                            <i class="fa-solid fa-gift"></i>
+                            <span>REWARD SYSTEM</span>
+                        </div>
+                    </div>
+
+                    <div class="fr-reward-list">
+                        <div class="fr-reward-item">
+                            <div class="fr-reward-info">
+                                <strong>3 Cards</strong>
+                                <span>→</span>
+                                <b>Bonus</b>
+                            </div>
+                            <button class="fr-claim" data-reward="3 Cards">
+                                CLAIM
+                            </button>
+                        </div>
+
+                        <div class="fr-reward-item">
+                            <div class="fr-reward-info">
+                                <strong>4 Cards</strong>
+                                <span>→</span>
+                                <b>Bonus</b>
+                            </div>
+                            <button class="fr-claim" data-reward="4 Cards">
+                                CLAIM
+                            </button>
+                        </div>
+
+                        <div class="fr-reward-item">
+                            <div class="fr-reward-info">
+                                <strong>5 Cards</strong>
+                                <span>→</span>
+                                <b>Bonus</b>
+                            </div>
+                            <button class="fr-claim" data-reward="5 Cards">
+                                CLAIM
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- =====================================
+                 INFORMATION ROW
+            ====================================== -->
+            <div class="fr-info-grid">
+                <!-- CARD COLLECTION -->
+                <section class="fr-section fr-info-box">
+                    <div class="fr-section-header">
+                        <div class="fr-section-title">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <span>CARD COLLECTION / HOW TO GET CARDS</span>
+                        </div>
+                    </div>
+                    <p class="fr-info-desc">
+                        1) During play any Game can get free random Card(s).
+                    </p>
+                    <div class="fr-game-types">
+                        <div class="fr-card-type">
+                            <span>Sport</span>
+                            <strong>Card 1, 2, 3</strong>
+                        </div>
+                        <div class="fr-card-type">
+                            <span>Casino</span>
+                            <strong>Card 2, 3, 4</strong>
+                        </div>
+                        <div class="fr-card-type">
+                            <span>Lottery</span>
+                            <strong>Card 3, 4, 5</strong>
+                        </div>
+                        <div class="fr-card-type">
+                            <span>Slot</span>
+                            <strong>Card 4, 5, 1</strong>
+                        </div>
+                        <div class="fr-card-type">
+                            <span>P2P</span>
+                            <strong>Card 5, 1, 2</strong>
+                        </div>
+                    </div>
+                </section>
+                <!-- CARD EXCHANGE -->
+                <section class="fr-section fr-info-box">
+                    <div class="fr-section-header">
+                        <div class="fr-section-title">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            <span>CARD EXCHANGE</span>
+                        </div>
+                    </div>
+                    <p class="fr-info-desc">
+                        2) Your Card can Exchange or Send to friend.
+                    </p>
+                    <div class="fr-exchange-grid">
+                        <button class="fr-exchange-item" data-cards="3">
+                            <span>3 Different Cards</span>
+                            <strong>
+                                Free <b>39</b>
+                            </strong>
+                        </button>
+                        <button class="fr-exchange-item" data-cards="4">
+                            <span>4 Different Cards</span>
+                            <strong>
+                                Free <b>399</b>
+                            </strong>
+                        </button>
+                        <button class="fr-exchange-item" data-cards="5">
+                            <span>5 Different Cards</span>
+                            <strong>
+                                Free <b>3,999</b>
+                            </strong>
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <!-- =====================================
+                 RECORDS
+            ====================================== -->
+            <section class="fr-section fr-records">
+                <div class="fr-section-header">
+                    <div class="fr-section-title">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span>RECORDS</span>
+                    </div>
+                </div>
+                <div class="fr-records-body" id="recordsBody">
+                    <div class="fr-empty-record">
+                        <div class="fr-empty-icon">
+                            <i class="fa-regular fa-clipboard"></i>
+                        </div>
+                        <h3>No records has been added yet.</h3>
+                        <p>
+                            Add a new record by simply clicking the button on top right side.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- =========================================
+             FRIEND REQUEST TAB
+        ========================================== -->
+        <div id="request-content" class="fr-tab-content fr-hidden">
+            <section class="fr-section fr-empty-tab">
+                <div class="fr-empty-tab-icon">
+                    <i class="fa-solid fa-user-clock"></i>
+                </div>
+                <h3>No Friend Requests</h3>
+                <p>You don't have any pending friend requests.</p>
+            </section>
+        </div>
+        <!-- =========================================
+             SENT REQUEST TAB
+        ========================================== -->
+        <div id="sent-content" class="fr-tab-content fr-hidden">
+            <section class="fr-section fr-empty-tab">
+                <div class="fr-empty-tab-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <h3>No Sent Requests</h3>
+                <p>You haven't sent any friend requests.</p>
+            </section>
+        </div>
+    </div>
+    <!-- =========================================
+         ADD RECORD MODAL
+    ========================================== -->
+    <div class="fr-modal-overlay" id="recordModal">
+        <div class="fr-record-modal">
+            <div class="fr-modal-header">
+                <h3>Add Record</h3>
+                <button class="fr-modal-close" id="closeModal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="fr-modal-body">
+                <label>
+                    Record Type
+                </label>
+                <select id="recordType">
+                    <option value="Card Collection">
+                        Card Collection
+                    </option>
+                    <option value="Card Exchange">
+                        Card Exchange
+                    </option>
+                    <option value="Friend Activity">
+                        Friend Activity
+                    </option>
+                </select>
+                <label>
+                    Description
+                </label>
+                <input type="text"
+                       id="recordDescription"
+                       placeholder="Enter description...">
+            </div>
+            <div class="fr-modal-footer">
+                <button class="fr-cancel" id="cancelModal">
+                    Cancel
+                </button>
+                <button class="fr-save" id="saveRecord">
+                    Add Record
+                </button>
             </div>
         </div>
-
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-            <span class="promo-dot"></span>
-        </div>
-    </section>
-
-    <!-- =========================
-         HOT GAMES
-    ========================= -->
-
-    <section class="hot-games page-hot">
-        <div class="slot-section-title">
-            <div class="slot-section-icon">
-                <img src="imgs/icon/hot-ic.png" alt="Hot Icon" />
-            </div>
-
-            <div class="slot-section-text">
-                <h2>Hot Games</h2>
-                <p>Trending picks</p>
-            </div>
-
-        </div>
-
-        <div class="games-grid">
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
-
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
 
 
 

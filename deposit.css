@@ -1,0 +1,3224 @@
+﻿/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    padding: 95px 12px 30px;
+    background: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-right: 1px solid var(--border-light);
+    transition: width var(--transition-normal), transform var(--transition-normal);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-link {
+    width: 100%;
+    height: 44px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: var(--font-xl);
+    font-weight: var(--weight-medium);
+    transition: background var(--transition-fast), border var(--transition-fast), color var(--transition-fast);
+}
+
+.sidebar-icon {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .sidebar-icon img {
+        width: 25px;
+        height: 25px;
+        display: block;
+        object-fit: contain;
+    }
+
+.sidebar-text {
+    white-space: nowrap;
+}
+
+.sidebar-link:hover {
+    background: var(--bg-light-blue);
+    color: var(--primary);
+}
+
+    .sidebar-link:hover .sidebar-icon img, .sidebar-link.active .sidebar-icon img {
+        filter: invert(39%) sepia(98%) saturate(2600%) hue-rotate(203deg) brightness(101%) contrast(102%);
+    }
+
+
+.sidebar-link.active {
+    color: var(--primary);
+    background: linear-gradient( 135deg, #f5f9ff 0%, var(--bg-light-blue) 100% );
+    border-color: #a8c7ff;
+    box-shadow: 0 4px 12px rgba(20, 120, 237, 0.06);
+}
+
+.sidebar-help {
+    margin: auto 8px 0;
+    padding: 20px 16px 18px;
+    min-height: 164px;
+    background: linear-gradient( 145deg, var(--bg-white) 0%, var(--bg-body) 100% );
+    border: 1px solid #e3ebf7;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 5px 18px rgba(40, 91, 150, 0.04);
+}
+
+
+/* =========================================
+   HELP ICON
+========================================= */
+
+.help-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .help-icon svg {
+        width: 29px;
+        height: 29px;
+        fill: none;
+        stroke: var(--primary);
+        stroke-width: 1.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+
+/* =========================================
+   HELP TITLE
+========================================= */
+
+.sidebar-help h3 {
+    margin: 0 0 8px;
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: 15px;
+    font-weight: var(--weight-semibold);
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   HELP DESCRIPTION
+========================================= */
+
+.sidebar-help p {
+    margin: 0 0 14px;
+    max-width: 155px;
+    color: var(--text-gray);
+    font-family: var(--font-main);
+    font-size: 11px;
+    font-weight: var(--weight-normal);
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   LIVE CHAT BUTTON
+========================================= */
+
+.live-chat-btn {
+    width: 100%;
+    height: 40px;
+    padding: 0 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #a9c7ff;
+    border-radius: var(--radius-lg);
+    background: var(--bg-white);
+    color: var(--primary);
+    font-family: var(--font-main);
+    font-size: 11px;
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+    transition: background var(--transition-fast), border var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+
+/* =========================================
+   CHAT LEFT
+========================================= */
+
+.chat-left {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+    .chat-left svg {
+        width: 17px;
+        height: 17px;
+        fill: none;
+        stroke: var(--primary);
+        stroke-width: 1.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+
+/* =========================================
+   CHAT ARROW
+========================================= */
+
+.chat-arrow {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.live-chat-btn:hover {
+    background: var(--bg-light-blue);
+    border-color: #8db7ff;
+    box-shadow: var(--shadow-button);
+}
+
+
+/* =========================================
+   COLLAPSED SIDEBAR
+========================================= */
+
+.sidebar.close {
+    width: 76px;
+}
+
+    .sidebar.close .sidebar-text,
+    .sidebar.close .sidebar-help {
+        display: none;
+    }
+
+    .sidebar.close .sidebar-link {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .sidebar.close .sidebar-icon {
+        margin: 0;
+    }
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.sidebar.close + .main-content {
+    margin-left: 76px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+}
+
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.page-title {
+    padding: 16px 0px 18px;
+    background: var(--bg-white);
+}
+
+
+/* Title + Badge */
+
+.page-title-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Verified Icon */
+
+.page-title-badge {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    margin-left: 270px;
+    background: var(--bg-body);
+    transition: margin-left var(--transition-normal);
+}
+
+.contentmain {
+    width:1400px;
+    margin:auto;
+}
+/* =========================================
+   PAGE HEADER
+========================================= */
+.page-header {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient( 90deg, #ffffff 0%, #f8fbff 100% );
+    border-bottom: 1px solid #eef3fa;
+    width: 100%;
+}
+
+
+.page-title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+
+.page-title h1 {
+    margin: 0;
+    color: #17213a;
+    font-family: var(--font-main);
+    font-size: 22px;
+    font-weight: var(--weight-bold);
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.page-title p {
+    margin: 5px 0 0;
+    color: #52627d;
+    font-family: var(--font-main);
+    font-weight: var(--weight-normal);
+    line-height: 1.5;
+}
+
+/* =========================
+   ANNOUNCEMENT BAR
+========================= */
+
+.announce-bar {
+    margin-left: auto;
+    width: 520px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background: #f5f9ff;
+    border: 1px solid #dce9fa;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* =========================
+   FIXED ICON
+========================= */
+
+.announce-icon {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1769ff;
+    background: #edf5ff;
+    font-size: 12px;
+    border-right: 1px solid #dce9fa;
+    z-index: 2;
+}
+
+/* =========================
+   TEXT WINDOW
+========================= */
+
+.announce-window {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* =========================
+   SCROLLING TEXT
+========================= */
+
+.announce-track {
+    display: flex;
+    width: max-content;
+    animation: announcementScroll 8s linear infinite;
+}
+
+    .announce-track span {
+        flex-shrink: 0;
+        padding-right: 80px;
+        color: #1769ff;
+        font-size: 11px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes announcementScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================================
+   DEPOSIT CONTENT
+========================================= */
+
+.deposit-content {
+    display: none;
+    grid-template-columns: minmax(300px, 0.8fr) minmax(550px, 1fr);
+    gap: 40px;
+    padding: 20px 10px;
+}
+
+
+/* =========================================
+   LEFT CARD
+========================================= */
+
+.deposit-left {
+    padding: 10px;
+    background: var(--bg-white);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: 0 4px 15px rgba(42, 91, 140, 0.04);
+    display: flex;
+    flex-direction: column;
+    background: url(imgs/icon/bankdepo.jpg) bottom no-repeat;
+    background-size: 80%;
+}
+
+.deposit-content.show {
+    display: grid;
+}
+
+
+
+/* =========================================
+   STEP
+========================================= */
+
+.deposit-step {
+    margin-bottom: 22px;
+}
+
+
+    .deposit-step h3,
+    .deposit-form-group label,
+    .package-title-wrap h2 {
+        display: block;
+        margin: 0 0 12px;
+        color: #202d45;
+        font-weight: var(--weight-semibold);
+        line-height: 1.4;
+        font-size: var(--font-xl);
+    }
+
+
+/* =========================================
+   PAYMENT METHOD
+========================================= */
+
+.payment-method {
+    position: relative;
+    flex: 0 0 calc((100% - 35px) / 5);
+    width: calc((100% - 35px) / 5);
+    min-width: 0;
+    min-height: 100px;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid #dfe6f0;
+    border-radius: var(--radius-md);
+    background: var(--bg-white);
+    cursor: pointer;
+}
+
+    .payment-method.active {
+        border-color: var(--primary);
+        background: linear-gradient( 135deg, #ffffff 0%, #f5f9ff 100% );
+        box-shadow: 0 3px 10px rgba(22, 121, 239, 0.05);
+    }
+
+.payment-icon {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient( circle, #eaf4ff 0%, #f8fbff 70% );
+}
+
+    .payment-icon img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    font-family: var(--font-main);
+}
+
+    .payment-info strong {
+        color: #1e2c46;
+        font-weight: var(--weight-semibold);
+    }
+
+    .payment-info span {
+        color: #68758b;
+        line-height: 1.4;
+    }
+
+    .payment-info span, .payment-info strong {
+        font-size: var(--font-lg);
+    }
+
+.payment-check {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d8e1ed;
+    border-radius: 50%;
+    background: #ffffff;
+    color: transparent;
+    font-size: 13px;
+    font-weight: var(--weight-bold);
+}
+
+.payment-method.active .payment-check,
+.package-card.active .payment-check {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* =========================================
+   SELECT BOX
+========================================= */
+
+.select-box {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #dfe5ee;
+    border-radius: var(--radius-md);
+    background: var(--bg-white);
+    cursor: pointer;
+}
+
+
+.select-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+    .select-left img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+
+    .select-left span {
+        color: #27344c;
+    }
+
+
+.select-arrow {
+    color: #24344e;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.deposit-right {
+    display: none;
+    padding: 10px;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    border-top: 4px solid var(--primary);
+    box-shadow: 0 5px 18px rgba(35, 90, 145, 0.05);
+}
+
+    .deposit-right.show {
+        display: block;
+    }
+
+/* =========================================
+   RIGHT LAYOUT
+========================================= */
+
+.right-layout {
+    display: none;
+}
+
+    .right-layout.active {
+        display: block;
+    }
+
+/* =========================================
+   NOTE
+========================================= */
+
+.deposit-note {
+    padding: 14px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    border-radius: var(--radius-md);
+    background: linear-gradient( 135deg, #f5f9ff, #f8fbff );
+}
+
+
+.note-icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--primary);
+    border-radius: 50%;
+    color: var(--primary);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.deposit-note strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #263550;
+}
+
+
+.deposit-note p {
+    margin: 0;
+    color: #66748c;
+}
+
+
+/* =========================================
+   ILLUSTRATION
+========================================= */
+
+.deposit-illustration {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+    .deposit-illustration img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+
+
+/* =========================================
+   BANK INFORMATION
+========================================= */
+
+
+.bank-main-icon {
+    width: 66px;
+    height: 66px;
+    flex: 0 0 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+    .bank-main-icon img {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+    }
+
+
+.bank-detail {
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 22px;
+}
+
+
+    .bank-detail span {
+        color: #68758b;
+        font-size: 11px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+
+    .bank-detail strong {
+        color: #202d46;
+        font-family: var(--font-main);
+        font-size: 13px;
+        font-weight: var(--weight-semibold);
+        white-space: nowrap;
+    }
+
+.copy-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #d9e5f5;
+    border-radius: 10px;
+    background: #f8fbff;
+    color: #1769e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+    .copy-btn.copied {
+        background: #1769e8;
+        border-color: #1769e8;
+        color: #16ad8f;
+    }
+
+
+    .copy-btn img {
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+    }
+
+
+.deposit-form-group {
+    margin-top: 0px;
+    padding: 10px;
+}
+
+        .deposit-form-group label span {
+            color: #718096;
+            font-weight: var(--weight-normal);
+        }
+
+.transfer-details-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+}
+
+    .transfer-details-row .deposit-form-group {
+        padding: 10px 0px;
+        margin: 0;
+        min-width: 0;
+    }
+
+.transfer-type-group .custom-dropdown-btn {
+    height: 44px;
+}
+
+.upload-slip-group .upload-box {
+    box-sizing: border-box;
+}
+
+.amount-input {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dbe3ee;
+    border-radius: var(--radius-md);
+    background: var(--bg-white);
+    overflow: hidden;
+}
+
+
+    .amount-input:focus-within {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(22, 121, 239, 0.06);
+    }
+
+
+    .amount-input input {
+        width: 100%;
+        height: 100%;
+        padding: 0 14px;
+        border: 0;
+        outline: none;
+        background: transparent;
+        color: #24334d;
+        font-family: var(--font-main);
+    }
+
+
+        .amount-input input::placeholder {
+            color: #8b96a8;
+        }
+
+
+    .amount-input span {
+        padding-right: 14px;
+        color: #68758b;
+    }
+
+
+.deposit-form-group small {
+    display: block;
+    margin: 8px 15px 0;
+    color: #68758b;
+}
+
+
+    .deposit-form-group small b {
+        margin: 0 5px;
+        color: #8d98a8;
+    }
+
+
+/* =========================================
+   TRANSFER SELECT
+========================================= */
+
+.transfer-select {
+    height: 43px;
+}
+
+
+/* =========================================
+   UPLOAD
+========================================= */
+
+.upload-box {
+    min-height: 93px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 1px dashed #cfd8e5;
+    border-radius: var(--radius-md);
+    background: #fcfdff;
+    cursor: pointer;
+    transition: border var(--transition-fast), background var(--transition-fast);
+}
+
+
+    .upload-box:hover {
+        border-color: var(--primary);
+        background: #f8fbff;
+    }
+
+
+    .upload-box input {
+        display: none;
+    }
+
+
+    .upload-box > img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+    }
+
+
+.upload-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+    .upload-text strong {
+        color: #68758b;
+        font-weight: var(--weight-normal);
+    }
+
+
+    .upload-text span {
+        color: #68758b;
+    }
+
+
+    .upload-text small {
+        margin: 2px 0 0;
+        color: #68758b;
+    }
+
+label.upload-box {
+    text-align: center;
+}
+
+
+/* =========================================
+   SUBMIT
+========================================= */
+
+.deposit-submit {
+    width: 100%;
+    height: 40px;
+    margin-top: 17px;
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--gradient-primary);
+    color: var(--text-white);
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    box-shadow: var(--shadow-button);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+
+    .deposit-submit:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(20, 120, 237, 0.25);
+    }
+
+/* =========================================
+   CUSTOM DROPDOWN
+========================================= */
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.custom-dropdown-btn {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #dfe5ee;
+    border-radius: var(--radius-md);
+    background: var(--bg-white);
+    cursor: pointer;
+}
+
+.custom-dropdown-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: var(--font-lg);
+    font-weight: var(--weight-semibold);
+}
+
+    .custom-dropdown-value img,
+    .custom-dropdown-option img {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+    }
+
+.custom-dropdown-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid #17395f;
+    transition: transform 0.25s ease;
+}
+
+.custom-dropdown.open .custom-dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.custom-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background: var(--bg-white);
+    border: 1px solid #dfe5ee;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-header);
+    z-index: 100;
+    display: none;
+}
+
+.custom-dropdown.open .custom-dropdown-menu {
+    display: block;
+}
+
+.custom-dropdown-option {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: var(--font-lg);
+    text-align: left;
+    cursor: pointer;
+}
+
+    .custom-dropdown-option:hover {
+        background: var(--bg-light-blue);
+        color: var(--primary);
+    }
+
+/* =========================================================
+   DEPOSIT FLOW
+   Add below existing deposit CSS
+========================================================= */
+
+.deposit-flow {
+    display: none;
+}
+
+    .deposit-flow.active {
+        display: block;
+    }
+
+
+/* =========================================================
+   GATEWAY
+========================================================= */
+
+.gateway-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scroll-behavior: smooth;
+}
+
+    .gateway-grid::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .gateway-grid::-webkit-scrollbar-track {
+        background: #e8f0f8;
+        border-radius: 10px;
+    }
+
+    .gateway-grid::-webkit-scrollbar-thumb {
+        background: #8fb5d8;
+        border-radius: 10px;
+    }
+
+        .gateway-grid::-webkit-scrollbar-thumb:hover {
+            background: #6f9fc8;
+        }
+.gateway-card {
+    min-width: 130px;
+    flex: 0 0 130px;
+    min-height: 90px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #dfe6f0;
+    border-radius: var(--radius-md);
+    background: var(--bg-white);
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: var(--font-lg);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    transition: border var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+
+    .gateway-card img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+
+    .gateway-card:hover {
+        border-color: var(--primary);
+        background: var(--bg-light-blue);
+    }
+
+
+    .gateway-card.active {
+        border-color: var(--primary);
+        background: #f5f9ff;
+        box-shadow: 0 3px 10px rgba(22, 121, 239, 0.08);
+    }
+
+
+/* =========================================================
+   QR RESULT
+========================================================= */
+
+.qr-result {
+    display: none;
+    margin-top: 18px;
+    padding: 18px;
+    align-items: center;
+    gap: 16px;
+    border-radius: var(--radius-md);
+    background: #f5f9ff;
+    border: 1px solid #e0eaf7;
+}
+
+
+    .qr-result.show {
+        display: flex;
+    }
+
+
+.qr-code {
+    width: 130px;
+    height: 130px;
+    flex: 0 0 130px;
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+    border: 1px solid #e0e5ed;
+}
+
+
+.qr-result strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #202d46;
+    font-size: var(--font-xl);
+    font-weight: var(--weight-semibold);
+}
+
+
+.qr-result p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: var(--font-lg);
+    line-height: 1.5;
+}
+
+
+.payment-method:focus,
+.custom-dropdown-btn:focus,
+.gateway-card:focus,
+.deposit-submit:focus,
+.copy-btn:focus {
+    outline: none;
+}
+
+/* =========================================
+   CHOOSE BANK
+========================================= */
+
+.choose-bank-step {
+    width: 100%;
+    margin-bottom: 22px;
+    display: none;
+}
+
+    .choose-bank-step.show {
+        display: block;
+    }
+/*======================================================
+   BANK DROPDOWN
+========================================================= */
+
+.custom-dropdown-btn:hover {
+    border-color: var(--primary);
+}
+
+
+.custom-dropdown.open .custom-dropdown-btn {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(22, 121, 239, 0.06);
+}
+
+
+/* =========================================================
+   COPY BUTTON
+========================================================= */
+
+.copy-btn:hover {
+    border-color: var(--primary);
+    background: var(--bg-light-blue);
+    transform: translateY(-1px);
+}
+
+
+.copy-btn:active {
+    transform: scale(0.96);
+}
+
+
+
+/* =========================================================
+   GATEWAY HEADER
+========================================================= */
+
+.gateway-header {
+    text-align: center;
+    padding: 5px 0 25px;
+    border-radius: 10px;
+    background: #edf5ff;
+}
+
+.gateway-name {
+    margin: 0 0 10px;
+    color: #163d91;
+    text-transform: uppercase;
+}
+
+.gateway-logo {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .gateway-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+.payment-method-label {
+    text-align: center;
+    color: #243866;
+}
+
+    .payment-method-label > span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+.payment-method-line {
+    width: 160px;
+    height: 1px;
+    margin: 0 auto 10px;
+    background: #dce5f5;
+}
+
+.payment-method-label strong {
+    color: #1679ef;
+    font-size: var(--font-icon-lg);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   AMOUNT CARD
+========================================================= */
+
+.amount-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 5px 10px;
+    box-shadow: 0 8px 25px rgba(40, 90, 150, 0.08);
+}
+
+    .amount-card > label {
+        display: block;
+        margin-bottom: 5px;
+        color: #172d5f;
+        font-weight: 600;
+    }
+
+        .amount-card > label span {
+            color: #ff3b30;
+        }
+
+
+/* =========================================================
+   AMOUNT INPUT
+========================================================= */
+
+.amount-input-new {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #1769ff;
+    border-radius: 14px;
+    overflow: visible;
+    background: #ffffff;
+}
+
+/* =========================================================
+   CURRENCY DROPDOWN
+========================================================= */
+
+
+/* Currency wrapper */
+.currency-dropdown {
+    position: relative;
+    width: 90px;
+    height: 48px;
+    flex: 0 0 90px;
+    z-index: 50;
+}
+
+
+/* Currency button */
+.currency-btn {
+    width: 90px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 0;
+    border-radius: 12px 0 0 12px;
+    background: #1769e8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* Arrow */
+.currency-arrow {
+    font-size: 8px;
+    transition: transform 0.2s ease;
+}
+
+.currency-dropdown.open .currency-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.currency-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 90px;
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid #d9e4f2;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(30, 70, 120, 0.15);
+    display: none;
+    z-index: 9999;
+}
+
+
+.currency-dropdown.open .currency-menu {
+    display: block;
+}
+
+
+/* Options */
+.currency-menu button {
+    width: 100%;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #17395f;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+    .currency-menu button:hover {
+        background: #f1f7ff;
+        color: #1769e8;
+    }
+
+
+.amount-input-new input {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0 18px;
+    color: #26395f;
+    font-size: var(--font-lg);
+    font-family: var(--font-main);
+    background: transparent;
+    pointer-events: auto;
+    cursor: text;
+}
+
+    .amount-input-new input::placeholder {
+        color: #a9b0bd;
+    }
+
+    .amount-display .amount-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .amount-display .amount-icon img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            margin-top: 0px;
+        }
+
+    .amount-display strong {
+        color: #1769e8;
+        font-size: 15px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+.amount-display {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 90px;
+    height: 100%;
+    pointer-events: none;
+    flex-shrink: 0;
+    width: 150px;
+    border-left: 1px solid #e4eaf3;
+    color: #1769ff;
+    font-family: var(--font-main);
+}
+
+.amount-icon {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   QUICK ADD
+========================================================= */
+
+.quick-add {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.quick-line {
+    flex: 1;
+    height: 1px;
+    background: #9bb8e9;
+}
+
+.quick-add span {
+    padding: 4px 18px;
+    border-radius: 20px;
+    background: #1769d9;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   QUICK AMOUNTS
+========================================================= */
+
+.quick-amounts {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+
+    .quick-amounts > button:not(.confirm-btn) {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        flex: 0 0 50px;
+        border: 2px solid #1769ff;
+        border-radius: 50%;
+        background: #ffffff;
+        color: #173d8f;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-main);
+    }
+
+        .quick-amounts > button:not(.confirm-btn) strong {
+            font-size: var(--font-xl);
+            font-weight: 600;
+        }
+
+
+        /* PLUS CIRCLE */
+
+        .quick-amounts > button:not(.confirm-btn) span {
+            position: absolute;
+            right: -2px;
+            bottom: -2px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #1769ff;
+            color: #ffffff;
+            font-size: var(--font-xl);
+            line-height: 1;
+            display: none;
+        }
+
+
+/* =========================================================
+   CONFIRM
+========================================================= */
+
+.confirm-btn {
+    margin-left: auto;
+    margin-top: 0px;
+    min-width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 14px;
+    background: linear-gradient( 135deg, #1679ef, #1551bd );
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(22, 105, 220, 0.2);
+    font-size: var(--font-main);
+}
+
+.confirm-icon {
+    display:none;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.deposit-security {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: #f2f7ff;
+    color: #1761c9;
+}
+
+.security-icon {
+    font-size: 20px;
+}
+
+.security-icon img{
+    width:20px;
+    height:20px;
+}
+
+
+/* =========================================================
+   PACKAGE SECTION
+========================================================= */
+
+.package-section {
+    width: 100%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.package-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 14px;
+    box-sizing: border-box;
+}
+
+.package-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.package-header-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf4ff;
+    color: #1769ff;
+}
+
+.package-title-wrap p {
+    margin: 4px 0 0;
+    color: #6d7890;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.package-arrows {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.package-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #dbe6fa;
+    background: #ffffff;
+    color: #8ca0c1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+    .package-arrow i {
+        font-size: 12px;
+    }
+
+    .package-arrow.next-btn {
+        color: #1769ff;
+        border-color: #1769ff;
+    }
+
+    .package-arrow:hover {
+        background: #f3f7ff;
+    }
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.package-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 12px 8px;
+    box-sizing: border-box;
+}
+
+.package-slider {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+    .package-slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .package-slider .package-card:hover {
+        z-index: 100;
+    }
+
+.package-categories .btn-deposit::after {
+    top: calc(100% + -70px);
+}
+.package-bg {
+    background: #edf4ff;
+    padding:10px;
+    border-radius:10px;
+}
+
+
+/* =========================================================
+   PACKAGE CARD
+========================================================= */
+.package-card {
+    position: relative;
+    flex: 0 0 255px;
+    min-height: 245px;
+    padding: 0px;
+    border: 1px solid #e5ebf5;
+    border-radius: 10px;
+    background: linear-gradient( 180deg, #ffffff 0%, #fbfcff 100% );
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+    overflow: visible !important;
+    z-index: 1;
+}
+
+    .package-card:hover {
+        border-color: #b9ceff;
+        box-shadow: 0 5px 18px rgba(23, 105, 255, .08);
+    }
+
+    .package-card.active {
+        border: 1.5px solid #1769ff;
+        box-shadow: 0 5px 20px rgba(23, 105, 255, .08);
+    }
+
+
+/* =========================================================
+   PACKAGE ICON
+========================================================= */
+
+.package-icon {
+    width: 46px;
+    height: 46px;
+    margin: auto;
+    border-radius: 50%;
+    background: #1769ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.package-card.active .package-icon {
+    color: #1769ff;
+    background: #edf4ff;
+}
+
+
+/* =========================================================
+   PACKAGE NAME
+========================================================= */
+
+.package-name {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #101d3f;
+    font-weight: 700;
+    line-height: 1.55;
+    padding:0px 20px;
+}
+
+
+/* =========================================================
+   BONUS + ROLLOVER
+   SIDE BY SIDE
+========================================================= */
+
+.package-info {
+    width: 100%;
+    min-height: 42px;
+    margin-top: 9px;
+    padding: 6px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #edf1f8;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, .8);
+    box-sizing: border-box;
+}
+
+.info-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex-direction: column;
+}
+
+    .info-item span {
+        color: #182a55;
+        line-height: 1;
+    }
+
+    .info-item strong {
+        color: #ff5757;
+        background: #fff0f0;
+        font-weight: 700;
+        line-height: 1;
+        padding: 5px 8px;
+        border-radius: 20px;
+    }
+
+
+.info-divider {
+    width: 1px;
+    height: 24px;
+    background: #dfe6f2;
+}
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.package-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 9px;
+    padding-top: 8px;
+    border-top: 1px solid #e9eef7;
+}
+
+    .package-categories span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border: 1px solid #bcd4ff;
+        border-radius: 20px;
+        background: #edf4ff;
+        color: #17274d;
+        white-space: nowrap;
+        box-shadow: 0 2px 6px rgba(20, 40, 80, .03);
+        width: 35px;
+        height: 35px;
+    }
+
+    .package-categories i {
+        color: #1769ff;
+        font-size:15px;
+    }
+
+
+/* =========================================================
+   UNIVERSAL RIGHT PAYMENT LAYOUT
+========================================================= */
+
+.right-payment-layout {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.deposit-right.show .right-payment-layout {
+    display: flex;
+}
+
+.payment-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* LOGO */
+
+.payment-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .payment-logo img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+
+/* QR */
+
+.payment-qr {
+    display: none;
+}
+
+    .payment-qr img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        background: #fff;
+    }
+
+
+/* NAME */
+
+.right-payment-name {
+    margin: 8px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #10234d;
+    text-align: center;
+}
+
+
+/* INFO */
+
+.payment-information {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.payment-info-row {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+
+    .payment-info-row span {
+        font-size: 10px;
+        line-height: 13px;
+        color: #5b6b85;
+        white-space: nowrap;
+    }
+
+
+    .payment-info-row strong {
+        font-size: 14px;
+        line-height: 18px;
+        color: #1769ff;
+        white-space: normal;
+    }
+
+
+/* ACCOUNT */
+
+.account-number-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+    .account-number-wrap .copy-btn {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+
+        .account-number-wrap .copy-btn img {
+            width: 14px;
+            height: 14px;
+        }
+
+
+/* =========================================================
+   HIDDEN INFO
+========================================================= */
+
+.right-account-name-row,
+.right-account-number-row,
+.right-network-row,
+.right-exchange-row {
+    display: none;
+}
+
+/* =========================================================
+   CRYPTO
+========================================================= */
+
+.crypto-information,
+.crypto-address-section {
+    display: none;
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+}
+
+
+.crypto-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 6px;
+    font-size: 11px;
+}
+
+
+    .crypto-row strong {
+        color: #1769ff;
+    }
+
+
+.crypto-warning {
+    margin: 8px 0 0;
+    color: #ff5757;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+.crypto-address-box {
+    display: flex;
+    gap: 5px;
+}
+
+
+.right-crypto-address {
+    flex: 1;
+    height: 34px;
+    border: 1px solid #dce5f2;
+    border-radius: 6px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+
+.crypto-address-box .copy-btn {
+    width: 36px;
+    border: 1px solid #dce5f2;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   AMOUNT
+========================================================= */
+
+.payment-amount-section {
+    width: 100%;
+}
+
+
+    .payment-amount-section .amount-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+/* =========================================================
+   BANK EXTRA
+========================================================= */
+
+.bank-transfer-extra {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+    .bank-transfer-extra.show {
+        display: block;
+    }
+
+/* =========================================================
+   TYPE STATES
+========================================================= */
+
+/* BANK */
+
+.right-payment-layout[data-type="bank"] .right-account-name-row,
+.right-payment-layout[data-type="bank"] .right-account-number-row {
+    display: flex;
+}
+
+
+.right-payment-layout[data-type="bank"] .bank-transfer-extra {
+    display: block;
+}
+
+
+/* QR */
+
+.right-payment-layout[data-type="qr"] .payment-qr {
+    display: flex;
+}
+
+
+.right-payment-layout[data-type="qr"] .payment-logo {
+    display: none;
+}
+
+
+/* CRYPTO */
+
+.right-payment-layout[data-type="crypto-conversion"] .crypto-information {
+    display: block;
+}
+
+
+/* CRYPTO ADDRESS */
+
+.right-payment-layout[data-type="crypto-address"] .crypto-address-section {
+    display: block;
+}
+
+
+.right-payment-layout[data-type="crypto-address"] .payment-qr {
+    display: flex;
+}
+
+
+.right-payment-layout[data-type="crypto-address"] .payment-logo {
+    display: none;
+}
+
+
+/* NETWORK */
+
+.right-payment-layout[data-type="crypto-conversion"] .right-network-row,
+.right-payment-layout[data-type="crypto-address"] .right-network-row {
+    display: flex;
+}
+
+
+/* EXCHANGE */
+
+.right-payment-layout[data-type="crypto-address"] .right-exchange-row {
+    display: flex;
+}
+
+/* =========================================================
+   UNIVERSAL PAYMENT HEADER - NEW COMPACT STYLE
+========================================================= */
+
+.payment-header {
+    width: 100%;
+    min-height: 125px;
+    display: grid;
+    /* gateway | bank | payment method | supported */
+    grid-template-columns: 175px 70px 220px minmax(190px, 1fr);
+    align-items: center;
+    padding: 18px 28px;
+    box-sizing: border-box;
+    background: #edf4ff;
+}
+
+
+/* =========================================================
+   BIGPAYZ
+========================================================= */
+
+.payment-brand {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #c5d5ef;
+}
+
+    .payment-brand .right-payment-logo {
+        width: 55px;
+        height: 55px;
+        flex-shrink: 0;
+        object-fit: contain;
+    }
+
+    .payment-brand .right-payment-name {
+        margin: 0;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 700;
+        color: #10234d;
+    }
+
+
+/* =========================================================
+   BANK
+========================================================= */
+
+.payment-bank {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #c5d5ef;
+}
+
+/* =========================================================
+   PAYMENT METHOD
+========================================================= */
+
+.payment-method-info {
+    width: 220px;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px;
+    box-sizing: border-box;
+    border-right: 1px solid #c5d5ef;
+}
+
+.payment-method-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #edf4ff;
+    color: #1769ff;
+    font-size: 17px;
+}
+
+.payment-method-info .payment-info-row {
+    min-width: 0;
+    max-width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+    .payment-method-info .payment-info-row span {
+        font-size: 10px;
+        line-height: 12px;
+        color: #5b6b85;
+    }
+
+    .payment-method-info .payment-info-row strong {
+        font-size: 14px;
+        line-height: 18px;
+        color: #1769ff;
+    }
+
+
+SUPPORTED
+/* =========================================================
+   PAYMENT LIMIT
+========================================================= */
+.payment-limit {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 10px 25px;
+    background: #fff;
+    border-top: 1px solid #dce5f2;
+    color: #5b6b85;
+    font-size: 11px;
+    box-sizing: border-box;
+}
+
+    .payment-limit span {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        min-width: 170px;
+    }
+
+    .payment-limit strong {
+        color: #10234d;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+/* =========================================================
+   BANK LOGO - RIGHT HEADER
+========================================================= */
+
+.payment-bank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    border-right: 1px solid #c5d5ef;
+}
+
+.payment-bank-logo {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+}
+
+    .payment-bank-logo img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+    }
+
+/* =========================================================
+   BANK INFO CARD - COMPACT
+========================================================= */
+
+.bank-info-card {
+    width: 100%;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    background: #f8faff;
+    border: 1px solid #e1e8f5;
+    border-radius: 10px;
+    gap: 22px;
+}
+
+
+/* BANK / ACCOUNT DETAILS */
+
+    .bank-detail:first-child {
+        padding-left: 8px;
+    }
+
+/* DIVIDER */
+
+.bank-divider {
+    width: 1px;
+    height: 40px;
+    flex-shrink: 0;
+    background: #dce4f1;
+}
+
+
+/* ACCOUNT NUMBER */
+
+.account-number-detail {
+    flex: 1;
+}
+
+
+/* COPY BUTTON */
+
+.bank-info-card .copy-btn {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border: 1px solid #d8e3f5;
+    border-radius: 9px;
+    background: #f8fbff;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+    .bank-info-card .copy-btn:hover {
+        background: #edf4ff;
+        border-color: #bcd2f5;
+    }
+
+    .bank-info-card .copy-btn img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+    }
+
+.payment-header.hide {
+    display: none;
+}
+
+.bank-transfer-info {
+    display: none;
+    width: 100%;
+    padding: 0 10px 10px;
+    box-sizing: border-box;
+}
+
+    .bank-transfer-info.show {
+        display: block;
+    }
+
+
+/* =========================================================
+   SUPPORTED PAYMENT LOGOS - FIX
+========================================================= */
+
+.payment-supported {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding-left: 18px;
+}
+
+
+/* LABEL */
+
+.supported-label {
+    flex-shrink: 0;
+    font-size: 10px;
+    color: #5b6b85;
+    white-space: nowrap;
+}
+
+
+/* LOGO GRID */
+
+.supported-logos {
+    width: 138px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 42px) !important;
+    grid-template-rows: repeat(2, 42px) !important;
+    gap: 6px !important;
+    flex-shrink: 0;
+    position: static !important;
+}
+
+
+/* EACH LOGO */
+
+.supported-logo,
+.supported-more {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    max-width: 42px !important;
+    max-height: 42px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #e0e8f5;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+    /* ACTUAL IMAGE */
+
+    .supported-logo img {
+        width: 30px !important;
+        height: 30px !important;
+        max-width: 30px !important;
+        max-height: 30px !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+
+
+/* +2 */
+
+.supported-more {
+    color: #1769ff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.payment-limit {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0px 0px;
+}
+
+/* =========================================================
+   PAYMENT HEADER - NO BANK
+========================================================= */
+
+.payment-header.no-bank {
+    grid-template-columns: 175px 220px minmax(190px, 1fr);
+}
+
+    .payment-header.no-bank .payment-bank {
+        display: none !important;
+    }
+
+    /* Payment Method bila tiada Bank */
+
+    .payment-header.no-bank .payment-method-info {
+        width: 220px;
+        min-width: 220px;
+    }
+
+
+    /* Supported */
+
+    .payment-header.no-bank .payment-supported {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+.ewallet-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ewallet-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    .ewallet-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .ewallet-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .ewallet-btn.active {
+        transform: scale(1.08);
+    }
+
+
+
+
+
+/* =========================
+   E-WALLET BUTTON
+========================= */
+
+.ewallet-btn {
+    width: 52px;
+    height: 52px;
+    border: 2px solid transparent;
+    background: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+    .ewallet-btn img {
+        width: 38px;
+        height: 38px;
+        object-fit: contain;
+    }
+
+    .ewallet-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .ewallet-btn.active {
+        border-color: #2f7df6;
+        box-shadow: 0 0 0 3px rgba(47,125,246,.12);
+    }
+
+
+/* =========================
+   PAYMENT POPUP
+========================= */
+
+.ewallet-popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+    .ewallet-popup.show {
+        display: flex;
+    }
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.ewallet-popup-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 35, 55, .58);
+}
+
+
+/* =========================
+   POPUP BOX
+========================= */
+
+.ewallet-popup-box {
+    position: relative;
+    width: 390px;
+    max-width: 92%;
+    padding: 30px 28px 25px;
+    background: radial-gradient( circle at 0% 0%, rgba(215, 231, 255, .8), transparent 30% ), #fff;
+    border-radius: 22px;
+    z-index: 2;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 50, 110, .22);
+    animation: popupFade .2s ease;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes popupFade {
+
+    from {
+        transform: translateY(15px) scale(.98);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.ewallet-popup-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    background: #f1f5fa;
+    color: #536276;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
+/* =========================
+   GATEWAY LOGO
+========================= */
+
+.popup-gateway-logo {
+    position: relative;
+    min-height: 110px;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* =========================
+   E-WALLET OVERLAP
+========================= */
+
+.popup-ewallet-logo {
+    position: absolute;
+    right: -2px;
+    bottom: -3px;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 4px 14px rgba(0, 40, 90, .18);
+}
+
+    .popup-ewallet-logo img {
+        width: 46px;
+        height: 46px;
+        object-fit: contain;
+    }
+
+
+/* =========================
+   BANK OVERLAP
+========================= */
+
+.popup-bank-logo {
+    position: absolute;
+    right: -2px;
+    bottom: -3px;
+    width: 58px;
+    height: 58px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 4px 14px rgba(0, 40, 90, .18);
+}
+
+    .popup-bank-logo img {
+        width: 46px;
+        height: 46px;
+        object-fit: contain;
+    }
+
+
+/* =========================
+   PAYMENT NAME
+========================= */
+
+#popupWalletName {
+    margin: 5px 0 3px;
+    font-size: 21px;
+    font-weight: 800;
+    color: #10233f;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.ewallet-popup-subtitle {
+    margin-bottom: 22px;
+    font-size: 12px;
+    color: #69788d;
+}
+
+
+/* =========================
+   PAYMENT SUMMARY
+========================= */
+
+.payment-summary-title {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto -10px;
+    padding: 5px 18px;
+    background: #e7f0ff;
+    border-radius: 20px;
+    color: #1671ee;
+    font-size: 10px;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.payment-summary {
+    padding: 22px 12px 14px;
+    background: #fff;
+    border: 1px solid #dce8f8;
+    border-radius: 13px;
+    box-shadow: 0 5px 18px rgba(30, 100, 200, .07);
+}
+
+
+/* =========================
+   AMOUNT
+========================= */
+
+.popup-amount-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: linear-gradient( 135deg, #f3f8ff, #e4efff );
+    border-radius: 11px;
+}
+
+.popup-amount-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #edf5ff;
+    color: #1671ee;
+}
+
+.popup-amount-label {
+    display: block;
+    margin-bottom: 2px;
+    text-align: left;
+    font-size: 9px;
+    color: #6c7c91;
+}
+
+#popupAmount {
+    font-size: 21px;
+    font-weight: 800;
+    color: #075bdc;
+}
+
+
+/* =========================
+   PAYMENT DETAILS
+========================= */
+
+.popup-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.popup-detail {
+    padding: 12px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #e2eaf5;
+    border-radius: 10px;
+}
+
+.popup-detail-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 9px;
+    color: #75849a;
+}
+
+#popupMethod,
+#popupBank {
+    font-size: 12px;
+    font-weight: 700;
+    color: #172b49;
+}
+
+
+/* =========================
+   SECURITY
+========================= */
+
+.popup-secure {
+    margin: 14px 0;
+    padding-top: 12px;
+    border-top: 1px solid #e4ebf4;
+    text-align: center;
+    font-size: 9px;
+    color: #718097;
+}
+
+
+/* =========================
+   PROCEED BUTTON
+========================= */
+
+.proceed-payment-btn {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 13px;
+    background: linear-gradient( 135deg, #0868ff, #0874ed );
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(20, 105, 240, .25);
+    transition: .2s ease;
+}
+
+    .proceed-payment-btn:hover {
+        transform: translateY(-1px);
+    }
+
+    .proceed-payment-btn:active {
+        transform: scale(.98);
+    }
+
+
+.popup-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.popup-wallet-logo {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+    .popup-wallet-logo img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+.popup-payment-info {
+    margin: 22px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.popup-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+.popup-proceed {
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 12px;
+    background: #1677ff;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CRYPTO RIGHT PANEL
+========================================================= */
+
+.crypto-information {
+    display: none;
+    width: 100%;
+    padding: 12px 20px 10px;
+    box-sizing: border-box;
+}
+
+
+/* QR */
+
+.crypto-qr {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px 0 12px;
+}
+
+    .crypto-qr img {
+        width: 145px;
+        height: 145px;
+        padding: 7px;
+        box-sizing: border-box;
+        object-fit: contain;
+        background: #ffffff;
+    }
+
+
+/* EXCHANGE RATE */
+
+.crypto-rate-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4px;
+    font-size: 11px;
+    color: #202d45;
+}
+
+    .crypto-rate-row strong {
+        padding: 7px 10px;
+        background: #1769e8;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+
+/* NETWORK */
+
+.crypto-network {
+    margin-top: 10px;
+    text-align: center;
+    color: #ff5757;
+    font-size: 10px;
+    font-style: italic;
+}
+
+    .crypto-network strong {
+        font-weight: 500;
+    }
+
+
+/* CRYPTO ADDRESS */
+
+.crypto-address-section {
+    display: none;
+    width: 100%;
+    padding: 12px 20px 5px;
+    box-sizing: border-box;
+}
+
+    .crypto-address-section label {
+        display: block;
+        margin-bottom: 7px;
+        color: #202d45;
+        font-size: 11px;
+    }
+
+.crypto-address-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.right-crypto-address {
+    flex: 1;
+    min-width: 0;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #dce5f2;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #68758b;
+    font-size: 11px;
+    box-sizing: border-box;
+}
+
+.crypto-address-box .copy-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dce5f2;
+    border-radius: 6px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+    .crypto-address-box .copy-btn img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+    }
+
+
+/* RED DETAILS */
+
+.crypto-red-details {
+    display: none;
+    padding: 4px 20px 10px;
+    color: #ff3f3f;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+    .crypto-red-details strong {
+        font-weight: 500;
+    }
+
+
+/* CRYPTO STATE */
+
+.right-payment-layout[data-type="crypto-address"] .crypto-information,
+.right-payment-layout[data-type="crypto-address"] .crypto-address-section,
+.right-payment-layout[data-type="crypto-address"] .crypto-red-details {
+    display: block;
+}
+
+
+/* CRYPTO QR */
+
+.right-payment-layout[data-type="crypto-address"] .crypto-qr {
+    display: flex;
+}
+
+/* =========================================================
+   USDT ONLY
+========================================================= */
+
+.deposit-right.usdt-active .crypto-information {
+    display: block !important;
+}
+
+.deposit-right.usdt-active .crypto-address-section {
+    display: block !important;
+}
+
+/* CRYPTO HIDDEN BY DEFAULT */
+
+.crypto-information,
+.crypto-address-section {
+    display: none !important;
+}
+
+
+/* USDT ONLY */
+
+
+.deposit-right.usdt-active .payment-header {
+    display: none !important;
+}
+
+.popup-qr-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 110px;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+}
+
+    .popup-qr-box img {
+        width: 105px;
+        height: 105px;
+        object-fit: contain;
+    }
+
+/* Gateway logo */
+
+.popup-gateway-img {
+    width: 105px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.popup-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.crypto-conversion {
+    display: none;
+    margin-top: 8px;
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+    .crypto-conversion.show {
+        display: block;
+    }
+
+    .crypto-conversion .conversion-result {
+        color: #ff3333;
+    }
+
+    .crypto-conversion .exchange-rate {
+        color: #ff3333;
+    }
+
+    .crypto-conversion .crypto-min-deposit {
+        color: #ff3333;
+    }
+
+    .crypto-conversion .crypto-warning {
+        color: #ff3333;
+    }

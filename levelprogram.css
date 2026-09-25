@@ -1,0 +1,622 @@
+﻿.lp-page {
+    --lp-primary: #EAD87D;
+    --lp-secondary: #202228;
+    --lp-accent: #FFD700;
+    --lp-surface: #121418;
+    --lp-background: #000000;
+    --lp-text: #FFFFFF;
+    --lp-highlight: #FFF1A8;
+    --lp-border: rgba(234, 216, 125, 0.35);
+    --lp-border-soft: rgba(255, 255, 255, 0.08);
+    --lp-muted: #9b9b9b;
+}
+
+
+    /* =========================================================
+   RESET
+========================================================= */
+
+    .lp-page,
+    .lp-page *,
+    .lp-page *::before,
+    .lp-page *::after {
+        box-sizing: border-box;
+    }
+
+
+.lp-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 14px auto;
+    padding: 10px;
+    background: var(--lp-secondary);
+    color: var(--st-text);
+    box-sizing: border-box;
+    border-radius: 20px;
+    display:flex;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.lp-sidebar {
+    width: 250px;
+    min-width: 185px;
+    padding: 15px 8px;
+    background: #121418;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.lp-sidebar-menu {
+    width: 100%;
+}
+
+
+.lp-side-item {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: transparent;
+    color: #eeeeee;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    border-radius:30px;
+}
+
+
+    .lp-side-item i {
+        width: 22px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+
+    .lp-side-item:hover {
+        background: rgba(234,216,125,0.06);
+    }
+
+
+    /* ACTIVE */
+
+    .lp-side-item.lp-active {
+        background: var(--lp-primary);
+        color: #000000;
+    }
+
+
+/* =========================================================
+   EARNING BOX
+========================================================= */
+
+.lp-earning-box {
+    margin-top: 50px;
+    padding: 12px 9px;
+    background: transparent;
+    border: 0px solid rgba(255,255,255,0.04);
+    border-radius: 17px;
+}
+
+
+/* BUTTON */
+
+.lp-earning-button {
+    width: 100%;
+    padding: 5px 20px;
+    border: 1px solid var(--lp-highlight);
+    background: #ffd700;
+    color: #000;
+    cursor: pointer;
+    text-align:left;
+    font-weight:600;
+    border-radius:5px;
+}
+
+
+/* EARNING CONTENT */
+
+.lp-earning-content {
+    margin-top: 25px;
+}
+
+
+.lp-earning-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 15px;
+    color: #eeeeee;
+    line-height: 1.35;
+    padding: 0px 5px;
+}
+
+
+.lp-earning-number {
+    color: var(--lp-primary);
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.lp-main {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================================
+   LEVEL HEADER
+========================================================= */
+
+.lp-level-header {
+    width: 100%;
+    min-height: 70px;
+    padding: 7px 18px;
+    border: 0px solid #30333d;
+    border-radius: 10px;
+    background: #0b0e10;
+    display: grid;
+    grid-template-columns: 280px minmax(300px, 1fr) 280px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   MEMBER INFO
+========================================================= */
+
+.lp-member-info {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    border-right: 1px solid var(--lp-border);
+}
+
+
+.lp-member-avatar {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 2px solid var(--lp-primary);
+    border-radius: 50%;
+    background: #222;
+    padding:7px;
+}
+
+
+    .lp-member-avatar img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+
+.lp-member-details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.lp-level-number {
+    font-size: 23px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+
+.lp-member-category {
+    margin-top: 5px;
+    color: var(--lp-primary);
+}
+
+
+/* =========================================================
+   XP PROGRESS
+========================================================= */
+
+.lp-progress-area {
+    padding: 0 30px;
+}
+
+
+.lp-progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.lp-next-level {
+    color: var(--lp-primary);
+}
+
+
+.lp-progress-bar {
+    width: 100%;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #3b3d3f;
+}
+
+
+.lp-progress-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--lp-primary);
+    transition: width 0.4s ease;
+}
+
+
+.lp-progress-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    color: var(--lp-muted);
+}
+
+
+/* =========================================================
+   REWARD MESSAGE
+========================================================= */
+
+.lp-reward-message {
+    height: 55px;
+    padding-left: 20px;
+    border-left: 1px solid var(--lp-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    line-height: 1.4;
+}
+
+
+    .lp-reward-message i {
+        color: var(--lp-primary);
+        font-size: 27px;
+    }
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lp-hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 0px solid #30333d;
+    border-radius: 10px;
+    background: url(imgs/icon/bgbannerlvel.jpg)right no-repeat #080a0c;
+    background-size:contain;
+}
+
+
+    /* SIMPLE GOLD SHAPE */
+
+    .lp-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 17%;
+        width: 100px;
+        height: 100%;
+        background: rgba(234,216,125,0.045);
+        transform: skewX(-22deg);
+        pointer-events: none;
+    }
+
+
+/* HERO CONTENT */
+
+.lp-hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 30px 55px;
+}
+
+
+.lp-hero-label {
+    margin-bottom: 7px;
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+
+
+.lp-hero-title {
+    margin: 0;
+    font-size: clamp( 45px, 5vw, 72px );
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+
+    .lp-hero-title span {
+        color: #f4f4f4;
+    }
+
+
+    .lp-hero-title strong {
+        color: var(--lp-primary);
+        font-weight: 900;
+    }
+
+
+.lp-hero-subtitle {
+    margin-top: 10px;
+    color: #eeeeee;
+    letter-spacing: 5px;
+}
+
+
+/* HERO BUTTON */
+
+.lp-hero-button {
+    margin-top: 18px;
+    padding: 11px 22px;
+    border: 0;
+    border-radius: 5px;
+    background: #ffd700;
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+    .lp-hero-button:hover {
+        background: var(--lp-highlight);
+    }
+
+
+/* HERO PLAYER */
+
+.lp-hero-player {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+
+    .lp-hero-player img {
+        width: auto;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        object-position: bottom;
+    }
+
+
+/* =========================================================
+   REWARDS
+========================================================= */
+
+/* =========================================================
+   LEVEL REWARDS CONTAINER
+========================================================= */
+
+.lp-rewards-section {
+    width: 100%;
+    /*
+        2 ROW SAHAJA AKAN NAMPAK
+    */
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 6px;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.lp-rewards-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+}
+
+
+/* =========================================================
+   REWARD CARD
+========================================================= */
+
+.lp-reward-card {
+    height: 170px;
+    padding: 12px 10px 9px;
+    border: 1px solid #30333d;
+    border-radius: 10px;
+    background: #121418;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: border-color .2s ease;
+}
+
+
+    .lp-reward-card:hover {
+        border-color: #EAD87D;
+    }
+
+
+/* =========================================================
+   LEVEL
+========================================================= */
+
+.lp-reward-level {
+    color: #ead87d;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   REWARD VALUE
+========================================================= */
+
+.lp-reward-value {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EAD87D;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+    .lp-reward-value img {
+        width: 40%;
+        filter: grayscale(55%) contrast(110%) brightness(105%) saturate(140%);
+    }
+    /* =========================================================
+   LOCK BUTTON
+========================================================= */
+.lp-reward-lock {
+    height: 45px;
+    border-radius: 5px;
+    background: #202228;
+    color: #fff;
+    border: 1px solid #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+/* Chrome / Edge / Safari */
+
+.lp-rewards-section::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+.lp-rewards-section::-webkit-scrollbar-track {
+    background: #111315;
+    border-radius: 10px;
+}
+
+
+.lp-rewards-section::-webkit-scrollbar-thumb {
+    background: #EAD87D;
+    border-radius: 10px;
+}
+
+
+    .lp-rewards-section::-webkit-scrollbar-thumb:hover {
+        background: #FFD700;
+    }
+
+
+/* Firefox */
+
+.lp-rewards-section {
+    scrollbar-width: thin;
+    scrollbar-color: #202228 #111315;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.lp-terms {
+    width: 100%;
+    min-height: 50px;
+    padding: 8px 22px;
+    border: 1px solid var(--lp-border);
+    border-radius: 8px;
+    background: #0b0e10;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* ICON */
+
+.lp-terms-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border: 2px solid var(--lp-primary);
+    border-radius: 50%;
+    color: var(--lp-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+/* TITLE */
+
+.lp-terms-title {
+    color: var(--lp-primary);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* DIVIDER */
+
+.lp-terms-divider {
+    width: 1px;
+    height: 26px;
+    flex-shrink: 0;
+    background: var(--lp-border);
+}
+
+
+/* TEXT */
+
+.lp-terms-text {
+    color: #bdbdbd;
+    line-height: 1.4;
+}

@@ -9,6 +9,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="transaction.css" />
+    <link rel="stylesheet" href="profile.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
@@ -16,6 +18,7 @@
 
     <!-- JQuery -->
     <script src="script.js" defer></script>
+    <script src="transaction.js" defer></script>
 </head>
 
 <body>
@@ -419,254 +422,377 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
-
-    <section class="promo-slider">
-        <div class="promo-track">
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01a.jpg" alt="Promotion Banner" />
-                </a>
+    <main class="st-page">
+        <!-- ================= HEADER ================= -->
+        <header class="st-header">
+            <div class="st-header-left">
+                <div class="section-title">
+                    <h2>Statement</h2>
+                </div>
             </div>
 
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01b.jpg" alt="Promotion Banner" />
-                </a>
+            <div class="st-header-right">
+                <nav class="st-tabs">
+                    <a href="transaction.html">
+                        <button type="button"
+                                class="st-tab active"
+                                data-tab="statement">
+                            <i class="fa-regular fa-file-lines"></i>
+                            Statement
+
+                        </button>
+                    </a>
+                    <a href="mybets.html">
+                        <button type="button"
+                                class="st-tab"
+                                data-tab="mybets">
+                            <i class="fa-regular fa-rectangle-list"></i>
+                            MyBets
+                        </button>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ================= FILTER ================= -->
+        <section class="st-filter">
+            <div class="st-filter-block st-quick-filter">
+                <div class="st-quick-buttons">
+                    <button type="button"
+                            class="st-quick-btn active"
+                            data-days="7">
+                        Last 7 Days
+                    </button>
+                    <button type="button"
+                            class="st-quick-btn"
+                            data-days="14">
+                        Last 14 Days
+                    </button>
+                    <button type="button"
+                            class="st-quick-btn"
+                            data-days="30">
+                        Last 30 Days
+                    </button>
+                </div>
             </div>
 
-            <!-- SLIDE 3 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01c.jpg" alt="Promotion Banner" />
-                </a>
+            <div class="st-filter-divider"></div>
+
+            <div class="st-filter-block st-custom-filter">
+                <div class="st-date-row">
+                    <div class="st-date-input">
+                        <input type="date"
+                               id="stStartDate">
+                    </div>
+                    <span class="st-date-separator">
+                        —
+                    </span>
+                    <div class="st-date-input">
+                        <input type="date"
+                               id="stEndDate">
+                    </div>
+                    <button type="button"
+                            class="st-search-btn"
+                            id="stSearchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search</span>
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-            <span class="promo-dot"></span>
-        </div>
-    </section>
-
-    <!-- =========================
-         HOT GAMES
-    ========================= -->
-
-    <section class="hot-games page-hot">
-        <div class="slot-section-title">
-            <div class="slot-section-icon">
-                <img src="imgs/icon/hot-ic.png" alt="Hot Icon" />
+        <!-- ================= SUMMARY ================= -->
+        <section class="st-summary">
+            <div class="st-section-heading">
+                <small id="stSelectedPeriod">
+                    Last 7 Days
+                </small>
             </div>
 
-            <div class="slot-section-text">
-                <h2>Hot Games</h2>
-                <p>Trending picks</p>
+            <div class="st-summary-grid">
+                <!-- TURNOVER -->
+                <article class="st-summary-card">
+                    <div class="st-summary-info">
+                        <span class="st-summary-title">
+                            RUNNING TOTAL
+                        </span>
+                        <strong>450.00</strong>
+                        <small>MYR</small>
+                    </div>
+                </article>
+
+                <!-- DEPOSIT -->
+                <article class="st-summary-card">
+                    <div class="st-summary-info">
+                        <span class="st-summary-title">
+                            TOTAL OUTSTANDING
+                        </span>
+                        <strong>0.00</strong>
+                        <small>MYR</small>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ================= TRANSACTION ================= -->
+        <section class="st-transaction">
+            <div class="st-transaction-header">
+                <div>
+                    <h2>
+                        Transaction History
+                    </h2>
+                </div>
+                <span id="stRecordCount">
+                    6 records
+                </span>
             </div>
 
-        </div>
+            <div class="st-table-wrapper">
+                <table class="st-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>DETAILS</th>
+                            <th>SELECTION</th>
+                            <th>ODDS</th>
+                            <th>STAKE & VALID BET</th>
+                            <th>WIN/LOSS</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
 
-        <div class="games-grid">
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
+                    <tbody id="stTransactionBody">
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
+                        <!-- RECORD 1 -->
+                        <tr>
+                            <td>1</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
+                            <td>
+                                <div class="st-detail">
+                                    <strong>18/09/2026 10:12:34</strong>
+                                    <span>TXN000001</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
+                            <td>
+                                <div class="st-selection">
+                                    <strong>Deposit</strong>
+                                    <span>Main Wallet</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
+                            <td>-</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
+                            <td>
+                                <div class="st-stake">
+                                    <strong>+500.00</strong>
+                                    <span>500.00</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
+                            <td class="status-success">
+                                +500.00
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
+                            <td>
+                                <span class="st-status success">Completed</span>
+                            </td>
+                        </tr>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
+                        <!-- RECORD 2 -->
+                        <tr>
+                            <td>2</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
+                            <td>
+                                <div class="st-detail">
+                                    <strong>17/09/2026 21:45:10</strong>
+                                    <span>TXN000002</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
+                            <td>
+                                <div class="st-selection">
+                                    <strong>Sports</strong>
+                                    <span>Football - EPL</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
+                            <td>
+                                <span class="st-odds">1.85</span>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
+                            <td>
+                                <div class="st-stake">
+                                    <strong>150.00</strong>
+                                    <span>150.00</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
+                            <td class="status-error">
+                                -150.00
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
+                            <td>
+                                <span class="st-status success">Completed</span>
+                            </td>
+                        </tr>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
+                        <!-- RECORD 3 -->
+                        <tr>
+                            <td>3</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
+                            <td>
+                                <div class="st-detail">
+                                    <strong>17/09/2026 23:12:56</strong>
+                                    <span>TXN000003</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
+                            <td>
+                                <div class="st-selection">
+                                    <strong>Sports</strong>
+                                    <span>Arsenal</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
+                            <td>
+                                <span class="st-odds">2.40</span>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
+                            <td>
+                                <div class="st-stake">
+                                    <strong>150.00</strong>
+                                    <span>150.00</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
+                            <td class="status-success">
+                                +320.00
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
+                            <td>
+                                <span class="st-status success">Completed</span>
+                            </td>
+                        </tr>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht01.png" alt="Gates of Olympus" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht02.png" alt="Sweet Bonanza" />
-            </a>
+                        <!-- RECORD 4 -->
+                        <tr>
+                            <td>4</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht03.png" alt="Starlight Princess" />
-            </a>
+                            <td>
+                                <div class="st-detail">
+                                    <strong>16/09/2026 14:20:31</strong>
+                                    <span>TXN000004</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht04.png" alt="Mahjong Ways 2" />
-            </a>
+                            <td>
+                                <div class="st-selection">
+                                    <strong>Withdrawal</strong>
+                                    <span>Bank Transfer</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht05.png" alt="Wild Bounty" />
-            </a>
+                            <td>-</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht06.png" alt="Ways of the Qilin" />
-            </a>
+                            <td>
+                                <div class="st-stake">
+                                    <strong>300.00</strong>
+                                    <span>300.00</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht07.png" alt="Treasures of Aztec" />
-            </a>
+                            <td class="status-error">
+                                -300.00
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht08.png" alt="Sugar Rush" />
-            </a>
+                            <td>
+                                <span class="st-status success">Completed</span>
+                            </td>
+                        </tr>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht09.png" alt="Fortune Ox" />
-            </a>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht10.png" alt="Wild Bandito" />
-            </a>
+                        <!-- RECORD 5 -->
+                        <tr>
+                            <td>5</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht11.png" alt="Dragon Hatch 2" />
-            </a>
+                            <td>
+                                <div class="st-detail">
+                                    <strong>15/09/2026 09:08:17</strong>
+                                    <span>TXN000005</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht12.png" alt="Razor Returns" />
-            </a>
+                            <td>
+                                <div class="st-selection">
+                                    <strong>Bonus</strong>
+                                    <span>Daily Bonus</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht13.png" alt="Chicky Chicky" />
-            </a>
+                            <td>-</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht14.jpg" alt="5 Lions Megaways" />
-            </a>
+                            <td>
+                                <div class="st-stake">
+                                    <strong>+80.00</strong>
+                                    <span>80.00</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht15.jpg" alt="The Dog House Megaways" />
-            </a>
+                            <td class="status-success">
+                                +80.00
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht16.jpg" alt="Cleocatra" />
-            </a>
+                            <td>
+                                <span class="st-status success">Completed</span>
+                            </td>
+                        </tr>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht17.jpg" alt="Fire Hopper" />
-            </a>
+                        <!-- RECORD 6 -->
+                        <tr>
+                            <td>6</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht18.jpg" alt="Wild West Gold" />
-            </a>
+                            <td>
+                                <div class="st-detail">
+                                    <strong>14/09/2026 18:35:42</strong>
+                                    <span>TXN000006</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht19.jpg" alt="Joker Jewels" />
-            </a>
+                            <td>
+                                <div class="st-selection">
+                                    <strong>Withdrawal</strong>
+                                    <span>Bank Transfer</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht20.jpg" alt="Aztec Gems Deluxe" />
-            </a>
+                            <td>-</td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht21.jpg" alt="Buffalo King" />
-            </a>
+                            <td>
+                                <div class="st-stake">
+                                    <strong>200.00</strong>
+                                    <span>200.00</span>
+                                </div>
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht22.jpg" alt="Money Coming" />
-            </a>
+                            <td class="status-error">
+                                -200.00
+                            </td>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht23.jpg" alt="Fruit Party" />
-            </a>
+                            <td>
+                                <span class="st-status rejected">Rejected</span>
+                            </td>
+                        </tr>
 
-            <a href="#" class="game-card">
-                <img src="imgs/games/ht24.jpg" alt="Wild Coaster" />
-            </a>
-        </div>
-    </section>
-
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
 
 

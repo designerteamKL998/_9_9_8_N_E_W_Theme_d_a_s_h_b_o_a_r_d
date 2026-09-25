@@ -1,6 +1,5 @@
 ﻿<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +9,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="transaction.css" />
+    <link rel="stylesheet" href="profile.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
@@ -17,7 +18,7 @@
 
     <!-- JQuery -->
     <script src="script.js" defer></script>
-
+    <script src="transaction.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
             </a>
             <!-- NAVIGATION -->
             <nav class="main-nav">
-                <a href="index.html" class="nav-link">
+                <a href="index.html" class="nav-link active">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/head_00001A_home-ich.png" />
                     </span>
@@ -50,7 +51,7 @@
                     <span class="nav-text">Live Casino</span>
                 </a>
 
-                <a href="slot.html" class="nav-link active">
+                <a href="slot.html" class="nav-link">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/head_0005_slot-ich.png" />
                     </span>
@@ -421,472 +422,561 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
+    <main class="mb-page">
 
-    <section class="promo-slider">
-
-        <div class="promo-track">
-
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01a.jpg" alt="Promotion Banner">
-                </a>
+        <!-- =========================
+             MYBETS HEADER
+        ========================== -->
+        <header class="st-header">
+            <div class="st-header-left">
+                <div class="section-title">
+                    <h2>My Bets</h2>
+                </div>
             </div>
 
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01b.jpg" alt="Promotion Banner">
-                </a>
+            <div class="st-header-right">
+                <nav class="st-tabs">
+                    <a href="transaction.html">
+                        <button type="button"
+                                class="st-tab"
+                                data-tab="statement">
+                            <i class="fa-regular fa-file-lines"></i>
+                            Statement
+
+                        </button>
+                    </a>
+                    <a href="mybets.html">
+                        <button type="button"
+                                class="st-tab active"
+                                data-tab="mybets">
+                            <i class="fa-regular fa-rectangle-list"></i>
+                            MyBets
+                        </button>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="mb-actions">
+            <div class="mb-filter-wrap">
+                <div class="mb-dropdown" id="mbDropdown">
+
+                    <!-- Selected -->
+                    <button type="button" class="mb-dropdown-selected">
+                        <span>All</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <!-- Options -->
+                    <div class="mb-dropdown-menu">
+
+                        <button type="button" class="mb-dropdown-option active">
+                            All
+                        </button>
+
+                        <button type="button" class="mb-dropdown-option">
+                            Sports
+                        </button>
+
+                        <button type="button" class="mb-dropdown-option">
+                            Live Casino
+                        </button>
+
+                        <button type="button" class="mb-dropdown-option">
+                            Slots
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+                <button class="mb-print" type="button">
+                    <i class="fa-solid fa-print"></i>
+                </button>
+
+                <button class="mb-refresh" type="button">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <span>Refresh</span>
+                </button>
+
             </div>
 
-            <!-- SLIDE 3 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01c.jpg" alt="Promotion Banner">
-                </a>
-            </div>
+
+        <!-- =========================
+             TABLE HEADER
+        ========================== -->
+        <div class="mb-table-head">
+
+            <div>#</div>
+            <div>Details</div>
+            <div>Selection</div>
+            <div>Odds</div>
+            <div>Stake</div>
+            <div>Status</div>
+            <div></div>
 
         </div>
 
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-            <span class="promo-dot"></span>
-        </div>
 
-    </section>
+        <!-- =========================
+             RECORD 1
+        ========================== -->
+        <div class="mb-record">
 
-    <!-- ========================================================= SLOT GAMES ========================================================= -->
-    <div class="pagecontent">
-        <section class="slot-games">
+            <div class="mb-number">
+                1
+            </div>
 
-            <div class="slot-header">
+            <div class="mb-details">
+                <strong>18/09/2026 10:12:34</strong>
+                <span>MB000001</span>
+            </div>
 
-                <div class="slot-section-title">
+            <div class="mb-selection">
 
-                    <div class="slot-section-icon">
-                        <img src="imgs/icon/title_0004_slot-ic.png" alt="Slot Games">
-                    </div>
-
-                    <div class="slot-section-text">
-                        <h2>Slot Games</h2>
-                        <p>Exciting slots</p>
-                    </div>
-
-                    <div class="slot-section-line"></div>
-
-                    <div class="slot-search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search games..." />
-                    </div>
+                <div>
+                    <strong>Manchester City</strong>
+                    <span>Football</span>
                 </div>
 
             </div>
 
-            <div class="slot-grid">
-
-                <a href="#" class="slot-card">
-                    <div class="ex-badge">EXCLUSIVE</div>
-                    <img src="imgs/games/slot/slot-g1.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <div class="promo-badge">promotion</div>
-                    <img src="imgs/games/slot/slot-g2.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g3.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g4.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <div class="new-badge">NEW</div>
-                    <img src="imgs/games/slot/slot-g5.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g6.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g7.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <div class="hot-badge">HOT</div>
-                    <img src="imgs/games/slot/slot-g8.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g9.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g10.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g11.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g12.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g13.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g14.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g15.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g16.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g17.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g18.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g19.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g20.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g21.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g22.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g23.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g24.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g25.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g26.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g27.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g28.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g29.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g30.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g31.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g32.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g33.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g34.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g35.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g36.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g37.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g38.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g39.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g40.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g41.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/slot/slot-g42.png" alt="Slot Game">
-                </a>
-
+            <div class="mb-odds">
+                1.85
             </div>
 
-        </section>
+            <div class="mb-stake">
+                200.00 MYR
+            </div>
+
+            <div class="mb-status won">
+                <i class="fa-solid fa-circle"></i>
+                Won
+            </div>
+
+            <button class="mb-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
         </div>
 
 
-        <!-- LANGUAGE POPUP -->
-        <div class="language-overlay" id="languagePopup">
-            <div class="language-popup">
-                <!-- Header -->
-                <div class="language-header">
-                    <div class="language-title-wrap">
-                        <div class="language-globe">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
+        <!-- =========================
+             RECORD 2
+        ========================== -->
+        <div class="mb-record">
 
-                        <div class="language-title-content">
-                            <h3>Language</h3>
-                            <span>Choose your preferred language</span>
-                        </div>
-                    </div>
+            <div class="mb-number">
+                2
+            </div>
 
-                    <button type="button" class="language-close" id="languageClose" aria-label="Close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
+            <div class="mb-details">
+                <strong>17/09/2026 21:45:10</strong>
+                <span>MB000002</span>
+            </div>
+
+            <div class="mb-selection">
+
+                <div>
+                    <strong>Liverpool</strong>
+                    <span>Football</span>
                 </div>
 
-                <!-- Decorative line -->
-                <div class="language-divider">
-                    <span></span>
+            </div>
+
+            <div class="mb-odds">
+                2.10
+            </div>
+
+            <div class="mb-stake">
+                150.00 MYR
+            </div>
+
+            <div class="mb-status lost">
+                <i class="fa-solid fa-circle"></i>
+                Lost
+            </div>
+
+            <button class="mb-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             RECORD 3
+        ========================== -->
+        <div class="mb-record">
+
+            <div class="mb-number">
+                3
+            </div>
+
+            <div class="mb-details">
+                <strong>17/09/2026 18:22:11</strong>
+                <span>MB000003</span>
+            </div>
+
+            <div class="mb-selection">
+
+                <div>
+                    <strong>Baccarat</strong>
+                    <span>Live Casino</span>
                 </div>
 
-                <!-- Language List -->
-                <div class="language-list">
-                    <button class="language-item active" data-language="English">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/uk-square.jpg" />
-                            </span>
-                            <span class="language-name">English</span>
-                        </div>
+            </div>
 
-                        <span class="language-radio"></span>
-                    </button>
+            <div class="mb-odds">
+                1.95
+            </div>
 
-                    <button class="language-item" data-language="ភាសាខ្មែរ">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/cambodia-square.jpg" />
-                            </span>
-                            <span class="language-name">ភាសាខ្មែរ</span>
-                        </div>
+            <div class="mb-stake">
+                300.00 MYR
+            </div>
 
-                        <span class="language-radio"></span>
-                    </button>
+            <div class="mb-status won">
+                <i class="fa-solid fa-circle"></i>
+                Won
+            </div>
 
-                    <button class="language-item" data-language="简体中文">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/china-square.jpg" />
-                            </span>
-                            <span class="language-name">简体中文</span>
-                        </div>
+            <button class="mb-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
 
-                        <span class="language-radio"></span>
-                    </button>
+        </div>
 
-                    <button class="language-item" data-language="မြန်မာ">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/myanmar-square.jpg" />
-                            </span>
-                            <span class="language-name">မြန်မာ</span>
-                        </div>
 
-                        <span class="language-radio"></span>
-                    </button>
+        <!-- =========================
+             RECORD 4
+        ========================== -->
+        <div class="mb-record">
 
-                    <button class="language-item" data-language="繁體中文">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/taiwan-square.jpg" />
-                            </span>
-                            <span class="language-name">繁體中文</span>
-                        </div>
+            <div class="mb-number">
+                4
+            </div>
 
-                        <span class="language-radio"></span>
-                    </button>
+            <div class="mb-details">
+                <strong>16/09/2026 14:20:31</strong>
+                <span>MB000004</span>
+            </div>
 
-                    <button class="language-item" data-language="ジャパン">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/japan-square.jpg" />
-                            </span>
-                            <span class="language-name">ジャパン</span>
-                        </div>
+            <div class="mb-selection">
 
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="ภาษาไทย">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/thailand-square.jpg" />
-                            </span>
-                            <span class="language-name">ภาษาไทย</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Français">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/french-square.jpg" />
-                            </span>
-                            <span class="language-name">Français</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="한국어">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/korea-square.jpg" />
-                            </span>
-                            <span class="language-name">한국어</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Español">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/spain-square.jpg" />
-                            </span>
-                            <span class="language-name">Español</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Tiếng Việt">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/VietNam-square.jpg" />
-                            </span>
-                            <span class="language-name">Tiếng Việt</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Português">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/portugal-square.jpg" />
-                            </span>
-                            <span class="language-name">Português</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Indonesia">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/indo-square.jpg" />
-                            </span>
-                            <span class="language-name">Indonesia</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="বাংলা">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/bangladesh-square.jpg" />
-                            </span>
-                            <span class="language-name">বাংলা</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="इंडिया">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/indi-square.jpg" />
-                            </span>
-                            <span class="language-name">इंडिया</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Malaysia">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/malaysia-square.jpg" />
-                            </span>
-                            <span class="language-name">Malaysia</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
+                <div>
+                    <strong>Sweet Bonanza</strong>
+                    <span>Slots</span>
                 </div>
 
-                <!-- Footer -->
-                <div class="language-footer">
-                    <div class="language-footer-icon">
-                        <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div class="mb-odds">
+                -
+            </div>
+
+            <div class="mb-stake">
+                100.00 MYR
+            </div>
+
+            <div class="mb-status lost">
+                <i class="fa-solid fa-circle"></i>
+                Lost
+            </div>
+
+            <button class="mb-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             RECORD 5
+        ========================== -->
+        <div class="mb-record">
+
+            <div class="mb-number">
+                5
+            </div>
+
+            <div class="mb-details">
+                <strong>15/09/2026 09:08:17</strong>
+                <span>MB000005</span>
+            </div>
+
+            <div class="mb-selection">
+
+                <div>
+                    <strong>Arsenal</strong>
+                    <span>Football</span>
+                </div>
+
+            </div>
+
+            <div class="mb-odds">
+                1.92
+            </div>
+
+            <div class="mb-stake">
+                250.00 MYR
+            </div>
+
+            <div class="mb-status rejected">
+                <i class="fa-regular fa-circle"></i>
+                Rejected
+            </div>
+
+            <button class="mb-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- LANGUAGE POPUP -->
+    <div class="language-overlay" id="languagePopup">
+        <div class="language-popup">
+            <!-- Header -->
+            <div class="language-header">
+                <div class="language-title-wrap">
+                    <div class="language-globe">
+                        <i class="fa-solid fa-globe"></i>
                     </div>
 
-                    <div class="language-footer-text">
-                        <strong>Applied instantly</strong>
-                        <span>Your language preference will be saved automatically.</span>
+                    <div class="language-title-content">
+                        <h3>Language</h3>
+                        <span>Choose your preferred language</span>
                     </div>
+                </div>
+
+                <button type="button" class="language-close" id="languageClose" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Decorative line -->
+            <div class="language-divider">
+                <span></span>
+            </div>
+
+            <!-- Language List -->
+            <div class="language-list">
+                <button class="language-item active" data-language="English">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/uk-square.jpg" />
+                        </span>
+                        <span class="language-name">English</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="ភាសាខ្មែរ">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/cambodia-square.jpg" />
+                        </span>
+                        <span class="language-name">ភាសាខ្មែរ</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="简体中文">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/china-square.jpg" />
+                        </span>
+                        <span class="language-name">简体中文</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="မြန်မာ">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/myanmar-square.jpg" />
+                        </span>
+                        <span class="language-name">မြန်မာ</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="繁體中文">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/taiwan-square.jpg" />
+                        </span>
+                        <span class="language-name">繁體中文</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="ジャパン">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/japan-square.jpg" />
+                        </span>
+                        <span class="language-name">ジャパン</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="ภาษาไทย">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/thailand-square.jpg" />
+                        </span>
+                        <span class="language-name">ภาษาไทย</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="Français">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/french-square.jpg" />
+                        </span>
+                        <span class="language-name">Français</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="한국어">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/korea-square.jpg" />
+                        </span>
+                        <span class="language-name">한국어</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="Español">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/spain-square.jpg" />
+                        </span>
+                        <span class="language-name">Español</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="Tiếng Việt">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/VietNam-square.jpg" />
+                        </span>
+                        <span class="language-name">Tiếng Việt</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="Português">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/portugal-square.jpg" />
+                        </span>
+                        <span class="language-name">Português</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="Indonesia">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/indo-square.jpg" />
+                        </span>
+                        <span class="language-name">Indonesia</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="বাংলা">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/bangladesh-square.jpg" />
+                        </span>
+                        <span class="language-name">বাংলা</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="इंडिया">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/indi-square.jpg" />
+                        </span>
+                        <span class="language-name">इंडिया</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+
+                <button class="language-item" data-language="Malaysia">
+                    <div class="language-info">
+                        <span class="language-flag">
+                            <img src="imgs/language/malaysia-square.jpg" />
+                        </span>
+                        <span class="language-name">Malaysia</span>
+                    </div>
+
+                    <span class="language-radio"></span>
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <div class="language-footer">
+                <div class="language-footer-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="language-footer-text">
+                    <strong>Applied instantly</strong>
+                    <span>Your language preference will be saved automatically.</span>
                 </div>
             </div>
         </div>
+    </div>
 
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
 </body>
 </html>

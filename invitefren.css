@@ -1,0 +1,707 @@
+﻿/* =====================================================
+   REFERRAL PAGE
+===================================================== */
+
+.rf-page {
+    --rf-primary: #EAD87D;
+    --rf-accent: #FFD700;
+    --rf-secondary: #202228;
+    --rf-surface: #121418;
+    --rf-bg: #000000;
+    --rf-text: #FFFFFF;
+    --rf-muted: #9B9DA5;
+    --rf-highlight: #FFF1A8;
+    --rf-success: #43C07A;
+    --rf-error: #FF5B5B;
+    --rf-live: #2EE6C6;
+    position: relative;
+    overflow: hidden;
+    color: var(--rf-text);
+    font-family: var(--font-main);
+    padding: 5px 10px;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.rf-container {
+    width: min(1500px, 100%);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.rf-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 150px;
+    position: relative;
+}
+
+
+.rf-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #D7D9DF;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+    .rf-eyebrow span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--rf-accent);
+        box-shadow: 0 0 15px rgba(255,215,0,.7);
+    }
+
+
+.rf-hero h1 {
+    margin: 0;
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+    .rf-hero h1 strong {
+        color: var(--rf-accent);
+    }
+
+
+.rf-hero p {
+    margin: 18px 0 0;
+    color: #A8ABB3;
+}
+
+
+.rf-title-line {
+    width: 60px;
+    height: 4px;
+    margin-top: 22px;
+    border-radius: 10px;
+    background: var(--rf-accent);
+    box-shadow: 0 0 15px rgba(255,215,0,.3);
+}
+
+
+
+
+
+/* =====================================================
+   MAIN GRID
+===================================================== */
+
+.rf-main-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: 24px;
+    margin-top: 15px;
+    background: #202228;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+
+/* =====================================================
+   SHARE CARD
+===================================================== */
+
+.rf-share-card {
+    position: relative;
+    padding: 28px;
+    border-radius: 15px;
+    background: linear-gradient( 145deg, #15171B, #090A0C );
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 25px 70px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.04);
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.rf-tabs {
+    display: flex;
+    width: max-content;
+    padding: 4px;
+    border-radius: 30px;
+    background: #1C2026;
+    border: 1px solid rgba(255,255,255,.08);
+    margin-bottom: 30px;
+}
+
+
+.rf-tab {
+    border: 0;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: transparent;
+    color: #9FA2AA;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+}
+
+    .rf-tab:hover {
+        color: white;
+        background: #EAD87D;
+    }
+
+.rf-tab-active {
+    color: #111;
+    background: #EAD87D;
+    box-shadow: 0 5px 20px rgba(255,215,0,.18);
+}
+
+
+.rf-tab-icon {
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   TAB CONTENT
+===================================================== */
+
+.rf-tab-content {
+    display: none;
+}
+
+.rf-content-active {
+    display: block;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.rf-field-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+
+.rf-round-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--rf-accent);
+    background: rgba(255,215,0,.08);
+    border: 1px solid rgba(255,215,0,.22);
+}
+
+
+.rf-field-heading h3 {
+    margin: 0 0 4px;
+}
+
+.rf-field-heading p {
+    margin: 0;
+    color: #858993;
+}
+
+
+/* =====================================================
+   COPY BOX
+===================================================== */
+
+.rf-copy-box {
+    display: flex;
+    align-items: center;
+    min-height: 62px;
+    padding: 5px;
+    border-radius: 30px;
+    background: #20242A;
+    border: 1px dashed #3b3b3b;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.4);
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.rf-code-value,
+.rf-link-value {
+    flex: 1;
+    min-width: 0;
+    padding: 0 18px;
+    color: #F4F4F4;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rf-link-value {
+    display: block;
+    max-width: calc(100% - 120px);
+}
+
+.rf-code-value {
+    letter-spacing: 2px;
+}
+
+
+.rf-copy-btn {
+    flex-shrink: 0;
+    height: 52px;
+    padding: 0 25px;
+    border: 0;
+    border-radius: 30px;
+    background: #EAD87D;
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+    .rf-copy-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255,215,0,.25);
+    }
+
+    .rf-copy-btn:active {
+        transform: scale(.97);
+    }
+
+.rf-left i, .rf-step-icon i {
+    font-size: 18px;
+}
+/* =====================================================
+   OR
+===================================================== */
+.rf-or {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #747780;
+}
+
+    .rf-or span {
+        height: 1px;
+        flex: 1;
+        background: linear-gradient( 90deg, transparent, rgba(255,255,255,.15) );
+    }
+
+        .rf-or span:last-child {
+            background: linear-gradient( 90deg, rgba(255,255,255,.15), transparent );
+        }
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.rf-share-options {
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #858991;
+}
+
+.rf-social {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.1);
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+    .rf-social:hover {
+        transform: translateY(-3px);
+    }
+
+.rf-whatsapp {
+    background: #20C875;
+}
+
+.rf-facebook {
+    background: #287BEA;
+}
+
+.rf-telegram {
+    background: #229ED9;
+}
+
+.rf-more {
+    background: #282D34;
+}
+
+
+/* =====================================================
+   REWARD
+===================================================== */
+
+.rf-reward-box {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 24px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: #000;
+    border: 1px solid #EAD87D;
+    box-shadow: 0 0 25px rgba(255,215,0,.05);
+}
+
+
+.rf-reward-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255,215,0,.1);
+}
+
+
+.rf-reward-text p {
+    margin: 3px 0;
+    color: #D3D5D9;
+    line-height: 1.5;
+}
+
+.rf-reward-text strong {
+    color: var(--rf-accent);
+}
+
+
+/* =====================================================
+   BONUS GRID
+===================================================== */
+
+.rf-bonus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+
+.rf-bonus-card {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #111317;
+    border: 1px solid rgba(255,255,255,.1);
+    transition: .25s;
+}
+
+    .rf-bonus-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255,215,0,.25);
+    }
+
+
+.rf-status-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+
+.rf-pending .rf-status-icon {
+    color: #FF3F72;
+    background: rgba(255,63,114,.1);
+}
+
+.rf-earned .rf-status-icon {
+    color: var(--rf-success);
+    background: rgba(67,192,122,.1);
+}
+
+
+.rf-status-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+    .rf-status-content small {
+    }
+
+    .rf-status-content strong {
+
+    }
+
+.rf-pending .rf-status-content strong {
+    color: #FF3F72;
+    font-size: 18px;
+}
+
+.rf-earned .rf-status-content strong {
+    color: var(--rf-success);
+    font-size: 18px;
+}
+
+
+.rf-arrow {
+    margin-left: auto;
+    color: #767A82;
+    font-size: 30px;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.rf-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+
+.rf-stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 13px;
+    background: #0D0F12;
+    border: 1px solid rgba(255,255,255,.06);
+}
+
+
+    .rf-stat > span {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        color: var(--rf-accent);
+        background: rgba(255,215,0,.07);
+    }
+
+
+    .rf-stat small {
+        display: block;
+        color: #777B84;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    .rf-stat strong {
+
+    }
+
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.rf-how {
+    position: relative;
+    padding: 30px;
+    border-radius: 22px;
+    background: linear-gradient( 145deg, #121418, #090A0C );
+    border: 1px solid rgba(255,255,255,.1);
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0,0,0,.45);
+}
+
+.rf-how-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+
+.rf-how-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #111;
+    background: #e8d67c;
+    box-shadow: 0 10px 30px rgba(255,215,0,.18);
+}
+
+
+.rf-how-label {
+    color: #777C85;
+}
+
+
+.rf-how h2 {
+    margin: 0;
+}
+
+    .rf-how h2 strong {
+        color: var(--rf-accent);
+    }
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.rf-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 62px 62px 1fr;
+    align-items: center;
+    gap: 15px;
+    min-height: 125px;
+    padding: 20px;
+    margin-bottom: 13px;
+    border-radius: 17px;
+    background: linear-gradient( 145deg, #181A1E, #101114 );
+    border: 1px solid rgba(255,255,255,.09);
+    transition: transform .25s, border-color .25s;
+}
+
+    .rf-step:hover {
+        transform: translateX(5px);
+        border-color: rgba(255,215,0,.25);
+    }
+
+
+.rf-step-number {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #111;
+    background: #e8d67c;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(255,215,0,.12);
+}
+
+
+.rf-step-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    background: #22252A;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+
+.rf-step-content h3 {
+    margin: 0 0 8px;
+}
+
+.rf-step-content p {
+    margin: 0;
+    color: #8B8F99;
+    line-height: 1.6;
+}
+
+
+.rf-promo-title {
+    position: relative;
+    z-index: 3;
+    margin-left: auto;
+    margin-right: 35px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+}
+
+    .rf-promo-title span {
+        color: #777B84;
+    }
+
+    .rf-promo-title strong {
+        margin-top: 5px;
+        color: var(--rf-accent);
+    }
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.rf-toast {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    border-radius: 13px;
+    background: #181A1E;
+    border: 1px solid rgba(67,192,122,.35);
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: .3s;
+    z-index: 9999;
+}
+
+    .rf-toast.rf-show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .rf-toast > span {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: white;
+        background: var(--rf-success);
+    }
+
+    .rf-toast strong {
+        display: block;
+    }
+
+    .rf-toast small {
+        display: block;
+        margin-top: 3px;
+        color: #888C95;
+    }
+
+

@@ -1,0 +1,796 @@
+﻿/* =========================================================
+   SPIN & WIN
+   PREFIX: sw-
+========================================================= */
+
+:root {
+    --sw-gold: #f5c84c;
+    --sw-gold-light: #ffe58a;
+    --sw-gold-dark: #9d6410;
+    --sw-bg: #050708;
+    --sw-panel: #0b0f12;
+    --sw-panel-2: #10161b;
+    --sw-border: rgba(245, 200, 76, .45);
+    --sw-blue: #1764ef;
+    --sw-green: #00a83b;
+    --sw-red: #e51e25;
+    --sw-purple: #8b20e8;
+    --sw-orange: #ff9e00;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.sw-page {
+    position: relative;
+    overflow: hidden;
+    background: url(imgs/icon/bgspinwheel.jpg)no-repeat;
+    background-size:cover;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.sw-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient( rgba(255,255,255,.025) 1px, transparent 1px ), linear-gradient( 90deg, rgba(255,255,255,.025) 1px, transparent 1px );
+    background-size: 70px 70px;
+    mask-image: linear-gradient( to bottom, transparent, #000 20%, #000 80%, transparent );
+    pointer-events: none;
+}
+
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.sw-container {
+    position: relative;
+    z-index: 5;
+    width: min(1200px, calc(100% - 150px));
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 30px;
+    background: rgb(32, 34, 40, 0.6);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.sw-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+    .sw-header img {
+        width:90%;
+    }
+    
+    .sw-header h1 {
+        position: relative;
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        line-height: .9;
+        font-weight: 900;
+        letter-spacing: -3px;
+        color: #fff;
+        text-shadow: 0 2px 0 #8b5608, 0 5px 0 #6c4307, 0 10px 20px rgba(0,0,0,.8);
+    }
+
+        .sw-header h1 span {
+            background: linear-gradient( 180deg, #fff9c7 0%, #ffd75b 35%, #f3a916 70%, #b96b05 100% );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sw-header h1 b {
+            color: #fff;
+            background: linear-gradient( 180deg, #ffffff, #f5c84c );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+.sw-crown {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(70px) rotate(-4deg);
+    color: #ffe78a;
+    filter: drop-shadow(0 0 10px rgba(245,200,76,.8));
+}
+
+.sw-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin-top: 12px;
+    color: var(--sw-gold);
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+    .sw-subtitle i {
+        width: 38px;
+        height: 1px;
+        background: var(--sw-gold);
+    }
+
+    .sw-subtitle em {
+        font-style: normal;
+        color: #fff;
+    }
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sw-content {
+    display: grid;
+    grid-template-columns: minmax(560px, 1.08fr) minmax(420px, .82fr);
+    align-items: start;
+    gap: 45px;
+}
+
+
+/* =========================================================
+   WHEEL SECTION
+========================================================= */
+
+.sw-wheel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sw-wheel-stage {
+    position: relative;
+    width: min(590px, 100%);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(imgs/icon/bgsidewheel.png);
+    background-size: 100%;
+}
+
+
+/* =========================================================
+   WHEEL RINGS
+========================================================= */
+
+.sw-wheel-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.sw-ring-one {
+    width: 98%;
+    height: 98%;
+    border: 3px solid rgba(245,200,76,.8);
+    box-shadow: 0 0 20px rgba(245,200,76,.2), inset 0 0 20px rgba(245,200,76,.15);
+}
+
+.sw-ring-two {
+    width: 92%;
+    height: 92%;
+    border: 7px solid #15191c;
+    box-shadow: 0 0 0 2px #b87915, inset 0 0 0 2px #5e3c0c;
+}
+
+
+/* =========================================================
+   LIGHT DOTS
+========================================================= */
+
+.sw-wheel-lights {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background: repeating-conic-gradient( from 0deg, #ffe58a 0deg 2deg, transparent 2deg 30deg );
+    mask: radial-gradient( transparent 0 46%, #000 46.5% 49%, transparent 49.5% );
+    opacity: .9;
+    animation: sw-light-spin 12s linear infinite;
+}
+
+@keyframes sw-light-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   POINTER
+========================================================= */
+
+.sw-pointer {
+    position: absolute;
+    top: 1%;
+    z-index: 20;
+    width: 55px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient( 135deg, #fff3a0, #f4b51b 50%, #9d5d06 );
+    clip-path: polygon( 50% 100%, 0 0, 100% 0 );
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,.8));
+}
+
+.sw-pointer-inner {
+    position: absolute;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #1b1307;
+    box-shadow: 0 0 0 3px #ffe68b;
+}
+
+
+/* =========================================================
+   WHEEL
+========================================================= */
+
+.sw-wheel-wrap {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    z-index: 5;
+    padding: 10px;
+    background: linear-gradient( 145deg, #ffe68a, #9b620b, #f8c43e, #7a4b08 );
+    box-shadow: 0 15px 35px rgba(0,0,0,.7), 0 0 35px rgba(245,200,76,.2);
+}
+
+.sw-wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: conic-gradient(from -22.5deg, #202228 0deg 45deg, #ca7e03 45deg 90deg, #202228 90deg 135deg, #ca7e03 135deg 180deg, #202228 180deg 225deg, #ca7e03 225deg 270deg, #202228 270deg 315deg, var(--sw-orange) 315deg 360deg);
+    border: 2px solid rgba(255, 255, 255, .18);
+    transition: transform 5s cubic-bezier(.12,.8,.16,1);
+}
+
+
+    /* =========================================================
+   SEGMENT DIVIDERS
+========================================================= */
+
+    .sw-wheel::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-conic-gradient( from -22.5deg, rgba(255,255,255,.8) 0deg 1deg, transparent 1deg 45deg );
+        z-index: 3;
+        pointer-events: none;
+    }
+
+
+/* =========================================================
+   SEGMENT LABELS
+========================================================= */
+
+.sw-wheel-segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 0;
+    transform-origin: 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0,0,0,.6);
+}
+
+    .sw-wheel-segment span {
+        transform: translateY(-50px) rotate(0.5deg);
+    }
+
+.sw-s1 {
+    transform: rotate(-44.5deg);
+}
+
+.sw-s2 {
+    transform: rotate(1.5deg);
+    font-size: 30px;
+}
+
+.sw-s3 {
+    transform: rotate(44.5deg);
+    font-size: 30px;
+}
+
+.sw-s4 {
+    transform: rotate(89.5deg);
+}
+
+.sw-s5 {
+    transform: rotate(136.5deg);
+}
+
+.sw-s6 {
+    transform: rotate(178.5deg);
+}
+
+.sw-s7 {
+    transform: rotate(225.5deg);
+}
+
+.sw-s8 {
+    transform: rotate(270.5deg);
+}
+
+.sw-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+    .sw-phone small {
+        line-height: 1.15;
+        font-size: 17px;
+    }
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.sw-wheel-center {
+    position: absolute;
+    z-index: 15;
+    left: 50%;
+    top: 50%;
+    width: 26%;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    padding: 7px;
+    border-radius: 50%;
+    background: linear-gradient( 145deg, #ffe58a, #bd7608, #ffe16a );
+    box-shadow: 0 5px 20px rgba(0,0,0,.6);
+}
+
+.sw-center-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: radial-gradient( circle, #302006, #090b0c );
+    border: 2px solid #f5c84c;
+    box-shadow: inset 0 0 20px rgba(245,200,76,.25);
+}
+
+    .sw-center-inner span {
+        color: #f9d765;
+        filter: drop-shadow(0 0 8px rgba(245,200,76,.7));
+    }
+
+
+/* =========================================================
+   SPIN BUTTON
+========================================================= */
+
+.sw-spin-btn {
+    position: relative;
+    margin-top: -10px;
+    min-width: 410px;
+    border: 0;
+    padding: 15px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    cursor: pointer;
+    border-radius: 18px;
+    background: linear-gradient( 180deg, #ffe98d 0%, #f8c53f 45%, #d99312 100% );
+    color: #171006;
+    box-shadow: 0 8px 0 #75480b, 0 15px 25px rgba(0,0,0,.5);
+    transition: .2s ease;
+}
+
+    .sw-spin-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 11px 0 #75480b, 0 18px 30px rgba(0,0,0,.55);
+    }
+
+    .sw-spin-btn:active {
+        transform: translateY(4px);
+        box-shadow: 0 4px 0 #75480b, 0 8px 15px rgba(0,0,0,.5);
+    }
+
+    .sw-spin-btn:disabled {
+        cursor: not-allowed;
+        transform: none;
+    }
+
+.sw-spin-icon {
+    font-size: 30px;
+}
+
+.sw-spin-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .sw-spin-text strong {
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+
+    .sw-spin-text small {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.sw-history {
+    min-height: 470px;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient( 145deg, rgba(20,25,29,.95), rgba(6,9,11,.98) );
+    border: 1px solid #30333d;
+    box-shadow: 0 25px 60px rgba(0,0,0,.45), inset 0 0 35px rgba(255,255,255,.02);
+}
+
+
+/* =========================================================
+   HISTORY HEADER
+========================================================= */
+
+.sw-history-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.sw-history-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #000;
+    background: #EAD87D;
+    border: 1px solid rgba(245,200,76,.4);
+    font-size: 30px;
+}
+
+.sw-history-header h2 {
+    margin: 0;
+    color: #EAD87D;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.sw-history-header p {
+    margin: 3px 0 0;
+    color: #7f8a92;
+}
+
+
+/* =========================================================
+   HISTORY TABLE
+========================================================= */
+
+.sw-history-table {
+    overflow: hidden;
+    min-height: 350px;
+    border-radius: 15px;
+    border: 1px solid rgba(245,200,76,.25);
+    background: #080c0f;
+}
+
+.sw-history-head {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr .8fr;
+    padding: 15px 18px;
+    background: linear-gradient( 90deg, #171718, #101315 );
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    color: #e7c45c;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.sw-history-empty {
+    min-height: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #88929a;
+}
+
+.sw-empty-icon {
+    position: relative;
+    margin-bottom: 18px;
+    width: 60px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #667079;
+    border-radius: 7px;
+    opacity: .65;
+    font-size: 30px;
+}
+
+    .sw-empty-icon i {
+        position: absolute;
+        top: -13px;
+        right: -9px;
+        font-style: normal;
+        background: #080c0f;
+        color: #aab2b8;
+    }
+
+.sw-history-empty strong {
+    color: #d5d9dc;
+}
+
+.sw-history-empty p {
+    margin-top: 6px;
+    color: #69737a;
+}
+
+
+/* =========================================================
+   HISTORY ROW
+========================================================= */
+
+.sw-history-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr .8fr;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    color: #d7dce0;
+}
+
+    .sw-history-row:last-child {
+        border-bottom: 0;
+    }
+
+.sw-history-reward {
+    color: #f5c84c;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.sw-bottom-info {
+    margin-top: 25px;
+    text-align: center;
+    color: #b99b4b;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+    .sw-bottom-info span {
+        color: #f5c84c;
+    }
+
+    .sw-bottom-info b {
+        margin: 0 10px;
+        color: #fff;
+    }
+
+
+/* =========================================================
+   SPINNING
+========================================================= */
+
+.sw-spinning .sw-spin-icon {
+    animation: sw-button-spin .7s linear infinite;
+}
+
+@keyframes sw-button-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+   RIGHT COLUMN
+========================================= */
+
+.sw-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+
+    /* =========================================
+   SPIN HISTORY
+========================================= */
+
+    .sw-right-column .sw-history {
+        min-height: 0;
+        width: 100%;
+    }
+
+
+/* =========================================
+   DEPOSIT PROMOTION
+========================================= */
+
+.sw-promo-card {
+    min-height: 78px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: linear-gradient( 145deg, #111619, #080b0d );
+    border: 1px solid #30333d;
+    box-shadow: 0 12px 25px rgba(0,0,0,.35);
+}
+
+
+/* GIFT ICON */
+
+.sw-promo-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EAD87D;
+    font-size: 30px;
+}
+
+
+/* PROMO TEXT */
+
+.sw-promo-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+    .sw-promo-copy > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+
+    .sw-promo-copy strong {
+        color: #EAD87D;
+        font-weight: 900;
+    }
+
+
+    .sw-promo-copy span {
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+
+    .sw-promo-copy small {
+        color: #aeb5ba;
+    }
+
+
+/* =========================================
+   TERMS & CONDITIONS
+========================================= */
+
+.sw-terms-card {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #070a0c;
+    border: 1px solid #30333d;
+    box-shadow: 0 12px 25px rgba(0,0,0,.35);
+}
+
+
+/* RED TITLE */
+
+.sw-terms-title {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background: linear-gradient( 180deg, #e33250, #aa142e );
+    color: #ffffff;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+
+
+/* T&C ITEMS */
+
+.sw-term-item {
+    min-height: 55px;
+    margin: 9px 12px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-radius: 10px;
+    background: linear-gradient( 90deg, #15191b, #0b0e10 );
+    border: 1px solid rgba(255,255,255,.06);
+    color: #eeeeee;
+}
+
+
+/* NUMBER CIRCLE */
+
+.sw-term-number {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EAD87D;
+    color: #000000;
+    font-weight: 900;
+}
+
+
+/* =========================================
+   REMOVE T&C ARROWS
+========================================= */
+
+.sw-terms-card i,
+.sw-terms-card svg,
+.sw-terms-card .fa-chevron-right,
+.sw-terms-card .fa-chevron-down {
+    display: none !important;
+}
+
+

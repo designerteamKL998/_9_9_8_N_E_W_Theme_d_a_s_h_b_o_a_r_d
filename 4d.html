@@ -1,6 +1,5 @@
 ﻿<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="transaction.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="4d.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
@@ -17,7 +19,6 @@
 
     <!-- JQuery -->
     <script src="script.js" defer></script>
-
 </head>
 
 <body>
@@ -29,7 +30,7 @@
             </a>
             <!-- NAVIGATION -->
             <nav class="main-nav">
-                <a href="index.html" class="nav-link">
+                <a href="index.html" class="nav-link active">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/head_00001A_home-ich.png" />
                     </span>
@@ -57,7 +58,7 @@
                     <span class="nav-text">Slots</span>
                 </a>
 
-                <a href="lottery.html" class="nav-link active">
+                <a href="lottery.html" class="nav-link">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/lotteryiconhead.png" />
                     </span>
@@ -325,6 +326,21 @@
                     <span>Home</span>
                 </a>
 
+                <a href="hotgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/hot-ic.png" alt="Hot Games" />
+                    <span>Hot Games</span>
+                </a>
+
+                <a href="newgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/new-ic.png" alt="New Games" />
+                    <span>New Games</span>
+                </a>
+
+                <a href="favgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/fav-ic.png" alt="Fav Games" />
+                    <span>Fav Games</span>
+                </a>
+
                 <a href="slot.html" class="mobile-game-btn">
                     <img src="imgs/icon/title_0004_slot-ic.png" alt="Slot" />
                     <span>Slot</span>
@@ -365,7 +381,7 @@
         </div>
 
         <!-- PROMOTION -->
-        <a href="#" class="bottom-nav-item">
+        <a href="promotion.html" class="bottom-nav-item">
             <span class="bottom-nav-icon">
                 <img src="imgs/icon/promoiconbottom2.png" />
             </span>
@@ -406,96 +422,12 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
-
-    <section class="promo-slider">
-
-        <div class="promo-track">
-
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01-lottery.jpg" alt="Promotion Banner">
-                </a>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner02-lottery.jpg" alt="Promotion Banner">
-                </a>
-            </div>
-
+    <main class="st-page">
+        <div class="fourdresult__static">
+            <iframe src="https://4dyes3.com/pop.php?view=home" frameborder="0" style="border:0;width:100%;height:100%;"></iframe>
         </div>
+    </main>
 
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-        </div>
-
-    </section>
-
-    <!----------------------------------------------------------   LOTTERY  -------------------------------------------------------->
-    <!-- ========================================================= LOTTERY ========================================================= -->
-    <div class="pagecontent">
-        <section class="lottery-games">
-
-            <div class="slot-section-title">
-
-                <div class="slot-section-icon">
-                    <img src="imgs/icon/title_0003_lottery-ic.png" alt="Lottery">
-                </div>
-
-                <div class="slot-section-text">
-                    <h2>Lottery</h2>
-                    <p>Lucky draws</p>
-                </div>
-
-                <div class="slot-section-line"></div>
-
-            </div>
-
-            <div class="slot-grid">
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-01.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-02.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-03.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-04.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-05.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-06.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-07.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-08.png" alt="Slot Game">
-                </a>
-
-            </div>
-
-        </section>
-    </div>
 
 
         <!-- LANGUAGE POPUP -->
@@ -717,6 +649,10 @@
             </div>
         </div>
 
+        <!-- BACK TO TOP -->
+        <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
 
 </body>
 </html>

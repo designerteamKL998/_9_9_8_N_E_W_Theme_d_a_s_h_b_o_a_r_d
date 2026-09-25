@@ -1,6 +1,5 @@
 ﻿<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="download.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
@@ -17,7 +17,6 @@
 
     <!-- JQuery -->
     <script src="script.js" defer></script>
-
 </head>
 
 <body>
@@ -29,7 +28,7 @@
             </a>
             <!-- NAVIGATION -->
             <nav class="main-nav">
-                <a href="index.html" class="nav-link">
+                <a href="index.html" class="nav-link active">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/head_00001A_home-ich.png" />
                     </span>
@@ -57,7 +56,7 @@
                     <span class="nav-text">Slots</span>
                 </a>
 
-                <a href="lottery.html" class="nav-link active">
+                <a href="lottery.html" class="nav-link">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/lotteryiconhead.png" />
                     </span>
@@ -325,6 +324,21 @@
                     <span>Home</span>
                 </a>
 
+                <a href="hotgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/hot-ic.png" alt="Hot Games" />
+                    <span>Hot Games</span>
+                </a>
+
+                <a href="newgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/new-ic.png" alt="New Games" />
+                    <span>New Games</span>
+                </a>
+
+                <a href="favgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/fav-ic.png" alt="Fav Games" />
+                    <span>Fav Games</span>
+                </a>
+
                 <a href="slot.html" class="mobile-game-btn">
                     <img src="imgs/icon/title_0004_slot-ic.png" alt="Slot" />
                     <span>Slot</span>
@@ -365,7 +379,7 @@
         </div>
 
         <!-- PROMOTION -->
-        <a href="#" class="bottom-nav-item">
+        <a href="promotion.html" class="bottom-nav-item">
             <span class="bottom-nav-icon">
                 <img src="imgs/icon/promoiconbottom2.png" />
             </span>
@@ -406,96 +420,250 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
+    <main class="download-page">
+        <div class="dl-page">
+            <!-- =========================
+             BACKGROUND DECORATION
+        ========================== 
+            <div class="dl-bg-orb dl-bg-orb-1"></div>
+            <div class="dl-bg-orb dl-bg-orb-2"></div>
+            <div class="dl-bg-line dl-bg-line-1"></div>
+            <div class="dl-bg-line dl-bg-line-2"></div>-->
 
-    <section class="promo-slider">
 
-        <div class="promo-track">
+            <!-- =========================
+             HERO
+        ========================== -->
+            <section class="dl-hero">
+                <div class="dl-hero-content">
+                        <div class="section-title">
+                            <h2>Download Our Apps</h2>
+                        </div>
+                    <p>
+                        Play anytime, anywhere with the official Perdana4D mobile application. Download the app for your device and enjoy a smoother experience.
+                    </p>
+                </div>
+            </section>
 
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01-lottery.jpg" alt="Promotion Banner">
-                </a>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner02-lottery.jpg" alt="Promotion Banner">
-                </a>
-            </div>
-
-        </div>
-
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-        </div>
-
-    </section>
-
-    <!----------------------------------------------------------   LOTTERY  -------------------------------------------------------->
-    <!-- ========================================================= LOTTERY ========================================================= -->
-    <div class="pagecontent">
-        <section class="lottery-games">
-
-            <div class="slot-section-title">
-
-                <div class="slot-section-icon">
-                    <img src="imgs/icon/title_0003_lottery-ic.png" alt="Lottery">
+            <!-- =========================
+             PHONE + DOWNLOAD AREA
+        ========================== -->
+            <section class="dl-main">
+                <!-- LEFT PHONE -->
+                <div class="dl-phone-side dl-phone-left">
+                    <div class="dl-phone">
+                        <div class="dl-phone-notch"></div>
+                        <div class="dl-phone-screen">
+                            <div class="dl-phone-brand">
+                                <i class="fa-solid fa-crown"></i>
+                                <div>
+                                    <b>PERDANA<span>4D</span></b>
+                                    <small>PLAY TODAY WIN TOMORROW</small>
+                                </div>
+                            </div>
+                            <div class="dl-phone-title">
+                                YOUR<br>
+                                GAME<br>
+                                <span>OUR PASSION</span>
+                            </div>
+                            <div class="dl-phone-balls">
+                                <div>4</div>
+                                <div>8</div>
+                            </div>
+                            <div class="dl-phone-line"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="slot-section-text">
-                    <h2>Lottery</h2>
-                    <p>Lucky draws</p>
+                <!-- DOWNLOAD CARDS -->
+                <div class="dl-download-area">
+
+                    <div class="dl-cards">
+                        <!-- ANDROID -->
+                        <article class="dl-card dl-card-android">
+                            <div class="dl-card-icon">
+                               <img src="imgs/icon/downloadandroid.png" />
+                            </div>
+                            <div class="dl-card-content">
+                                <span class="dl-card-label">
+                                    MOBILE APPLICATION
+                                </span>
+                                <h3>Android App</h3>
+                                <p>
+                                    Fast, smooth and optimized
+                                    for Android devices.
+                                </p>
+                            </div>
+
+                            <a href="YOUR_GOOGLE_PLAY_LINK"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="dl-store-btn">
+                                <div class="dl-store-icon">
+                                    <img src="imgs/icon/playstore.png" />
+                                </div>
+                                <div class="dl-store-text">
+                                    <small>GET IT ON</small>
+                                    <strong>Google Play</strong>
+                                </div>
+                                <i class="fa-solid fa-arrow-right dl-arrow"></i>
+                            </a>
+                        </article>
+
+                        <!-- IOS -->
+                        <article class="dl-card dl-card-ios">
+                            <div class="dl-card-icon">
+                                <img src="imgs/icon/downloadapple.png" />
+                            </div>
+                            <div class="dl-card-content">
+                                <span class="dl-card-label">
+                                    MOBILE APPLICATION
+                                </span>
+                                <h3>iOS App</h3>
+                                <p>
+                                    Optimized for iPhone
+                                    and iPad devices.
+                                </p>
+                            </div>
+
+                            <a href="YOUR_APP_STORE_LINK"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="dl-store-btn">
+                                <div class="dl-store-icon">
+                                    <img src="imgs/icon/appleicon.png" />
+                                </div>
+                                <div class="dl-store-text">
+                                    <small>DOWNLOAD ON THE</small>
+                                    <strong>App Store</strong>
+                                </div>
+                                <i class="fa-solid fa-arrow-right dl-arrow"></i>
+                            </a>
+                        </article>
+                    </div>
                 </div>
 
-                <div class="slot-section-line"></div>
+                <!-- RIGHT PHONE -->
+                <div class="dl-phone-side dl-phone-right">
+                    <div class="dl-phone">
+                        <div class="dl-phone-notch"></div>
+                        <div class="dl-phone-screen">
+                            <div class="dl-phone-brand">
+                                <i class="fa-solid fa-crown"></i>
+                                <div>
+                                    <b>PERDANA<span>4D</span></b>
+                                    <small>PLAY TODAY WIN TOMORROW</small>
+                                </div>
+                            </div>
 
-            </div>
+                            <div class="dl-login-box">
+                                <div>
+                                    <i class="fa-solid fa-user"></i>
+                                    Username
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-lock"></i>
+                                    Password
+                                </div>
+                                <button>Login</button>
+                            </div>
 
-            <div class="slot-grid">
+                            <small class="dl-phone-caption">
+                                Play Anytime, Anywhere
+                            </small>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-01.png" alt="Slot Game">
+                            <div class="dl-phone-nav">
+                                <div class="active">
+                                    <i class="fa-solid fa-house"></i>
+                                    <small>Home</small>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-chart-column"></i>
+                                    <small>Results</small>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-gift"></i>
+                                    <small>Promos</small>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-user"></i>
+                                    <small>Account</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+             FEATURES
+        ========================== -->
+            <section class="dl-features">
+                <div class="dl-feature">
+                    <div class="dl-feature-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h4>Faster Access</h4>
+                        <p>Play on the go</p>
+                    </div>
+                </div>
+
+                <div class="dl-feature">
+                    <div class="dl-feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4>Secure & Safe</h4>
+                        <p>Your data is protected</p>
+                    </div>
+                </div>
+
+                <div class="dl-feature">
+                    <div class="dl-feature-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div>
+                        <h4>Smooth Experience</h4>
+                        <p>Optimized for mobile</p>
+                    </div>
+                </div>
+
+                <div class="dl-feature">
+                    <div class="dl-feature-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <div>
+                        <h4>Easy to Use</h4>
+                        <p>Simple & convenient</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+             FOOTER
+        ========================== -->
+            <footer class="dl-footer">
+                <a href="index.html" class="dl-back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to Home</span>
                 </a>
+            </footer>
+        </div>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-02.png" alt="Slot Game">
-                </a>
+    </main>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-03.png" alt="Slot Game">
-                </a>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-04.png" alt="Slot Game">
-                </a>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-05.png" alt="Slot Game">
-                </a>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-06.png" alt="Slot Game">
-                </a>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-07.png" alt="Slot Game">
-                </a>
 
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-08.png" alt="Slot Game">
-                </a>
 
-            </div>
 
-        </section>
-    </div>
+
+
+
+
 
 
         <!-- LANGUAGE POPUP -->
@@ -717,6 +885,10 @@
             </div>
         </div>
 
+        <!-- BACK TO TOP -->
+        <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
 
 </body>
 </html>

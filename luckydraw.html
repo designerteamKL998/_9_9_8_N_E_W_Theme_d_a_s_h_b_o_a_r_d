@@ -1,6 +1,5 @@
 ﻿<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="home-content.css" />
+    <link rel="stylesheet" href="luckydraw.css" />
     <link rel="stylesheet" href="responsive.css" />
 
     <!-- Font Awesome -->
@@ -17,7 +17,7 @@
 
     <!-- JQuery -->
     <script src="script.js" defer></script>
-
+    <script src="luckydraw.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             </a>
             <!-- NAVIGATION -->
             <nav class="main-nav">
-                <a href="index.html" class="nav-link">
+                <a href="index.html" class="nav-link active">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/head_00001A_home-ich.png" />
                     </span>
@@ -57,7 +57,7 @@
                     <span class="nav-text">Slots</span>
                 </a>
 
-                <a href="lottery.html" class="nav-link active">
+                <a href="lottery.html" class="nav-link">
                     <span class="nav-icon">
                         <img src="imgs/icon/header/lotteryiconhead.png" />
                     </span>
@@ -325,6 +325,21 @@
                     <span>Home</span>
                 </a>
 
+                <a href="hotgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/hot-ic.png" alt="Hot Games" />
+                    <span>Hot Games</span>
+                </a>
+
+                <a href="newgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/new-ic.png" alt="New Games" />
+                    <span>New Games</span>
+                </a>
+
+                <a href="favgames.html" class="mobile-game-btn">
+                    <img src="imgs/icon/fav-ic.png" alt="Fav Games" />
+                    <span>Fav Games</span>
+                </a>
+
                 <a href="slot.html" class="mobile-game-btn">
                     <img src="imgs/icon/title_0004_slot-ic.png" alt="Slot" />
                     <span>Slot</span>
@@ -365,7 +380,7 @@
         </div>
 
         <!-- PROMOTION -->
-        <a href="#" class="bottom-nav-item">
+        <a href="promotion.html" class="bottom-nav-item">
             <span class="bottom-nav-icon">
                 <img src="imgs/icon/promoiconbottom2.png" />
             </span>
@@ -406,316 +421,190 @@
         <img src="imgs/icon/menuiconbottom.png" />
     </button>
 
-    <!-- =========================
-         PROMO SLIDER
-    ========================= -->
+    <div class="sw-page">
 
-    <section class="promo-slider">
+        <!-- =========================
+             MAIN WRAPPER
+        ========================== -->
+        <main class="sw-container">
+            <!-- HEADER -->
+            <!-- =========================
+                 CONTENT
+            ========================== -->
+            <section class="sw-content">
 
-        <div class="promo-track">
+                <!-- =========================
+                     WHEEL AREA
+                ========================== -->
+                <div class="sw-wheel-section">
+                    <header class="sw-header">
+                        <div class="sw-header-line"></div>
+                        <img src="imgs/icon/spinwin.png" />
+                    </header>
+                    <div class="sw-wheel-stage">
+                        <!-- outer decorative rings -->
+                        <div class="sw-wheel-ring sw-ring-one"></div>
+                        <div class="sw-wheel-ring sw-ring-two"></div>
+                        <!-- light dots -->
+                        <div class="sw-wheel-lights"></div>
+                        <!-- pointer -->
+                        <div class="sw-pointer">
+                            <div class="sw-pointer-inner"></div>
+                        </div>
+                        <!-- actual wheel -->
+                        <div class="sw-wheel-wrap">
+                            <div class="sw-wheel" id="swWheel">
+                                <div class="sw-wheel-segment sw-s1">
+                                    <span>$888</span>
+                                </div>
+                                <div class="sw-wheel-segment sw-s2">
+                                    <span class="sw-phone">
+                                        📱
+                                        <small>iPhone 17<br>Pro Max<br>2TB</small>
+                                    </span>
+                                </div>
+                                <div class="sw-wheel-segment sw-s3">
+                                    <span>😲</span>
+                                </div>
+                                <div class="sw-wheel-segment sw-s4">
+                                    <span>Please Try<br>Again!</span>
+                                </div>
+                                <div class="sw-wheel-segment sw-s5">
+                                    <span>$0</span>
+                                </div>
+                                <div class="sw-wheel-segment sw-s6">
+                                    <span>$1</span>
+                                </div>
+                                <div class="sw-wheel-segment sw-s7">
+                                    <span>$5</span>
+                                </div>
+                                <div class="sw-wheel-segment sw-s8">
+                                    <span>$88</span>
+                                </div>
+                            </div>
+                            <!-- center -->
+                            <div class="sw-wheel-center">
+                                <div class="sw-center-inner">
+                                    <span>♛</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- SLIDE 1 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner01-lottery.jpg" alt="Promotion Banner">
-                </a>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="promo-slide">
-                <a href="#">
-                    <img src="imgs/banner02-lottery.jpg" alt="Promotion Banner">
-                </a>
-            </div>
-
-        </div>
-
-        <!-- DOTS -->
-        <div class="promo-dots">
-            <span class="promo-dot active"></span>
-            <span class="promo-dot"></span>
-        </div>
-
-    </section>
-
-    <!----------------------------------------------------------   LOTTERY  -------------------------------------------------------->
-    <!-- ========================================================= LOTTERY ========================================================= -->
-    <div class="pagecontent">
-        <section class="lottery-games">
-
-            <div class="slot-section-title">
-
-                <div class="slot-section-icon">
-                    <img src="imgs/icon/title_0003_lottery-ic.png" alt="Lottery">
+                    <!-- SPIN BUTTON -->
+                    <button class="sw-spin-btn" id="swSpinBtn">
+                        <span class="sw-spin-icon">↻</span>
+                        <span class="sw-spin-text">
+                            <strong>SPIN NOW</strong>
+                            <small>
+                                <b id="swSpinCount">0</b>
+                                SPIN(S) AVAILABLE
+                            </small>
+                        </span>
+                    </button>
                 </div>
 
-                <div class="slot-section-text">
-                    <h2>Lottery</h2>
-                    <p>Lucky draws</p>
+                <!-- =========================
+                     HISTORY
+                ========================== -->
+                <!-- =========================
+         RIGHT SIDE
+    ========================== -->
+                <div class="sw-right-column">
+
+                    <!-- SPIN HISTORY -->
+                    <aside class="sw-history">
+
+                        <div class="sw-history-header">
+
+                            <div class="sw-history-icon">
+                                ◷
+                            </div>
+
+                            <div>
+                                <h2>SPIN HISTORY</h2>
+
+                                <p>
+                                    Records may take some time to appear
+                                    in the history.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="sw-history-table">
+
+                            <div class="sw-history-empty"
+                                 id="swHistoryEmpty">
+
+                                <div class="sw-empty-icon">
+                                    <span>☷</span>
+                                    <i>+</i>
+                                </div>
+
+                                <strong>No records found</strong>
+
+                                <p>
+                                    Spin and win your first reward!
+                                </p>
+
+                            </div>
+
+                            <div class="sw-history-list"
+                                 id="swHistoryList"></div>
+
+                        </div>
+
+                    </aside>
+
+
+                    <!-- DEPOSIT PROMOTION -->
+                    <div class="sw-promo-card">
+
+                        <div class="sw-promo-icon">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+
+                        <div class="sw-promo-copy">
+
+                            <div>
+                                <strong>Deposit 50</strong>
+                                <span>gets free Lucky Draw spin chance</span>
+                            </div>
+
+                            <small>
+                                Maximum of 5 chances per deposit
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS & CONDITIONS -->
+                    <div class="sw-terms-card">
+
+                        <div class="sw-terms-title">
+                            TERMS &amp; CONDITIONS
+                        </div>
+
+                        <div class="sw-term-item">
+                            <span class="sw-term-number">1</span>
+                            <span>Rewards are subject to the applicable promotion terms.</span>
+                        </div>
+
+                        <div class="sw-term-item">
+                            <span class="sw-term-number">2</span>
+                            <span>All Lucky Draw results are final.</span>
+                        </div>
+
+                    </div>
+
                 </div>
+            </section>
 
-                <div class="slot-section-line"></div>
-
-            </div>
-
-            <div class="slot-grid">
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-01.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-02.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-03.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-04.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-05.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-06.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-07.png" alt="Slot Game">
-                </a>
-
-                <a href="#" class="slot-card">
-                    <img src="imgs/games/lotto/lottoh-08.png" alt="Slot Game">
-                </a>
-
-            </div>
-
-        </section>
+        </main>
     </div>
-
-
-        <!-- LANGUAGE POPUP -->
-        <div class="language-overlay" id="languagePopup">
-            <div class="language-popup">
-                <!-- Header -->
-                <div class="language-header">
-                    <div class="language-title-wrap">
-                        <div class="language-globe">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
-
-                        <div class="language-title-content">
-                            <h3>Language</h3>
-                            <span>Choose your preferred language</span>
-                        </div>
-                    </div>
-
-                    <button type="button" class="language-close" id="languageClose" aria-label="Close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-
-                <!-- Decorative line -->
-                <div class="language-divider">
-                    <span></span>
-                </div>
-
-                <!-- Language List -->
-                <div class="language-list">
-                    <button class="language-item active" data-language="English">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/uk-square.jpg" />
-                            </span>
-                            <span class="language-name">English</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="ភាសាខ្មែរ">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/cambodia-square.jpg" />
-                            </span>
-                            <span class="language-name">ភាសាខ្មែរ</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="简体中文">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/china-square.jpg" />
-                            </span>
-                            <span class="language-name">简体中文</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="မြန်မာ">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/myanmar-square.jpg" />
-                            </span>
-                            <span class="language-name">မြန်မာ</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="繁體中文">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/taiwan-square.jpg" />
-                            </span>
-                            <span class="language-name">繁體中文</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="ジャパン">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/japan-square.jpg" />
-                            </span>
-                            <span class="language-name">ジャパン</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="ภาษาไทย">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/thailand-square.jpg" />
-                            </span>
-                            <span class="language-name">ภาษาไทย</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Français">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/french-square.jpg" />
-                            </span>
-                            <span class="language-name">Français</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="한국어">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/korea-square.jpg" />
-                            </span>
-                            <span class="language-name">한국어</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Español">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/spain-square.jpg" />
-                            </span>
-                            <span class="language-name">Español</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Tiếng Việt">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/VietNam-square.jpg" />
-                            </span>
-                            <span class="language-name">Tiếng Việt</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Português">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/portugal-square.jpg" />
-                            </span>
-                            <span class="language-name">Português</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Indonesia">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/indo-square.jpg" />
-                            </span>
-                            <span class="language-name">Indonesia</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="বাংলা">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/bangladesh-square.jpg" />
-                            </span>
-                            <span class="language-name">বাংলা</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="इंडिया">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/indi-square.jpg" />
-                            </span>
-                            <span class="language-name">इंडिया</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-
-                    <button class="language-item" data-language="Malaysia">
-                        <div class="language-info">
-                            <span class="language-flag">
-                                <img src="imgs/language/malaysia-square.jpg" />
-                            </span>
-                            <span class="language-name">Malaysia</span>
-                        </div>
-
-                        <span class="language-radio"></span>
-                    </button>
-                </div>
-
-                <!-- Footer -->
-                <div class="language-footer">
-                    <div class="language-footer-icon">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-
-                    <div class="language-footer-text">
-                        <strong>Applied instantly</strong>
-                        <span>Your language preference will be saved automatically.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
 </body>

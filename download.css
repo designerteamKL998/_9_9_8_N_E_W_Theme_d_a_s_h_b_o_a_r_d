@@ -1,0 +1,696 @@
+﻿.download-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 14px auto;
+    padding: 10px 32px 20px;
+    background: #202228;
+    color: var(--st-text);
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+/* =========================================================
+   PERDANA4D DOWNLOAD PAGE
+   ALL CLASSES USE "dl-" PREFIX
+========================================================= */
+
+:root {
+    --dl-gold: #ead87d;
+    --dl-gold-light: #fff0a8;
+    --dl-gold-dark: #b89b38;
+    --dl-red: #ef3030;
+    --dl-bg: #050505;
+    --dl-bg-2: #0a0b0d;
+    --dl-card: rgba(17, 18, 20, .88);
+    --dl-border: rgba(234, 216, 125, .25);
+    --dl-text: #ffffff;
+    --dl-muted: #8d9097;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.dl-page *,
+.dl-page *::before,
+.dl-page *::after {
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.dl-bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+}
+
+
+.dl-bg-orb-1 {
+    width: 350px;
+    height: 350px;
+    top: 10%;
+    left: -200px;
+    background: rgba(234,216,125,.07);
+}
+
+
+.dl-bg-orb-2 {
+    width: 300px;
+    height: 300px;
+    right: -150px;
+    bottom: 10%;
+    background: rgba(234,216,125,.06);
+}
+
+
+.dl-bg-line {
+    position: absolute;
+    width: 500px;
+    height: 1px;
+    background: linear-gradient( 90deg, transparent, rgba(234,216,125,.25), transparent );
+    transform: rotate(-35deg);
+    pointer-events: none;
+}
+
+
+.dl-bg-line-1 {
+    top: 160px;
+    left: -100px;
+}
+
+
+.dl-bg-line-2 {
+    bottom: 160px;
+    right: -100px;
+    transform: rotate(35deg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.dl-header {
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.section-title h2 {
+    line-height: 1.2;
+    color: #ead87d;
+    font-weight: 700;
+    margin-bottom: 7px;
+    font-size: var(--font-icon-xl);
+}
+
+
+.dl-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding-top: 4px;
+}
+
+
+.dl-logo-crown {
+    position: absolute;
+    top: -17px;
+    left: 145px;
+    color: var(--dl-gold);
+    font-size: 18px;
+}
+
+
+.dl-logo-text {
+    font-size: 31px;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1;
+}
+
+
+.dl-logo-gold {
+    color: var(--dl-gold);
+}
+
+
+.dl-logo-red {
+    color: var(--dl-red);
+}
+
+
+.dl-logo small {
+    position: absolute;
+    left: 3px;
+    bottom: -17px;
+    width: max-content;
+    color: #d8d8d8;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+
+.dl-live-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 16px;
+    border: 1px solid rgba(234,216,125,.16);
+    border-radius: 30px;
+    background: rgba(255,255,255,.025);
+    color: #a8a8a8;
+}
+
+
+    .dl-live-status span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #5dd47b;
+        box-shadow: 0 0 10px #5dd47b;
+    }
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.dl-hero {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid #30333d;
+}
+
+
+.dl-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: var(--dl-gold);
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+    .dl-eyebrow span {
+        width: 35px;
+        height: 1px;
+        background: var(--dl-gold);
+    }
+
+
+.dl-hero h1 {
+    margin: 0;
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -3px;
+}
+
+
+    .dl-hero h1 strong {
+        display: block;
+        font-weight: 800;
+        background: linear-gradient( 180deg, #fff4b0, #ead87d 50%, #b28e2e );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+
+.dl-hero p {
+    padding-left: 8px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.dl-main {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.dl-phone-side {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dl-phone {
+    width: 175px;
+    height: 355px;
+    position: relative;
+    border-radius: 30px;
+    padding: 7px;
+    background: linear-gradient( 145deg, #777, #171717 18%, #050505 75%, #9a812f );
+    box-shadow: 0 30px 60px rgba(0,0,0,.65), 0 0 30px rgba(234,216,125,.10);
+    transform: perspective(1000px) rotateY(8deg);
+    transition: .4s ease;
+}
+
+
+.dl-phone-right .dl-phone {
+    transform: perspective(1000px) rotateY(-8deg);
+}
+
+
+.dl-phone:hover {
+    transform: perspective(1000px) rotateY(0deg) translateY(-8px);
+}
+
+
+.dl-phone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 17px;
+    border-radius: 20px;
+    background: #020202;
+    z-index: 5;
+}
+
+
+.dl-phone-screen {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 24px;
+    background: radial-gradient( circle at 50% 0%, rgba(234,216,125,.15), transparent 45% ), #090a0c;
+    padding: 42px 14px 12px;
+}
+
+
+.dl-phone-brand {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--dl-gold);
+}
+
+
+    .dl-phone-brand > i {
+    }
+
+
+    .dl-phone-brand b {
+        display: block;
+        font-weight: 800;
+    }
+
+
+        .dl-phone-brand b span {
+            color: var(--dl-red);
+        }
+
+
+    .dl-phone-brand small {
+        display: block;
+        margin-top: 2px;
+        color: #999;
+        letter-spacing: .8px;
+    }
+
+
+.dl-phone-title {
+    margin-top: 55px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+
+    .dl-phone-title span {
+        color: var(--dl-gold);
+    }
+
+
+.dl-phone-balls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+
+    .dl-phone-balls div {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: radial-gradient( circle at 35% 30%, #fff, #ead87d 20%, #876d23 100% );
+        color: #080808;
+        font-weight: 800;
+        box-shadow: inset -4px -5px 8px rgba(0,0,0,.25), 0 5px 15px rgba(0,0,0,.5);
+    }
+
+
+.dl-phone-line {
+    width: 40px;
+    height: 2px;
+    margin: 25px auto;
+    background: var(--dl-gold);
+}
+
+
+.dl-login-box {
+    margin-top: 65px;
+}
+
+
+    .dl-login-box > div {
+        height: 28px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 0 8px;
+        margin-bottom: 7px;
+        border-radius: 5px;
+        background: #191a1d;
+        color: #72747a;
+    }
+
+
+    .dl-login-box i {
+        color: var(--dl-gold);
+    }
+
+
+    .dl-login-box button {
+        width: 100%;
+        height: 30px;
+        border: 0;
+        border-radius: 6px;
+        margin-top: 3px;
+        background: var(--dl-gold);
+        color: #111;
+        font-weight: 700;
+    }
+
+
+.dl-phone-caption {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--dl-gold);
+}
+
+
+.dl-phone-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+
+    .dl-phone-nav div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        color: #696b71;
+    }
+
+
+    .dl-phone-nav i {
+    }
+
+
+    .dl-phone-nav .active {
+        color: var(--dl-gold);
+    }
+
+
+/* =========================================================
+   DOWNLOAD AREA
+========================================================= */
+
+.dl-download-area {
+    width: 100%;
+    margin-top:20px;
+}
+
+.dl-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+
+/* =========================================================
+   DOWNLOAD CARD
+========================================================= */
+
+.dl-card {
+    position: relative;
+    padding: 25px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #121418;
+    border: 1px solid #30333d;
+    box-shadow: inset 0 1px rgba(255,255,255,.04), 0 20px 40px rgba(0,0,0,.35);
+    transition: .3s ease;
+}
+
+    .dl-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(234,216,125,.65);
+        box-shadow: 0 25px 55px rgba(0,0,0,.5), 0 0 25px rgba(234,216,125,.06);
+    }
+
+
+.dl-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    color: var(--dl-gold);
+    font-size: 27px;
+}
+
+    .dl-card-icon img {
+        width:100px;
+        height:100px;
+    }
+    
+    
+    .dl-card-label {
+        color: #686b72;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+
+
+.dl-card h3 {
+    margin: 5px 0 7px;
+    font-size: 21px;
+}
+
+
+.dl-card p {
+    min-height: 40px;
+    margin: 0 0 20px;
+    color: #777a81;
+    line-height: 1.6;
+}
+
+.dl-card-content {
+    text-align:center;
+}
+/* =========================================================
+   STORE BUTTON
+========================================================= */
+.dl-store-btn {
+    min-height: 57px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #121418;
+    background: rgba(234,216,125,.045);
+    transition: .25s ease;
+}
+
+
+    .dl-store-btn:hover {
+        color: #111;
+        background: var(--dl-gold);
+        transform: translateY(-2px);
+    }
+
+
+.dl-store-icon {
+    width: 34px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.dl-store-icon img {
+    width:100%;
+    padding-top:10px;
+}
+
+.dl-store-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+    .dl-store-text small {
+        letter-spacing: .8px;
+        opacity: .7;
+    }
+
+
+    .dl-store-text strong {
+        line-height: 1.3;
+    }
+
+
+.dl-arrow {
+    opacity: .65;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.dl-features {
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255,255,255,.07);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    padding: 20px 0;
+}
+
+
+.dl-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 5px 20px;
+    border-right: 1px solid rgba(255,255,255,.07);
+}
+
+
+    .dl-feature:last-child {
+        border-right: 0;
+    }
+
+
+.dl-feature-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--dl-gold);
+    background: rgba(234,216,125,.06);
+    border: 1px solid rgba(234,216,125,.18);
+    font-size: 20px;
+}
+
+
+.dl-feature h4 {
+    margin: 0 0 3px;
+    color: #e6d98d;
+}
+
+
+.dl-feature p {
+    margin: 0;
+    color: #676970;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.dl-footer {
+    max-width: 1050px;
+    margin: 25px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dl-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(234,216,125,.3);
+    color: #aaa;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+
+    .dl-back-btn:hover {
+        background: var(--dl-gold);
+        color: #111;
+        border-color: var(--dl-gold);
+    }
+
+
+.dl-footer-brand {
+    color: #55575c;
+    letter-spacing: 3px;
+}
+
+
+    .dl-footer-brand span {
+        color: var(--dl-gold);
+        margin: 0 4px;
+    }
+

@@ -1,0 +1,704 @@
+﻿/* =========================================================
+   DAILY CHECK-IN PAGE
+   ALL CLASSES ARE PREFIXED WITH dci-
+========================================================= */
+
+:root {
+    --dci-primary: #EAD87D;
+    --dci-secondary: #202228;
+    --dci-accent: #FFD700;
+    --dci-surface: #121418;
+    --dci-background: #000000;
+    --dci-text: #FFFFFF;
+    --dci-highlight: #FFF1A8;
+    --dci-success: #43C07A;
+    --dci-error: #FF5B5B;
+    --dci-live: #2EE6C6;
+    --dci-muted: #8C8C8C;
+    --dci-border: rgba(234, 216, 125, 0.20);
+    --dci-border-strong: rgba(234, 216, 125, 0.45);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.dci-page *,
+.dci-page *::before,
+.dci-page *::after {
+    box-sizing: border-box;
+}
+
+
+.dci-page {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: radial-gradient( circle at 10% 0%, rgba(234,216,125,.045), transparent 28% ), #000000;
+    color: var(--dci-text);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.dci-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.dci-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 0 8px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.dci-brand-text h2 {
+    line-height: 1.2;
+    color: #ead87d;
+    font-weight: 700;
+    font-size: var(--font-icon-xl);
+}
+
+/* BRAND */
+.dci-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.dci-brand-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dci-accent);
+    font-size: 27px;
+}
+
+
+.dci-brand-text h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -.7px;
+}
+
+
+    .dci-brand-text h1 span {
+        color: var(--dci-primary);
+    }
+
+
+.dci-brand-text p {
+    margin: 6px 0 0;
+    color: var(--dci-muted);
+}
+
+
+/* HEADER BADGE */
+
+.dci-header-badge {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 16px;
+    background: #090a0c;
+    border: 1px solid var(--dci-border);
+    border-radius: 11px;
+}
+
+
+.dci-header-badge-icon {
+    color: var(--dci-accent);
+    font-size: 23px;
+}
+
+
+.dci-header-badge-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+    .dci-header-badge-text strong {
+        color: #d9dce1;
+        letter-spacing: .5px;
+    }
+
+
+    .dci-header-badge-text span {
+        color: var(--dci-accent);
+        font-weight: 800;
+    }
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.dci-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(380px, .85fr);
+    gap: 14px;
+    margin-top: 16px;
+}
+
+
+/* =========================================================
+   CALENDAR CARD
+========================================================= */
+
+.dci-calendar-card {
+    padding: 20px;
+    background: var(--dci-secondary);
+    border: 1px solid rgba(255,255,255,.055);
+    border-radius: 18px;
+}
+
+
+/* TOP */
+
+.dci-calendar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+
+.dci-section-label {
+    color: var(--dci-muted);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+
+.dci-calendar-heading h2 {
+    margin: 4px 0 0;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.dci-progress-wrap {
+    min-width: 145px;
+    text-align: right;
+}
+
+
+    .dci-progress-wrap > span {
+        color: #969ba4;
+        font-weight: 700;
+    }
+
+
+.dci-progress-track {
+    width: 145px;
+    height: 4px;
+    margin-top: 7px;
+    overflow: hidden;
+    background: #0d0f12;
+    border-radius: 10px;
+}
+
+
+    .dci-progress-track > div {
+        width: 0%;
+        height: 100%;
+        background: var(--dci-accent);
+        border-radius: inherit;
+        transition: width .25s ease;
+    }
+
+
+/* =========================================================
+   DAYS GRID
+========================================================= */
+
+.dci-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(70px, 1fr));
+    gap: 8px;
+}
+
+
+/* DAY */
+
+.dci-day {
+    position: relative;
+    min-height: 105px;
+    padding: 9px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dci-surface);
+    border: 1px solid #343840;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .18s ease;
+}
+
+
+    .dci-day:hover {
+        transform: translateY(-2px);
+        border-color: var(--dci-border-strong);
+        background: #17191d;
+    }
+
+
+    /* SELECTED */
+
+    .dci-day.dci-selected {
+        border-color: var(--dci-accent);
+        box-shadow: inset 0 0 0 1px rgba(255,215,0,.18);
+    }
+
+
+    /* CHECKED */
+
+    .dci-day.dci-checked {
+        border-color: var(--dci-success);
+        background: #111915;
+    }
+
+        .dci-day.dci-checked::after {
+            content: "✓";
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--dci-success);
+            color: #07120c;
+            font-weight: 900;
+            box-shadow: 0 0 0 2px #111915;
+        }
+
+    .dci-day.dci-reward.dci-checked {
+        border-color: var(--dci-success);
+        background: linear-gradient( 145deg, #EAD87D, #93ea7d );
+    }
+
+
+        .dci-day.dci-reward.dci-checked::after {
+            background: var(--dci-success);
+            color: #07120c;
+        }
+
+
+    /* REWARD DAY */
+
+    .dci-day.dci-reward {
+        background: linear-gradient( 145deg, #EAD87D, #bda94c );
+        border-color: #f7df72;
+        color: #111111;
+    }
+
+
+        .dci-day.dci-reward:hover {
+            background: linear-gradient( 145deg, #f5df7c, #c9b454 );
+        }
+
+
+
+
+/* LABEL */
+
+.dci-day-label {
+    width: 100%;
+    color: #8f949c;
+    font-weight: 700;
+    text-align: left;
+}
+
+
+.dci-day.dci-reward .dci-day-label {
+    color: #222222;
+}
+
+
+/* NUMBER */
+
+.dci-day-number {
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+
+/* SYMBOL */
+
+.dci-day-symbol {
+    min-height: 23px;
+    color: #b7bdc6;
+    font-size: 22px;
+    line-height: 1;
+}
+
+
+.dci-day.dci-reward .dci-day-symbol {
+    color: #111111;
+}
+
+
+/* =========================================================
+   CALENDAR FOOTER
+========================================================= */
+
+.dci-calendar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14px;
+    color: #747a83;
+}
+
+
+    .dci-calendar-footer i {
+        margin-right: 5px;
+        color: var(--dci-primary);
+    }
+
+
+/* =========================================================
+   REWARD CARD
+========================================================= */
+
+.dci-reward-card {
+    min-height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: var(--dci-secondary);
+    border: 1px solid rgba(255,255,255,.055);
+    border-radius: 18px;
+}
+
+
+/* HEADER */
+
+.dci-reward-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+
+.dci-reward-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0e1013;
+    border: 1px solid var(--dci-border);
+    border-radius: 10px;
+    color: var(--dci-accent);
+    font-size: 20px;
+}
+
+
+.dci-reward-heading > span {
+    color: var(--dci-muted);
+}
+
+
+.dci-reward-heading h2 {
+    margin: 3px 0 0;
+    color: #f4f5f7;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   REWARD CONTENT
+========================================================= */
+
+.dci-reward-content {
+    min-height: 200px;
+    margin-top: 12px;
+    padding: 15px;
+    overflow: auto;
+    background: #101216;
+    border: 1px solid #2b2f35;
+    border-radius: 12px;
+}
+
+
+.dci-reward-empty {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+    .dci-reward-empty > i {
+        margin-bottom: 15px;
+        color: #59606a;
+        font-size: 42px;
+    }
+
+
+    .dci-reward-empty strong {
+        color: #e4e6ea;
+        font-size: 15px;
+    }
+
+
+    .dci-reward-empty p {
+        margin: 7px 0 0;
+        color: #777e88;
+    }
+
+
+/* =========================================================
+   REWARD DETAILS
+========================================================= */
+
+.dci-reward-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.dci-reward-item {
+    padding: 10px;
+    border-bottom: 1px dashed rgba(255,255,255,.18);
+}
+
+
+    .dci-reward-item:last-child {
+        border-bottom: 0;
+    }
+
+
+    .dci-reward-item h3 {
+        margin: 0;
+        color: #f1f2f4;
+        font-style: italic;
+    }
+
+
+        .dci-reward-item h3 span {
+            color: var(--dci-accent);
+        }
+
+
+    .dci-reward-item p {
+        margin: 5px 0 0;
+        color: #8e949d;
+    }
+
+
+.dci-reward-date {
+    color: var(--dci-accent);
+}
+
+
+/* =========================================================
+   ELIGIBILITY
+========================================================= */
+
+.dci-eligibility {
+    margin-top: 12px;
+    padding: 12px;
+    background: #0e1013;
+    border: 1px solid var(--dci-border);
+    border-radius: 10px;
+}
+
+
+.dci-eligibility-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #e9dfaa;
+}
+
+
+    .dci-eligibility-title i {
+        color: var(--dci-accent);
+    }
+
+
+.dci-eligibility p {
+    margin: 7px 0 0;
+    color: #9298a1;
+    line-height: 1.45;
+}
+
+
+.dci-eligibility strong {
+    color: var(--dci-accent);
+}
+
+
+/* =========================================================
+   CHECK-IN BUTTON
+========================================================= */
+
+.dci-checkin-button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--dci-accent);
+    color: #111111;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .15s ease, filter .15s ease;
+}
+
+
+    .dci-checkin-button:hover:not(:disabled) {
+        transform: translateY(-1px);
+        filter: brightness(1.06);
+    }
+
+
+    .dci-checkin-button:disabled {
+        opacity: .35;
+        cursor: not-allowed;
+    }
+
+
+/* STATUS */
+
+.dci-status {
+    padding-top: 8px;
+    color: #707781;
+    text-align: center;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.dci-terms-card {
+    margin-top: 14px;
+    padding: 20px 22px;
+    background: var(--dci-secondary);
+    border: 1px solid rgba(255,255,255,.055);
+    border-radius: 18px;
+}
+
+
+/* HEADER */
+
+.dci-terms-header {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+
+.dci-terms-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: var(--dci-primary);
+    color: #111111;
+}
+
+
+.dci-terms-header span {
+    color: var(--dci-muted);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.dci-terms-header h2 {
+    margin: 3px 0 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+/* TERM */
+
+.dci-term-row {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+    align-items: start;
+    padding: 10px 0;
+}
+
+
+    .dci-term-row + .dci-term-row {
+        border-top: 1px solid rgba(255,255,255,.04);
+    }
+
+
+.dci-term-number {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--dci-primary);
+    color: #111111;
+    font-weight: 900;
+}
+
+
+.dci-term-row p {
+    margin: 4px 0 0;
+    color: #8f959e;
+    line-height: 1.5;
+}
+
+i.dci-terms-arrow {
+    display:none;
+}
+
+

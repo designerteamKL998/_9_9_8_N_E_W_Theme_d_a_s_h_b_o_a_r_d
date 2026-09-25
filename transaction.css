@@ -1,0 +1,1463 @@
+﻿/* =========================================================
+   COLOR VARIABLES
+========================================================= */
+
+.st-page,
+.mb-page {
+    --st-primary: #EAD87D;
+    --st-secondary: #000;
+    --st-accent: #FFD700;
+    --st-surface: #121418;
+    --st-background: #202228;
+    --st-text: #FFFFFF;
+    --st-highlight: #FFF1A8;
+    --st-success: #43C07A;
+    --st-error: #FF5B5B;
+    --st-live: #2EE6C6;
+    --st-muted: #8C8C8C;
+    --st-muted-dark: #666666;
+    --st-border: rgba(234, 216, 125, 0.22);
+    --st-border-light: rgba(255, 255, 255, 0.08);
+}
+
+
+/* STATEMENT */
+
+.st-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 14px auto;
+    padding: 10px 32px 20px;
+    background: var(--st-background);
+    color: var(--st-text);
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+
+/* MYBETS */
+
+.mb-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 14px auto;
+    padding: 10px 32px;
+    background: var(--st-background);
+    color: var(--st-text);
+    box-sizing: border-box;
+    border-radius: 20px;
+    --mb-grid: 70px 1.2fr 1.5fr .7fr .9fr 1fr;
+}
+
+
+    /* =========================================================
+   BOX SIZING
+========================================================= */
+
+    .st-page *,
+    .st-page *::before,
+    .st-page *::after {
+        box-sizing: border-box;
+    }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.st-header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #30333d;
+}
+
+
+/* LEFT */
+
+.st-header-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+}
+
+
+.st-icon {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--st-surface);
+    border: 1px solid var(--st-primary);
+    color: var(--st-accent);
+    font-size: 23px;
+}
+
+
+.st-header-text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.st-eyebrow {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--st-primary);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+
+.st-header-text h1 {
+    margin: 0;
+    color: var(--st-text);
+    font-size: 31px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+
+.st-header-text p {
+    margin: 7px 0 0;
+    color: #969696;
+    line-height: 1.45;
+}
+
+
+/* RIGHT */
+
+.st-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+
+.st-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--st-text);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+
+    .st-brand span {
+        display: block;
+        width: 26px;
+        height: 1px;
+        background: var(--st-primary);
+    }
+
+
+/* =========================================================
+   TOP TABS
+========================================================= */
+
+.st-tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--st-border);
+    background: #000;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+
+.st-tab {
+    position: relative;
+    height: 34px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: transparent;
+    border: 0;
+    color: #6F6F6F;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+
+    .st-tab i {
+    }
+
+
+    .st-tab:hover {
+        color: var(--st-primary);
+    }
+
+
+    .st-tab.active {
+        color: var(--st-primary);
+    }
+
+
+        /*.st-tab.active::after {
+            content: "";
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: -1px;
+            height: 2px;
+            background: var(--st-accent);
+        }*/
+
+
+/* =========================================================
+   FILTER SECTION
+========================================================= */
+
+.st-filter {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1px minmax(0, 1fr);
+    column-gap: 27px;
+    padding: 5px 0;
+    border-bottom: 1px solid #30333d;
+}
+
+
+.st-filter-block {
+    min-width: 0;
+    display: flex;
+}
+
+
+    .st-filter-block > label {
+        display: block;
+        color: #8A8A8A;
+        line-height: 1;
+    }
+
+
+/* =========================================================
+   QUICK FILTER
+========================================================= */
+
+.st-quick-buttons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.st-quick-btn {
+    height: 34px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    color: #A0A0A0;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    border-radius: 20px;
+}
+
+
+    .st-quick-btn:hover {
+        color: var(--st-primary);
+        border-color: var(--st-primary);
+    }
+
+
+    .st-quick-btn.active {
+        background: var(--st-primary);
+        border-color: var(--st-primary);
+        color: #000000;
+    }
+
+
+/* =========================================================
+   FILTER DIVIDER
+========================================================= */
+
+.st-filter-divider {
+    width: 1px;
+    height: 56px;
+    background: var(--st-border);
+}
+
+
+/* =========================================================
+   CUSTOM DATE
+========================================================= */
+
+.st-custom-filter {
+    width: 100%;
+}
+
+
+.st-date-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+
+.st-date-input {
+    width: 190px;
+    height: 34px;
+    flex: 0 1 190px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 10px;
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    transition: border-color 0.2s ease;
+    border-radius: 20px;
+}
+
+
+    .st-date-input:focus-within {
+        border-color: var(--st-primary);
+    }
+
+
+    .st-date-input i {
+        flex: 0 0 auto;
+        color: var(--st-primary);
+    }
+
+
+    .st-date-input input {
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        padding: 0;
+        outline: none;
+        border: 0;
+        background: transparent;
+        color: #D0D0D0;
+        font-family: var(--font-main);
+    }
+
+
+        .st-date-input input::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            opacity: 0.7;
+            filter: brightness(0) saturate(100%) invert(80%) sepia(25%) saturate(700%);
+        }
+
+
+.st-date-separator {
+    flex: 0 0 auto;
+    color: #777777;
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.st-search-btn {
+    height: 34px;
+    min-width: 92px;
+    padding: 0 17px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--st-accent);
+    border: 1px solid var(--st-accent);
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    border-radius:20px;
+}
+
+
+    .st-search-btn:hover {
+        background: var(--st-highlight);
+        border-color: var(--st-highlight);
+    }
+
+
+    .st-search-btn:active {
+        transform: translateY(1px);
+    }
+
+
+/* =========================================================
+   ACCOUNT SUMMARY
+========================================================= */
+
+.st-summary {
+    width: 100%;
+    padding-top: 23px;
+}
+
+
+.st-section-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 11px;
+}
+
+
+    .st-section-heading > span {
+        color: #8A8A8A;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+    }
+
+
+    .st-section-heading small {
+        color: #777777;
+    }
+
+
+/* =========================================================
+   SUMMARY GRID
+========================================================= */
+
+.st-summary-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.st-summary-card {
+    position: relative;
+    min-width: 0;
+    height: 118px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: var(--st-surface);
+    border: 1px solid #30333d;
+    border-radius:20px;
+}
+
+
+    .st-summary-card + .st-summary-card {
+        border-left: 0;
+    }
+
+
+/* =========================================================
+   SUMMARY INFO
+========================================================= */
+
+.st-summary-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.st-summary-title {
+    display: block;
+    color: #858585;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+.st-summary-info strong {
+    display: block;
+    margin-top: 15px;
+    color: var(--st-text);
+    line-height: 1;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.st-summary-info small {
+    display: block;
+    margin-top: 6px;
+    color: var(--st-primary);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+========================================================= */
+
+.st-summary-icon {
+    flex: 0 0 auto;
+    padding-top: 1px;
+    color: var(--st-accent);
+}
+
+
+/* =========================================================
+   TRANSACTION SECTION
+========================================================= */
+
+.st-transaction {
+    width: 100%;
+    margin-top: 15px;
+    background: var(--st-surface);
+    border: 0px solid #30333d;
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   TRANSACTION HEADER
+========================================================= */
+
+.st-transaction-header {
+    width: 100%;
+    min-height: 57px;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0px solid var(--st-border);
+}
+
+
+    .st-transaction-header h2 {
+        margin: 0;
+        color: #E8E8E8;
+        line-height: 1.2;
+        font-weight: 600;
+    }
+
+
+    .st-transaction-header p {
+        margin: 4px 0 0;
+        color: #777777;
+        line-height: 1.2;
+    }
+
+
+    .st-transaction-header > span {
+        color: #777777;
+    }
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.st-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--st-primary) var(--st-secondary);
+}
+
+
+    .st-table-wrapper::-webkit-scrollbar {
+        height: 5px;
+    }
+
+
+    .st-table-wrapper::-webkit-scrollbar-track {
+        background: var(--st-secondary);
+    }
+
+
+    .st-table-wrapper::-webkit-scrollbar-thumb {
+        background: var(--st-primary);
+    }
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.st-table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+}
+
+
+    /* =========================================================
+   TABLE HEAD
+========================================================= */
+
+    .st-table thead {
+        background: var(--st-secondary);
+    }
+
+
+    .st-table th {
+        height: 38px;
+        padding: 0 12px;
+        text-align: left;
+        vertical-align: middle;
+        color: var(--st-primary);
+        border-bottom: 0px solid var(--st-border);
+        line-height: 1;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+
+
+    /* =========================================================
+   TABLE BODY
+========================================================= */
+
+    .st-table td {
+        height: 48px;
+        padding: 0 12px;
+        vertical-align: middle;
+        color: #C4C4C4;
+        border-bottom: 1px solid var(--st-border-light);
+    }
+
+
+    .st-table tbody tr:not(.st-empty-row) {
+        transition: background 0.15s ease;
+    }
+
+
+        .st-table tbody tr:not(.st-empty-row):hover {
+            background: #17191D;
+        }
+
+
+/* =========================================================
+   EMPTY ROW
+========================================================= */
+
+.st-empty-row td {
+    height: 190px;
+    padding: 0;
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.st-empty {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.st-empty-icon {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0D0F12;
+    border: 1px solid var(--st-border);
+    color: var(--st-primary);
+}
+
+
+    .st-empty-icon .fa-file-lines {
+
+    }
+
+
+    .st-empty-icon .fa-magnifying-glass {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        padding: 2px;
+        background: #0D0F12;
+    }
+
+
+.st-empty h3 {
+    margin: 0;
+    color: #BEBEBE;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+
+.st-empty p {
+    margin: 5px 0 0;
+    color: #666666;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.st-page .view-btn {
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid var(--st-border);
+    color: var(--st-primary);
+    cursor: pointer;
+}
+
+
+    .st-page .view-btn:hover {
+        background: var(--st-primary);
+        color: #000000;
+    }
+
+
+/* =========================================================
+   STATUS COLORS
+========================================================= */
+
+.st-page .status-success {
+    color: var(--st-success);
+}
+
+
+.st-page .status-error {
+    color: var(--st-error);
+}
+
+
+.st-page .status-live {
+    color: var(--st-live);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.st-page button:focus-visible,
+.st-page input:focus-visible {
+    outline: 1px solid var(--st-accent);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TRANSACTION RECORDS
+========================================================= */
+
+.st-page .st-table tbody tr {
+    height: 58px;
+}
+
+.st-page .st-table tbody td:first-child {
+    color: var(--st-primary);
+    font-weight: 600;
+    width: 45px;
+}
+
+
+/* DETAILS */
+
+.st-page .st-detail,
+.st-page .st-selection,
+.st-page .st-stake {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .st-page .st-detail strong,
+    .st-page .st-selection strong,
+    .st-page .st-stake strong {
+        color: #E5E5E5;
+        font-weight: 500;
+    }
+
+    .st-page .st-detail span,
+    .st-page .st-selection span,
+    .st-page .st-stake span {
+        color: #707070;
+    }
+
+
+    /* SELECTION */
+
+    .st-page .st-selection strong {
+        color: #D8D8D8;
+    }
+
+
+/* ODDS */
+
+.st-page .st-odds {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    padding: 5px 9px;
+    background: #1A1C20;
+    border: 1px solid var(--st-border);
+    border-radius: 6px;
+    color: var(--st-primary);
+    font-weight: 600;
+}
+
+
+/* AMOUNT */
+
+.st-page .status-success {
+    color: var(--st-success);
+    font-weight: 600;
+}
+
+.st-page .status-error {
+    color: var(--st-error);
+    font-weight: 600;
+}
+
+
+/* STATUS BADGE */
+
+.st-page .st-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    height: 27px;
+    padding: 0 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+    .st-page .st-status.success {
+        background: rgba(67, 192, 122, 0.18);
+        border: 1px solid rgba(67, 192, 122, 0.35);
+        color: var(--st-success);
+    }
+
+
+/* TABLE HOVER */
+
+.st-page .st-table tbody tr:not(.st-empty-row):hover {
+    background: #17191D;
+}
+
+
+/* AMOUNT ALIGNMENT */
+
+.st-page .st-table td:nth-child(6) {
+    font-weight: 600;
+}
+
+
+/* CLEAN EMPTY STATE */
+
+.st-page .st-empty-row {
+    display: none;
+}
+
+.st-page .st-status.rejected {
+    background: rgba(255, 91, 91, 0.15);
+    border: 1px solid rgba(255, 91, 91, 0.35);
+    color: var(--st-error);
+}
+
+
+
+/*------------------  Mybets  ------------------*/
+
+/* =========================================================
+   MYBETS ACTIONS
+========================================================= */
+
+.mb-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding:10px 0px;
+}
+
+
+/* FILTER */
+
+/* =========================
+   FILTER
+========================= */
+
+.mb-filter-wrap {
+    position: relative;
+    width: 190px;
+}
+
+.mb-filter {
+    width: 100%;
+    height: 42px;
+    padding: 0 42px 0 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #121418;
+    border: 1px solid rgba(234, 216, 125, 0.35);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+    border-radius: 20px;
+}
+
+
+    .mb-filter:hover {
+        border-color: rgba(234, 216, 125, 0.65);
+        background: #16191D;
+    }
+    .mb-filter:focus {
+        border-color: #EAD87D;
+        background: #121418;
+        box-shadow: 0 0 0 2px rgba(234, 216, 125, 0.08);
+    }
+
+
+/* =========================
+   ARROW
+========================= */
+
+.mb-filter-arrow {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    color: #EAD87D;
+    font-size: 10px;
+    pointer-events: none;
+}
+
+
+/* Focus - warna sahaja, JANGAN ROTATE */
+
+.mb-filter-wrap:focus-within .mb-filter-arrow {
+    color: var(--st-primary);
+    transform: translateY(-50%);
+}
+
+/* OPTIONS */
+
+.mb-filter option {
+    background: #121418;
+    color: #FFFFFF;
+    padding: 10px 12px;
+    font-family: var(--font-main);
+}
+
+
+    /* SELECTED OPTION */
+
+    .mb-filter option:checked {
+        background: #202228;
+        color: #EAD87D;
+        font-family: var(--font-main);
+    }
+
+
+    /* HOVER OPTION */
+
+    .mb-filter option:hover {
+        background: #202228;
+        color: #FFD700;
+    }
+
+
+/* PRINT */
+
+.mb-print {
+    width: 44px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121418;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: #D8D8D8;
+    cursor: pointer;
+    transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+
+    .mb-print:hover {
+        color: var(--st-primary);
+        border-color: rgba(234, 216, 125, 0.45);
+        background: #181A1E;
+    }
+
+
+/* REFRESH */
+
+.mb-refresh {
+    height: 42px;
+    min-width: 110px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: var(--st-accent);
+    border: 1px solid var(--st-accent);
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    transition: background .2s ease, border-color .2s ease, transform .15s ease;
+}
+
+    .mb-refresh:hover {
+        background: var(--st-highlight);
+        border-color: var(--st-highlight);
+    }
+
+    .mb-refresh:active {
+        transform: translateY(1px);
+    }
+
+    .mb-refresh i {
+    }
+
+
+/* =========================================================
+   MYBETS TABLE HEADER
+========================================================= */
+
+.mb-table-head {
+    display: grid;
+    grid-template-columns: var(--mb-grid);
+    align-items: center;
+    min-height: 46px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    background: #181B20;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    color: #AEB5BD;
+    font-weight: 500;
+    letter-spacing: .2px;
+    align-content: center;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   MYBETS RECORD
+========================================================= */
+    .mb-table-head > *,
+    .mb-record > * {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+.mb-record {
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--mb-grid);
+    align-items: center;
+    min-height: 72px;
+    margin-top: 7px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    background: #111418;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+    .mb-record:hover {
+        background: #171A1E;
+        border-color: rgba(234, 216, 125, 0.20);
+    }
+
+
+    /* FIRST RECORD */
+
+    .mb-record.active {
+        border-color: rgba(234, 216, 125, 0.35);
+    }
+
+        .mb-record.active::before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: 9px;
+            bottom: 9px;
+            width: 3px;
+            background: var(--st-primary);
+            border-radius: 0 4px 4px 0;
+        }
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.mb-number {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #20242A;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 13px;
+    color: #D7D7D7;
+    font-weight: 600;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.mb-record.active .mb-number {
+    background: var(--st-primary);
+    border-color: var(--st-primary);
+    color: #000;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.mb-details {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .mb-details strong {
+        overflow: hidden;
+        color: #E5E7EA;
+        font-weight: 500;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .mb-details span {
+        color: #69717A;
+        font-weight: 400;
+    }
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+.mb-selection {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.mb-game-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1B2026;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 11px;
+    color: var(--st-primary);
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.mb-record:hover .mb-game-icon {
+    background: #22272E;
+    border-color: rgba(234, 216, 125, 0.20);
+}
+
+.mb-selection > div:last-child {
+    min-width: 0;
+}
+
+.mb-selection strong {
+    display: block;
+    overflow: hidden;
+    color: #E6E8EA;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mb-selection span {
+    display: block;
+    margin-top: 3px;
+    color: #6D757D;
+}
+
+
+/* =========================================================
+   ODDS
+========================================================= */
+
+.mb-odds {
+    width: 78px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #191D22;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    color: var(--st-accent);
+    font-weight: 600;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.mb-record:hover .mb-odds {
+    background: #1D2126;
+    border-color: rgba(234, 216, 125, 0.16);
+}
+
+
+/* =========================================================
+   STAKE
+========================================================= */
+
+.mb-stake {
+    color: #DCDCDC;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.mb-status {
+    width: 118px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 14px;
+    border-radius: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+    .mb-status i {
+
+    }
+
+
+    /* WON */
+
+    .mb-status.won {
+        background: rgba(67, 192, 122, 0.09);
+        border: 1px solid rgba(67, 192, 122, 0.70);
+        color: var(--st-success);
+    }
+
+
+    /* LOST */
+
+    .mb-status.lost {
+        background: rgba(255, 91, 91, 0.09);
+        border: 1px solid rgba(255, 91, 91, 0.70);
+        color: var(--st-error);
+    }
+
+
+    /* REJECTED */
+
+    .mb-status.rejected {
+        background: rgba(130, 140, 150, 0.08);
+        border: 1px solid rgba(150, 160, 170, 0.55);
+        color: #B9C0C7;
+    }
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.mb-arrow {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #20262D;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: #D5D9DD;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+    display:none;
+}
+
+    .mb-arrow:hover {
+        background: var(--st-primary);
+        color: #000;
+        transform: translateX(2px);
+    }
+
+
+/* =========================================================
+   CLEAN LAST ROW
+========================================================= */
+
+.mb-record:last-child {
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   CUSTOM MYBETS DROPDOWN
+========================================================= */
+
+.mb-dropdown {
+    position: relative;
+    width: 190px;
+}
+
+.mb-dropdown-selected {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    background: #121418;
+    border: 1px solid rgba(234, 216, 125, 0.35);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease;
+}
+
+    .mb-dropdown-selected:hover {
+        background: #16191D;
+        border-color: rgba(234, 216, 125, 0.60);
+    }
+
+
+    /* ARROW */
+
+    .mb-dropdown-selected i {
+        color: #EAD87D;
+        font-size: 10px;
+        transition: transform .2s ease;
+    }
+
+
+/* WHEN OPEN */
+
+.mb-dropdown.open .mb-dropdown-selected {
+    border-color: #EAD87D;
+}
+
+    .mb-dropdown.open .mb-dropdown-selected i {
+        transform: rotate(180deg);
+    }
+
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.mb-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    padding: 6px;
+    background: #121418;
+    border: 1px solid rgba(234, 216, 125, 0.25);
+    border-radius: 12px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+    z-index: 1000;
+}
+
+
+/* OPEN */
+
+.mb-dropdown.open .mb-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.mb-dropdown-option {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 11px;
+    background: transparent;
+    border: 0;
+    border-radius: 8px;
+    color: #D8D8D8;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+}
+
+
+    /* HOVER */
+
+    .mb-dropdown-option:hover {
+        background: #202228;
+        color: #FFD700;
+    }
+
+
+    /* ACTIVE */
+
+    .mb-dropdown-option.active {
+        background: rgba(234, 216, 125, 0.10);
+        color: #EAD87D;
+    }
+
+
+        /* ACTIVE + HOVER */
+
+        .mb-dropdown-option.active:hover {
+            background: rgba(234, 216, 125, 0.15);
+            color: #FFD700;
+        }
