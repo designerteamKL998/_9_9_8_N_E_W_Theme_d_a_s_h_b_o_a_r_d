@@ -946,3 +946,170 @@ button {
     background: #ead87d;
     border: 0;
 }
+
+/* =========================================
+   FRIEND REQUEST / SENT REQUEST
+========================================= */
+
+.fr-request-section {
+    min-height: 350px;
+}
+
+
+/* COUNT */
+
+.fr-record-count {
+    padding: 5px 10px;
+    color: var(--gold);
+    border: 1px solid rgba(234, 216, 125, .3);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+/* LIST */
+
+.fr-request-list {
+    width: 100%;
+    padding-top: 8px;
+}
+
+
+/* ROW */
+
+.fr-request-row {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: #181a20;
+    border: 1px solid #292d35;
+    border-radius: 6px;
+    transition: .2s ease;
+}
+
+    .fr-request-row:hover {
+        border-color: rgba(234, 216, 125, .45);
+        background: #1c1e24;
+    }
+
+
+/* USER */
+
+.fr-request-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* AVATAR */
+
+.fr-request-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    background: #202229;
+    border: 1px solid #30343d;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+    .fr-request-avatar i {
+        font-size: 17px;
+    }
+
+
+/* INFO */
+
+.fr-request-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+    .fr-request-info strong {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .fr-request-info span {
+        color: #858a94;
+        font-size: 12px;
+    }
+
+    .fr-request-info small {
+        color: #5f646e;
+        font-size: 11px;
+    }
+
+
+/* ACTIONS */
+
+.fr-request-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+/* ACCEPT */
+
+.fr-btn-accept,
+.fr-btn-decline,
+.fr-btn-cancel {
+    height: 32px;
+    padding: 0 13px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+
+/* ACCEPT */
+
+.fr-btn-accept {
+    color: #111;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+    .fr-btn-accept:hover {
+        background: var(--gold-light);
+    }
+
+
+/* DECLINE */
+
+.fr-btn-decline {
+    color: #aaa;
+    background: #202228;
+    border: 1px solid #343841;
+}
+
+    .fr-btn-decline:hover {
+        color: #fff;
+        background: #292c33;
+    }
+
+
+/* CANCEL */
+
+.fr-btn-cancel {
+    color: #aaa;
+    background: transparent;
+    border: 1px solid #343841;
+}
+
+    .fr-btn-cancel:hover {
+        color: #fff;
+        border-color: #777d87;
+    }

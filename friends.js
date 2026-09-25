@@ -4,32 +4,44 @@ document.addEventListener("DOMContentLoaded", () => {
        TABS
     ================================= */
 
-    const tabs = document.querySelectorAll(".fr-tab");
-    const contents = document.querySelectorAll(".fr-tab-content");
+    /* ================================
+   TABS
+================================ */
 
-    tabs.forEach(tab => {
+const tabs = document.querySelectorAll(".fr-tab");
+const contents = document.querySelectorAll(".fr-tab-content");
 
-        tab.addEventListener("click", () => {
+tabs.forEach(tab => {
 
-            const target = tab.dataset.tab;
+    tab.addEventListener("click", () => {
 
-            tabs.forEach(item => {
-                item.classList.remove("fr-active");
-            });
+        const target = tab.dataset.tab;
 
-            contents.forEach(content => {
-                content.classList.add("fr-hidden");
-            });
+        /* Remove active */
 
-            tab.classList.add("fr-active");
-
-            document
-                .getElementById(`fr-${target}-content`)
-                ?.classList.remove("fr-hidden");
-
+        tabs.forEach(item => {
+            item.classList.remove("active");
         });
 
+        /* Hide all content */
+
+        contents.forEach(content => {
+            content.classList.add("fr-hidden");
+        });
+
+        /* Activate selected tab */
+
+        tab.classList.add("active");
+
+        /* Show selected content */
+
+        document
+            .getElementById(`${target}-content`)
+            ?.classList.remove("fr-hidden");
+
     });
+
+});
 
 
     /* ================================
