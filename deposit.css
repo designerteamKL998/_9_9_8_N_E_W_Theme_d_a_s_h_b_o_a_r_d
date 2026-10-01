@@ -490,6 +490,7 @@ dialog {
     padding: 30px;
     max-width: 450px;
     width: calc(100% - 32px);
+    margin:auto;
 }
 
     dialog::backdrop {
