@@ -366,45 +366,13 @@ const notificationButtons = document.querySelectorAll(
     ".notification-btn, .notification-bottom-btn"
 );
 
-const notificationDots = document.querySelectorAll(
-    ".notification-dot"
-);
-
-function openNotification() {
-
-    // Tutup floating menu lain
-    const homeWrap = document.querySelector(".bottom-home-wrap");
-    const moreMenu = document.querySelector(".mobile-more-menu");
-
-    if (homeWrap) {
-        homeWrap.classList.remove("game-open");
-    }
-
-    if (moreMenu) {
-        moreMenu.classList.remove("active");
-    }
-
-    // TODO:
-    // Buka notification popup / notification page
-    console.log("Notification opened");
-
-    // Bila notification dah dibuka,
-    // buang tanda unread
-    notificationDots.forEach(dot => {
-        dot.style.display = "none";
-    });
-}
-
-
-// Header + Bottom Notification
 notificationButtons.forEach(button => {
 
-    button.addEventListener("click", function (e) {
+    button.addEventListener("click", function () {
 
-        e.preventDefault();
-        e.stopPropagation();
-
-        openNotification();
+        document.querySelectorAll(".notification-dot").forEach(dot => {
+            dot.style.display = "none";
+        });
 
     });
 

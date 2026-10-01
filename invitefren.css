@@ -33,12 +33,13 @@
     z-index: 2;
 }
 
-
+.rf-page .account-nav {
+    margin-top:10px;
+}
 
 /* =====================================================
    HERO
 ===================================================== */
-
 .rf-hero {
     display: flex;
     justify-content: space-between;
@@ -46,6 +47,7 @@
     min-height: 150px;
     position: relative;
 }
+
 
 
 .rf-eyebrow {
@@ -155,7 +157,7 @@
 }
 
     .rf-tab:hover {
-        color: white;
+        color: #000;
         background: #EAD87D;
     }
 
@@ -416,11 +418,6 @@
     transition: .25s;
 }
 
-    .rf-bonus-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(255,215,0,.25);
-    }
-
 
 .rf-status-icon {
     width: 52px;
@@ -589,11 +586,6 @@
     border: 1px solid rgba(255,255,255,.09);
     transition: transform .25s, border-color .25s;
 }
-
-    .rf-step:hover {
-        transform: translateX(5px);
-        border-color: rgba(255,215,0,.25);
-    }
 
 
 .rf-step-number {

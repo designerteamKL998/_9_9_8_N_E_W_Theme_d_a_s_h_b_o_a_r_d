@@ -1,0 +1,714 @@
+﻿/* =========================================================
+   PK BATTLE PAGE
+   PREFIX: pkb-
+========================================================= */
+
+.pkb-page {
+    /* =========================================
+       COLOR PALETTE
+    ========================================= */
+    --pkb-primary: #EAD87D;
+    --pkb-secondary: #202228;
+    --pkb-accent: #FFD700;
+    --pkb-surface: #121418;
+    --pkb-text: #FFFFFF;
+    --pkb-background: #000000;
+    --pkb-highlight: #FFF1A8;
+    --pkb-on-primary: #111111;
+    --pkb-success: #43C07A;
+    --pkb-error: #FF5B5B;
+    --pkb-live: #2EE6C6;
+    /* =========================================
+       EXTRA UI COLORS
+    ========================================= */
+    --pkb-muted: #9B9FA8;
+    --pkb-border: rgba(234, 216, 125, 0.22);
+    --pkb-border-light: rgba(255, 255, 255, 0.08);
+    --pkb-team-a: #258EEA;
+    --pkb-team-b: #F2384B;
+
+}
+
+
+    /* =========================================================
+   RESET
+========================================================= */
+
+    .pkb-page *,
+    .pkb-page *::before,
+    .pkb-page *::after {
+        box-sizing: border-box;
+    }
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+.pkb-page {
+    width: 100%;
+    max-width: 1600px;
+    margin: 14px auto;
+    padding: 10px 32px;
+    background: var(--pkb-secondary);
+    color: var(--pkb-text);
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.pkb-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #30333d;
+}
+
+.pkb-header-line {
+    width: 8px;
+    height: 76px;
+    flex-shrink: 0;
+    background: var(--pkb-primary);
+    border-radius: 8px;
+}
+
+.pkb-header-content h2 {
+    margin: 0;
+    color: var(--pkb-primary);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 10px 20px 0px;
+}
+
+.pkb-header-content p {
+    margin: 10px 0 0;
+    color: var(--pkb-muted);
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.pkb-tabs {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0px;
+    background: #121418;
+    border: 1px solid #292d35;
+    border-radius: 40px;
+    margin: 5px auto;
+}
+
+.pkb-tab {
+    padding: 10px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #969ba5;
+    border: 0px solid var(--pkb-border-light);
+    cursor: pointer;
+    transition: 0.2s ease;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.pkb-tab-icon img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    display:none;
+}
+
+.pkb-tab:hover img, .pkb-tab-active img {
+    filter: brightness(0) saturate(100%);
+}
+
+.pkb-tab:hover {
+    color: #000;
+    background: #ead87d;
+}
+
+.pkb-tab-active {
+    color: #000;
+    background: #ead87d;
+    margin: 0 5px;
+}
+
+    .pkb-tab-active:hover {
+        color: #000;
+        background: #ead87d;
+
+    }
+
+.pkb-tab-icon {
+    line-height: 1;
+    font-size:17px;
+}
+
+
+/* =========================================================
+   TAB CONTENT
+========================================================= */
+
+.pkb-tab-content {
+    display: none;
+}
+
+.pkb-content-active {
+    display: block;
+}
+
+
+/* =========================================================
+   GENERAL PANEL
+========================================================= */
+
+.pkb-panel {
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   ONGOING BATTLE PANEL
+========================================================= */
+
+.pkb-ongoing-panel {
+    padding: 0px 0px 0px;
+    border-color: var(--pkb-border);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.pkb-section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 8px 12px;
+}
+
+.pkb-section-icon {
+    color: var(--pkb-primary);
+    line-height: 1;
+    font-size: 40px;
+}
+
+.pkb-section-title h2 {
+    margin: 0;
+    color: var(--pkb-primary);
+    font-weight: 800;
+}
+
+.pkb-section-title p {
+    margin: 5px 0 0;
+    color: var(--pkb-muted);
+}
+
+
+/* =========================================================
+   BATTLE GRID
+========================================================= */
+
+.pkb-battle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+
+/* =========================================================
+   BATTLE CARD
+========================================================= */
+
+.pkb-battle-card {
+    min-width: 0;
+    padding: 14px 17px 16px;
+    background: var(--pkb-surface);
+    border: 1px solid var(--pkb-border-light);
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+    .pkb-battle-card:hover {
+        border-color: var(--pkb-border);
+    }
+
+
+/* =========================================================
+   BATTLE TOP
+========================================================= */
+
+.pkb-battle-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 13px;
+}
+
+.pkb-battle-number {
+    display: inline-flex;
+    align-items: center;
+    min-height: 29px;
+    padding: 0 11px;
+    background: transparent;
+    border: 1px solid var(--pkb-primary);
+    border-radius: 8px;
+    color: var(--pkb-primary);
+}
+
+.pkb-countdown {
+    color: var(--pkb-muted);
+    white-space: nowrap;
+}
+
+    .pkb-countdown > span {
+        color: var(--pkb-accent);
+        margin-right: 5px;
+    }
+
+    .pkb-countdown strong {
+        color: var(--pkb-text);
+        margin-left: 4px;
+        letter-spacing: 1px;
+    }
+
+
+/* =========================================================
+   GAME INFORMATION
+========================================================= */
+
+.pkb-battle-info {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin: 5px 5px 10px;
+}
+
+.pkb-game-icon {
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pkb-secondary);
+    border: 1px solid var(--pkb-border);
+    border-radius: 50%;
+    color: var(--pkb-primary);
+    font-size: 20px;
+}
+
+.pkb-sports-icon {
+}
+
+.pkb-slot-icon {
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.pkb-casino-icon {
+}
+
+.pkb-battle-info h3 {
+    margin: 0 0 5px;
+    color: var(--pkb-text);
+}
+
+.pkb-battle-info p {
+    margin: 0;
+    color: var(--pkb-muted);
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   TEAM SCORE
+========================================================= */
+
+.pkb-team-score {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    align-items: center;
+    text-align: center;
+    margin: 0 5px 13px;
+}
+
+.pkb-team {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+    .pkb-team span {
+        font-weight: 800;
+    }
+
+    .pkb-team strong {
+        color: var(--pkb-text);
+    }
+
+.pkb-team-a span {
+    color: var(--pkb-team-a);
+}
+
+.pkb-team-b span {
+    color: var(--pkb-team-b);
+}
+
+.pkb-vs {
+    color: var(--pkb-accent);
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.pkb-progress {
+    margin: 0 0 12px;
+}
+
+.pkb-progress-track {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    background: var(--pkb-secondary);
+    border-radius: 20px;
+}
+
+.pkb-progress-a {
+    height: 100%;
+    background: var(--pkb-team-a);
+}
+
+.pkb-progress-b {
+    height: 100%;
+    background: var(--pkb-team-b);
+}
+
+.pkb-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding: 0 3px;
+    color: var(--pkb-text);
+}
+
+
+/* =========================================================
+   JOIN BUTTON
+========================================================= */
+
+.pkb-join-btn {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--pkb-primary);
+    color: var(--pkb-on-primary);
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+    .pkb-join-btn span {
+        margin-left: 6px;
+        line-height: 0;
+        vertical-align: -2px;
+    }
+
+    .pkb-join-btn:hover {
+        background: var(--pkb-accent);
+        transform: translateY(-1px);
+    }
+
+    .pkb-join-btn:active {
+        transform: translateY(0);
+    }
+
+
+/* =========================================================
+   BOTTOM GRID
+========================================================= */
+
+.pkb-bottom-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 14px;
+    margin: 5px 0px;
+}
+
+
+/* =========================================================
+   CONTRIBUTOR / RULES PANEL
+========================================================= */
+
+.pkb-contributor-panel,
+.pkb-rules-panel {
+    padding: 16px 20px 20px;
+    background: #111;
+}
+
+
+/* =========================================================
+   PANEL HEADING
+========================================================= */
+
+.pkb-panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.pkb-panel-heading-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--pkb-primary);
+    font-size:20px;
+}
+
+.pkb-panel-heading h2 {
+    margin: 0;
+    color: var(--pkb-primary);
+}
+
+.pkb-panel-heading p {
+    color: var(--pkb-muted);
+}
+
+
+/* =========================================================
+   BATTLE SELECT
+========================================================= */
+
+.pkb-battle-select {
+    margin-left: auto;
+    min-width: 190px;
+    height: 42px;
+    padding: 0 15px;
+    background: var(--pkb-surface);
+    color: var(--pkb-text);
+    border: 1px solid var(--pkb-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    font-family: var(--font-main);
+}
+
+    .pkb-battle-select:focus {
+        border-color: var(--pkb-accent);
+    }
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.pkb-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.pkb-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+    .pkb-table th {
+        height: 36px;
+        padding: 0 14px;
+        background: var(--pkb-secondary);
+        color: var(--pkb-primary);
+        font-weight: 700;
+        text-align: center;
+    }
+
+        .pkb-table th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        .pkb-table th:last-child,
+        .pkb-table td:last-child {
+            text-align: right;
+        }
+
+    .pkb-table td {
+        height: 41px;
+        padding: 0 14px;
+        border-bottom: 1px solid var(--pkb-border-light);
+        color: var(--pkb-text);
+        text-align: center;
+    }
+
+    .pkb-table tbody tr {
+        background: transparent;
+        transition: background 0.2s ease;
+    }
+
+        .pkb-table tbody tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .pkb-table tbody tr:hover {
+            background: rgba(234, 216, 125, 0.04);
+        }
+
+
+/* =========================================================
+   RANK
+========================================================= */
+
+.pkb-rank {
+    width: 29px;
+    height: 29px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.pkb-rank-1 {
+    background: var(--pkb-primary);
+    color: var(--pkb-on-primary);
+}
+
+.pkb-rank-2 {
+    background: #C9CDD4;
+    color: #202228;
+}
+
+.pkb-rank-3 {
+    background: #C77D2A;
+    color: #111111;
+}
+
+
+/* =========================================================
+   TEAM BADGE
+========================================================= */
+
+.pkb-team-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    height: 29px;
+    border-radius: 8px;
+}
+
+.pkb-team-badge-a {
+    background: #103D79;
+    color: #FFFFFF;
+}
+
+.pkb-team-badge-b {
+    background: #8E1726;
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   BATTLE RULES
+========================================================= */
+
+.pkb-rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.pkb-rule {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    align-items: center;
+    gap: 13px;
+}
+
+    .pkb-rule > span {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: 1px solid var(--pkb-primary);
+        border-radius: 8px;
+        color: var(--pkb-primary);
+    }
+
+    .pkb-rule p {
+        margin: 0;
+        color: #C6CBD3;
+        line-height: 1.45;
+    }
+
+
+/* =========================================================
+   EMPTY TAB
+========================================================= */
+
+.pkb-empty-panel {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    pkb-empty-icon align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pkb-empty-icon {
+    margin-bottom: 15px;
+    color: var(--pkb-primary);
+    font-size:20px;
+}
+
+.pkb-empty-icon img{
+    width:40px;
+    height:40px;
+}
+
+.pkb-empty-panel h2 {
+    margin: 0;
+    color: var(--pkb-primary);
+}
+
+.pkb-empty-panel p {
+    color: var(--pkb-muted);
+}
+
+
+/* =========================================================
+   SUCCESS / ERROR / LIVE
+========================================================= */
+
+.pkb-success {
+    color: var(--pkb-success);
+}
+
+.pkb-error {
+    color: var(--pkb-error);
+}
+
+.pkb-live {
+    color: var(--pkb-live);
+}
+

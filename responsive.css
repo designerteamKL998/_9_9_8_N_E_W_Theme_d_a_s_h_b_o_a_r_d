@@ -18,7 +18,7 @@
     display: none;
 }
 
-/* ========================================================= RESPONSIVE - TABLET MAX WIDTH: 1024px ========================================================= */
+/* ================================================================================ RESPONSIVE - TABLET MAX WIDTH: 1024px ======================================================================================= */
 @media (max-width: 1024px) {
     .deks-view {
         display: none;
@@ -161,7 +161,6 @@
 
     .slot-section-title {
         gap: 14px;
-        margin: 18px 0px 12px;
         margin: 5px 0px;
     }
 
@@ -311,7 +310,7 @@
         padding: 0px 15px;
     }
 
-    /*=============   DEPOSIT PAGE   ================*/
+    /*--------------   DEPOSIT PAGE   ---------------*/
 
     .sidebar {
         position: relative;
@@ -613,10 +612,6 @@
         transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
     }
 
-        /* =====================================================
-       NORMAL NAV ITEM
-    ===================================================== */
-
         .mobile-bottom-nav .bottom-nav-item {
             display: flex;
             flex-direction: column;
@@ -636,10 +631,6 @@
             cursor: pointer;
         }
 
-        /* =====================================================
-       ICON
-    ===================================================== */
-
         .mobile-bottom-nav .bottom-nav-icon {
             width: 26px;
             height: 26px;
@@ -649,9 +640,6 @@
             font-size: 17px;
             line-height: 1;
         }
-        /* =====================================================
-       ACTIVE MENU
-    ===================================================== */
 
         .mobile-bottom-nav .bottom-nav-item.active {
             color: #146cff;
@@ -666,10 +654,6 @@
         .mobile-bottom-nav .bottom-nav-item:hover {
             color: #c69b00;
         }
-
-        /* =====================================================
-       HIDE BOTTOM NAV WHEN SCROLLING
-    ===================================================== */
 
         .mobile-bottom-nav.scrolled {
             opacity: 0 !important;
@@ -828,11 +812,6 @@
             color: #146cff;
         }
 
-    /* =====================================================
-       FLOATING MENU BUTTON
-       SHOW WHEN SCROLL
-    ===================================================== */
-
     .floating-menu-btn {
         position: fixed;
         left: 8px;
@@ -853,10 +832,6 @@
         cursor: pointer;
         transform: translateY(-50%);
     }
-
-    /* =====================================================
-       FLOATING BUTTON WHEN SCROLLED
-    ===================================================== */
 
     body.menu-scrolled .floating-menu-btn {
         display: flex;
@@ -923,9 +898,6 @@
         pointer-events: none;
     }
 
-    /* =====================================================
-       MOBILE MORE MENU
-    ===================================================== */
     .mobile-more-menu {
         display: none;
         position: fixed;
@@ -1015,7 +987,7 @@
         background: linear-gradient(189deg, #ffe45c 0%, #202228 100%);
     }
 
-    /*======================================  PROFILE PAGE  ========================================*/
+    /*--------------  PROFILE PAGE  -----------------*/
     .section-title h2 {
         font-size: var(--font-icon);
     }
@@ -1065,8 +1037,7 @@
         display: none;
     }
 
-    /*--------------------------  PROMOTIONS  ---------------------------*/
-    /* HEADER */
+    /*-------------------  PROMOTIONS  ------------------*/
     .cm8-promo-header {
         margin-bottom: 15px;
     }
@@ -1091,7 +1062,6 @@
         padding: 0 15px;
         gap: 12px;
     }
-    /* CATEGORY */
 
     .cm8-promo-category-wrap {
         grid-template-columns: repeat(4, 1fr);
@@ -1103,13 +1073,11 @@
         gap: 8px;
         padding: 0 10px;
     }
-    /* PROMO GRID */
 
     .cm8-promo-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
-    /* CARD */
 
     .cm8-promo-card {
         grid-template-columns: 42% 58%;
@@ -1118,13 +1086,11 @@
     .cm8-promo-card-content {
         padding: 11px 9px;
     }
-        /* TITLE */
 
         .cm8-promo-card-content h3 {
             font-size: 15px;
             margin: 5px 4px 8px;
         }
-    /* PAYMENT ICON */
 
     .promo-payment-icons {
         gap: 4px;
@@ -1135,7 +1101,6 @@
             height: 42px;
             flex: 0 0 42px;
         }
-    /* INFO */
 
     .cm8-promo-info {
         gap: 3px;
@@ -1144,7 +1109,6 @@
         .cm8-promo-info > div {
             height: 36px;
         }
-    /* PAYMENT */
 
     .cm8-promo-payment {
         gap: 5px;
@@ -1153,7 +1117,6 @@
         .cm8-promo-payment span {
             font-size: 11px;
         }
-    /* GAME ICONS */
 
     .cm8-promo-game-icons {
         gap: 4px;
@@ -1195,7 +1158,7 @@
         width: 180px;
     }
 
-    /*--------------------------  LEVELPROGRAM PAGE  ---------------------------*/
+    /*------------------  LEVELPROGRAM PAGE  -------------*/
     .lp-page {
         margin: 0px;
         padding: 8px;
@@ -1285,7 +1248,7 @@
     .lp-terms {
         margin-bottom: 50px;
     }
-    /*--------------------------  LUCKYDRAW PAGE  ---------------------------*/
+    /*-------------------  LUCKYDRAW PAGE  -----------------*/
     .sw-container {
         width: calc(100% - 40px);
         padding: 18px;
@@ -1388,17 +1351,11 @@
         gap: 4px;
     }
 
-        /* MAIN TEXT
-   IMPORTANT:
-   Jangan flex row lagi
-*/
-
         .sw-promo-copy > div {
             display: block;
             line-height: 1.25;
         }
 
-        /* DEPOSIT 50 */
 
         .sw-promo-copy strong {
             color: #ead87d;
@@ -1406,14 +1363,12 @@
             margin-right: 5px;
         }
 
-        /* GETS FREE... */
 
         .sw-promo-copy span {
             color: #ffffff;
             font-weight: 600;
         }
 
-        /* MAXIMUM */
 
         .sw-promo-copy small {
             display: block;
@@ -1421,7 +1376,6 @@
             font-size: 12px;
             line-height: 1.3;
         }
-    /* TERMS */
 
     .sw-term-item {
         margin: 8px 10px;
@@ -1430,7 +1384,7 @@
         font-size: 13px;
     }
 
-    /*----------------------------  DAILY CHECKIN PAGE  ----------------------------------*/
+    /*-------------------  DAILY CHECKIN PAGE  ------------------*/
     .dci-page {
         padding: 16px;
     }
@@ -1564,7 +1518,7 @@
         padding: 10px;
     }
 
-    /*--------------------------  TRANSACTION (STATEMENT/MYBET) PAGE  ---------------------------*/
+    /*----------------  TRANSACTION (STATEMENT/MYBET) PAGE  ---------------*/
     .st-page,
     .mb-page {
         width: calc(100% - 20px);
@@ -1683,7 +1637,7 @@
         min-height: 66px;
     }
 
-    /*--------------------------  DOWNLOAD PAGE  ---------------------------*/
+    /*-----------------  DOWNLOAD PAGE  -----------------*/
     .download-page {
         width: calc(100% - 20px);
         padding: 10px 22px 18px;
@@ -1775,9 +1729,897 @@
     .dl-feature p {
         font-size: 10px;
     }
+
+    .fr-popup {
+        max-width: 620px;
+    }
+
+    .fr-popup-body {
+        padding: 20px;
+    }
+
+    /*------------------  ANNOUNCEMENT PAGE  -----------------*/
+    .announcement-content {
+        padding: 18px;
+        margin-bottom: 40px;
+    }
+
+    .announcement-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .announcement-heading {
+        margin: 5px 0px;
+    }
+
+    .announcement-list-card,
+    .announcement-detail-card {
+        min-height: 450px;
+    }
+
+    .announcement-item {
+        min-height: 110px;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .announcement-item-image {
+        width: 78px;
+        height: 78px;
+        flex: 0 0 78px;
+    }
+
+    .announcement-item-top {
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+
+    .announcement-tag {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .announcement-date {
+        font-size: 12px;
+    }
+
+    .announcement-item h3 {
+        font-size: 15px;
+    }
+
+    .announcement-item p {
+        font-size: 13px;
+    }
+
+    .announcement-detail-image {
+        height: auto;
+    }
+
+    .announcement-detail-content h2 {
+        font-size: 22px;
+    }
+
+    .announcement-detail-content > p {
+        font-size: 14px;
+    }
+
+    /*--------------------------  FREE POINT PAGE  ---------------------------*/
+    .freepoint-page,
+    .fp-history-page,
+    .pkb-tabs {
+        max-width: 100%;
+    }
+
+    .freepoint-page {
+        margin: 10px auto 40px;
+        padding: 8px;
+    }
+
+    /* MAIN LAYOUT */
+    .freepoint-layout {
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+        gap: 16px;
+        padding: 8px;
+    }
+
+    /* FREE POINT CARD */
+    .freepoint-content {
+        padding: 35px 20px;
+    }
+
+        .freepoint-content h1 {
+            font-size: 42px;
+        }
+
+    .freepoint-subtitle {
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    .point-orb {
+        width: 210px;
+        height: 210px;
+    }
+
+    .point-star i {
+        font-size: 90px;
+    }
+
+    .point-star span {
+        font-size: 31px;
+    }
+
+    .claim-btn {
+        width: 90%;
+        height: 54px;
+        margin-top: 28px;
+    }
+
+    /* TERMS */
+    .terms-card {
+        padding: 22px;
+    }
+
+    .terms-header h2 {
+        font-size: 22px;
+    }
+
+    .term-item {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .term-number {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+    }
+
+    .term-item p {
+        font-size: 14px;
+    }
+
+    /* HISTORY PAGE */
+    .fp-history-page {
+        margin: 15px auto 50px;
+        padding: 15px;
+    }
+
+    /* SUMMARY */
+    .fp-summary {
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .fp-summary-card {
+        padding: 10px 20px;
+    }
+
+    .fp-summary-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 26px;
+    }
+
+    .fp-summary-info {
+        margin-left: 18px;
+    }
+
+    .fp-summary-decoration {
+        right: 15px;
+        font-size: 100px;
+    }
+
+    /* TABS */
+    .pkb-tabs {
+        padding: 0 15px;
+        gap: 6px;
+    }
+
+    .pkb-tab {
+        min-width: 190px;
+        padding: 0 20px;
+        gap: 10px;
+    }
+
+    /* HISTORY SECTION */
+    .fp-section-header {
+        padding: 0 18px;
+    }
+
+    /* TABLE */
+    .fp-table {
+        min-width: 750px;
+    }
+
+        .fp-table th,
+        .fp-table td {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+    /*---------------  PK-BATTLE PAGE  -------------*/
+    .pkb-page {
+        max-width: 100%;
+        margin: 10px auto 40px;
+        padding: 8px;
+    }
+
+    /* HEADER */
+    .pkb-header {
+        gap: 18px;
+        margin-bottom: 14px;
+    }
+
+    .pkb-header-line {
+        width: 7px;
+        height: 65px;
+    }
+
+    .pkb-header-content h2 {
+        font-size: 24px;
+        padding: 8px 15px 0;
+    }
+
+    .pkb-header-content p {
+        margin-top: 7px;
+        font-size: 14px;
+    }
+
+    .pkb-tabs {
+        gap: 6px;
+        min-height: 50px;
+        padding: 0 15px;
+    }
+
+    .pkb-tab {
+        min-width: 180px;
+        min-height: 42px;
+        padding: 0 18px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .pkb-tab-icon img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .pkb-section-title {
+        gap: 12px;
+        padding: 0 6px 10px;
+    }
+
+    .pkb-section-icon {
+        font-size: 34px;
+    }
+
+    .pkb-section-title h2 {
+        font-size: 22px;
+    }
+
+    .pkb-section-title p {
+        font-size: 13px;
+    }
+
+    .pkb-battle-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .pkb-battle-card {
+        padding: 13px 14px 15px;
+    }
+
+    .pkb-battle-top {
+        gap: 7px;
+        margin-bottom: 10px;
+    }
+
+    .pkb-battle-number {
+        min-height: 27px;
+        padding: 0 9px;
+        font-size: 9px;
+    }
+
+    .pkb-countdown {
+        font-size: 12px;
+    }
+
+
+    /* GAME INFO */
+    .pkb-battle-info {
+        gap: 12px;
+        margin: 5px 3px 10px;
+    }
+
+    .pkb-game-icon {
+        width: 52px;
+        height: 52px;
+        flex: 0 0 52px;
+        font-size: 18px;
+    }
+
+    .pkb-battle-info h3 {
+        font-size: 16px;
+    }
+
+    .pkb-battle-info p {
+        font-size: 12px;
+    }
+
+
+    /* TEAM SCORE */
+    .pkb-team-score {
+        grid-template-columns: 1fr 40px 1fr;
+        margin: 0 3px 12px;
+    }
+
+    .pkb-team span {
+        font-size: 13px;
+    }
+
+    .pkb-team strong {
+        font-size: 14px;
+    }
+
+    .pkb-vs {
+        font-size: 14px;
+    }
+
+
+    /* PROGRESS */
+    .pkb-progress-track {
+        height: 8px;
+    }
+
+    .pkb-progress-labels {
+        font-size: 12px;
+    }
+
+    /* JOIN */
+    .pkb-join-btn {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .pkb-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 10px 5px;
+    }
+
+    .pkb-contributor-panel,
+    .pkb-rules-panel {
+        padding: 15px 18px 18px;
+    }
+
+    .pkb-panel-heading {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+        .pkb-panel-heading h2 {
+            font-size: 18px;
+        }
+
+        .pkb-panel-heading p {
+            font-size: 13px;
+        }
+
+    .pkb-battle-select {
+        min-width: 170px;
+        height: 40px;
+    }
+
+
+    /* TABLE */
+    .pkb-table {
+        min-width: 580px;
+    }
+
+        .pkb-table th,
+        .pkb-table td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    /*-----------------  PK-BATTLE PAGE  -----------------*/
+    .special-event-page {
+        width: 100%;
+        max-width: 100%;
+        margin: 12px auto;
+        padding: 10px 15px 25px;
+    }
+
+    .event-nav {
+        gap: 6px;
+        min-height: 52px;
+        padding: 5px;
+    }
+
+    .event-nav-item {
+        min-width: 0;
+        flex: 1;
+        height: 42px;
+        gap: 8px;
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+        .event-nav-item img {
+            width: 25px;
+            height: 25px;
+        }
+
+    .event-container {
+        padding: 18px 15px;
+    }
+
+    .event-heading {
+        gap: 14px;
+        margin-bottom: 10px;
+    }
+
+    .event-heading-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .event-heading h2 {
+        font-size: 24px;
+    }
+
+    .event-heading p {
+        font-size: 13px;
+    }
+
+    .event-filter {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .category-btn {
+        min-height: 43px;
+        font-size: 13px;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .event-card {
+        padding: 13px 14px 18px;
+        border-radius: 14px;
+    }
+
+    .event-card-content {
+        gap: 13px;
+        min-height: 75px;
+        margin-bottom: 15px;
+    }
+
+    .event-icon {
+        flex: 0 0 65px;
+        width: 65px;
+        height: 65px;
+        font-size: 25px;
+    }
+
+    .event-info h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .event-info p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .event-date {
+        gap: 6px;
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+        .event-date i {
+            font-size: 14px;
+        }
+
+    .view-btn {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .event-modal {
+        padding: 20px;
+    }
+
+    .event-modal-box {
+        max-width: 65%;
+        max-height: 90vh;
+    }
+
+    .event-modal-header {
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .event-modal-icon {
+        width: 140px;
+        height: 140px;
+        flex: 0 0 140px;
+    }
+
+    .event-modal-title h2 {
+        font-size: 22px;
+    }
+
+    .event-modal-content {
+        padding: 18px;
+    }
+
+    .modal-info-row {
+        gap: 14px;
+        padding: 15px 16px;
+    }
+
+    .modal-description {
+        margin-left: 10px;
+    }
+
+    .modal-rewards {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .reward-list {
+        gap: 10px;
+    }
+
+    .reward-item {
+        min-height: 95px;
+        padding: 12px;
+    }
+
+    /*-----------------  WITHDRAWAL PAGE  --------------*/
+    .wdr-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 20px 35px;
+        margin-bottom: 40px;
+    }
+
+    .wdr-page-head {
+        gap: 15px;
+        margin-bottom: 14px;
+    }
+
+    .wdr-title-accent {
+        width: 9px;
+        height: 65px;
+        flex: 0 0 9px;
+    }
+
+    .wdr-page-head h2 {
+        font-size: 25px;
+    }
+
+    .wdr-page-head p {
+        font-size: 13px;
+    }
+
+    .wdr-methods {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .wdr-method {
+        width: auto;
+        flex: 1;
+        height: 56px;
+        padding: 0 18px;
+        gap: 13px;
+    }
+
+    .wdr-method-icon {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+    }
+
+
+    .wdr-bank-columns {
+        grid-template-columns: 1.1fr .75fr;
+        gap: 12px;
+    }
+
+    .wdr-ewallet-columns {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .wdr-panel-head {
+        padding: 14px 18px;
+        gap: 12px;
+    }
+
+    .wdr-heading {
+        gap: 12px;
+    }
+
+    .wdr-heading-icon {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+    }
+
+    .wdr-heading h2 {
+        font-size: 18px;
+    }
+
+    .wdr-heading p {
+        font-size: 12px;
+    }
+
+    .wdr-outline-btn {
+        height: 38px;
+        padding: 0 13px;
+        font-size: 12px;
+    }
+
+    .wdr-bank-list {
+        gap: 8px;
+        padding: 0 18px 10px;
+    }
+
+    .wdr-bank-row {
+        padding: 9px 13px;
+        gap: 10px;
+    }
+
+    .wdr-bank-logo {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+    }
+
+        .wdr-bank-logo img {
+            width: 35px;
+        }
+
+    .wdr-radio {
+        width: 21px;
+        height: 21px;
+        flex: 0 0 21px;
+    }
+
+    .wdr-withdraw-top {
+        grid-template-columns: minmax(0, 1fr) 165px;
+        gap: 10px;
+        padding: 16px 18px 0;
+    }
+
+    .wdr-rollover {
+        width: 165px;
+        min-height: 58px;
+        padding: 8px 11px;
+    }
+
+    .wdr-amount-note {
+        padding: 5px 18px 0;
+    }
+
+
+    /* MONEY INPUT */
+    .wdr-money-input {
+        height: 48px;
+    }
+
+        .wdr-money-input > span {
+            width: 58px;
+            padding-left: 13px;
+        }
+
+        .wdr-money-input input {
+            padding: 0 12px;
+        }
+
+
+    /* QUICK AMOUNT */
+    .wdr-quick {
+        gap: 7px;
+        padding: 13px 18px 15px;
+    }
+
+        .wdr-quick button {
+            height: 40px;
+            font-size: 12px;
+        }
+
+
+    /* SUMMARY */
+    .wdr-summary {
+        margin: 0 18px;
+    }
+
+    .wdr-summary-row {
+        padding: 9px 13px;
+    }
+
+    .wdr-submit {
+        width: calc(100% - 36px);
+        margin: 12px 18px 0;
+    }
+
+    .wdr-bank-announcement-grid {
+        margin: 0 18px 18px;
+        min-height: 170px;
+    }
+
+    .wdr-steps {
+        padding: 9px 15px;
+    }
+
+    .wdr-notes {
+        padding: 12px 15px;
+    }
+
+        .wdr-steps > div,
+        .wdr-notes > div {
+            font-size: 12px;
+        }
+
+    .wdr-wallet-alert {
+        margin: 0 18px 17px;
+        padding: 11px 13px;
+    }
+
+    .wdr-ewallet-info-box {
+        margin: 0 18px;
+        padding: 14px 16px;
+        gap: 13px;
+    }
+
+    .wdr-subtitle {
+        margin: 10px 18px;
+    }
+
+    .wdr-how-list {
+        padding: 0 18px;
+        gap: 10px;
+    }
+
+    .wdr-divider {
+        margin: 22px 18px 0;
+    }
+
+    .wdr-ewallet-notes {
+        padding: 0 18px 18px;
+    }
+
+    .wdr-notes i {
+        width: 5px;
+        height: 5px;
+        flex: 0 0 5px;
+    }
+
+    .pkb-panel-heading-icon {
+        display: none;
+    }
+
+    /*---------------  PINVITEFREN PAGE  --------------*/
+    .rf-page {
+        padding: 5px 16px;
+    }
+
+    .rf-container {
+        width: 100%;
+    }
+
+    /* HERO */
+    .rf-hero {
+        min-height: 130px;
+    }
+
+        .rf-hero h1 {
+            font-size: 36px;
+            letter-spacing: -2px;
+        }
+
+        .rf-hero p {
+            font-size: 14px;
+            margin-top: 14px;
+        }
+
+    .rf-eyebrow {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+
+    /* MAIN GRID */
+    .rf-main-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 8px;
+    }
+
+
+    /* SHARE CARD */
+    .rf-share-card {
+        padding: 24px;
+    }
+
+    .rf-share-options {
+        top: 24px;
+        right: 24px;
+    }
+
+
+    /* BONUS */
+    .rf-bonus-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .rf-bonus-card {
+        padding: 15px;
+        min-height: 90px;
+    }
+
+
+    /* STATS */
+    .rf-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .rf-stat {
+        padding: 12px;
+        gap: 9px;
+    }
+
+
+    /* HOW IT WORKS */
+    .rf-how {
+        padding: 24px;
+    }
+
+    .rf-step {
+        grid-template-columns: 52px 52px minmax(0, 1fr);
+        gap: 12px;
+        padding: 16px;
+        min-height: 110px;
+    }
+
+    .rf-step-number {
+        width: 50px;
+        height: 50px;
+    }
+
+    .rf-step-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .rf-step-content h3 {
+        font-size: 15px;
+    }
+
+    .rf-step-content p {
+        font-size: 13px;
+    }
+
+    .rf-promo-title {
+        margin-right: 20px;
+    }
 }
 
-/*===============================================================  MOBILE 768PX  ==========================================================*/
+/*===========================================================================================================  MOBILE 768PX  =======================================================================================*/
 @media (max-width: 768px) {
     .main-header {
         padding: 7px 10px;
@@ -1919,11 +2761,6 @@
         opacity: 0;
     }
 
-    /* =====================================================
-       PROMOTION BANNER
-       ORIGINAL
-    ===================================================== */
-
     .promo-slider {
         width: calc(100% - 16px);
         margin: 8px auto 0;
@@ -1957,10 +2794,6 @@
             width: 14px;
         }
 
-    /* =====================================================
-       HOT GAMES
-    ===================================================== */
-
     .hot-games {
         width: calc(100% - 16px);
         max-width: none;
@@ -1968,9 +2801,6 @@
         will-change: opacity, transform;
     }
 
-    /* =====================================================
-       NEW GAMES
-    ===================================================== */
 
     .new-games {
         opacity: 1;
@@ -1986,9 +2816,6 @@
             pointer-events: none;
         }
 
-    /* =====================================================
-       GAME SECTIONS
-    ===================================================== */
 
     .slot-games,
     .lc-games,
@@ -2005,9 +2832,7 @@
     .notification-dot {
         top: 8px;
     }
-    /* =====================================================
-       GAME GRID
-    ===================================================== */
+
     .games-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         column-gap: 7px;
@@ -2024,10 +2849,6 @@
             object-fit: cover;
             border-radius: 7px;
         }
-
-    /* =====================================================
-       SLOT TITLE
-    ===================================================== */
 
     .slot-section-title {
         gap: 9px;
@@ -2065,10 +2886,6 @@
         margin-right: 3px;
         font-size: 15px;
     }
-
-    /* =====================================================
-       SLOT GRID
-    ===================================================== */
 
     .slot-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -2130,7 +2947,7 @@
             margin-left: 0px;
         }
 
-    /* ================  OVERLAY LANGUAGE  ===============*/
+    /* ----------------  OVERLAY LANGUAGE  ----------------*/
     .language-overlay {
         padding: 8px !important;
         align-items: center !important;
@@ -2150,7 +2967,7 @@
             animation: languageMobileIn 0.22s ease-out;
         }
 
-    @keyframes languageMobileIn {
+    @ keyframes languageMobileIn {
         from {
             opacity: 0;
             transform: scale(0.96) translateY(6px);
@@ -2161,10 +2978,6 @@
             transform: scale(1) translateY(0);
         }
     }
-
-    /* =========================================
-       HEADER LANGUAGE
-    ========================================= */
 
     .language-overlay .language-header {
         height: 62px;
@@ -2199,10 +3012,6 @@
         height: 25px;
     }
 
-    /* =========================================
-       DIVIDER LANGUAGE
-    ========================================= */
-
     .language-overlay .language-divider {
         height: 10px;
     }
@@ -2219,10 +3028,6 @@
             box-shadow: 0 0 0 3px rgba(23, 100, 239, 0.07);
         }
 
-    /* =========================================
-       LANGUAGE GRID
-    ========================================= */
-
     .language-overlay .language-list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2232,9 +3037,6 @@
         margin: 0;
     }
 
-    /* =========================================
-       LANGUAGE ITEM 
-    ========================================= */
 
     .language-overlay .language-item {
         height: 45px;
@@ -2259,18 +3061,10 @@
             box-shadow: 0 2px 6px rgba(23, 100, 239, 0.07);
         }
 
-    /* =========================================
-       LANGUAGE LEFT
-    ========================================= */
-
     .language-overlay .language-left {
         gap: 6px;
         min-width: 0;
     }
-
-    /* =========================================
-       FLAG LANGUAGE
-    ========================================= */
 
     .language-overlay .language-flag {
         width: 25px;
@@ -2286,7 +3080,6 @@
             border-radius: 2px;
         }
 
-    /* LANGUAGE NAME */
     .language-overlay .language-name {
         line-height: 1;
         font-weight: 500;
@@ -2299,9 +3092,6 @@
         font-weight: 600;
     }
 
-    /* =========================================
-   RADIO LANGUAGE
-========================================= */
 
     .language-overlay .language-radio {
         width: 10px;
@@ -2317,10 +3107,6 @@
         height: 4px;
     }
 
-    /* =========================================
-   FOOTER LANGUAGE
-========================================= */
-
     .language-overlay .language-footer {
         min-height: 38px;
         height: 55px;
@@ -2328,14 +3114,12 @@
         gap: 7px;
     }
 
-    /* FOOTER CHECK */
     .language-overlay .language-footer-icon {
         width: 19px;
         height: 19px;
         flex: 0 0 19px;
     }
 
-    /* FOOTER LANGUAGE TEXT */
     .language-overlay .language-footer-text {
         gap: 1px;
     }
@@ -2348,7 +3132,6 @@
             line-height: 1.1;
         }
 
-    /* FOOTER DECORATION */
     .language-overlay .language-footer::after {
         width: 90px;
         height: 55px;
@@ -2357,7 +3140,7 @@
         filter: blur(10px);
     }
 
-    /*=================================  PROFILE PAGE  ============================== */
+    /*---------------  PROFILE PAGE  -------------- */
     .account-page {
         width: calc(100% - 16px);
         margin: 8px auto;
@@ -2557,7 +3340,6 @@
         gap: 8px;
         font-size: 12px;
     }
-    /* CATEGORY */
 
     .cm8-promo-category-wrap {
         grid-template-columns: repeat(4, 1fr);
@@ -2576,18 +3358,16 @@
             width: 18px;
             height: 18px;
         }
-    /* GRID */
+
 
     .cm8-promo-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
     }
-    /* CARD */
 
     .cm8-promo-card {
         grid-template-columns: 1fr;
     }
-    /* IMAGE */
 
     .cm8-promo-card-image {
         order: -1;
@@ -2690,7 +3470,7 @@
         gap: 6px;
     }
 
-    /*--------------------------  LEVELPROGRAM PAGE  ---------------------------*/
+    /*-----------------  LEVELPROGRAM PAGE  -----------------*/
 
     .lp-page {
         display: flex;
@@ -2821,7 +3601,7 @@
             display: none;
         }
 
-    /*--------------------------  LUKYDRAW PAGE  ---------------------------*/
+    /*-----------------  LUKYDRAW PAGE  ---------------*/
 
     .sw-page {
         min-height: 100vh;
@@ -2938,7 +3718,7 @@
         margin-bottom: 40px;
     }
 
-    /*---------------------------------  DAILY CHECK IN PAGE ---------------------------*/
+    /*-------------------  DAILY CHECK IN PAGE ----------------*/
     .dci-page {
         padding: 12px;
     }
@@ -3131,7 +3911,7 @@
             padding-top: 8px;
         }
 
-    /*----------------------------  FRIENDS PAGE  ----------------------------------*/
+    /*------------------  FRIENDS PAGE  -----------------*/
     .fr-page {
         padding: 8px 12px 15px;
         margin: 8px auto;
@@ -3327,16 +4107,48 @@
         font-size: 11px;
     }
 
-    /* MODAL */
-    .fr-modal-overlay {
-        padding: 12px;
+    .fr-popup-overlay {
+        padding: 15px;
     }
 
-    .fr-record-modal {
-        max-width: 100%;
+    .fr-popup {
+        width: 100%;
+        max-width: 580px;
+        max-height: 90vh;
     }
 
-    /*--------------------------  TRANSACTION (STATEMENT/MYBET) PAGE  ---------------------------*/
+    .fr-popup-header {
+        height: 54px;
+    }
+
+        .fr-popup-header h3 {
+            font-size: 15px;
+        }
+
+    .fr-popup-body {
+        padding: 18px;
+        max-height: calc(90vh - 54px);
+    }
+
+    .fr-add-description {
+        font-size: 11px;
+    }
+
+    .fr-add-field input,
+    .fr-add-field textarea {
+        font-size: 12px;
+    }
+
+    .fr-popup-table {
+        font-size: 12px;
+    }
+
+        .fr-popup-table thead th,
+        .fr-popup-table tbody td {
+            padding: 8px 5px;
+        }
+
+    /*----------------  TRANSACTION (STATEMENT/MYBET) PAGE  ---------------*/
     .st-page,
     .mb-page {
         width: calc(100% - 14px);
@@ -3685,7 +4497,7 @@
         font-size: 9px;
     }
 
-    /*--------------------------  DOWNLOAD PAGE  ---------------------------*/
+    /*------------------  DOWNLOAD PAGE  ------------------*/
     .download-page {
         width: calc(100% - 14px);
         padding: 8px 13px 15px;
@@ -3870,9 +4682,1669 @@
         padding: 8px 15px;
         font-size: 10px;
     }
+
+    /*------------------ ANNOUNCE PAGE --------------------*/
+    .announcement-content {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .announcement-heading {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .announcement-heading-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        font-size: 19px;
+    }
+
+    .announcement-heading h2 {
+        font-size: 20px;
+    }
+
+    .announcement-heading p {
+        font-size: 13px;
+    }
+
+
+    /* MAIN LAYOUT */
+
+    .announcement-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+
+    /* LIST */
+
+    .announcement-list-card {
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .announcement-item {
+        min-height: 100px;
+        padding: 10px;
+    }
+
+    .announcement-item-image {
+        width: 72px;
+        height: 72px;
+        flex: 0 0 72px;
+    }
+
+    .announcement-item h3 {
+        font-size: 15px;
+    }
+
+    .announcement-item p {
+        font-size: 13px;
+    }
+
+
+    /* DETAIL */
+
+    .announcement-detail-card {
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .announcement-detail-image {
+    }
+
+    .announcement-detail-content {
+        padding: 4px 6px 10px;
+    }
+
+        .announcement-detail-content h2 {
+            font-size: 21px;
+        }
+
+        .announcement-detail-content > p {
+            font-size: 14px;
+        }
+
+    .announcement-highlight {
+        margin-top: 18px;
+        padding: 15px 16px;
+    }
+
+        .announcement-highlight ul {
+            padding-left: 18px;
+            font-size: 14px;
+        }
+
+    /*--------------------  FREE POINT PAGE  -----------------*/
+    .freepoint-page {
+        padding: 6px;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .freepoint-layout {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 6px;
+    }
+
+    /* FREE POINT CARD */
+    .freepoint-card {
+        min-height: auto;
+    }
+
+    .freepoint-content {
+        padding: 35px 20px;
+    }
+
+        .freepoint-content h1 {
+            font-size: 38px;
+        }
+
+    .freepoint-subtitle {
+        max-width: 500px;
+        margin: 8px auto 25px;
+        font-size: 14px;
+    }
+
+    .freepoint-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 36px;
+    }
+
+    /* ORB */
+    .point-orb {
+        width: 190px;
+        height: 190px;
+    }
+
+    .point-star i {
+        font-size: 80px;
+    }
+
+    .point-star span {
+        font-size: 28px;
+    }
+
+    .point-label {
+        font-size: 14px;
+    }
+
+    /* BUTTON */
+    .claim-btn {
+        width: 100%;
+        max-width: 500px;
+        height: 52px;
+        margin-top: 25px;
+    }
+
+    /* TERMS */
+    .terms-card {
+        padding: 20px;
+    }
+
+    .terms-header {
+        gap: 10px;
+    }
+
+    .terms-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+
+    .terms-header h2 {
+        font-size: 20px;
+    }
+
+    .terms-divider {
+        margin: 15px 0;
+    }
+
+    .terms-list {
+        gap: 10px;
+    }
+
+    .term-item {
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .term-number {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        font-size: 13px;
+    }
+
+    .term-item p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .fp-history-page {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    /* HEADER */
+    .fp-history-header {
+        gap: 15px;
+    }
+
+    .fp-header-left {
+        gap: 12px;
+    }
+
+    .fp-header-line {
+        width: 6px;
+        height: 55px;
+    }
+
+    .fp-history-header h2 {
+        font-size: 20px;
+    }
+
+    .fp-history-header p {
+        font-size: 13px;
+    }
+
+    /* BACK BUTTON */
+    .fp-back-btn {
+        min-width: 100px;
+        height: 42px;
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+
+    /* SUMMARY */
+    .fp-summary {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .fp-summary-card {
+        min-height: 75px;
+        padding: 10px 12px;
+    }
+
+    .fp-summary-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        font-size: 22px;
+    }
+
+    .fp-summary-info {
+        margin-left: 12px;
+        gap: 3px;
+    }
+
+        .fp-summary-info span {
+            font-size: 12px;
+        }
+
+        .fp-summary-info strong {
+            font-size: 18px;
+        }
+
+    .fp-summary-decoration {
+        right: 5px;
+        bottom: -20px;
+        font-size: 75px;
+    }
+
+    .pkb-tabs {
+        width: calc(100% - 12px);
+        min-height: auto;
+        padding: 6px;
+        gap: 6px;
+        border-radius: 30px;
+    }
+
+    .pkb-tab {
+        min-width: 0;
+        width: 50%;
+        min-height: 42px;
+        padding: 0 12px;
+        gap: 7px;
+        font-size: 13px;
+    }
+
+    .pkb-tab-icon img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .fp-history-section {
+        margin-top: 15px;
+    }
+
+    .fp-section-header {
+        min-height: 60px;
+        padding: 0 15px;
+    }
+
+    .fp-section-title {
+        gap: 9px;
+        font-size: 15px;
+    }
+
+        .fp-section-title i {
+            font-size: 20px;
+        }
+
+    .fp-record-count {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .fp-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .fp-table {
+        min-width: 700px;
+        table-layout: fixed;
+    }
+
+        .fp-table th {
+            height: 48px;
+            padding: 0 14px;
+            font-size: 12px;
+        }
+
+        .fp-table td {
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+    .fp-type {
+        gap: 10px;
+    }
+
+    .fp-type-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+        .fp-type-icon i {
+            font-size: 18px;
+        }
+
+    .fp-type-info strong {
+        font-size: 13px;
+    }
+
+    .fp-type-info small {
+        font-size: 11px;
+    }
+
+    .fp-point {
+        font-size: 14px;
+    }
+
+    .fp-status {
+        min-width: 80px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .fp-no-more {
+        min-height: 70px;
+        font-size: 13px;
+    }
+
+    /*-------------------  PK-BATTLE PAGE  ----------------*/
+
+    .pkb-page {
+        width: 100%;
+        padding: 6px;
+        border-radius: 0 0 14px 14px;
+    }
+
+    .pkb-header {
+        gap: 12px;
+        margin-bottom: 12px;
+        margin-top: 10px;
+    }
+
+    .pkb-header-line {
+        width: 5px;
+        height: 55px;
+    }
+
+    .pkb-header-content h2 {
+        font-size: 20px;
+        padding: 5px 8px 0;
+        letter-spacing: .5px;
+    }
+
+    .pkb-header-content p {
+        margin-top: 6px;
+        padding-left: 8px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .pkb-tabs {
+        width: 100%;
+        min-height: auto;
+        padding: 5px;
+        gap: 5px;
+        border-radius: 25px;
+    }
+
+    .pkb-tab {
+        width: 50%;
+        min-width: 0;
+        min-height: 40px;
+        padding: 0 10px;
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    .pkb-tab-active {
+        margin: 0;
+    }
+
+    .pkb-tab-icon {
+        font-size: 14px;
+    }
+
+        .pkb-tab-icon img {
+            width: 22px;
+            height: 22px;
+        }
+
+    .pkb-ongoing-panel {
+        padding: 0 4px;
+    }
+
+
+    /* SECTION TITLE */
+    .pkb-section-title {
+        gap: 9px;
+        padding: 0 4px 10px;
+    }
+
+    .pkb-section-icon {
+        font-size: 28px;
+    }
+
+    .pkb-section-title h2 {
+        font-size: 18px;
+    }
+
+    .pkb-section-title p {
+        margin-top: 3px;
+        font-size: 11px;
+    }
+
+    .pkb-battle-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .pkb-battle-card {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+
+    /* BATTLE TOP */
+    .pkb-battle-top {
+        gap: 5px;
+        margin-bottom: 9px;
+    }
+
+    .pkb-battle-number {
+        min-height: 24px;
+        padding: 0 7px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+
+    .pkb-countdown {
+        font-size: 10px;
+    }
+
+        .pkb-countdown > span {
+            margin-right: 2px;
+        }
+
+        .pkb-countdown strong {
+            margin-left: 2px;
+            letter-spacing: .5px;
+        }
+
+    .pkb-battle-info {
+        gap: 8px;
+        margin: 4px 2px 8px;
+    }
+
+    .pkb-game-icon {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        font-size: 15px;
+    }
+
+    .pkb-battle-info h3 {
+        margin-bottom: 3px;
+        font-size: 13px;
+    }
+
+    .pkb-battle-info p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .pkb-team-score {
+        grid-template-columns: 1fr 25px 1fr;
+        margin: 0 2px 9px;
+    }
+
+    .pkb-team {
+        gap: 4px;
+    }
+
+        .pkb-team span {
+            font-size: 11px;
+        }
+
+        .pkb-team strong {
+            font-size: 12px;
+        }
+
+    .pkb-vs {
+        font-size: 11px;
+    }
+
+    .pkb-progress {
+        margin-bottom: 9px;
+    }
+
+    .pkb-progress-track {
+        height: 7px;
+    }
+
+    .pkb-progress-labels {
+        margin-top: 5px;
+        padding: 0 2px;
+        font-size: 10px;
+    }
+
+    .pkb-join-btn {
+        height: 34px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+
+        .pkb-join-btn span {
+            margin-left: 4px;
+        }
+
+
+    .pkb-bottom-grid {
+        width: 100%;
+        margin: 8px 0;
+        grid-template-columns: 1fr;
+    }
+
+    .pkb-contributor-panel,
+    .pkb-rules-panel {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .pkb-panel-heading {
+        width: 100%;
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+
+        .pkb-panel-heading > div {
+            min-width: 0;
+        }
+
+        .pkb-panel-heading h2,
+        .pkb-panel-heading p {
+            overflow-wrap: anywhere;
+        }
+
+    .pkb-battle-select {
+        margin-left: auto;
+        min-width: 120px;
+        max-width: 150px;
+        flex-shrink: 1;
+    }
+
+
+    /* TABLE */
+    .pkb-table-wrap {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .pkb-table {
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+    }
+
+        .pkb-table th,
+        .pkb-table td {
+            padding: 8px 6px;
+            font-size: 10px;
+            white-space: nowrap;
+        }
+
+            .pkb-table th:first-child {
+                width: 42px;
+            }
+
+            .pkb-table th:nth-child(2) {
+                width: 25%;
+            }
+
+            .pkb-table th:nth-child(3) {
+                width: 30%;
+            }
+
+            .pkb-table th:last-child {
+                width: 30%;
+            }
+
+    .pkb-team-badge {
+        min-width: 55px;
+        max-width: 100%;
+        height: 24px;
+        padding: 0 6px;
+        font-size: 10px;
+    }
+
+    .pkb-rank {
+        width: 23px;
+        height: 23px;
+        font-size: 10px;
+    }
+
+    .pkb-rules-list {
+        gap: 8px;
+    }
+
+    .pkb-rule {
+        grid-template-columns: 32px 1fr;
+        gap: 9px;
+    }
+
+        .pkb-rule > span {
+            width: 28px;
+            height: 28px;
+            font-size: 11px;
+        }
+
+        .pkb-rule p {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+    .pkb-empty-panel {
+        min-height: 280px;
+    }
+
+    .pkb-page {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .pkb-bottom-grid,
+    .pkb-contributor-panel,
+    .pkb-rules-panel,
+    .pkb-table-wrap {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .pkb-table-wrap {
+        overflow: hidden;
+    }
+
+    .pkb-table {
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+    }
+
+    /*--------------------------  SPECIAL-EVENT PAGE  ---------------------------*/
+
+    .special-event-page {
+        width: 100%;
+        max-width: 100%;
+        margin: 8px auto 40px;
+        padding: 8px 8px 20px;
+        overflow: hidden;
+    }
+
+
+    .event-nav {
+        width: 100%;
+        min-height: auto;
+        padding: 5px;
+        gap: 5px;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    .event-nav-item {
+        min-width: 0;
+        flex: 1;
+        height: 40px;
+        padding: 0 8px;
+        gap: 5px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+        .event-nav-item img {
+            width: 21px;
+            height: 21px;
+        }
+
+    .event-container {
+        width: 100%;
+        padding: 15px 10px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .event-heading {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .event-heading-icon {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+
+    .event-heading h2 {
+        font-size: 19px;
+    }
+
+    .event-heading p {
+        margin-top: 3px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .event-filter {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .category-btn {
+        min-height: 38px;
+        padding: 0 5px;
+        border-radius: 20px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+
+    .event-card {
+        min-width: 0;
+        padding: 10px 10px 13px;
+        border-radius: 11px;
+    }
+
+    .event-card-top {
+        min-height: 5px;
+    }
+
+    .event-card-content {
+        gap: 9px;
+        min-height: 62px;
+        margin-bottom: 12px;
+    }
+
+    .event-icon {
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .event-info {
+        min-width: 0;
+    }
+
+        .event-info h2 {
+            margin-bottom: 4px;
+            font-size: 13px;
+            line-height: 1.2;
+        }
+
+        .event-info p {
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+    .event-date {
+        gap: 4px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+        .event-date i {
+            font-size: 12px;
+        }
+
+        .event-date span,
+        .event-date small {
+            white-space: nowrap;
+        }
+
+    .view-btn {
+        padding: 8px 6px;
+        font-size: 11px;
+        border-radius: 25px;
+    }
+
+        .view-btn span {
+            margin-left: 5px;
+        }
+
+    .event-modal {
+        padding: 10px;
+    }
+
+    .event-modal-box {
+        width: 100%;
+        max-width: 95%;
+        max-height: 92vh;
+        border-radius: 14px;
+    }
+
+    .event-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .event-modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+        padding-right: 55px;
+    }
+
+    .event-modal-icon {
+        width: 90px;
+        height: 90px;
+        flex: 0 0 90px;
+        border-radius: 12px;
+    }
+
+    .event-modal-title {
+        width: 100%;
+    }
+
+        .event-modal-title h2 {
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+    .event-modal-status {
+        padding: 5px 11px;
+        font-size: 11px;
+    }
+
+    .event-modal-content {
+        padding: 12px;
+    }
+
+    .modal-info-wrap {
+        gap: 8px;
+    }
+
+    .modal-info-row {
+        gap: 10px;
+        padding: 12px;
+        border-radius: 9px;
+    }
+
+        .modal-info-row > i {
+            width: 34px;
+            height: 34px;
+            flex: 0 0 34px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .modal-info-row small {
+            font-size: 10px;
+        }
+
+        .modal-info-row strong {
+            font-size: 12px;
+        }
+
+    .modal-description {
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+        .modal-description h3,
+        .modal-rewards h3 {
+            margin-bottom: 9px;
+            padding-left: 11px;
+            font-size: 15px;
+        }
+
+            .modal-description h3::before,
+            .modal-rewards h3::before {
+                width: 3px;
+                height: 17px;
+            }
+
+        .modal-description p {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+    .modal-rewards {
+        margin-top: 12px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .reward-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .reward-item {
+        min-height: 80px;
+        padding: 8px 5px;
+        gap: 7px;
+        border-radius: 9px;
+        font-size: 10px;
+    }
+
+        .reward-item i {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+    .event-modal-footer {
+        padding: 0 12px 12px;
+    }
+
+    .modal-close-btn {
+        height: 44px;
+        font-size: 13px;
+    }
+
+
+    /*----------------------------  WITHHDRAWAL PAGE  -------------------------------*/
+    .wdr-page {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px 10px 25px;
+        overflow: hidden;
+    }
+
+    .wdr-page-head {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .wdr-title-accent {
+        width: 6px;
+        height: 52px;
+        flex: 0 0 6px;
+    }
+
+    .wdr-page-head h2 {
+        font-size: 20px;
+        letter-spacing: -.5px;
+    }
+
+    .wdr-page-head p {
+        margin-top: 5px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+
+    /* ==============
+       METHOD TABS
+       2 COLUMNS
+    =============== */
+
+    .wdr-methods {
+        width: 100%;
+        gap: 7px;
+        margin-bottom: 9px;
+    }
+
+    .wdr-method {
+        width: 50%;
+        min-width: 0;
+        height: 52px;
+        padding: 0 10px;
+        gap: 8px;
+        border-radius: 9px;
+    }
+
+    .wdr-method-icon {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+    }
+
+    .wdr-methods i {
+        font-size: 16px;
+    }
+
+    .wdr-method-copy {
+        min-width: 0;
+    }
+
+        .wdr-method-copy strong {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .wdr-method-copy small {
+            margin-top: 2px;
+            font-size: 9px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    .wdr-bank-columns {
+        grid-template-columns: 1fr;
+        grid-template-areas: "bank-details" "withdraw" "announcement";
+        gap: 10px;
+    }
+
+        .wdr-bank-columns > .wdr-bank-announcement {
+            height: auto;
+        }
+
+    .wdr-ewallet-columns {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .wdr-ewallet-left {
+        gap: 10px;
+    }
+
+
+    .wdr-panel {
+        border-radius: 10px;
+    }
+
+    .wdr-panel-head {
+        padding: 12px 13px;
+        gap: 8px;
+    }
+
+    .wdr-heading {
+        gap: 9px;
+    }
+
+    .wdr-heading-icon {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+    }
+
+    .wdr-heading h2 {
+        font-size: 15px;
+    }
+
+    .wdr-heading p {
+        margin-top: 2px;
+        font-size: 10px;
+    }
+
+    .wdr-outline-btn {
+        height: 34px;
+        padding: 0 9px;
+        font-size: 10px;
+    }
+
+    .wdr-bank-list {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        padding: 0 13px 10px;
+    }
+
+    .wdr-bank-row {
+        padding: 8px 10px;
+        gap: 9px;
+        border-radius: 9px;
+    }
+
+    .wdr-bank-logo {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+
+        .wdr-bank-logo img {
+            width: 32px;
+        }
+
+    .wdr-bank-data p {
+        font-size: 12px;
+    }
+
+    .wdr-bank-data span {
+        font-size: 10px;
+    }
+
+    .wdr-bank-data small {
+        font-size: 9px;
+    }
+
+    .wdr-radio {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+    }
+
+    .wdr-withdraw-top {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        padding: 13px 13px 0;
+    }
+
+        .wdr-withdraw-top .wdr-rollover {
+            width: 100%;
+        }
+
+    .wdr-rollover {
+        min-height: 55px;
+        padding: 8px 11px;
+    }
+
+    .wdr-amount-note {
+        padding: 5px 13px 0;
+        font-size: 10px;
+    }
+
+    .wdr-field label {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .wdr-money-input {
+        height: 46px;
+    }
+
+        .wdr-money-input > span {
+            width: 52px;
+            padding-left: 11px;
+            font-size: 12px;
+        }
+
+        .wdr-money-input input {
+            padding: 0 11px;
+            font-size: 13px;
+        }
+
+    .wdr-field > small {
+        font-size: 9px;
+    }
+
+    .wdr-quick {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 5px;
+        padding: 11px 13px 13px;
+    }
+
+        .wdr-quick button {
+            height: 36px;
+            padding: 0 3px;
+            font-size: 10px;
+            border-radius: 6px;
+        }
+
+    .wdr-summary {
+        margin: 0 13px;
+        border-radius: 8px;
+    }
+
+    .wdr-summary-row {
+        padding: 8px 11px;
+        gap: 8px;
+        font-size: 11px;
+    }
+
+    .wdr-summary-bank > strong {
+        font-size: 11px;
+    }
+
+    .wdr-summary-bank small {
+        font-size: 9px;
+    }
+
+    .wdr-submit {
+        width: calc(100% - 26px);
+        margin: 10px 13px 0;
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .wdr-bank-announcement-grid {
+        margin: 0 13px 13px;
+        min-height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .wdr-steps {
+        padding: 10px 12px;
+        border-right: 0;
+        border-bottom: 1px solid #343B42;
+    }
+
+    .wdr-notes {
+        padding: 10px 12px;
+    }
+
+    .wdr-steps > div {
+        min-height: 29px;
+        gap: 9px;
+        font-size: 10px;
+    }
+
+    .wdr-steps b {
+        width: 26px;
+        height: 26px;
+        flex: 0 0 26px;
+        font-size: 10px;
+    }
+
+    .wdr-notes > div {
+        gap: 8px;
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .wdr-wallet-alert {
+        margin: 0 13px 13px;
+        min-height: 65px;
+        padding: 10px 11px;
+        gap: 9px;
+    }
+
+    .wdr-alert-icon {
+        width: 27px;
+        height: 27px;
+        flex: 0 0 27px;
+        font-size: 12px;
+    }
+
+    .wdr-wallet-alert strong {
+        font-size: 12px;
+    }
+
+    .wdr-wallet-alert p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .wdr-ewallet-info-box {
+        margin: 0 13px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .wdr-info-circle {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        font-size: 12px;
+    }
+
+    .wdr-ewallet-info-box strong {
+        font-size: 12px;
+    }
+
+    .wdr-ewallet-info-box p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .wdr-subtitle {
+        margin: 9px 13px;
+        font-size: 12px;
+    }
+
+    .wdr-how-list {
+        padding: 0 13px;
+        gap: 8px;
+    }
+
+        .wdr-how-list > div {
+            min-height: 34px;
+            gap: 10px;
+            font-size: 10px;
+            line-height: 1.4;
+        }
+
+        .wdr-how-list b {
+            width: 31px;
+            height: 31px;
+            flex: 0 0 31px;
+            font-size: 10px;
+        }
+
+    .wdr-divider {
+        margin: 18px 13px 0;
+    }
+
+    .wdr-important-title {
+        margin-top: 13px;
+    }
+
+    .wdr-ewallet-notes {
+        padding: 0 13px 15px;
+        font-size: 10px;
+    }
+
+    .wdr-summary-ewallet > strong {
+        gap: 8px;
+    }
+
+    .wdr-sklpay-mini {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    /* ======
+       MODAL
+    ====== */
+
+    .wdr-modal {
+        padding: 10px;
+    }
+
+    .wdr-modal-box {
+        width: 100%;
+        max-width: 100%;
+        max-height: 92vh;
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+        .wdr-modal-box h3 {
+            font-size: 17px;
+        }
+
+        .wdr-modal-box > p {
+            margin-bottom: 15px;
+            font-size: 11px;
+        }
+
+        .wdr-modal-box label {
+            margin: 11px 0 5px;
+            font-size: 12px;
+        }
+
+        .wdr-modal-box input,
+        .wdr-modal-box select {
+            height: 42px;
+            font-size: 12px;
+        }
+
+        .wdr-modal-box .wdr-submit {
+            margin-top: 15px;
+        }
+
+    .wdr-toast {
+        left: 10px;
+        right: 10px;
+        bottom: 12px;
+        min-width: 0;
+        width: auto;
+        max-width: none;
+        font-size: 12px;
+    }
+
+    /*-------------------------  INVITE FREN PAGE ----------------------*/
+    .rf-page {
+        padding: 5px 12px;
+    }
+
+
+    .rf-hero {
+        display: block;
+        min-height: auto;
+        padding: 20px 5px;
+    }
+
+    .rf-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .rf-hero h1 {
+        font-size: 30px;
+        letter-spacing: -1.5px;
+    }
+
+    .rf-hero p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 12px;
+        max-width: 600px;
+    }
+
+    .rf-title-line {
+        width: 45px;
+        height: 3px;
+        margin-top: 16px;
+    }
+
+    .rf-main-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 6px;
+        margin-top: 10px;
+        border-radius: 12px;
+    }
+
+    .rf-share-card {
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    .rf-tabs {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        margin-bottom: 22px;
+        scrollbar-width: none;
+    }
+
+        .rf-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+    .rf-tab {
+        flex-shrink: 0;
+        padding: 11px 18px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .rf-share-options {
+        position: static;
+        justify-content: flex-start;
+        margin-bottom: 18px;
+    }
+
+    .rf-social {
+        width: 32px;
+        height: 32px;
+    }
+
+    .rf-field-heading {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .rf-round-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .rf-field-heading h3 {
+        font-size: 15px;
+    }
+
+    .rf-field-heading p {
+        font-size: 12px;
+    }
+
+    .rf-copy-box {
+        min-height: 56px;
+        border-radius: 28px;
+    }
+
+    .rf-code-value,
+    .rf-link-value {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .rf-copy-btn {
+        height: 46px;
+        padding: 0 18px;
+        font-size: 13px;
+    }
+
+    .rf-reward-box {
+        gap: 12px;
+        margin-top: 18px;
+        padding: 14px;
+    }
+
+    .rf-reward-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .rf-reward-text {
+        min-width: 0;
+    }
+
+        .rf-reward-text p {
+            font-size: 13px;
+        }
+
+    .rf-bonus-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .rf-bonus-card {
+        min-height: 80px;
+        padding: 14px;
+    }
+
+    .rf-status-icon {
+        width: 44px;
+        height: 44px;
+        margin-right: 12px;
+    }
+
+    .rf-status-content strong {
+        font-size: 16px;
+    }
+
+    .rf-arrow {
+        font-size: 24px;
+    }
+
+    .rf-stats {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .rf-stat {
+        padding: 12px;
+    }
+
+        .rf-stat > span {
+            width: 36px;
+            height: 36px;
+        }
+
+    .rf-how {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .rf-how-header {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .rf-how-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .rf-how h2 {
+        font-size: 20px;
+    }
+
+    .rf-how-label {
+        font-size: 11px;
+    }
+
+    .rf-step {
+        grid-template-columns: 45px minmax(0, 1fr);
+        gap: 12px;
+        min-height: auto;
+        padding: 14px;
+        border-radius: 13px;
+    }
+
+    .rf-step-number {
+        width: 45px;
+        height: 45px;
+        grid-row: span 2;
+    }
+
+    .rf-step-icon {
+        display: none;
+    }
+
+    .rf-step-content h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .rf-step-content p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .rf-promo-title {
+        margin: 20px 0 0;
+        text-align: left;
+        align-items: flex-start;
+        letter-spacing: 1px;
+    }
+
+        .rf-promo-title strong {
+            font-size: 15px;
+        }
+
+    .rf-toast {
+        left: 12px;
+        right: 12px;
+        bottom: 15px;
+        padding: 12px 15px;
+    }
 }
 
-/*===============================================================  MOBILE 480PX  ==========================================================*/
+/*===========================================================================================  MOBILE 480PX  ======================================================================================================*/
 
 @media (max-width: 480px) {
     .main-header {
@@ -4009,8 +6481,6 @@
             border-radius: 7px;
         }
 
-    /*======================   DEPOSIT   ============================*/
-    /* Confirm button → full row bawah */
     .quick-amounts .confirm-btn {
         flex: 0 0 100%;
         width: 100%;
@@ -4079,7 +6549,7 @@
         padding: 0px;
     }
 
-    /*----------------------  FREN PAGE  --------------------------------*/
+    /*-------------------  FREN PAGE  -------------------*/
     .fr-card {
         height: 130px;
     }
@@ -4088,12 +6558,12 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    /*----------------------  PROFILE PAGE  --------------------------------*/
+    /*------------------  PROFILE PAGE  -------------------*/
     .profile-grid {
         grid-template-columns: 1fr;
     }
 
-    /*----------------------  STATEMENT/MYBETS PAGE  --------------------------------*/
+    /*----------------  STATEMENT/MYBETS PAGE  ------------*/
 
     .mb-odds {
         width: 40px;
@@ -4119,5 +6589,10 @@
     .mb-table-head,
     .mb-record {
         --mb-grid: 30px 1.15fr 1.35fr 0.7fr 0.85fr 1fr;
+    }
+
+    .lp-rewards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
     }
 }

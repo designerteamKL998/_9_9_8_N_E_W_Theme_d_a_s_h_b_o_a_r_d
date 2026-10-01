@@ -1,0 +1,820 @@
+﻿
+/* =========================================================
+   PAGE
+========================================================= */
+
+.freepoint-page {
+    width: 100%;
+    max-width: 1600px;
+    color: var(--pkb-text);
+    box-sizing: border-box;
+    margin: 14px auto;
+    background: #202228;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.freepoint-layout {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.70fr) minmax(0, 1.30fr);
+    gap: 24px;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 8px 25px rgba(26, 75, 140, 0.07);
+}
+
+
+/* =========================================================
+   LEFT CARD
+========================================================= */
+
+.freepoint-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #3a3524;
+    border-radius: 8px;
+    background: url(imgs/icon/bgfreepoint.jpg)no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.gold-circle {
+    position: absolute;
+    border: 1px solid rgba(234, 216, 125, 0.35);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.circle-1 {
+    width: 600px;
+    height: 600px;
+    top: -280px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle-2 {
+    width: 450px;
+    height: 450px;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.35;
+}
+
+
+/* =========================================================
+   FREE POINT CONTENT
+========================================================= */
+
+.freepoint-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    padding: 45px 30px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.freepoint-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ead87d;
+    font-size: 42px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.freepoint-content h1 {
+    margin: 0;
+    color: #ead87d;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+.freepoint-subtitle {
+    margin: 10px auto 35px;
+    max-width: 600px;
+    color: #d7d7d7;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   POINT AREA
+========================================================= */
+
+.point-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   POINT ORB
+========================================================= */
+
+.point-orb {
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient( 145deg, #fff2a0, #d8af24, #8f6810 );
+    box-shadow: 0 0 35px rgba(234, 216, 125, 0.28), 0 0 80px rgba(234, 216, 125, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.point-star {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient( circle at 50% 40%, #302710, #0b0b0b 70% );
+    border: 3px solid #eac84c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+    .point-star i {
+        position: absolute;
+        color: #ffd83d;
+        font-size: 105px;
+        filter: drop-shadow( 0 0 10px rgba(255, 216, 61, 0.4) );
+    }
+
+
+    .point-star span {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        font-size: 35px;
+        font-weight: 700;
+        text-shadow: 0 2px 5px #000;
+    }
+
+
+/* =========================================================
+   POINT LABEL
+========================================================= */
+
+.point-label {
+    margin-top: 12px;
+    color: #ead87d;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CLAIM BUTTON
+========================================================= */
+
+.claim-btn {
+    width: min(560px, 90%);
+    height: 58px;
+    margin: 35px auto 0;
+    border: none;
+    border-radius: 30px;
+    background: #ead87d;
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+
+    .claim-btn i {
+        font-size: 18px;
+    }
+
+
+    .claim-btn:hover {
+        transform: translateY(-2px);
+        background: #f4e48d;
+        box-shadow: 0 8px 25px rgba(234, 216, 125, 0.25);
+    }
+
+
+    .claim-btn:active {
+        transform: translateY(0);
+    }
+
+
+    .claim-btn.claimed {
+        background: #30322f;
+        color: #8f968c;
+        cursor: default;
+        box-shadow: none;
+    }
+
+
+/* =========================================================
+   TERMS CARD
+========================================================= */
+
+.terms-card {
+    padding: 28px;
+    border: 1px solid #292c32;
+    border-radius: 8px;
+    background: linear-gradient( 145deg, #111318, #0c0d10 );
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   TERMS HEADER
+========================================================= */
+
+.terms-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.terms-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ead87d;
+    font-size: 27px;
+}
+
+
+.terms-header h2 {
+    margin: 0;
+    color: #ead87d;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.terms-divider {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+    background: #30333a;
+}
+
+
+/* =========================================================
+   TERMS LIST
+========================================================= */
+
+.terms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   TERM ITEM
+========================================================= */
+
+.term-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #191c22;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+/* =========================================================
+   TERM NUMBER
+========================================================= */
+
+.term-number {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 50%;
+    border: 2px solid #ead87d;
+    color: #ead87d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TERM TEXT
+========================================================= */
+
+.term-item p {
+    margin: 0;
+    color: #e5e5e5;
+    line-height: 1.55;
+}
+
+
+
+
+
+/*--  FREE POINT HISTORY  --*/
+.fp-history-page {
+    width: 100%;
+    max-width: 1600px;
+    margin: 14px auto;
+    padding: 20px;
+    background: #0c0e11;
+    border: 1px solid #292d35;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.fp-history-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #202228;
+}
+
+
+.fp-header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.fp-header-line {
+    width: 8px;
+    height: 70px;
+    background: #ead87d;
+    border-radius: 10px;
+}
+
+
+.fp-history-header h2 {
+    margin: 0;
+    color: #ead87d;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+
+.fp-history-header p {
+    margin: 6px 0 0;
+    color: #8f949e;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.fp-back-btn {
+    min-width: 120px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ead87d;
+    background: #111318;
+    border: 1px solid #ead87d;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+
+    .fp-back-btn i {
+    }
+
+
+    .fp-back-btn:hover {
+        color: #111318;
+        background: #ead87d;
+    }
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.fp-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+
+.fp-summary-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    overflow: hidden;
+    background: #202228;
+    border: 1px solid #111;
+    border-radius: 8px;
+}
+
+
+.fp-summary-icon {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ead87d;
+    background: #17191f;
+    border: 1px solid #ead87d;
+    border-radius: 14px;
+    font-size: 30px;
+}
+
+
+    .fp-summary-icon i {
+    }
+
+
+.fp-summary-info {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+
+    .fp-summary-info span {
+        color: #a1a5ad;
+    }
+
+
+    .fp-summary-info strong {
+        color: #ead87d;
+        line-height: 1;
+        font-weight: 700;
+    }
+
+
+.fp-summary-decoration {
+    position: absolute;
+    right: 25px;
+    bottom: -25px;
+    color: rgba(234, 216, 125, .10);
+    font-size: 130px;
+    transform: rotate(-12deg);
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.pkb-tabs {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 15px;
+    background: #121418;
+    border-radius: 30px;
+    margin-bottom: 0px;
+    border: 1px solid #292d35;
+    margin-top: 5px;
+}
+
+.pkb-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    border: 0;
+    border-radius: 24px;
+    background: transparent;
+    color: #969ba5;
+    cursor: pointer;
+    transition: 0.25s ease;
+    min-width: 135px;
+    padding: 10px 17px;
+    text-transform: uppercase;
+}
+
+    .pkb-tab:hover {
+        color: #000;
+        background: #ead87d;
+    }
+
+.pkb-tab-active {
+        color: #000;
+        background: #ead87d;
+        margin: 0;
+    }
+
+    .pkb-tab-active:hover {
+        color: #000;
+        background: #ead87d;
+    }
+
+.pkb-tab-icon:hover {
+    color: #000;
+    background: #ead87d;
+}
+
+.pkb-tab-icon {
+    line-height: 1;
+    font-size: 17px;
+}
+
+.pkb-tab-icon img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.pkb-tab:hover img, .pkb-tab-active img {
+    filter: brightness(0) saturate(100%);
+}
+
+/* =========================================
+   HISTORY SECTION
+========================================= */
+.fp-history-section {
+    margin-top: 25px;
+    overflow: hidden;
+    background: #0d0f12;
+    border: 1px solid #202228;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.fp-section-header {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 1px solid #292d35;
+}
+
+
+.fp-section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #ead87d;
+    font-size: 17px;
+}
+
+
+    .fp-section-title i {
+        font-size: 25px;
+    }
+
+
+.fp-record-count {
+    padding: 10px 18px;
+    color: #ead87d;
+    background: #111318;
+    border: 1px solid rgba(234, 216, 125, .45);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.fp-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+.fp-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+    /* HEADER */
+
+    .fp-table thead {
+        background: #202228;
+        border: 1px solid #111;
+    }
+
+
+    .fp-table th {
+        height: 55px;
+        padding: 0 25px;
+        color: #ead87d;
+        border-bottom: 1px solid #343841;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+
+    /* BODY */
+
+    .fp-table td {
+        padding: 12px 25px;
+        border-bottom: 1px solid #24272e;
+        color: #c4c7cc;
+    }
+
+
+    .fp-table tbody tr {
+        transition: .2s ease;
+    }
+
+
+        .fp-table tbody tr:hover {
+            background: #14171b;
+        }
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.fp-date {
+    color: #b7bbc2;
+}
+
+
+/* =========================================
+   TYPE
+========================================= */
+
+.fp-type {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.fp-type-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ead87d;
+    background: #17191f;
+    border: 1px solid rgba(234, 216, 125, .4);
+    border-radius: 9px;
+}
+
+
+    .fp-type-icon i {
+        font-size: 21px;
+    }
+
+
+.fp-type-info strong {
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+.fp-type-info small {
+    display: block;
+    margin-top: 5px;
+    color: #8a8f98;
+}
+
+
+/* =========================================
+   POINT
+========================================= */
+
+.fp-point {
+    font-size:15px;
+}
+
+
+.fp-plus {
+    color: #ead87d;
+}
+
+
+.fp-minus {
+    color: #ff5b5b;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.fp-status {
+    min-width: 95px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border-radius: 7px;
+    font-weight: 500;
+}
+
+
+    .fp-status i {
+        font-size: 8px;
+    }
+
+
+.fp-added {
+    color: #ead87d;
+    background: rgba(234, 216, 125, .06);
+    border: 1px solid rgba(234, 216, 125, .45);
+}
+
+
+.fp-used {
+    color: #aeb2b9;
+    background: #17191f;
+    border: 1px solid #656a73;
+}
+
+
+/* =========================================
+   NO MORE
+========================================= */
+
+.fp-no-more {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #70757e;
+}
+
+
+    .fp-no-more i {
+        color: #646a73;
+        font-size: 21px;
+    }

@@ -1,0 +1,372 @@
+﻿/* =========================================================
+   ANNOUNCEMENT PAGE
+========================================================= */
+
+.announcement-content {
+    width: 100%;
+    background: #202228;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.announcement-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 5px 0;
+}
+
+.announcement-heading-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ead87d;
+    color: #111;
+    border-radius: 13px;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.announcement-heading h2 {
+    margin: 0 0 5px;
+    color: #ead87d;
+    font-weight: 700;
+}
+
+.announcement-heading p {
+    margin: 0;
+    color: #aeb5c3;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.announcement-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT LIST CARD
+========================================================= */
+
+.announcement-list-card {
+    background: #111111;
+    border: 1px solid #202228;
+    border-radius: 15px;
+    padding: 12px;
+    min-height: 470px;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT ITEM
+========================================================= */
+
+.announcement-item {
+    width: 100%;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #30333d;
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+
+    .announcement-item:last-child {
+        border-bottom: none;
+    }
+
+
+    /* HOVER */
+
+    .announcement-item:hover {
+        background: #1a1c20;
+        border-radius: 12px;
+    }
+
+
+    /* ACTIVE */
+
+    .announcement-item.active {
+        background: #24241f;
+        border: 1px solid #ead87d;
+        border-radius: 12px;
+    }
+
+
+/* =========================================================
+   ITEM IMAGE
+========================================================= */
+
+.announcement-item-image {
+    width: 92px;
+    height: 92px;
+    flex: 0 0 92px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #202228;
+}
+
+
+    .announcement-item-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+
+/* =========================================================
+   ITEM CONTENT
+========================================================= */
+
+.announcement-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.announcement-item-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.announcement-tag {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+    .announcement-tag.system {
+        background: #ead87d;
+        color: #111;
+    }
+
+
+    .announcement-tag.promotion {
+        background: #5a4300;
+        color: #ead87d;
+    }
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.announcement-date {
+    color: #9aa3b4;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ITEM TITLE
+========================================================= */
+
+.announcement-item h3 {
+    margin: 0 0 6px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+
+.announcement-item.active h3 {
+    color: #ead87d;
+}
+
+
+/* =========================================================
+   ITEM DESCRIPTION
+========================================================= */
+
+.announcement-item p {
+    margin: 0;
+    color: #9fa7b5;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.announcement-arrow {
+    color: #9aa3b4;
+    margin-left: 5px;
+}
+
+
+.announcement-item.active .announcement-arrow {
+    color: #ead87d;
+}
+
+
+/* =========================================================
+   RIGHT DETAIL CARD
+========================================================= */
+
+.announcement-detail-card {
+    background: #111111;
+    border: 1px solid #202228;
+    border-radius: 15px;
+    padding: 12px;
+    min-height: 470px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DETAIL IMAGE
+========================================================= */
+
+.announcement-detail-image {
+    width: 100%;
+    height: 225px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #202228;
+    margin-bottom: 14px;
+}
+
+
+    .announcement-detail-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+
+/* =========================================================
+   DETAIL CONTENT
+========================================================= */
+
+.announcement-detail-content {
+    padding: 4px 8px 10px;
+}
+
+
+.announcement-detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   DETAIL TITLE
+========================================================= */
+
+.announcement-detail-content h2 {
+    margin: 0 0 12px;
+    color: #ead87d;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   DETAIL DESCRIPTION
+========================================================= */
+
+.announcement-detail-content > p {
+    margin: 0;
+    color: #e8e8e8;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   HIGHLIGHT BOX
+========================================================= */
+
+.announcement-highlight {
+    margin-top: 22px;
+    padding: 18px 20px;
+    background: #202228;
+    border: 1px solid #202228;
+    border-left: 3px solid #ead87d;
+    border-radius: 9px;
+}
+
+
+/* =========================================================
+   HIGHLIGHT TITLE
+========================================================= */
+
+.announcement-highlight-title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 10px;
+    color: #ead87d;
+    font-weight: 700;
+}
+
+
+    .announcement-highlight-title i {
+    }
+
+
+/* =========================================================
+   HIGHLIGHT LIST
+========================================================= */
+
+.announcement-highlight ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+
+.announcement-highlight li {
+    padding-left: 3px;
+}
+
+
+    .announcement-highlight li::marker {
+        color: #ead87d;
+    }
+
+

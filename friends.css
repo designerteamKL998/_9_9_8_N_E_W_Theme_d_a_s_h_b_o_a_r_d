@@ -71,7 +71,7 @@ button {
 .fr-title {
     margin-bottom: 10px;
     margin-top: 15px;
-    display:flex;
+    display: flex;
 }
 
 
@@ -148,7 +148,7 @@ button {
     border: 1px solid var(--border);
     border-radius: 30px;
     padding: 3px;
-    grid-gap:10px;
+    grid-gap: 10px;
 }
 
 
@@ -403,7 +403,6 @@ button {
 .fr-card-diamond .fr-card-symbol,
 .fr-card-diamond .fr-card-bottom,
 .fr-card-diamond .fr-card-top {
-    
 }
 
 
@@ -537,7 +536,7 @@ button {
 
 
 .fr-info-desc {
-    margin-bottom:10px !important;
+    margin-bottom: 10px !important;
     color: #898e98;
 }
 
@@ -852,7 +851,6 @@ button {
 
 
     .fr-modal-header h3 {
-
     }
 
 
@@ -985,7 +983,7 @@ button {
     justify-content: space-between;
     padding: 10px 14px;
     margin-bottom: 8px;
-    background: #181a20;
+    background: #121418;
     border: 1px solid #292d35;
     border-radius: 6px;
     transition: .2s ease;
@@ -1112,4 +1110,562 @@ button {
     .fr-btn-cancel:hover {
         color: #fff;
         border-color: #777d87;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FRIENDS PAGE - GENERIC POPUP
+   BLACK & GOLD
+   ========================================================= */
+
+
+/* =========================================================
+   POPUP OVERLAY
+   ========================================================= */
+
+.fr-popup-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.78);
+    z-index: 99999;
+}
+
+    .fr-popup-overlay.fr-show {
+        display: flex;
+    }
+
+
+/* =========================================================
+   POPUP CONTAINER
+   ========================================================= */
+
+.fr-popup {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    background: #111318;
+    color: #ffffff;
+    border: 1px solid rgba(234, 216, 125, 0.35);
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65);
+    animation: frPopupShow 0.2s ease;
+}
+
+
+/* =========================================================
+   POPUP ANIMATION
+   ========================================================= */
+
+@keyframes frPopupShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   POPUP HEADER
+   ========================================================= */
+
+.fr-popup-header {
+    position: relative;
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #17191f;
+    border-bottom: 1px solid rgba(234, 216, 125, 0.20);
+    box-sizing: border-box;
+}
+
+
+    /* GOLD HEADER LINE */
+
+    .fr-popup-header::after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 0;
+        height: 1px;
+        background: #ead87d;
+        opacity: 0.35;
+    }
+
+
+    /* POPUP TITLE */
+
+    .fr-popup-header h3 {
+        margin: 0;
+        padding: 0;
+        color: #ead87d;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.2px;
+    }
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.fr-popup-close {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    padding: 0;
+    color: #ead87d;
+    background: #202228;
+    border: 1px solid rgba(234, 216, 125, 0.35);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+    .fr-popup-close:hover {
+        color: #111318;
+        background: #ead87d;
+        border-color: #ead87d;
+    }
+
+    .fr-popup-close:active {
+        transform: translateY(-50%) scale(0.95);
+    }
+
+
+/* =========================================================
+   POPUP BODY
+   ========================================================= */
+
+.fr-popup-body {
+    width: 100%;
+    padding: 22px;
+    background: #111318;
+    box-sizing: border-box;
+    max-height: calc(90vh - 58px);
+    overflow-y: auto;
+}
+
+
+    /* =========================================================
+   POPUP BODY SCROLLBAR
+   ========================================================= */
+
+    .fr-popup-body::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .fr-popup-body::-webkit-scrollbar-track {
+        background: #111318;
+    }
+
+    .fr-popup-body::-webkit-scrollbar-thumb {
+        background: #3a3d44;
+        border-radius: 10px;
+    }
+
+        .fr-popup-body::-webkit-scrollbar-thumb:hover {
+            background: #ead87d;
+        }
+
+
+/* =========================================================
+   ADD FRIEND - DETAILS
+   ========================================================= */
+
+.fr-add-details {
+    width: 100%;
+    margin: 0 0 22px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid rgba(234, 216, 125, 0.15);
+    box-sizing: border-box;
+}
+
+
+/* DETAILS TITLE */
+
+.fr-add-title {
+    margin: 0 0 6px;
+    color: #ead87d;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* DETAILS DESCRIPTION */
+
+.fr-add-description {
+    margin: 0;
+    color: #8c9098;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ADD FRIEND FORM
+   ========================================================= */
+
+.fr-add-form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.fr-add-field {
+    width: 100%;
+    margin: 0 0 17px;
+    box-sizing: border-box;
+}
+
+
+    /* LABEL */
+
+    .fr-add-field label {
+        display: block;
+        margin: 0 0 7px;
+        color: #d8d9dc;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+
+    /* =========================================================
+   INPUT
+   ========================================================= */
+
+    .fr-add-field input {
+        display: block;
+        width: 100%;
+        height: 42px;
+        box-sizing: border-box;
+        padding: 0 12px;
+        color: #ffffff;
+        background: #181a20;
+        border: 1px solid #30343d;
+        border-radius: 5px;
+        outline: none;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 400;
+        transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+
+    /* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+    .fr-add-field textarea {
+        display: block;
+        width: 100%;
+        min-height: 85px;
+        box-sizing: border-box;
+        padding: 11px 12px;
+        color: #ffffff;
+        background: #181a20;
+        border: 1px solid #30343d;
+        border-radius: 5px;
+        outline: none;
+        resize: vertical;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.5;
+        transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+
+        /* =========================================================
+   INPUT PLACEHOLDER
+   ========================================================= */
+
+        .fr-add-field input::placeholder,
+        .fr-add-field textarea::placeholder {
+            color: #666b74;
+            opacity: 1;
+        }
+
+
+        /* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+        .fr-add-field input:focus,
+        .fr-add-field textarea:focus {
+            background: #1b1d23;
+            border-color: #ead87d;
+            box-shadow: 0 0 0 2px rgba(234, 216, 125, 0.08);
+        }
+
+
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
+
+.fr-add-send {
+    display: block;
+    width: 130px;
+    height: 40px;
+    margin: 8px auto 0;
+    padding: 0;
+    color: #111318;
+    background: #ead87d;
+    border: 1px solid #ead87d;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+    /* SEND HOVER */
+
+    .fr-add-send:hover {
+        color: #111318;
+        background: #fff0a3;
+        border-color: #fff0a3;
+        box-shadow: 0 4px 12px rgba(234, 216, 125, 0.15);
+        transform: translateY(-1px);
+    }
+
+
+    /* SEND ACTIVE */
+
+    .fr-add-send:active {
+        transform: translateY(0);
+    }
+
+
+/* =========================================================
+   GENERIC TABLE
+   CLAIM HISTORY / TRANSFER HISTORY
+   ========================================================= */
+
+.fr-popup-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+
+/* TABLE */
+
+.fr-popup-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+
+    /* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+    .fr-popup-table thead th {
+        height: 44px;
+        padding: 0 10px;
+        color: #ead87d;
+        background: #202228;
+        border-top: 1px solid rgba(234, 216, 125, 0.15);
+        border-bottom: 1px solid rgba(234, 216, 125, 0.25);
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+    .fr-popup-table tbody td {
+        height: 48px;
+        padding: 10px;
+        color: #d4d6da;
+        background: #111318;
+        border-bottom: 1px solid #292d35;
+        font-size: 12px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+
+/* =========================================================
+   EMPTY TABLE
+   ========================================================= */
+
+.fr-popup-empty td {
+    height: 100px;
+    color: #777c85 !important;
+    background: #111318 !important;
+    border-bottom: 0 !important;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE HOVER
+   ========================================================= */
+
+.fr-popup-table tbody tr:not(.fr-popup-empty):hover td {
+    color: #ffffff;
+    background: #181a20;
+}
+
+
+/* =========================================================
+   TABLE COLUMN WIDTH
+   ========================================================= */
+
+.fr-popup-table th:nth-child(1),
+.fr-popup-table td:nth-child(1) {
+    width: 10%;
+}
+
+.fr-popup-table th:nth-child(2),
+.fr-popup-table td:nth-child(2) {
+    width: 23%;
+}
+
+.fr-popup-table th:nth-child(3),
+.fr-popup-table td:nth-child(3) {
+    width: 17%;
+}
+
+.fr-popup-table th:nth-child(4),
+.fr-popup-table td:nth-child(4) {
+    width: 27%;
+}
+
+.fr-popup-table th:nth-child(5),
+.fr-popup-table td:nth-child(5) {
+    width: 23%;
+}
+
+
+/* =========================================
+   SETTINGS
+   SAME GENERIC POPUP - BLACK & GOLD
+========================================= */
+
+.fr-popup:has(.fr-settings-content) {
+    max-width: 400px;
+}
+
+
+/* SETTINGS CONTENT */
+
+.fr-settings-content {
+    width: 100%;
+}
+
+
+/* SETTING OPTION */
+
+.fr-setting-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    color: #d6d8dc;
+    font-size: 13px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+
+    /* CHECKBOX */
+
+    .fr-setting-option input {
+        width: 14px;
+        height: 14px;
+        margin: 0;
+        accent-color: #ead87d;
+        cursor: pointer;
+    }
+
+
+/* SAVE BUTTON */
+
+.fr-settings-save {
+    display: block;
+    width: 115px;
+    height: 36px;
+    margin: 35px auto 5px;
+    color: #111318;
+    background: #ead87d;
+    border: 1px solid #ead87d;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+
+    /* SAVE HOVER */
+
+    .fr-settings-save:hover {
+        color: #111318;
+        background: #fff0a3;
+        border-color: #fff0a3;
+        transform: translateY(-1px);
+    }
+
+
+    /* SAVE ACTIVE */
+
+    .fr-settings-save:active {
+        transform: translateY(0);
     }

@@ -33,7 +33,7 @@
 
 .nav-item {
     position: relative;
-    height: 60px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,6 +44,8 @@
     font-weight: 600;
     white-space: nowrap;
     transition: all 0.25s ease;
+    border-radius: 30px;
+    margin: 0 5px;
 }
 
 
@@ -59,9 +61,6 @@
     .nav-item:hover {
         color: #000;
         background: #ead87d;
-        border-radius: 30px;
-        height: 40px;
-        margin: 0 5px;
     }
 
 

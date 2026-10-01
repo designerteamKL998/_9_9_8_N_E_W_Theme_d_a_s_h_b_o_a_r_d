@@ -1,152 +1,264 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ================================
+    /* =========================
        TABS
-    ================================= */
+    ========================= */
 
-    /* ================================
-   TABS
-================================ */
+    document.querySelectorAll(".fr-tab").forEach(tab => {
 
-const tabs = document.querySelectorAll(".fr-tab");
-const contents = document.querySelectorAll(".fr-tab-content");
+        tab.addEventListener("click", () => {
 
-tabs.forEach(tab => {
+            document.querySelectorAll(".fr-tab")
+                .forEach(t => t.classList.remove("active"));
 
-    tab.addEventListener("click", () => {
+            document.querySelectorAll(".fr-tab-content")
+                .forEach(c => c.classList.add("fr-hidden"));
 
-        const target = tab.dataset.tab;
+            tab.classList.add("active");
 
-        /* Remove active */
+            document
+                .getElementById(`${tab.dataset.tab}-content`)
+                ?.classList.remove("fr-hidden");
 
-        tabs.forEach(item => {
-            item.classList.remove("active");
         });
-
-        /* Hide all content */
-
-        contents.forEach(content => {
-            content.classList.add("fr-hidden");
-        });
-
-        /* Activate selected tab */
-
-        tab.classList.add("active");
-
-        /* Show selected content */
-
-        document
-            .getElementById(`${target}-content`)
-            ?.classList.remove("fr-hidden");
 
     });
 
-});
 
-
-    /* ================================
+    /* =========================
        CLAIM REWARD
-    ================================= */
+    ========================= */
 
-    document.querySelectorAll(".fr-claim").forEach(button => {
+    document.querySelectorAll(".fr-claim").forEach(btn => {
 
-        button.addEventListener("click", () => {
+        btn.onclick = () => {
 
-            button.textContent = "CLAIMED";
-            button.disabled = true;
+            btn.textContent = "CLAIMED";
+            btn.disabled = true;
 
-        });
+        };
 
     });
 
 
-    /* ================================
+    /* =========================
        RECORD MODAL
-    ================================= */
+    ========================= */
 
-    const modal = document.getElementById("fr-record-modal");
-    const openBtn = document.getElementById("fr-add-record");
-    const closeBtn = document.getElementById("fr-close-record");
-    const cancelBtn = document.getElementById("fr-cancel-record");
-    const saveBtn = document.getElementById("fr-save-record");
+    const recordModal = document.getElementById("fr-record-modal");
 
-    const type = document.getElementById("fr-record-type");
-    const description =
-        document.getElementById("fr-record-description");
+    document.getElementById("fr-add-record")?.addEventListener("click", () => {
+        recordModal?.classList.add("fr-show");
+    });
 
-    const records =
-        document.getElementById("fr-records-body");
+    document.getElementById("fr-close-record")?.addEventListener("click", () => {
+        recordModal?.classList.remove("fr-show");
+    });
 
-
-    /* Open */
-
-    openBtn?.addEventListener("click", () => {
-        modal.classList.add("fr-show");
+    document.getElementById("fr-cancel-record")?.addEventListener("click", () => {
+        recordModal?.classList.remove("fr-show");
     });
 
 
-    /* Close */
+    /* =========================
+       GENERIC POPUP
+    ========================= */
 
-    closeBtn?.addEventListener("click", () => {
-        modal.classList.remove("fr-show");
+    const popup = document.getElementById("fr-popup-overlay");
+    const title = document.getElementById("fr-popup-title");
+    const body = document.getElementById("fr-popup-body");
+
+    const closePopup = () => {
+        popup?.classList.remove("fr-show");
+    };
+
+
+    document.getElementById("fr-popup-close")?.addEventListener("click", closePopup);
+
+    popup?.addEventListener("click", e => {
+        if (e.target === popup) closePopup();
     });
 
 
-    cancelBtn?.addEventListener("click", () => {
-        modal.classList.remove("fr-show");
+    /* =========================
+       HISTORY
+    ========================= */
+
+    document.getElementById("fr-history-btn")?.addEventListener("click", () => {
+
+        title.textContent = "Claim History";
+
+        body.innerHTML = `
+            <table class="fr-popup-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Prizes</th>
+                        <th>Cash</th>
+                        <th>Claim Date</th>
+                        <th>Cards</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="fr-popup-empty">
+                        <td colspan="5">No Record.</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+
+        popup.classList.add("fr-show");
+
     });
 
 
-    /* Save */
+    /* =========================
+       TRANSFER
+    ========================= */
 
-    saveBtn?.addEventListener("click", () => {
+    document.getElementById("fr-transfer-btn")?.addEventListener("click", () => {
 
-        if (!description.value.trim()) {
-            return;
-        }
+        title.textContent = "Transfer History";
+
+        body.innerHTML = `
+            <table class="fr-popup-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Transfer Date</th>
+                        <th>Cards</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="fr-popup-empty">
+                        <td colspan="5">No Record.</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+
+        popup.classList.add("fr-show");
+
+    });
 
 
-        /* Remove empty message */
+    /* =========================
+       ADD FRIEND
+    ========================= */
 
-        records.innerHTML = "";
+    document.getElementById("fr-add-friend-btn")?.addEventListener("click", () => {
 
+        title.textContent = "Add Friend";
 
-        /* Add record */
+        body.innerHTML = `
+            <div class="fr-add-details">
 
-        records.innerHTML = `
+                <div class="fr-add-title">
+                    Add a friend
+                </div>
 
-            <div class="fr-record-row">
-
-                <div class="fr-record-left">
-
-                    <div class="fr-record-icon">
-                        <i class="fa-regular fa-file-lines"></i>
-                    </div>
-
-                    <div class="fr-record-info">
-
-                        <strong>
-                            ${type.value}
-                        </strong>
-
-                        <span>
-                            ${description.value}
-                        </span>
-
-                    </div>
-
+                <div class="fr-add-description">
+                    Enter your friend's username and send them a friend request.
                 </div>
 
             </div>
 
+            <div class="fr-add-form">
+
+                <div class="fr-add-field">
+
+                    <label>Username</label>
+
+                    <input
+                        type="text"
+                        id="fr-friend-username"
+                        placeholder="Enter username">
+
+                </div>
+
+                <div class="fr-add-field">
+
+                    <label>Message</label>
+
+                    <textarea
+                        id="fr-friend-message"
+                        placeholder="Write a message..."
+                        rows="3"></textarea>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="fr-add-send"
+                    id="fr-add-send">
+
+                    Send
+
+                </button>
+
+            </div>
         `;
 
+        popup.classList.add("fr-show");
 
-        /* Reset */
+    });
 
-        description.value = "";
+/* =========================
+   SETTINGS
+========================= */
 
-        modal.classList.remove("fr-show");
+document.getElementById("fr-settings-btn")?.addEventListener("click", () => {
+
+    title.textContent = "Settings";
+
+    body.innerHTML = `
+        <div class="fr-settings-content">
+
+            <label class="fr-setting-option">
+                <input type="checkbox" checked>
+                <span>Show Online Status</span>
+            </label>
+
+            <label class="fr-setting-option">
+                <input type="checkbox" checked>
+                <span>Show Member Level Info</span>
+            </label>
+
+            <button type="button" class="fr-settings-save">
+                Save
+            </button>
+
+        </div>
+    `;
+
+    popup.classList.add("fr-show");
+
+});
+
+
+/* SAVE */
+
+document.addEventListener("click", e => {
+
+    if (e.target.closest(".fr-settings-save")) {
+        popup.classList.remove("fr-show");
+    }
+
+});
+
+    /* =========================
+       ESC
+    ========================= */
+
+    document.addEventListener("keydown", e => {
+
+        if (e.key === "Escape") {
+            closePopup();
+        }
 
     });
 
