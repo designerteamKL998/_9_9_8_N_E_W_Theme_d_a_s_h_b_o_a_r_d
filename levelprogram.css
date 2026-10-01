@@ -76,19 +76,25 @@
     cursor: pointer;
     transition: background 0.2s ease, color 0.2s ease;
     border-radius:30px;
+    padding-left:35px;
 }
 
 
-    .lp-side-item i {
+    .lp-side-item img {
         width: 22px;
         text-align: center;
         font-size: 18px;
+        filter: brightness(0) invert(1);
     }
 
 
     .lp-side-item:hover {
         background: rgba(234,216,125,0.06);
     }
+
+.lp-side-item.lp-active img{
+            filter: brightness(0);
+        }
 
 
     /* ACTIVE */
@@ -172,7 +178,6 @@
 
 .lp-level-header {
     width: 100%;
-    min-height: 70px;
     padding: 7px 18px;
     border: 0px solid #30333d;
     border-radius: 10px;
@@ -180,6 +185,7 @@
     display: grid;
     grid-template-columns: 280px minmax(300px, 1fr) 280px;
     align-items: center;
+    margin-bottom:10px;
 }
 
 
@@ -440,6 +446,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 6px;
+    margin-top:10px;
 }
 
 

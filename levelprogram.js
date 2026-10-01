@@ -231,6 +231,180 @@ const lpSideItems =
     );
 
 
+/* =========================================================
+   CATEGORY DATA
+========================================================= */
+
+const lpCategoryData = {
+
+    sport: {
+        name: "Sport",
+        icon: "imgs/icon/header/head_0007_sports-ich.png",
+        label: "PLAY MORE  EARN MORE",
+        title: "LEVEL",
+        highlight: "REWARDS",
+        subtitle: "MORE PLAY  MORE XP  MORE REWARDS",
+        button: "START EARNING NOW"
+    },
+
+    casino: {
+        name: "Casino",
+        icon: "imgs/icon/header/head_0006_casino-ich.png",
+        label: "PLAY MORE  EARN MORE",
+        title: "CASINO",
+        highlight: "REWARDS",
+        subtitle: "MORE PLAY  MORE XP  MORE REWARDS",
+        button: "START EARNING NOW"
+    },
+
+    lottery: {
+        name: "Lottery",
+        icon: "imgs/icon/header/lotteryiconhead.png",
+        label: "PLAY MORE  EARN MORE",
+        title: "LOTTERY",
+        highlight: "REWARDS",
+        subtitle: "MORE PLAY  MORE XP  MORE REWARDS",
+        button: "START EARNING NOW"
+    },
+
+    games: {
+        name: "Games",
+        icon: "imgs/icon/header/head_0005_slot-ich.png",
+        label: "PLAY MORE  EARN MORE",
+        title: "GAMES",
+        highlight: "REWARDS",
+        subtitle: "MORE PLAY  MORE XP  MORE REWARDS",
+        button: "START EARNING NOW"
+    },
+
+    p2p: {
+        name: "P2P",
+        icon: "imgs/icon/header/head_0002_poker-ich.png",
+        label: "PLAY MORE  EARN MORE",
+        title: "P2P",
+        highlight: "REWARDS",
+        subtitle: "MORE PLAY  MORE XP  MORE REWARDS",
+        button: "START EARNING NOW"
+    }
+
+};
+
+
+/* =========================================================
+   CHANGE CATEGORY CONTENT
+========================================================= */
+
+function lpChangeCategory(category) {
+
+    const data =
+        lpCategoryData[category];
+
+    if (!data) {
+        return;
+    }
+
+
+    const lpCategoryIcon =
+        document.getElementById(
+            "lpCategoryIcon"
+        );
+
+    const lpCategory =
+        document.getElementById(
+            "lpCategory"
+        );
+
+    const lpHeroLabel =
+        document.getElementById(
+            "lpHeroLabel"
+        );
+
+    const lpHeroTitle =
+        document.getElementById(
+            "lpHeroTitle"
+        );
+
+    const lpHeroHighlight =
+        document.getElementById(
+            "lpHeroHighlight"
+        );
+
+    const lpHeroSubtitle =
+        document.getElementById(
+            "lpHeroSubtitle"
+        );
+
+    const lpHeroButtonText =
+        document.getElementById(
+            "lpHeroButtonText"
+        );
+
+
+    if (lpCategoryIcon) {
+
+        lpCategoryIcon.src =
+            data.icon;
+
+        lpCategoryIcon.alt =
+            data.name;
+
+    }
+
+
+    if (lpCategory) {
+
+        lpCategory.textContent =
+            data.name;
+
+    }
+
+
+    if (lpHeroLabel) {
+
+        lpHeroLabel.textContent =
+            data.label;
+
+    }
+
+
+    if (lpHeroTitle) {
+
+        lpHeroTitle.textContent =
+            data.title;
+
+    }
+
+
+    if (lpHeroHighlight) {
+
+        lpHeroHighlight.textContent =
+            data.highlight;
+
+    }
+
+
+    if (lpHeroSubtitle) {
+
+        lpHeroSubtitle.textContent =
+            data.subtitle;
+
+    }
+
+
+    if (lpHeroButtonText) {
+
+        lpHeroButtonText.textContent =
+            data.button;
+
+    }
+
+}
+
+
+/* =========================================================
+   CATEGORY BUTTON CLICK
+========================================================= */
+
 lpSideItems.forEach(
     function (item) {
 
@@ -254,13 +428,12 @@ lpSideItems.forEach(
                 );
 
 
-                const lpMenu =
-                    item.dataset.lpMenu;
+                const lpCategory =
+                    item.dataset.lpCategory;
 
 
-                console.log(
-                    "Selected Level Program menu:",
-                    lpMenu
+                lpChangeCategory(
+                    lpCategory
                 );
 
             }
@@ -268,6 +441,11 @@ lpSideItems.forEach(
 
     }
 );
+
+
+/* INITIAL CATEGORY */
+
+lpChangeCategory("sport");
 
 
 /* =========================================================
